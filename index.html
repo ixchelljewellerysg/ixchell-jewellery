@@ -13,6 +13,36 @@
       background: linear-gradient(to bottom, #f8f9fb, #edf2f7);
       color: #111827;
     }
+.hero {
+  height: 100vh;
+  background: url('hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 20px;
+}
+<div class="hero">
+  <div class="hero-content">
+    <h1>Not all jade is jadeite.</h1>
+    <p>Seen everywhere. Understood by few.</p>
+    <a href="https://instagram.com/ixchelljewellery" class="button button-secondary">Book Private Viewing</a>
+  </div>
+</div>
 
     .page {
       max-width: 760px;
