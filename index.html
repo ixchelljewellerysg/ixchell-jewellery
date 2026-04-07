@@ -5,219 +5,170 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Ixchell Jewellery Singapore | Private Jadeite Boutique</title>
-<meta name="description" content="Ixchell Jewellery is a private jadeite boutique in Singapore near City Hall MRT, specialising in natural Type A Burmese jadeite bangles, earrings and collector pieces." />
+
+<meta name="description" content="Private jadeite boutique in Singapore near City Hall MRT. Specialising in natural Type A Burmese jadeite jewellery, bangles, and curated collector pieces." />
 
 <style>
-  :root{
-    --bg:#f5f7fb;
-    --bg-soft:#eef3f8;
-    --card:#ffffff;
-    --text:#111827;
-    --muted:#596272;
-    --brand:#183153;
-    --brand-dark:#10233d;
-    --line:rgba(17,24,39,0.08);
-    --shadow:0 14px 34px rgba(15,23,42,0.08);
-    --radius:22px;
-    --max:980px;
-  }
+:root{
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --text:#111827;
+  --muted:#5b6472;
+  --brand:#183153;
+  --brand-dark:#10233d;
+  --line:rgba(17,24,39,0.08);
+  --shadow:0 14px 34px rgba(0,0,0,0.08);
+  --radius:22px;
+}
 
-  *{ box-sizing:border-box; }
+*{box-sizing:border-box;}
 
-  body{
-    margin:0;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-    background:radial-gradient(circle at top left,#ffffff 0%,#f6f8fb 42%,#eef3f8 100%);
-    color:var(--text);
-  }
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
 
-  img{
-    display:block;
-    max-width:100%;
-  }
+img{
+  display:block;
+  max-width:100%;
+}
 
-  a{ color:inherit; }
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  background:
+    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.65)),
+    url('./hero.jpg') center/cover no-repeat;
+  padding:20px;
+}
 
-  .hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    background:
-      linear-gradient(rgba(0,0,0,0.42),rgba(0,0,0,0.62)),
-      url('./hero.jpg') center/cover no-repeat;
-    padding:24px 16px;
-  }
+.hero-inner{
+  max-width:720px;
+}
 
-  .hero-inner{
-    max-width:780px;
-  }
+.logo{
+  width:70px;
+  margin:0 auto 20px;
+}
 
-  .logo-hero{
-    width:70px;
-    margin:0 auto 18px;
-    opacity:0.96;
-  }
+.hero h1{
+  font-size:clamp(36px,7vw,70px);
+  margin:0;
+}
 
-  .hero h1{
-    margin:0;
-    font-size:clamp(42px,8vw,78px);
-    line-height:0.96;
-    letter-spacing:-0.04em;
-  }
+.hero p{
+  font-size:18px;
+  margin-top:12px;
+  color:rgba(255,255,255,0.9);
+}
 
-  .hero p{
-    margin:14px auto 0;
-    font-size:clamp(18px,3vw,22px);
-    line-height:1.55;
-    max-width:700px;
-    color:rgba(255,255,255,0.93);
-  }
+.btn{
+  display:inline-block;
+  margin-top:18px;
+  padding:14px 24px;
+  border-radius:999px;
+  background:white;
+  color:black;
+  text-decoration:none;
+  font-weight:700;
+}
 
-  .button{
-    display:inline-block;
-    margin-top:20px;
-    padding:14px 24px;
-    border-radius:999px;
-    text-decoration:none;
-    font-weight:700;
-    font-size:15px;
-  }
+.container{
+  max-width:960px;
+  margin:auto;
+  padding:20px;
+}
 
-  .primary{
-    background:white;
-    color:#111111;
-    box-shadow:0 10px 26px rgba(0,0,0,0.16);
-  }
+.card{
+  background:white;
+  border-radius:var(--radius);
+  padding:22px;
+  margin-top:14px;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
 
-  .page{
-    max-width:var(--max);
-    margin:auto;
-    padding:20px 16px 190px;
-  }
+.card h2{
+  margin:0 0 10px;
+}
 
-  .card{
-    background:var(--card);
-    border:1px solid var(--line);
-    border-radius:var(--radius);
-    padding:24px 20px;
-    margin-top:14px;
-    box-shadow:var(--shadow);
-  }
+.card p{
+  color:var(--muted);
+  line-height:1.7;
+}
 
-  .card h2{
-    margin:0 0 10px;
-    font-size:clamp(28px,5vw,40px);
-    line-height:1.08;
-  }
+.spotlight{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  align-items:center;
+}
 
-  .card p{
-    margin:0 0 12px;
-    font-size:16px;
-    line-height:1.7;
-    color:var(--muted);
-  }
+.spotlight-image{
+  background:linear-gradient(#faf3ff,#f4f7ff);
+  border-radius:18px;
+  padding:16px;
+}
 
-  .statement{
-    font-size:20px;
-    line-height:1.65;
-    color:#111827;
-  }
+.spotlight-image img{
+  border-radius:12px;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  width:100%;
+}
 
+.float{
+  animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-8px);}
+  100%{transform:translateY(0);}
+}
+
+.gallery{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.gallery img{
+  border-radius:12px;
+}
+
+.dark{
+  background:linear-gradient(var(--brand),var(--brand-dark));
+  color:white;
+}
+
+.dark p{color:white;}
+
+.floating-btn{
+  position:fixed;
+  bottom:20px;
+  left:12px;
+  right:12px;
+  background:var(--brand);
+  color:white;
+  text-align:center;
+  padding:14px;
+  border-radius:999px;
+  text-decoration:none;
+  font-weight:700;
+}
+
+@media(max-width:700px){
   .spotlight{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:18px;
-    align-items:center;
+    grid-template-columns:1fr;
   }
-
-  .spotlight-visual{
-    border-radius:20px;
-    overflow:hidden;
-    background:linear-gradient(180deg,#faf3ff,#f7f9ff);
-    padding:18px;
-    min-height:unset;
-  }
-
-  .spotlight-visual img{
-    width:100%;
-    aspect-ratio:1 / 1;
-    object-fit:cover;
-    border-radius:16px;
-  }
-
-  .float-slow{
-    animation:floatSlow 6s ease-in-out infinite;
-  }
-
-  @keyframes floatSlow{
-    0%{ transform:translateY(0px); }
-    50%{ transform:translateY(-8px); }
-    100%{ transform:translateY(0px); }
-  }
-
-  .gallery{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-  }
-
-  .gallery-item{
-    overflow:hidden;
-    border-radius:14px;
-    background:white;
-    border:1px solid var(--line);
-  }
-
-  .gallery-item img{
-    width:100%;
-    aspect-ratio:1 / 1;
-    object-fit:cover;
-  }
-
-  .dark-card{
-    background:linear-gradient(180deg,var(--brand),var(--brand-dark));
-    color:white;
-  }
-
-  .dark-card p,
-  .dark-card h2{
-    color:white;
-  }
-
-  .floating{
-    position:fixed;
-    bottom:20px;
-    left:12px;
-    right:12px;
-    background:var(--brand);
-    color:white;
-    padding:14px;
-    text-align:center;
-    border-radius:999px;
-    text-decoration:none;
-    font-weight:700;
-    box-shadow:0 10px 24px rgba(0,0,0,0.18);
-    z-index:999;
-  }
-
-  @media (max-width:760px){
-    .spotlight{
-      grid-template-columns:1fr;
-    }
-  }
-
-  @media (max-width:640px){
-    .hero h1{
-      font-size:38px;
-    }
-
-    .page{
-      padding:18px 14px 190px;
-    }
-  }
+}
 </style>
 </head>
 
@@ -225,90 +176,68 @@
 
 <section class="hero">
   <div class="hero-inner">
-    <img src="./logo.png" alt="Ixchell Jewellery Singapore" class="logo-hero">
+    <img src="./logo.png" class="logo">
     <h1>Not all jade is jadeite.</h1>
     <p>Seen everywhere. Understood by few.</p>
-    <a href="https://instagram.com/ixchelljewellery" class="button primary" target="_blank" rel="noopener">
+    <a href="https://instagram.com/ixchelljewellery" class="btn" target="_blank">
       Book Private Viewing
     </a>
   </div>
 </section>
 
-<div class="page">
+<div class="container">
 
-  <div class="card">
-    <h2>Ixchell Jewellery Singapore</h2>
-    <p class="statement">
-      A private jadeite boutique near City Hall MRT, specialising in natural Type A Burmese jadeite.
-    </p>
-  </div>
+<div class="card">
+<h2>Ixchell Jewellery Singapore</h2>
+<p>A private jadeite boutique near City Hall MRT, specialising in natural Type A Burmese jadeite.</p>
+</div>
 
-  <div class="card">
-    <h2>This is where people finally understand jadeite.</h2>
-    <p>
-      In person, colour, structure and depth reveal what photos never can.
-    </p>
-  </div>
+<div class="card">
+<h2>This is where people finally understand jadeite.</h2>
+<p>In person, colour, structure and depth reveal what photos never can.</p>
+</div>
 
-  <div class="card spotlight">
-    <div>
-      <h2>Lavender jadeite earrings for thoughtful gifting.</h2>
-      <p>
-        A refined yet effortless piece, often chosen for birthdays, Mother’s Day, or as a meaningful souvenir from Singapore.
-      </p>
-      <p>
-        Simple, elegant, and easy to wear — a gentle introduction to jadeite.
-      </p>
-    </div>
+<div class="card spotlight">
 
-    <div class="spotlight-visual">
-      <img src="./earring1.jpg" alt="Lavender jadeite butterfly earrings Singapore gift" class="float-slow">
-    </div>
-  </div>
+<div>
+<h2>Lavender jadeite earrings for thoughtful gifting</h2>
+<p>A refined, effortless piece often chosen for birthdays, Mother's Day, and as a meaningful souvenir from Singapore.</p>
+<p>Simple, elegant, and quietly memorable — a gentle introduction to jadeite.</p>
+</div>
 
-  <div class="card">
-    <h2>The butterfly, reimagined in jadeite.</h2>
-    <p>
-      In Peranakan and Straits Chinese heritage, the butterfly is more than a decorative motif.
-    </p>
-    <p>
-      It represents grace, transformation, and a beauty that unfolds over time — something gentle, yet unforgettable.
-    </p>
-    <p>
-      Paired with lavender jadeite, the meaning becomes even more refined. Lavender is admired for its softness, calm presence, and quiet elegance.
-    </p>
-    <p>
-      Together, they create a piece that feels thoughtful, meaningful, and easy to give.
-    </p>
-  </div>
-
-  <div class="card">
-    <h2>More than a jewellery store.</h2>
-    <div class="gallery">
-      <div class="gallery-item"><img src="./gallery1.jpg" alt="Jadeite bangles Singapore"></div>
-      <div class="gallery-item"><img src="./gallery2.jpg" alt="Jadeite display Singapore"></div>
-      <div class="gallery-item"><img src="./gallery3.jpg" alt="Collector jadeite Singapore"></div>
-      <div class="gallery-item"><img src="./gallery4.jpg" alt="Jadeite carvings Singapore"></div>
-    </div>
-  </div>
-
-  <div class="card dark-card">
-    <h2>Private Viewing Only</h2>
-    <p>
-      By appointment via Instagram DM for a secure and personalised experience.
-    </p>
-    <p>
-      Walk-ins are welcome if available, though scheduled visits are prioritised.
-    </p>
-    <p>
-      All transactions are conducted in-store. We accept Visa, MasterCard and American Express.
-    </p>
-  </div>
+<div class="spotlight-image">
+<img src="./earring1.jpg" class="float" alt="Lavender jadeite butterfly earrings Singapore">
+</div>
 
 </div>
 
-<a href="https://instagram.com/ixchelljewellery" class="floating" target="_blank" rel="noopener">
-  Book via Instagram
+<div class="card">
+<h2>The butterfly, reimagined in jadeite</h2>
+<p>In Peranakan and Straits Chinese culture, the butterfly symbolises transformation, grace, and enduring beauty.</p>
+<p>Paired with lavender jadeite, it reflects calmness, softness, and quiet elegance — a gift that feels both thoughtful and lasting.</p>
+</div>
+
+<div class="card">
+<h2>More than a jewellery store</h2>
+<div class="gallery">
+<img src="./gallery1.jpg">
+<img src="./gallery2.jpg">
+<img src="./gallery3.jpg">
+<img src="./gallery4.jpg">
+</div>
+</div>
+
+<div class="card dark">
+<h2>Private Viewing Only</h2>
+<p>Appointments are arranged via Instagram DM for safety and clarity.</p>
+<p>Walk-ins are possible if available, though private viewings are prioritised.</p>
+<p>All transactions are conducted in-store. We accept Visa, MasterCard and American Express.</p>
+</div>
+
+</div>
+
+<a href="https://instagram.com/ixchelljewellery" class="floating-btn">
+Book via Instagram
 </a>
 
 </body>
