@@ -19,8 +19,10 @@
     --line:rgba(17,24,39,0.08);
     --shadow:0 14px 34px rgba(15,23,42,0.08);
     --radius:22px;
-    --max:980px;
+    --max:1040px;
     --white:#ffffff;
+    --gold:#d4af37;
+    --lav:#e9ddff;
   }
 
   *{
@@ -386,6 +388,97 @@
     margin:0 auto;
   }
 
+  .gift-feature{
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(135deg,#fff8fd 0%, #f9f5ff 40%, #fffefc 100%);
+  }
+
+  .gift-feature::before{
+    content:"";
+    position:absolute;
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    background:radial-gradient(circle, rgba(233,221,255,0.75) 0%, rgba(233,221,255,0) 70%);
+    top:-100px;
+    right:-120px;
+    animation:driftGlow 8s ease-in-out infinite;
+    pointer-events:none;
+  }
+
+  .gift-grid{
+    position:relative;
+    z-index:1;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    align-items:center;
+  }
+
+  .gift-visual{
+    position:relative;
+    min-height:420px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .gift-main{
+    width:min(100%, 420px);
+    border-radius:26px;
+    box-shadow:0 24px 50px rgba(24,49,83,0.12);
+    animation:floatMain 5.2s ease-in-out infinite;
+  }
+
+  .gift-worn{
+    position:absolute;
+    width:180px;
+    right:0;
+    bottom:6px;
+    border-radius:22px;
+    border:6px solid rgba(255,255,255,0.88);
+    box-shadow:0 18px 38px rgba(0,0,0,0.14);
+    animation:floatCard 6.8s ease-in-out infinite;
+  }
+
+  .gift-copy h2{
+    margin-bottom:12px;
+  }
+
+  .price-tag{
+    display:inline-block;
+    margin:4px 0 12px;
+    padding:9px 14px;
+    border-radius:999px;
+    background:#fff;
+    border:1px solid rgba(212,175,55,0.28);
+    color:#7a5a00;
+    font-weight:700;
+    box-shadow:0 8px 20px rgba(212,175,55,0.08);
+  }
+
+  .gift-points{
+    display:grid;
+    gap:10px;
+    margin-top:14px;
+  }
+
+  .gift-point{
+    padding:12px 14px;
+    border-radius:14px;
+    background:rgba(255,255,255,0.72);
+    border:1px solid rgba(24,49,83,0.08);
+    color:#223046;
+    font-weight:600;
+  }
+
+  .gift-note{
+    margin-top:14px;
+    font-size:14px;
+    color:#6f7685;
+  }
+
   .floating{
     position:fixed;
     bottom:20px;
@@ -400,6 +493,38 @@
     font-weight:700;
     box-shadow:0 10px 24px rgba(0,0,0,0.18);
     z-index:999;
+  }
+
+  @keyframes floatMain{
+    0%,100%{ transform:translateY(0px) rotate(-1deg); }
+    50%{ transform:translateY(-10px) rotate(1deg); }
+  }
+
+  @keyframes floatCard{
+    0%,100%{ transform:translateY(0px); }
+    50%{ transform:translateY(-8px); }
+  }
+
+  @keyframes driftGlow{
+    0%,100%{ transform:translate(0,0) scale(1); }
+    50%{ transform:translate(-18px,14px) scale(1.06); }
+  }
+
+  @media (max-width:920px){
+    .gift-grid{
+      grid-template-columns:1fr;
+    }
+
+    .gift-visual{
+      min-height:auto;
+      padding-bottom:140px;
+    }
+
+    .gift-worn{
+      width:150px;
+      right:18px;
+      bottom:0;
+    }
   }
 
   @media (max-width:760px){
@@ -426,6 +551,15 @@
     .page{
       padding:18px 14px 190px;
     }
+
+    .gift-visual{
+      padding-bottom:120px;
+    }
+
+    .gift-worn{
+      width:132px;
+      right:8px;
+    }
   }
 </style>
 </head>
@@ -436,8 +570,8 @@
   <div class="topbar-inner">
     <div class="topbar-brand">Ixchell Jewellery Singapore</div>
     <div class="topbar-links">
+      <a class="topbar-link" href="#featured-gift">Featured Gift</a>
       <a class="topbar-link" href="#visit">Visit</a>
-      <a class="topbar-link" href="#learn">Learn</a>
       <a class="topbar-link" href="#faq">FAQ</a>
     </div>
   </div>
@@ -455,8 +589,8 @@
       <a href="https://instagram.com/ixchelljewellery" class="button primary" target="_blank" rel="noopener">
         Book Private Viewing
       </a>
-      <a href="#visit" class="button secondary">
-        Plan Your Visit
+      <a href="#featured-gift" class="button secondary">
+        View Featured Gift
       </a>
     </div>
   </div>
@@ -516,6 +650,43 @@
     </div>
   </div>
 
+  <div id="featured-gift" class="card gift-feature">
+    <div class="gift-grid">
+      <div class="gift-copy">
+        <div class="mini-title">Featured Gift Piece</div>
+        <h2>Lavender jadeite earrings for thoughtful gifting.</h2>
+        <div class="price-tag">S$68</div>
+        <p class="lead">
+          A lighter, more effortless piece for those looking for a gift that feels charming, wearable and easy to choose.
+        </p>
+        <p>
+          These earrings are often chosen for birthdays, Mother’s Day, and as a small souvenir from Singapore — refined enough to feel special, yet accessible enough to give with ease.
+        </p>
+
+        <div class="gift-points">
+          <div class="gift-point">A gentle gift for birthdays and meaningful occasions</div>
+          <div class="gift-point">A thoughtful Mother’s Day choice</div>
+          <div class="gift-point">An elegant Singapore souvenir that is easy to carry home</div>
+        </div>
+
+        <p class="gift-note">
+          Soft movement, calm colour and easy wear — designed to feel graceful rather than overstated.
+        </p>
+
+        <div class="hero-actions" style="justify-content:flex-start; margin-top:18px;">
+          <a href="https://instagram.com/ixchelljewellery" class="button secondary-dark" target="_blank" rel="noopener">
+            Enquire via Instagram
+          </a>
+        </div>
+      </div>
+
+      <div class="gift-visual">
+        <img src="earring-main.jpg" alt="Lavender jadeite butterfly earrings in Singapore" class="gift-main">
+        <img src="earring-worn.jpg" alt="Model wearing lavender jadeite earrings" class="gift-worn">
+      </div>
+    </div>
+  </div>
+
   <div class="card center">
     <h2>More than a jewellery store.</h2>
     <p>
@@ -531,156 +702,3 @@
       <div class="gallery-item">
         <img src="gallery2.jpg" alt="Rare jadeite carvings at Ixchell Jewellery Singapore">
       </div>
-      <div class="gallery-item">
-        <img src="gallery3.jpg" alt="Jadeite collection at Ixchell Jewellery Singapore">
-      </div>
-      <div class="gallery-item wide">
-        <img src="gallery4.jpg" alt="Jadeite jewellery display in Singapore">
-      </div>
-      <div class="gallery-item">
-        <img src="gallery5.jpg" alt="Carved jadeite bangle in Singapore">
-      </div>
-      <div class="gallery-item">
-        <img src="gallery6.jpg" alt="Lavender jadeite at Ixchell Jewellery Singapore">
-      </div>
-    </div>
-  </div>
-
-  <div class="card center quote-block">
-    <h2>“I didn’t expect jadeite to look like this in person.”</h2>
-    <p>
-      That is the reaction we hear most often.
-    </p>
-    <p>
-      Jadeite is rarely understood fully through a screen.
-    </p>
-  </div>
-
-  <div class="card dark-card">
-    <div class="mini-title">Private Viewing</div>
-    <h2>By appointment, with intention.</h2>
-    <p>
-      Kindly DM at least one day in advance so we can prepare your visit with care.
-    </p>
-    <p>
-      All appointments are arranged exclusively via Instagram DM, ensuring a secure and verified point of contact.
-    </p>
-    <p>
-      This allows us to maintain clarity, privacy and consistency for every client interaction.
-    </p>
-    <p>
-      All transactions are conducted in-store, allowing each piece to be viewed and selected with confidence.
-    </p>
-    <p>
-      We accept Visa, MasterCard and American Express for both local and international clients.
-    </p>
-  </div>
-
-  <div id="learn" class="card left">
-    <div class="mini-title">Learn Before You Choose</div>
-    <h2>Built for understanding, not only selection.</h2>
-
-    <div class="education-grid">
-      <div class="education-item">
-        <strong>What is Type A jadeite?</strong>
-        A clear explanation of natural jadeite and why it matters.
-
-        <div style="margin-top:10px;">
-          <a href="type-a-jadeite.html" class="button secondary-dark">
-            Read Guide
-          </a>
-        </div>
-      </div>
-
-      <div class="education-item">
-        <strong>How to choose jadeite properly</strong>
-        Understanding translucency, structure and colour.
-      </div>
-
-      <div class="education-item">
-        <strong>Why private viewing matters</strong>
-        Seeing jadeite properly before choosing it.
-      </div>
-
-      <div class="education-item">
-        <strong>Collector pieces and rare finds</strong>
-        Curated selection and future releases.
-      </div>
-    </div>
-  </div>
-
-  <div id="visit" class="card center">
-    <h2>Visit Us</h2>
-    <div class="visit-grid">
-      <div class="visit-tile">
-        <strong>Location</strong>
-        The Adelphi, Singapore<br>
-        Near City Hall MRT
-      </div>
-      <div class="visit-tile">
-        <strong>Hours</strong>
-        Mon–Sat, 1pm–6pm
-      </div>
-    </div>
-  </div>
-
-  <div id="faq" class="card left faq">
-    <h2>Your Visit</h2>
-
-    <h3>Do I need an appointment?</h3>
-    <p>
-      Walk-ins are welcome if you happen to be at The Adelphi.
-    </p>
-    <p>
-      However, private viewing sessions are prioritised for scheduled appointments.
-    </p>
-    <p>
-      To ensure a proper and uninterrupted experience, we recommend arranging your visit at least one day in advance via Instagram DM.
-    </p>
-
-    <h3>Why are appointments arranged through Instagram DM?</h3>
-    <p>
-      All appointments are arranged exclusively via Instagram DM, ensuring a secure and verified point of contact.
-    </p>
-
-    <h3>How are payments handled?</h3>
-    <p>
-      All transactions are conducted in-store. We accept Visa, MasterCard and American Express for both local and international clients.
-    </p>
-
-    <h3>What languages can be used in the shop?</h3>
-    <p>
-      We assist clients in English, Mandarin, Bahasa Malaysia and Bahasa Indonesia.
-    </p>
-    <p>
-      Common Chinese dialects can also be accommodated where possible, allowing for a more natural and comfortable viewing experience.
-    </p>
-    <p>
-      Language, for us, is not simply a means of communication.
-    </p>
-    <p>
-      It allows us to understand each client more precisely, so that every piece is chosen with clarity, rather than assumption.
-    </p>
-
-    <h3>Do you evaluate jade not bought from your shop?</h3>
-    <p>
-      No. Out of respect for our work and clients, we only advise on our own collection.
-    </p>
-  </div>
-
-  <div class="card center">
-    <p class="closing">
-      Some come to look.<br>
-      Some come to understand.<br><br>
-      The difference is everything.
-    </p>
-  </div>
-
-</div>
-
-<a href="https://instagram.com/ixchelljewellery" class="floating" target="_blank" rel="noopener">
-  Book via Instagram
-</a>
-
-</body>
-</html>
