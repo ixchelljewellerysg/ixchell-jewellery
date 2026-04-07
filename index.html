@@ -3,22 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ixchell Jewellery | Jadeite Singapore</title>
-  <meta name="description" content="Ixchell Jewellery is a private jadeite boutique in Singapore specialising in natural Type A Burmese jadeite bangles, rings, pendants and collector pieces." />
+
+  <title>Ixchell Jewellery Singapore | Private Jadeite Boutique Near City Hall MRT</title>
+  <meta name="description" content="Ixchell Jewellery is a private jadeite boutique in Singapore near City Hall MRT, specialising in natural Type A Burmese jadeite bangles, rings, pendants and collector pieces. Private viewing by appointment." />
+  <meta name="keywords" content="Ixchell Jewellery Singapore, jadeite Singapore, jade Singapore, Type A Burmese jadeite, jadeite bangles Singapore, jadeite boutique Singapore, jewellery near City Hall MRT, private jewellery viewing Singapore" />
+
+  <meta property="og:title" content="Ixchell Jewellery Singapore | Private Jadeite Boutique" />
+  <meta property="og:description" content="Private jadeite viewing in Singapore near City Hall MRT. Natural Type A Burmese jadeite bangles, rings, pendants and collector pieces." />
+  <meta property="og:image" content="hero.jpg" />
+  <meta property="og:type" content="website" />
 
   <style>
     :root {
-      --bg: #f6f8fb;
-      --card: rgba(255,255,255,0.96);
+      --bg: #f5f7fb;
+      --card: rgba(255,255,255,0.97);
       --text: #111827;
       --muted: #5b6472;
       --brand: #183153;
       --brand-dark: #10233d;
-      --line: rgba(17, 24, 39, 0.08);
-      --shadow: 0 12px 28px rgba(0,0,0,0.08);
-      --radius: 20px;
+      --brand-soft: #eef3f8;
+      --line: rgba(17,24,39,0.08);
+      --shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+      --radius: 22px;
+      --max: 980px;
       --white: #ffffff;
-      --max: 920px;
     }
 
     * {
@@ -32,8 +40,8 @@
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at top left, #ffffff 0%, #f6f8fb 42%, #eef3f8 100%);
       color: var(--text);
-      background: var(--bg);
     }
 
     img {
@@ -45,6 +53,46 @@
       color: inherit;
     }
 
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: rgba(245,247,251,0.84);
+      border-bottom: 1px solid rgba(17,24,39,0.06);
+    }
+
+    .topbar-inner {
+      max-width: var(--max);
+      margin: auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .topbar-brand {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand);
+    }
+
+    .topbar-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .topbar-link {
+      font-size: 13px;
+      text-decoration: none;
+      color: #314155;
+      font-weight: 600;
+    }
+
     .hero {
       min-height: 100vh;
       display: flex;
@@ -54,28 +102,41 @@
       position: relative;
       color: white;
       background:
-        linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.62)),
+        linear-gradient(rgba(0,0,0,0.44), rgba(0,0,0,0.66)),
         url('./hero.jpg') center/cover no-repeat;
     }
 
     .hero-content {
-      max-width: 760px;
-      padding: 24px 18px;
+      max-width: 780px;
+      padding: 30px 18px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.24);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     .hero h1 {
       margin: 0;
-      font-size: clamp(40px, 8vw, 72px);
-      line-height: 0.98;
-      letter-spacing: -0.03em;
+      font-size: clamp(42px, 8vw, 78px);
+      line-height: 0.96;
+      letter-spacing: -0.04em;
     }
 
     .hero p {
       margin: 14px auto 0;
       font-size: clamp(18px, 3vw, 22px);
-      line-height: 1.45;
+      line-height: 1.5;
       color: rgba(255,255,255,0.92);
-      max-width: 640px;
+      max-width: 700px;
     }
 
     .hero-actions {
@@ -107,17 +168,23 @@
       box-shadow: 0 10px 26px rgba(0,0,0,0.16);
     }
 
+    .button-secondary {
+      background: rgba(255,255,255,0.12);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.24);
+    }
+
     .page {
       max-width: var(--max);
       margin: auto;
-      padding: 20px 20px 190px;
+      padding: 20px 16px 190px;
     }
 
     .card {
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 22px 18px;
+      padding: 24px 20px;
       margin-top: 14px;
       box-shadow: var(--shadow);
     }
@@ -130,6 +197,11 @@
       text-align: left;
     }
 
+    .logo {
+      width: 126px;
+      margin: 0 auto 16px;
+    }
+
     .mini-title {
       font-size: 12px;
       font-weight: 700;
@@ -139,14 +211,9 @@
       margin-bottom: 8px;
     }
 
-    .logo {
-      width: 120px;
-      margin: 0 auto 16px;
-    }
-
     h2 {
       margin: 0 0 10px;
-      font-size: clamp(28px, 5vw, 40px);
+      font-size: clamp(30px, 5vw, 42px);
       line-height: 1.08;
       letter-spacing: -0.02em;
     }
@@ -160,21 +227,27 @@
     p {
       margin: 0 0 12px;
       font-size: 16px;
-      line-height: 1.65;
+      line-height: 1.7;
       color: var(--muted);
     }
 
     .statement {
       font-size: 20px;
-      line-height: 1.55;
+      line-height: 1.6;
       color: #111827;
-      max-width: 760px;
+      max-width: 780px;
       margin: 0 auto;
     }
 
     .lead {
       font-size: 17px;
       color: #1f2937;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 14px;
     }
 
     .pill-row {
@@ -188,16 +261,10 @@
       padding: 9px 13px;
       border-radius: 999px;
       background: #f4f7fb;
-      border: 1px solid rgba(24, 49, 83, 0.10);
+      border: 1px solid rgba(24,49,83,0.10);
       color: var(--brand);
       font-size: 14px;
       font-weight: 700;
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 14px;
     }
 
     .trust-list {
@@ -214,10 +281,6 @@
       color: var(--brand-dark);
       font-weight: 700;
       line-height: 1.5;
-    }
-
-    .experience {
-      text-align: center;
     }
 
     .gallery {
@@ -252,6 +315,10 @@
       grid-column: span 2;
     }
 
+    .quote-block {
+      background: linear-gradient(180deg, #ffffff, #f8fbff);
+    }
+
     .luxury-break {
       margin-top: 14px;
       padding: 54px 20px;
@@ -281,7 +348,7 @@
     }
 
     .policy .mini-title {
-      opacity: 0.8;
+      opacity: 0.82;
     }
 
     .visit-grid {
@@ -302,6 +369,27 @@
       display: block;
       color: #111827;
       margin-bottom: 4px;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .education-item {
+      background: var(--brand-soft);
+      border: 1px solid rgba(24,49,83,0.08);
+      border-radius: 14px;
+      padding: 14px;
+      text-align: left;
+    }
+
+    .education-item strong {
+      display: block;
+      color: #111827;
+      margin-bottom: 6px;
     }
 
     .faq h3 {
@@ -350,7 +438,8 @@
 
     @media (max-width: 760px) {
       .split,
-      .visit-grid {
+      .visit-grid,
+      .education-grid {
         grid-template-columns: 1fr;
       }
 
@@ -379,16 +468,50 @@
       }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"JewelryStore",
+    "name":"Ixchell Jewellery",
+    "description":"Private jadeite boutique in Singapore specialising in natural Type A Burmese jadeite bangles, rings, pendants and collector pieces.",
+    "image":"hero.jpg",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"1 Coleman St, #02-33 The Adelphi",
+      "addressLocality":"Singapore",
+      "postalCode":"179803",
+      "addressCountry":"SG"
+    },
+    "url":"https://ixchelljewellery.com",
+    "sameAs":["https://instagram.com/ixchelljewellery"]
+  }
+  </script>
 </head>
 <body>
 
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-brand">Ixchell Jewellery Singapore</div>
+      <div class="topbar-links">
+        <a class="topbar-link" href="#collection">Collection</a>
+        <a class="topbar-link" href="#visit">Visit</a>
+        <a class="topbar-link" href="#faq">FAQ</a>
+      </div>
+    </div>
+  </div>
+
   <section class="hero">
     <div class="hero-content">
+      <div class="hero-tag">Private Jadeite Boutique</div>
       <h1>Not all jade is jadeite.</h1>
       <p>Seen everywhere. Understood by few. Chosen by those who know.</p>
       <div class="hero-actions">
         <a href="https://instagram.com/ixchelljewellery" class="button button-primary" target="_blank" rel="noopener">
           Book Private Viewing
+        </a>
+        <a href="https://www.google.com/maps/place/1+Coleman+St,+%2302-33+Ixchell+Jewellery,+The+Adelphi,+Singapore+179803/" class="button button-secondary" target="_blank" rel="noopener">
+          Get Directions
         </a>
       </div>
     </div>
@@ -399,38 +522,28 @@
     <section class="card center">
       <img src="logo.png" alt="Ixchell Jewellery logo" class="logo">
       <p class="statement">
-        Ixchell Jewellery is where jadeite is properly understood —
-        not rushed, not mass presented, but chosen with clarity and peerless beauty.
+        Ixchell Jewellery Singapore is a private jadeite boutique near City Hall MRT —
+        where jadeite is properly understood, not rushed, not mass presented, but chosen with clarity and peerless beauty.
       </p>
     </section>
 
     <section class="card left">
       <h2>This is where people finally understand jadeite.</h2>
-      <p class="lead">
-        Most people only see jadeite through screens.
-      </p>
-      <p class="lead">
-        Here, you see it in real life — colour, texture, weight, presence.
-      </p>
-      <p class="lead">
-        That is when everything changes.
-      </p>
+      <p class="lead">Most people only see jadeite through screens.</p>
+      <p class="lead">Here, you see it in real life — colour, texture, weight, presence.</p>
+      <p class="lead">That is when everything changes.</p>
     </section>
 
     <section class="split">
       <div class="card left">
         <div class="mini-title">Why Ixchell</div>
         <h2>For those who refuse to choose jade blindly.</h2>
-        <p class="lead">
-          Jadeite is not just about colour — it is about structure, translucency and life.
-        </p>
-        <p class="lead">
-          Most never see the difference. Here, you do.
-        </p>
+        <p class="lead">Jadeite is not just about colour — it is about structure, translucency and life.</p>
+        <p class="lead">Most never see the difference. Here, you do.</p>
         <div class="pill-row">
           <span class="pill">Type A Burmese Jadeite</span>
           <span class="pill">Private Viewing</span>
-          <span class="pill">Collector Pieces</span>
+          <span class="pill">Near City Hall MRT</span>
           <span class="pill">Singapore Boutique</span>
         </div>
       </div>
@@ -439,14 +552,14 @@
         <div class="mini-title">Trust Signals</div>
         <div class="trust-list">
           <div class="trust-item">Natural Type A Burmese jadeite only</div>
-          <div class="trust-item">Trusted by collectors and first-time buyers</div>
+          <div class="trust-item">Private boutique viewing in Singapore</div>
           <div class="trust-item">Certification can be arranged upon request</div>
-          <div class="trust-item">Education before purchase</div>
+          <div class="trust-item">Trusted by collectors and first-time buyers</div>
         </div>
       </div>
     </section>
 
-    <section class="card experience center">
+    <section id="collection" class="card center">
       <h2>More than a jewellery store.</h2>
       <p>
         A private space where jadeite is seen, touched, and understood.
@@ -457,56 +570,36 @@
     <section class="card">
       <div class="gallery">
         <div class="gallery-item">
-          <img src="gallery1.jpg" alt="Jadeite bangles at Ixchell Jewellery Singapore">
-          <div class="gallery-caption">
-            A full spectrum of jadeite bangles — each with its own character, colour and presence.
-          </div>
+          <img src="gallery1.jpg" alt="Type A Burmese jadeite bangles in Singapore">
+          <div class="gallery-caption">A full spectrum of jadeite bangles — each with its own character, colour and presence.</div>
         </div>
-
         <div class="gallery-item">
-          <img src="gallery2.jpg" alt="Rare jadeite carvings at Ixchell Jewellery Singapore">
-          <div class="gallery-caption">
-            Collector-grade jadeite carvings, shaped by tradition and time.
-          </div>
+          <img src="gallery2.jpg" alt="Collector jadeite carvings at Ixchell Jewellery Singapore">
+          <div class="gallery-caption">Collector-grade jadeite carvings, shaped by tradition and time.</div>
         </div>
-
         <div class="gallery-item">
-          <img src="gallery3.jpg" alt="Jadeite jewellery collection at Ixchell Jewellery Singapore">
-          <div class="gallery-caption">
-            A private viewing experience for those who want to see jadeite properly before choosing.
-          </div>
+          <img src="gallery3.jpg" alt="Private jadeite viewing at Ixchell Jewellery near City Hall MRT">
+          <div class="gallery-caption">A private viewing experience for those who want to see jadeite properly before choosing.</div>
         </div>
-
         <div class="gallery-item">
-          <img src="gallery4.jpg" alt="Jadeite piece at Ixchell Jewellery Singapore">
-          <div class="gallery-caption">
-            Refined jadeite pieces for everyday elegance and quiet presence.
-          </div>
+          <img src="gallery4.jpg" alt="Fine jadeite jewellery in Singapore">
+          <div class="gallery-caption">Refined jadeite pieces for everyday elegance and quiet presence.</div>
         </div>
-
         <div class="gallery-item">
-          <img src="gallery5.jpg" alt="Carved jadeite bangle at Ixchell Jewellery Singapore">
-          <div class="gallery-caption">
-            Carved jadeite with texture, detail and collector character.
-          </div>
+          <img src="gallery5.jpg" alt="Carved jadeite bangle in Singapore">
+          <div class="gallery-caption">Carved jadeite with texture, detail and collector character.</div>
         </div>
-
         <div class="gallery-item">
-          <img src="gallery6.jpg" alt="Lavender jadeite piece at Ixchell Jewellery Singapore">
-          <div class="gallery-caption">
-            Soft lavender tones, calm beauty, and one-of-a-kind appeal.
-          </div>
+          <img src="gallery6.jpg" alt="Lavender jadeite at Ixchell Jewellery Singapore">
+          <div class="gallery-caption">Soft lavender tones, calm beauty, and one-of-a-kind appeal.</div>
         </div>
       </div>
     </section>
 
-    <section class="card center">
+    <section class="card center quote-block">
       <h2>“I didn’t expect jadeite to look like this in person.”</h2>
       <p>That is what we hear most.</p>
-      <p>
-        Photos do not show translucency.<br>
-        Lighting does not show depth.
-      </p>
+      <p>Photos do not show translucency.<br>Lighting does not show depth.</p>
       <p>Only real viewing does.</p>
     </section>
 
@@ -519,23 +612,21 @@
     <section class="card policy">
       <div class="mini-title">Private Viewing Only</div>
       <h2>By appointment, with intention.</h2>
-      <p>
-        Kindly DM at least one day in advance.
-      </p>
-      <p>
-        Each session is prepared specifically for you — not a walk-in display.
-      </p>
-      <p>
-        We prepare each viewing based on your preference, size and budget —
-        so your visit is focused, private and meaningful.
-      </p>
+      <p>Kindly DM at least one day in advance.</p>
+      <p>All appointments are arranged exclusively via Instagram DM, ensuring a secure and verified point of contact.</p>
+      <p>This allows us to maintain clarity, privacy and consistency for every client interaction.</p>
+      <p>Each session is prepared specifically for you — not a walk-in display.</p>
+      <p>We prepare each viewing based on your preference, size and budget — so your visit is focused, private and meaningful.</p>
       <p><strong>Limited viewing slots each day.</strong></p>
+      <p>All transactions are conducted in-store, allowing each piece to be viewed and selected with confidence.</p>
+      <p>We accept Visa, MasterCard and American Express, for both local and international clients.</p>
+      <p>We do not accept deposits or online payments. All selections are made and confirmed in person.</p>
       <a href="https://instagram.com/ixchelljewellery" class="button button-primary" target="_blank" rel="noopener">
         Book via Instagram
       </a>
     </section>
 
-    <section class="card center">
+    <section id="visit" class="card center">
       <h2>Visit Us</h2>
       <div class="visit-grid">
         <div class="visit-tile">
@@ -547,9 +638,37 @@
           Mon–Sat, 1pm–6pm
         </div>
       </div>
+      <div class="hero-actions" style="margin-top:18px;">
+        <a href="https://www.google.com/maps/place/1+Coleman+St,+%2302-33+Ixchell+Jewellery,+The+Adelphi,+Singapore+179803/" class="button button-primary" target="_blank" rel="noopener">
+          Open in Google Maps
+        </a>
+      </div>
     </section>
 
-    <section class="card faq left">
+    <section class="card left">
+      <div class="mini-title">Educational Focus</div>
+      <h2>Built for future educational and promotional posts.</h2>
+      <div class="education-grid">
+        <div class="education-item">
+          <strong>What is Type A jadeite?</strong>
+          A natural place for future educational writing on untreated jadeite.
+        </div>
+        <div class="education-item">
+          <strong>How to choose jadeite properly</strong>
+          Ideal for future posts on translucency, structure, colour and texture.
+        </div>
+        <div class="education-item">
+          <strong>Why private viewing matters</strong>
+          Supports future authority content and premium client education.
+        </div>
+        <div class="education-item">
+          <strong>Collector pieces and rare finds</strong>
+          A stable base for launches, themed promotions and curated write-ups.
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="card faq left">
       <h2>Your Visit</h2>
 
       <h3>Do you provide certification?</h3>
@@ -559,10 +678,22 @@
       <p>No. We focus on private in-store viewing.</p>
 
       <h3>Do I need an appointment?</h3>
-      <p>Yes. DM at least one day in advance.</p>
+      <p>Yes. Kindly DM at least one day in advance.</p>
+
+      <h3>Why do you arrange appointments through Instagram DM?</h3>
+      <p>All appointments are arranged exclusively via Instagram DM, ensuring a secure and verified point of contact.</p>
+
+      <h3>How are payments handled?</h3>
+      <p>All transactions are conducted in-store. We accept Visa, MasterCard and American Express for both local and international clients.</p>
 
       <h3>Do you evaluate jade not bought from your shop?</h3>
-      <p>We only advise on pieces from our collection.</p>
+      <p>No. Out of respect for our work and clients, we only advise on our collection.</p>
+
+      <h3>Is Ixchell Jewellery near City Hall MRT?</h3>
+      <p>Yes. Ixchell Jewellery is located at The Adelphi, near City Hall MRT in Singapore.</p>
+
+      <h3>What does Ixchell Jewellery specialise in?</h3>
+      <p>Ixchell Jewellery specialises in natural Type A Burmese jadeite bangles, rings, pendants and collector pieces.</p>
     </section>
 
     <section class="card center">
@@ -572,8 +703,8 @@
         The difference is everything.
       </p>
       <p class="small-note">
-        Ixchell Jewellery Singapore | jadeite boutique near City Hall MRT |
-        Type A Burmese jadeite | jadeite bangles Singapore
+        Ixchell Jewellery Singapore | private jadeite boutique near City Hall MRT |
+        Type A Burmese jadeite | jadeite bangles Singapore | jewellery shop in Singapore
       </p>
     </section>
 
