@@ -5,19 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Ixchell Jewellery Singapore | Private Jadeite Boutique Near City Hall MRT</title>
-
 <meta name="description" content="Ixchell Jewellery is a private jadeite boutique in Singapore near City Hall MRT, specialising in natural Type A Burmese jadeite." />
 
 <style>
 body{
   margin:0;
-  font-family:-apple-system,Segoe UI,Arial;
+  font-family:-apple-system,Segoe UI,Arial,sans-serif;
   background:#f5f7fb;
   color:#111;
 }
 
+*{
+  box-sizing:border-box;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
 .hero{
-  height:100vh;
+  min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -26,15 +34,24 @@ body{
   background:
     linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.65)),
     url('./hero.jpg') center/cover no-repeat;
+  padding:20px;
+}
+
+.hero-inner{
+  max-width:760px;
 }
 
 .hero h1{
   font-size:42px;
+  line-height:1.05;
   margin:0;
 }
 
 .hero p{
   font-size:18px;
+  line-height:1.5;
+  margin:12px auto 0;
+  max-width:680px;
 }
 
 .button{
@@ -59,7 +76,7 @@ body{
 .page{
   max-width:900px;
   margin:auto;
-  padding:20px 16px 160px;
+  padding:20px 16px 170px;
 }
 
 .card{
@@ -67,6 +84,29 @@ body{
   padding:20px;
   border-radius:18px;
   margin-top:14px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.06);
+}
+
+.card h2{
+  margin:0 0 10px;
+  font-size:28px;
+  line-height:1.15;
+}
+
+.card p{
+  margin:0 0 12px;
+  line-height:1.65;
+  color:#444;
+}
+
+.dark-card{
+  background:#183153;
+  color:white;
+}
+
+.dark-card p,
+.dark-card h2{
+  color:white;
 }
 
 .gallery{
@@ -75,8 +115,20 @@ body{
   gap:10px;
 }
 
-.gallery img{
-  border-radius:12px;
+.gallery-item{
+  background:white;
+  border-radius:14px;
+  overflow:hidden;
+}
+
+.gallery-item.wide{
+  grid-column:span 2;
+}
+
+.gallery-item img{
+  width:100%;
+  aspect-ratio:1 / 1;
+  object-fit:cover;
 }
 
 .education-grid{
@@ -91,6 +143,11 @@ body{
   border-radius:12px;
 }
 
+.education-item strong{
+  display:block;
+  margin-bottom:6px;
+}
+
 .floating{
   position:fixed;
   bottom:20px;
@@ -103,18 +160,32 @@ body{
   border-radius:999px;
   text-decoration:none;
   font-weight:bold;
+  box-shadow:0 10px 24px rgba(0,0,0,0.18);
+}
+
+@media (max-width:640px){
+  .hero h1{
+    font-size:38px;
+  }
+
+  .gallery{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .education-grid{
+    grid-template-columns:1fr;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <section class="hero">
-  <div>
+  <div class="hero-inner">
     <h1>Not all jade is jadeite.</h1>
     <p>Seen everywhere. Understood by few. Chosen by those who know.</p>
-    <a href="https://instagram.com/ixchelljewellery" class="button primary">
+    <a href="https://instagram.com/ixchelljewellery" class="button primary" target="_blank" rel="noopener">
       Book Private Viewing
     </a>
   </div>
@@ -122,120 +193,123 @@ body{
 
 <div class="page">
 
-<div class="card">
-  <h2>Ixchell Jewellery Singapore</h2>
-  <p>
-    A private jadeite boutique near City Hall MRT specialising in natural Type A Burmese jadeite.
-  </p>
-</div>
-
-<div class="card">
-  <h2>This is where people finally understand jadeite.</h2>
-  <p>
-    Most people only see jadeite through photos.
-    In reality, jadeite reveals its true colour, structure and depth only in person.
-  </p>
-</div>
-
-<div class="card">
-  <h2>For those who refuse to choose blindly.</h2>
-  <p>
-    Jadeite is not judged by colour alone, but by structure, translucency and life within the stone.
-  </p>
-</div>
-
-<div class="card">
-  <h2>More than a jewellery store.</h2>
-  <p>
-    Hundreds of jadeite bangles, rare carvings and one-of-a-kind pieces presented in a private environment.
-  </p>
-</div>
-
-<div class="card">
-  <div class="gallery">
-    <img src="gallery1.jpg">
-    <img src="gallery2.jpg">
-    <img src="gallery3.jpg">
-    <img src="gallery4.jpg">
-    <img src="gallery5.jpg">
-    <img src="gallery6.jpg">
+  <div class="card">
+    <h2>Ixchell Jewellery Singapore</h2>
+    <p>
+      A private jadeite boutique near City Hall MRT specialising in natural Type A Burmese jadeite.
+    </p>
   </div>
-</div>
 
-<div class="card">
-  <h2>“I didn’t expect jadeite to look like this in person.”</h2>
-  <p>
-    That is the most common reaction. Jadeite is not meant to be understood through a screen.
-  </p>
-</div>
+  <div class="card">
+    <h2>This is where people finally understand jadeite.</h2>
+    <p>
+      Most people only see jadeite through photos.
+      In reality, jadeite reveals its true colour, structure and depth only in person.
+    </p>
+  </div>
 
-<div class="card" style="background:#183153;color:white;">
-  <h2>Private Viewing Only</h2>
-  <p>
-    Kindly DM at least one day in advance.
-  </p>
-  <p>
-    All appointments are arranged exclusively via Instagram DM, ensuring a secure and verified point of contact.
-  </p>
-  <p>
-    All transactions are conducted in-store. We accept Visa, MasterCard and American Express.
-  </p>
-</div>
+  <div class="card">
+    <h2>For those who refuse to choose blindly.</h2>
+    <p>
+      Jadeite is not judged by colour alone, but by structure, translucency and life within the stone.
+    </p>
+  </div>
 
-<!-- EDUCATIONAL SECTION (UPDATED) -->
-<div class="card">
-  <h2>Learn Before You Choose</h2>
+  <div class="card">
+    <h2>More than a jewellery store.</h2>
+    <p>
+      Hundreds of jadeite bangles, rare carvings and one-of-a-kind pieces presented in a private environment.
+    </p>
+  </div>
 
-  <div class="education-grid">
-
-    <div class="education-item">
-      <strong>What is Type A jadeite?</strong>
-      A clear explanation of natural jadeite and why it matters.
-
-      <div style="margin-top:10px;">
-        <a href="type-a-jadeite.html" class="button secondary">
-          Read Guide
-        </a>
+  <div class="card">
+    <div class="gallery">
+      <div class="gallery-item wide">
+        <img src="gallery1.jpg" alt="Jadeite bangles at Ixchell Jewellery Singapore">
+      </div>
+      <div class="gallery-item">
+        <img src="gallery2.jpg" alt="Rare jadeite carvings at Ixchell Jewellery Singapore">
+      </div>
+      <div class="gallery-item">
+        <img src="gallery3.jpg" alt="Jadeite collection at Ixchell Jewellery Singapore">
+      </div>
+      <div class="gallery-item wide">
+        <img src="gallery4.jpg" alt="Jadeite jewellery display in Singapore">
+      </div>
+      <div class="gallery-item">
+        <img src="gallery5.jpg" alt="Carved jadeite bangle in Singapore">
+      </div>
+      <div class="gallery-item">
+        <img src="gallery6.jpg" alt="Lavender jadeite at Ixchell Jewellery Singapore">
       </div>
     </div>
-
-    <div class="education-item">
-      <strong>How to choose jadeite properly</strong>
-      Understanding translucency, structure and colour.
-    </div>
-
-    <div class="education-item">
-      <strong>Why private viewing matters</strong>
-      See jadeite properly before choosing.
-    </div>
-
-    <div class="education-item">
-      <strong>Collector pieces and rare finds</strong>
-      Curated selection and future releases.
-    </div>
-
   </div>
+
+  <div class="card">
+    <h2>“I didn’t expect jadeite to look like this in person.”</h2>
+    <p>
+      That is the most common reaction. Jadeite is not meant to be understood through a screen.
+    </p>
+  </div>
+
+  <div class="card dark-card">
+    <h2>Private Viewing Only</h2>
+    <p>Kindly DM at least one day in advance.</p>
+    <p>All appointments are arranged exclusively via Instagram DM, ensuring a secure and verified point of contact.</p>
+    <p>All transactions are conducted in-store. We accept Visa, MasterCard and American Express.</p>
+  </div>
+
+  <div class="card">
+    <h2>Learn Before You Choose</h2>
+
+    <div class="education-grid">
+      <div class="education-item">
+        <strong>What is Type A jadeite?</strong>
+        A clear explanation of natural jadeite and why it matters.
+
+        <div style="margin-top:10px;">
+          <a href="type-a-jadeite.html" class="button secondary">
+            Read Guide
+          </a>
+        </div>
+      </div>
+
+      <div class="education-item">
+        <strong>How to choose jadeite properly</strong>
+        Understanding translucency, structure and colour.
+      </div>
+
+      <div class="education-item">
+        <strong>Why private viewing matters</strong>
+        See jadeite properly before choosing.
+      </div>
+
+      <div class="education-item">
+        <strong>Collector pieces and rare finds</strong>
+        Curated selection and future releases.
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Visit Us</h2>
+    <p>
+      The Adelphi, Singapore<br>
+      Near City Hall MRT
+    </p>
+  </div>
+
+  <div class="card">
+    <p style="text-align:center;">
+      Some come to look.<br>
+      Some come to understand.<br><br>
+      The difference is everything.
+    </p>
+  </div>
+
 </div>
 
-<div class="card">
-  <h2>Visit Us</h2>
-  <p>
-    The Adelphi, Singapore<br>
-    Near City Hall MRT
-  </p>
-</div>
-
-<div class="card">
-  <p style="text-align:center;">
-    Some come to look.<br>
-    Some come to understand.<br><br>
-    The difference is everything.
-  </p>
-</div>
-
-</div>
-
-<a href="https://instagram.com/ixchelljewellery" class="floating">
+<a href="https://instagram.com/ixchelljewellery" class="floating" target="_blank" rel="noopener">
   Book via Instagram
 </a>
 
