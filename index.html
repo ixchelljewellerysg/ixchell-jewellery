@@ -58,25 +58,27 @@
     .topbar-inner{
       max-width:var(--max);
       margin:auto;
-      padding:14px 18px;
+      padding:12px 16px;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      gap:14px;
+      gap:12px;
+      flex-wrap:wrap;
     }
 
     .topbar-brand{
       font-size:12px;
       font-weight:700;
-      letter-spacing:0.12em;
+      letter-spacing:0.10em;
       text-transform:uppercase;
       color:var(--brand);
-      white-space:nowrap;
+      line-height:1.4;
+      max-width:240px;
     }
 
     .topbar-links{
       display:flex;
-      gap:14px;
+      gap:12px;
       flex-wrap:wrap;
       justify-content:flex-end;
     }
@@ -134,14 +136,8 @@
     }
 
     @keyframes heroFade{
-      from{
-        opacity:0;
-        transform:translateY(18px);
-      }
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
+      from{ opacity:0; transform:translateY(18px); }
+      to{ opacity:1; transform:translateY(0); }
     }
 
     .logo-hero{
@@ -610,6 +606,21 @@
     }
 
     @media (max-width: 760px){
+      .topbar-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .topbar-brand{
+        max-width:none;
+      }
+
+      .topbar-links{
+        width:100%;
+        justify-content:flex-start;
+        gap:10px 14px;
+      }
+
       .two-col,
       .spotlight,
       .gift-grid,
@@ -627,6 +638,10 @@
       .page{
         padding:22px 14px 190px;
       }
+
+      .card{
+        padding:24px 18px;
+      }
     }
   </style>
 </head>
@@ -637,7 +652,6 @@
       <div class="topbar-brand">Ixchell Jewellery Singapore</div>
       <div class="topbar-links">
         <a class="topbar-link" href="#spotlight">Spotlight</a>
-        <a class="topbar-link" href="#gifting">Gifting</a>
         <a class="topbar-link" href="#collection">Collection</a>
         <a class="topbar-link" href="#visit">Visit</a>
         <a class="topbar-link" href="#faq">FAQ</a>
@@ -772,7 +786,7 @@
       </p>
     </div>
 
-    <div id="gifting" class="card left reveal">
+    <div class="card left reveal">
       <div class="mini-title">Gift & Souvenir Perspective</div>
       <h2>Why this piece is often chosen as a gift from Singapore.</h2>
       <p class="lead">
@@ -1002,13 +1016,12 @@
       const x = (window.innerWidth / 2 - e.clientX) / 55;
       const y = (window.innerHeight / 2 - e.clientY) / 65;
 
-      if (heroInner) {
+      if (heroInner && window.innerWidth > 760) {
         heroInner.style.transform = `translate3d(${(-x/3)}px, ${(-y/3)}px, 0)`;
       }
 
-      if (spotlightImage) {
-        spotlightImage.style.transform =
-          `translate3d(${(-x/2)}px, ${(-y/2)}px, 0) scale(1.02)`;
+      if (spotlightImage && window.innerWidth > 760) {
+        spotlightImage.style.transform = `translate3d(${(-x/2)}px, ${(-y/2)}px, 0) scale(1.02)`;
       }
     });
 
