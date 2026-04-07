@@ -9,7 +9,7 @@
   <style>
     :root {
       --bg: #f5f7fa;
-      --card: rgba(255,255,255,0.84);
+      --card: rgba(255,255,255,0.88);
       --text: #111827;
       --muted: #5b6472;
       --line: rgba(17, 24, 39, 0.08);
@@ -54,8 +54,9 @@
       text-align: center;
       overflow: hidden;
       background:
-        linear-gradient(rgba(10, 16, 25, 0.28), rgba(10, 16, 25, 0.42)),
+        linear-gradient(rgba(10, 16, 25, 0.35), rgba(10, 16, 25, 0.55)),
         url("./hero.jpg") center/cover no-repeat;
+      background-attachment: fixed;
     }
 
     .hero::before {
@@ -161,6 +162,11 @@
       box-shadow: var(--shadow);
       padding: 28px 22px;
       margin-top: 18px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
     }
 
     .center {
@@ -179,6 +185,7 @@
       text-transform: uppercase;
       color: var(--brand);
       margin-bottom: 12px;
+      text-align: center;
     }
 
     h2 {
@@ -186,12 +193,14 @@
       font-size: clamp(28px, 4vw, 42px);
       line-height: 1.05;
       letter-spacing: -0.03em;
+      text-align: center;
     }
 
     h3 {
       margin: 22px 0 8px;
       font-size: 20px;
       line-height: 1.3;
+      color: #111827;
     }
 
     p {
@@ -212,6 +221,7 @@
       color: #111827;
       max-width: 760px;
       margin: 0 auto;
+      text-align: center;
     }
 
     .split {
@@ -260,12 +270,13 @@
       border: 1px solid var(--line);
       box-shadow: var(--shadow);
       text-align: center;
+      margin-top: 18px;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
       margin-top: 20px;
     }
 
@@ -278,7 +289,16 @@
       box-shadow: 0 10px 24px rgba(17,24,39,0.08);
     }
 
+    .gallery-item:nth-child(1) {
+      grid-column: span 2;
+    }
+
+    .gallery-item:nth-child(3) {
+      grid-column: span 2;
+    }
+
     .gallery-item img {
+      width: 100%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
       transition: transform 0.4s ease;
@@ -296,12 +316,53 @@
       background: rgba(255,255,255,0.92);
     }
 
+    .luxury-break {
+      margin: 40px 0 18px;
+      padding: 80px 20px;
+      border-radius: 28px;
+      background:
+        linear-gradient(rgba(10,16,25,0.7), rgba(10,16,25,0.85)),
+        url("./gallery2.jpg") center/cover no-repeat;
+      color: white;
+      text-align: center;
+      box-shadow: 0 18px 38px rgba(16, 35, 61, 0.22);
+    }
+
+    .luxury-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .luxury-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 13px;
+      opacity: 0.7;
+      margin-bottom: 12px;
+      color: rgba(255,255,255,0.75);
+    }
+
+    .luxury-break h2 {
+      font-size: clamp(28px, 5vw, 48px);
+      line-height: 1.1;
+      margin-bottom: 14px;
+      color: white;
+    }
+
+    .luxury-break p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.9);
+      text-align: center;
+    }
+
     .policy-box {
       background: linear-gradient(180deg, #183153, #10233d);
       color: var(--white);
       border-radius: 28px;
       padding: 30px 24px;
       box-shadow: 0 18px 38px rgba(16, 35, 61, 0.22);
+      margin-top: 18px;
     }
 
     .policy-box h2,
@@ -312,6 +373,12 @@
 
     .policy-box p {
       color: rgba(255,255,255,0.90);
+      text-align: left;
+    }
+
+    .policy-box .mini-title {
+      color: rgba(255,255,255,0.75);
+      text-align: left;
     }
 
     .visit-grid {
@@ -332,6 +399,10 @@
       display: block;
       margin-bottom: 4px;
       color: #0f172a;
+    }
+
+    .faq {
+      margin-top: 18px;
     }
 
     .faq h3 {
@@ -391,8 +462,17 @@
         grid-template-columns: 1fr;
       }
 
+      .gallery-item:nth-child(1),
+      .gallery-item:nth-child(3) {
+        grid-column: span 1;
+      }
+
       .page {
         padding-top: 20px;
+      }
+
+      .hero {
+        background-attachment: scroll;
       }
     }
   </style>
@@ -429,8 +509,8 @@
 
     <section class="split fade">
       <div class="card">
-        <div class="mini-title">Why Ixchell</div>
-        <h2>For those who want to understand jadeite properly.</h2>
+        <div class="mini-title" style="text-align:left;">Why Ixchell</div>
+        <h2 style="text-align:left;">For those who want to understand jadeite properly.</h2>
         <p class="lead">
           A private boutique near City Hall MRT, specialising in natural Type A Burmese jadeite
           bangles, rings, pendants and collector pieces.
@@ -444,7 +524,7 @@
       </div>
 
       <div class="card">
-        <div class="mini-title">Trust Signals</div>
+        <div class="mini-title" style="text-align:left;">Trust Signals</div>
         <div class="trust-list">
           <div class="trust-item">Natural Type A Burmese jadeite only</div>
           <div class="trust-item">Trusted by collectors and first-time buyers</div>
@@ -454,7 +534,7 @@
       </div>
     </section>
 
-    <section id="collection" class="experience fade" style="margin-top: 18px;">
+    <section id="collection" class="experience fade">
       <div class="mini-title">Step Inside the Collection</div>
       <h2>More than a jewellery store.</h2>
       <p class="statement">
@@ -464,7 +544,7 @@
       </p>
     </section>
 
-    <section class="card fade" style="margin-top: 18px;">
+    <section class="card fade">
       <div class="mini-title">Selected Pieces</div>
       <div class="gallery">
         <div class="gallery-item">
@@ -494,9 +574,23 @@
       </div>
     </section>
 
-    <section class="policy-box fade" style="margin-top: 18px;">
-      <div class="mini-title" style="color: rgba(255,255,255,0.75);">Private Viewing Only</div>
-      <h2>By appointment, with intention.</h2>
+    <section class="luxury-break fade">
+      <div class="luxury-inner">
+        <p class="luxury-eyebrow">Ixchell Philosophy</p>
+        <h2>
+          Jadeite is not chosen in a rush.<br>
+          It is recognised.
+        </h2>
+        <p>
+          In a world of mass offerings, we slow everything down.
+          Each piece is seen, understood, and selected with intention.
+        </p>
+      </div>
+    </section>
+
+    <section class="policy-box fade">
+      <div class="mini-title">Private Viewing Only</div>
+      <h2 style="text-align:left;">By appointment, with intention.</h2>
       <p>
         Kindly DM at least one day in advance so we may prepare the right selection for your visit.
       </p>
@@ -504,14 +598,14 @@
         Out of respect for our clients and our work, we do not provide evaluation or assessment
         for items not purchased from Ixchell Jewellery.
       </p>
-      <div class="hero-actions" style="justify-content: flex-start; margin-top: 18px;">
+      <div class="hero-actions" style="justify-content:flex-start; margin-top:18px;">
         <a href="https://instagram.com/ixchelljewellery" class="button button-primary" target="_blank" rel="noopener">
           DM to Arrange Your Visit
         </a>
       </div>
     </section>
 
-    <section class="card fade" style="margin-top: 18px;">
+    <section class="card fade">
       <div class="mini-title">Visit Us</div>
       <h2>Private boutique experience near City Hall MRT.</h2>
       <div class="visit-grid">
@@ -524,14 +618,14 @@
           Mon–Sat, 1pm–6pm
         </div>
       </div>
-      <div class="hero-actions" style="justify-content: flex-start;">
+      <div class="hero-actions" style="justify-content:flex-start;">
         <a href="https://www.google.com/maps/place/1+Coleman+St,+%2302-33+Ixchell+Jewellery,+The+Adelphi,+Singapore+179803/" class="button button-primary" target="_blank" rel="noopener">
           Get Directions
         </a>
       </div>
     </section>
 
-    <section class="card faq fade" style="margin-top: 18px;">
+    <section class="card faq fade">
       <div class="mini-title">Frequently Asked Questions</div>
       <h2>Your Visit</h2>
 
@@ -548,7 +642,7 @@
       <p>Out of respect for our clients and our work, we only advise on pieces from the Ixchell Jewellery collection.</p>
     </section>
 
-    <section class="card center fade" style="margin-top: 18px;">
+    <section class="card center fade">
       <p class="closing">
         Ixchell Jewellery is more than a jewellery store.
         It is a place to understand jadeite, appreciate its beauty,
