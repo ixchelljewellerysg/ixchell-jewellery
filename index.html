@@ -1,225 +1,605 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ixchell Jewellery | Jadeite Singapore</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ixchell Jewellery | Jadeite Singapore</title>
+  <meta name="description" content="Ixchell Jewellery is a private jadeite boutique in Singapore specialising in natural Type A Burmese jadeite bangles, rings, pendants and collector pieces." />
 
-<style>
-body {
-  margin:0;
-  font-family:-apple-system,Segoe UI,Arial;
-  background:#f6f8fb;
-  color:#111827;
-}
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: rgba(255,255,255,0.96);
+      --text: #111827;
+      --muted: #5b6472;
+      --brand: #183153;
+      --brand-dark: #10233d;
+      --line: rgba(17, 24, 39, 0.08);
+      --shadow: 0 12px 28px rgba(0,0,0,0.08);
+      --radius: 20px;
+      --white: #ffffff;
+      --max: 920px;
+    }
 
-.hero {
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
-  background:
-    linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.6)),
-    url('./hero.jpg') center/cover no-repeat;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.hero h1 {
-  font-size:42px;
-  margin:0;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.hero p {
-  font-size:18px;
-  margin-top:10px;
-}
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
 
-.button {
-  display:inline-block;
-  margin-top:20px;
-  padding:14px 24px;
-  background:white;
-  color:black;
-  border-radius:999px;
-  text-decoration:none;
-  font-weight:bold;
-}
+    img {
+      width: 100%;
+      display: block;
+    }
 
-.page {
-  max-width:900px;
-  margin:auto;
-  padding:20px 20px 120px; /* FIXED: bottom space for floating button */
-}
+    a {
+      color: inherit;
+    }
 
-.card {
-  background:white;
-  padding:20px;
-  border-radius:18px;
-  margin-top:14px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.08);
-}
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      color: white;
+      background:
+        linear-gradient(rgba(0,0,0,0.40), rgba(0,0,0,0.62)),
+        url('./hero.jpg') center/cover no-repeat;
+    }
 
-.center { text-align:center; }
+    .hero-content {
+      max-width: 760px;
+      padding: 24px 18px;
+    }
 
-h2 {
-  font-size:26px;
-  margin-bottom:10px;
-}
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(40px, 8vw, 72px);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+    }
 
-.gallery {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-}
+    .hero p {
+      margin: 14px auto 0;
+      font-size: clamp(18px, 3vw, 22px);
+      line-height: 1.45;
+      color: rgba(255,255,255,0.92);
+      max-width: 620px;
+    }
 
-.gallery img {
-  width:100%;
-  border-radius:12px;
-}
+    .hero-actions {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-.policy {
-  background:#183153;
-  color:white;
-  padding:20px;
-  border-radius:18px;
-}
+    .button {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+      transition: transform 0.22s ease, opacity 0.22s ease;
+    }
 
-.floating {
-  position:fixed;
-  bottom:15px;
-  left:15px;
-  right:15px;
-  background:#183153;
-  color:white;
-  padding:14px; /* slightly smaller */
-  font-size:14px;
-  border-radius:999px;
-  text-align:center;
-  text-decoration:none;
-  font-weight:bold;
-}
-</style>
+    .button:hover {
+      transform: translateY(-2px);
+      opacity: 0.96;
+    }
+
+    .button-primary {
+      background: white;
+      color: #111111;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.16);
+    }
+
+    .button-secondary {
+      background: rgba(255,255,255,0.12);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.28);
+    }
+
+    .page {
+      max-width: var(--max);
+      margin: auto;
+      padding: 20px 20px 190px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px 18px;
+      margin-top: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .left {
+      text-align: left;
+    }
+
+    .mini-title {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 8px;
+    }
+
+    .logo {
+      width: 120px;
+      margin: 0 auto 16px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin: 18px 0 8px;
+      font-size: 19px;
+      line-height: 1.35;
+    }
+
+    p {
+      margin: 0 0 12px;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--muted);
+    }
+
+    .statement {
+      font-size: 20px;
+      line-height: 1.55;
+      color: #111827;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .lead {
+      font-size: 17px;
+      color: #1f2937;
+    }
+
+    .pill-row {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .pill {
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: #f4f7fb;
+      border: 1px solid rgba(24, 49, 83, 0.10);
+      color: var(--brand);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 14px;
+    }
+
+    .trust-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .trust-item {
+      padding: 13px 14px;
+      border-radius: 14px;
+      background: #f8fbff;
+      border: 1px solid #dde7f2;
+      color: var(--brand-dark);
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .experience {
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 14px;
+      background: white;
+      border: 1px solid var(--line);
+    }
+
+    .gallery-item img {
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    .gallery-caption {
+      padding: 10px 12px 12px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #374151;
+      text-align: left;
+    }
+
+    .gallery-item:nth-child(1),
+    .gallery-item:nth-child(3) {
+      grid-column: span 2;
+    }
+
+    .luxury-break {
+      margin-top: 14px;
+      padding: 54px 20px;
+      border-radius: 20px;
+      text-align: center;
+      color: white;
+      background:
+        linear-gradient(rgba(10,16,25,0.72), rgba(10,16,25,0.90)),
+        url('./gallery2.jpg') center/cover no-repeat;
+      box-shadow: 0 16px 34px rgba(16, 35, 61, 0.20);
+    }
+
+    .luxury-break p,
+    .luxury-break h2 {
+      color: white;
+    }
+
+    .policy {
+      background: linear-gradient(180deg, var(--brand), var(--brand-dark));
+      color: white;
+    }
+
+    .policy h2,
+    .policy p,
+    .policy .mini-title {
+      color: white;
+    }
+
+    .policy .mini-title {
+      opacity: 0.8;
+    }
+
+    .visit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .visit-tile {
+      background: #f0f3f8;
+      padding: 14px;
+      border-radius: 14px;
+      text-align: left;
+    }
+
+    .visit-tile strong {
+      display: block;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+
+    .faq h3 {
+      border-top: 1px solid rgba(17,24,39,0.08);
+      padding-top: 12px;
+    }
+
+    .faq h3:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .closing {
+      font-size: 19px;
+      line-height: 1.7;
+      color: #111827;
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .small-note {
+      margin-top: 14px;
+      font-size: 12px;
+      line-height: 1.6;
+      color: #6b7280;
+      text-align: center;
+    }
+
+    .floating {
+      position: fixed;
+      bottom: 25px;
+      left: 15px;
+      right: 15px;
+      background: var(--brand);
+      color: white;
+      padding: 14px;
+      font-size: 14px;
+      border-radius: 999px;
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      z-index: 999;
+    }
+
+    @media (max-width: 760px) {
+      .split,
+      .visit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gallery-item:nth-child(1),
+      .gallery-item:nth-child(3) {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .page {
+        padding: 18px 14px 190px;
+      }
+
+      .floating {
+        left: 12px;
+        right: 12px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div>
-    <h1>Not all jade is jadeite.</h1>
-    <p>Seen everywhere. Understood by few.</p>
-    <a href="https://instagram.com/ixchelljewellery" class="button">
-      Book Private Viewing
-    </a>
-  </div>
-</section>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Not all jade is jadeite.</h1>
+      <p>Seen everywhere. Understood by few.</p>
+      <div class="hero-actions">
+        <a href="https://instagram.com/ixchelljewellery" class="button button-primary" target="_blank" rel="noopener">
+          Book Private Viewing
+        </a>
+      </div>
+    </div>
+  </section>
 
-<div class="page">
+  <main class="page">
 
-<!-- INTRO -->
-<div class="card center">
-  <p>
-    Ixchell Jewellery is where jadeite is properly understood —
-    not rushed, not mass presented, but chosen with clarity and peerless beauty.
-  </p>
-</div>
+    <!-- INTRO -->
+    <section class="card center">
+      <img src="logo.png" alt="Ixchell Jewellery logo" class="logo">
+      <p class="statement">
+        Ixchell Jewellery is where jadeite is properly understood —
+        not rushed, not mass presented, but chosen with clarity and peerless beauty.
+      </p>
+    </section>
 
-<!-- CORE MESSAGE -->
-<div class="card">
-  <h2>This is where people finally understand jadeite.</h2>
-  <p>
-    Most people only see jadeite through screens.<br><br>
-    Here, you see it in real life — colour, texture, weight, presence.<br><br>
-    That is when everything changes.
-  </p>
-</div>
+    <!-- CORE MESSAGE -->
+    <section class="card left">
+      <h2>This is where people finally understand jadeite.</h2>
+      <p class="lead">
+        Most people only see jadeite through screens.
+      </p>
+      <p class="lead">
+        Here, you see it in real life — colour, texture, weight, presence.
+      </p>
+      <p class="lead">
+        That is when everything changes.
+      </p>
+    </section>
 
-<!-- COLLECTION -->
-<div class="card center">
-  <h2>More than a jewellery store.</h2>
-  <p>
-    A private space where jadeite is seen, touched, and understood.
-    Hundreds of bangles. Rare carvings. One-of-a-kind pieces.
-  </p>
-</div>
+    <!-- WHY + TRUST -->
+    <section class="split">
+      <div class="card left">
+        <div class="mini-title">Why Ixchell</div>
+        <h2>For those who want to understand jadeite properly.</h2>
+        <p class="lead">
+          A private boutique near City Hall MRT, specialising in natural Type A Burmese jadeite
+          bangles, rings, pendants and collector pieces.
+        </p>
+        <div class="pill-row">
+          <span class="pill">Type A Burmese Jadeite</span>
+          <span class="pill">Private Viewing</span>
+          <span class="pill">Collector Pieces</span>
+          <span class="pill">Singapore Boutique</span>
+        </div>
+      </div>
 
-<!-- GALLERY -->
-<div class="card">
-  <div class="gallery">
-    <img src="gallery1.jpg">
-    <img src="gallery2.jpg">
-    <img src="gallery3.jpg">
-    <img src="gallery4.jpg">
-    <img src="gallery5.jpg">
-    <img src="gallery6.jpg">
-  </div>
-</div>
+      <div class="card left">
+        <div class="mini-title">Trust Signals</div>
+        <div class="trust-list">
+          <div class="trust-item">Natural Type A Burmese jadeite only</div>
+          <div class="trust-item">Trusted by collectors and first-time buyers</div>
+          <div class="trust-item">Certification can be arranged upon request</div>
+          <div class="trust-item">Education before purchase</div>
+        </div>
+      </div>
+    </section>
 
-<!-- REALISATION -->
-<div class="card center">
-  <h2>“I didn’t expect jadeite to look like this in person.”</h2>
-  <p>
-    That is what we hear most.<br><br>
-    Photos do not show translucency.<br>
-    Lighting does not show depth.<br><br>
-    Only real viewing does.
-  </p>
-</div>
+    <!-- COLLECTION -->
+    <section class="card experience center">
+      <h2>More than a jewellery store.</h2>
+      <p>
+        A private space where jadeite is seen, touched, and understood.
+        Hundreds of bangles. Rare carvings. One-of-a-kind pieces.
+      </p>
+    </section>
 
-<!-- POLICY -->
-<div class="policy">
-  <h2>Private Viewing Only</h2>
-  <p>
-    Kindly DM at least one day in advance.<br><br>
-    We prepare each viewing based on your preference, size and budget —
-    so your visit is focused, private and meaningful.
-  </p>
-  <p><strong>Limited viewing slots each day.</strong></p>
-  <a href="https://instagram.com/ixchelljewellery" class="button">
+    <!-- GALLERY -->
+    <section class="card">
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="gallery1.jpg" alt="Jadeite bangles at Ixchell Jewellery Singapore">
+          <div class="gallery-caption">
+            A full spectrum of jadeite bangles — each with its own character, colour and presence.
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="gallery2.jpg" alt="Rare jadeite carvings at Ixchell Jewellery Singapore">
+          <div class="gallery-caption">
+            Collector-grade jadeite carvings, shaped by tradition and time.
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="gallery3.jpg" alt="Jadeite jewellery collection at Ixchell Jewellery Singapore">
+          <div class="gallery-caption">
+            A private viewing experience for those who want to see jadeite properly before choosing.
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="gallery4.jpg" alt="Jadeite piece at Ixchell Jewellery Singapore">
+          <div class="gallery-caption">
+            Refined jadeite pieces for everyday elegance and quiet presence.
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="gallery5.jpg" alt="Carved jadeite bangle at Ixchell Jewellery Singapore">
+          <div class="gallery-caption">
+            Carved jadeite with texture, detail and collector character.
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="gallery6.jpg" alt="Lavender jadeite piece at Ixchell Jewellery Singapore">
+          <div class="gallery-caption">
+            Soft lavender tones, calm beauty, and one-of-a-kind appeal.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REALISATION -->
+    <section class="card center">
+      <h2>“I didn’t expect jadeite to look like this in person.”</h2>
+      <p>
+        That is what we hear most.
+      </p>
+      <p>
+        Photos do not show translucency.<br>
+        Lighting does not show depth.
+      </p>
+      <p>
+        Only real viewing does.
+      </p>
+    </section>
+
+    <!-- LUXURY BREAK -->
+    <section class="luxury-break">
+      <div class="mini-title" style="color: rgba(255,255,255,0.78);">Ixchell Philosophy</div>
+      <h2>Jadeite is not chosen in a rush.</h2>
+      <p>It is recognised.</p>
+    </section>
+
+    <!-- POLICY -->
+    <section class="card policy">
+      <div class="mini-title">Private Viewing Only</div>
+      <h2>By appointment, with intention.</h2>
+      <p>
+        Kindly DM at least one day in advance.
+      </p>
+      <p>
+        We prepare each viewing based on your preference, size and budget —
+        so your visit is focused, private and meaningful.
+      </p>
+      <p><strong>Limited viewing slots each day.</strong></p>
+      <a href="https://instagram.com/ixchelljewellery" class="button button-primary" target="_blank" rel="noopener">
+        Book via Instagram
+      </a>
+    </section>
+
+    <!-- VISIT -->
+    <section class="card center">
+      <h2>Visit Us</h2>
+      <div class="visit-grid">
+        <div class="visit-tile">
+          <strong>Location</strong>
+          The Adelphi, Singapore
+        </div>
+        <div class="visit-tile">
+          <strong>Hours</strong>
+          Mon–Sat, 1pm–6pm
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="card faq left">
+      <h2>Your Visit</h2>
+
+      <h3>Do you provide certification?</h3>
+      <p>Certification can be arranged upon request.</p>
+
+      <h3>Do you offer shipping?</h3>
+      <p>No. We focus on private in-store viewing.</p>
+
+      <h3>Do I need an appointment?</h3>
+      <p>Yes. DM at least one day in advance.</p>
+
+      <h3>Do you evaluate jade not bought from your shop?</h3>
+      <p>We only advise on pieces from our collection.</p>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="card center">
+      <p class="closing">
+        Not everyone understands jadeite.<br><br>
+        But once you do —<br>
+        you never look at jewellery the same way again.
+      </p>
+      <p class="small-note">
+        Ixchell Jewellery Singapore | jadeite boutique near City Hall MRT |
+        Type A Burmese jadeite | jadeite bangles Singapore
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FLOATING CTA -->
+  <a href="https://instagram.com/ixchelljewellery" class="floating" target="_blank" rel="noopener">
     Book via Instagram
   </a>
-</div>
-
-<!-- VISIT -->
-<div class="card center">
-  <h2>Visit Us</h2>
-  <p>The Adelphi, Singapore</p>
-  <p>Mon–Sat, 1pm–6pm</p>
-</div>
-
-<!-- FAQ -->
-<div class="card">
-  <h2>Your Visit</h2>
-
-  <h3>Do you provide certification?</h3>
-  <p>Certification can be arranged upon request.</p>
-
-  <h3>Do you offer shipping?</h3>
-  <p>No. We focus on private in-store viewing.</p>
-
-  <h3>Do I need an appointment?</h3>
-  <p>Yes. DM at least one day in advance.</p>
-
-  <h3>Do you evaluate jade not bought from your shop?</h3>
-  <p>We only advise on pieces from our collection.</p>
-</div>
-
-<!-- CLOSING -->
-<div class="card center">
-  <p>
-    Not everyone understands jadeite.<br><br>
-    But once you do —<br>
-    you never look at jewellery the same way again.
-  </p>
-</div>
-
-</div>
-
-<!-- FLOATING CTA -->
-<a href="https://instagram.com/ixchelljewellery" class="floating">
-  Book via Instagram
-</a>
 
 </body>
 </html>
