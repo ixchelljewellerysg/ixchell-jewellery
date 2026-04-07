@@ -11,6 +11,7 @@
     name="description"
     content="Ixchell Jewellery is a private jadeite boutique in Singapore near City Hall MRT, specialising in natural Type A Burmese jadeite bangles, earrings, pendants and collector pieces. Private viewing by appointment."
   />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
@@ -40,7 +41,7 @@
 
     body{
       margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      font-family:'Inter',sans-serif;
       background:
         radial-gradient(circle at top left, #ffffff 0%, #f7f8fb 40%, #edf2f7 100%);
       color:var(--text);
@@ -55,6 +56,43 @@
 
     a{
       color:inherit;
+    }
+
+    #luxury-loader{
+      position:fixed;
+      inset:0;
+      background:#000;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:99999;
+      transition:opacity 1s ease;
+    }
+
+    #luxury-loader h1{
+      margin:0;
+      color:#fff;
+      font-family:'Space Grotesk',sans-serif;
+      font-size:22px;
+      font-weight:600;
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      animation:loaderIn 1.8s ease;
+      text-align:center;
+      padding:0 20px;
+    }
+
+    @keyframes loaderIn{
+      from{
+        opacity:0;
+        letter-spacing:0.45em;
+        transform:scale(0.98);
+      }
+      to{
+        opacity:1;
+        letter-spacing:0.18em;
+        transform:scale(1);
+      }
     }
 
     .mobile-bar{
@@ -77,6 +115,7 @@
     }
 
     .mobile-brand{
+      font-family:'Space Grotesk',sans-serif;
       font-size:11px;
       font-weight:700;
       letter-spacing:0.10em;
@@ -100,7 +139,7 @@
       align-items:center;
       justify-content:center;
       text-align:center;
-      color:white;
+      color:#fff;
       padding:24px 16px;
       overflow:hidden;
       background:
@@ -128,19 +167,7 @@
       position:relative;
       z-index:2;
       width:min(100%, 860px);
-      animation:heroFade 1.1s ease both;
       will-change:transform;
-    }
-
-    @keyframes heroFade{
-      from{
-        opacity:0;
-        transform:translateY(18px);
-      }
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
     }
 
     .logo-hero{
@@ -164,10 +191,12 @@
       background:rgba(255,255,255,0.10);
       border:1px solid rgba(255,255,255,0.24);
       max-width:100%;
+      font-family:'Space Grotesk',sans-serif;
     }
 
     .hero h1{
       margin:0;
+      font-family:'Space Grotesk',sans-serif;
       font-size:clamp(40px, 9vw, 84px);
       line-height:0.96;
       letter-spacing:-0.05em;
@@ -200,6 +229,8 @@
       font-weight:700;
       transition:transform .22s ease, box-shadow .22s ease, opacity .22s ease;
       max-width:100%;
+      font-family:'Space Grotesk',sans-serif;
+      letter-spacing:0.02em;
     }
 
     .button:hover{
@@ -283,6 +314,21 @@
       transform:translateY(0);
     }
 
+    .reveal-text{
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity .9s ease, transform .9s ease;
+    }
+
+    .reveal-text.show{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    .delay-1{ transition-delay:0.12s; }
+    .delay-2{ transition-delay:0.24s; }
+    .delay-3{ transition-delay:0.36s; }
+
     .center{ text-align:center; }
     .left{ text-align:left; }
 
@@ -293,10 +339,12 @@
       letter-spacing:0.10em;
       text-transform:uppercase;
       color:var(--brand);
+      font-family:'Space Grotesk',sans-serif;
     }
 
     h2{
       margin:0 0 12px;
+      font-family:'Space Grotesk',sans-serif;
       font-size:clamp(29px, 7vw, 44px);
       line-height:1.08;
       letter-spacing:-0.02em;
@@ -305,6 +353,7 @@
 
     h3{
       margin:18px 0 8px;
+      font-family:'Space Grotesk',sans-serif;
       font-size:19px;
       line-height:1.36;
       text-wrap:balance;
@@ -326,11 +375,19 @@
       font-size:20px;
       line-height:1.74;
       color:#111827;
+      font-family:'Playfair Display',serif;
     }
 
     .lead{
       font-size:17px;
       color:#1f2937;
+    }
+
+    .luxury-text{
+      font-family:'Playfair Display',serif;
+      font-size:17px;
+      line-height:1.78;
+      color:#4c5564;
     }
 
     .two-col,
@@ -345,14 +402,8 @@
       width:100%;
     }
 
-    .two-col{
-      grid-template-columns:1fr;
-    }
-
-    .spotlight{
-      grid-template-columns:1fr;
-    }
-
+    .two-col,
+    .spotlight,
     .gift-grid,
     .learn-grid,
     .visit-grid,
@@ -377,6 +428,7 @@
       font-size:14px;
       font-weight:700;
       transition:transform .22s ease, background .22s ease;
+      font-family:'Space Grotesk',sans-serif;
     }
 
     .pill:hover{
@@ -485,6 +537,7 @@
       display:block;
       margin-bottom:6px;
       color:#111827;
+      font-family:'Space Grotesk',sans-serif;
     }
 
     .editorial-card{
@@ -574,6 +627,7 @@
       line-height:1.8;
       color:#111827;
       text-align:center;
+      font-family:'Playfair Display',serif;
     }
 
     .floating{
@@ -591,6 +645,7 @@
       font-weight:700;
       box-shadow:0 12px 26px rgba(0,0,0,0.18);
       transition:transform .22s ease, box-shadow .22s ease;
+      font-family:'Space Grotesk',sans-serif;
     }
 
     .floating:hover{
@@ -641,6 +696,10 @@
 </head>
 <body>
 
+  <div id="luxury-loader">
+    <h1>Ixchell Jewellery</h1>
+  </div>
+
   <div class="mobile-bar">
     <div class="mobile-bar-inner">
       <div class="mobile-brand">Ixchell Jewellery Singapore</div>
@@ -650,14 +709,14 @@
 
   <section class="hero" id="hero">
     <div class="hero-inner" id="heroInner">
-      <img src="./logo.png" alt="Ixchell Jewellery Singapore" class="logo-hero" />
-      <div class="hero-tag">Private Jadeite Boutique</div>
-      <h1>Not all jade is jadeite.</h1>
-      <p>Seen everywhere. Understood by few. Chosen by those who know.</p>
+      <img src="./logo.png" alt="Ixchell Jewellery Singapore" class="logo-hero reveal-text" />
+      <div class="hero-tag reveal-text delay-1">Private Jadeite Boutique</div>
+      <h1 class="reveal-text delay-1">Not all jade is jadeite.</h1>
+      <p class="reveal-text delay-2">Seen everywhere. Understood by few. Chosen by those who know.</p>
 
       <div class="hero-actions">
-        <a href="https://instagram.com/ixchelljewellery" class="button button-primary" target="_blank" rel="noopener">Book Private Viewing</a>
-        <a href="#visit" class="button button-secondary">Plan Your Visit</a>
+        <a href="https://instagram.com/ixchelljewellery" class="button button-primary reveal-text delay-2" target="_blank" rel="noopener">Book Private Viewing</a>
+        <a href="#visit" class="button button-secondary reveal-text delay-3">Plan Your Visit</a>
       </div>
     </div>
   </section>
@@ -667,31 +726,31 @@
     <img src="./logo.png" alt="Ixchell Jewellery" class="logo-divider reveal" />
 
     <div class="card center reveal">
-      <h2>Ixchell Jewellery Singapore</h2>
-      <p class="statement">
+      <h2 class="reveal-text">Ixchell Jewellery Singapore</h2>
+      <p class="statement reveal-text delay-1">
         A private jadeite boutique near City Hall MRT, specialising in natural Type A Burmese jadeite and a quieter, more considered way of choosing jewellery.
       </p>
     </div>
 
     <div class="card left reveal">
-      <h2>This is where people finally understand jadeite.</h2>
-      <p class="lead">Most people only see jadeite through photos.</p>
-      <p class="lead">In person, colour, structure, depth and presence become something entirely different.</p>
-      <p class="lead">That is when the difference becomes clear.</p>
+      <h2 class="reveal-text">This is where people finally understand jadeite.</h2>
+      <p class="lead reveal-text delay-1">Most people only see jadeite through photos.</p>
+      <p class="lead reveal-text delay-2">In person, colour, structure, depth and presence become something entirely different.</p>
+      <p class="lead reveal-text delay-3">That is when the difference becomes clear.</p>
     </div>
 
     <div class="two-col">
       <div class="card left reveal">
-        <div class="mini-title">Why Ixchell</div>
-        <h2>For those who prefer to choose with understanding.</h2>
-        <p class="lead">
+        <div class="mini-title reveal-text">Why Ixchell</div>
+        <h2 class="reveal-text delay-1">For those who prefer to choose with understanding.</h2>
+        <p class="lead reveal-text delay-2">
           Jadeite is not judged by colour alone, but by structure, translucency and life within the stone.
         </p>
-        <p class="lead">
+        <p class="lead reveal-text delay-3">
           Many never see the difference. Here, you can.
         </p>
 
-        <div class="pill-row">
+        <div class="pill-row reveal-text delay-3">
           <span class="pill">Type A Burmese Jadeite</span>
           <span class="pill">Private Viewing</span>
           <span class="pill">Near City Hall MRT</span>
@@ -700,31 +759,31 @@
       </div>
 
       <div class="card left reveal">
-        <div class="mini-title">Trust Signals</div>
+        <div class="mini-title reveal-text">Trust Signals</div>
         <div class="trust-list">
-          <div class="trust-item">Natural Type A Burmese jadeite only</div>
-          <div class="trust-item">Private boutique viewing in Singapore</div>
-          <div class="trust-item">Certification can be arranged upon request</div>
-          <div class="trust-item">Trusted by collectors and first-time buyers</div>
+          <div class="trust-item reveal-text delay-1">Natural Type A Burmese jadeite only</div>
+          <div class="trust-item reveal-text delay-2">Private boutique viewing in Singapore</div>
+          <div class="trust-item reveal-text delay-3">Certification can be arranged upon request</div>
+          <div class="trust-item reveal-text delay-3">Trusted by collectors and first-time buyers</div>
         </div>
       </div>
     </div>
 
     <div id="spotlight" class="card spotlight reveal">
       <div class="left">
-        <div class="mini-title">Featured Gift</div>
-        <h2>Lavender jadeite earrings for thoughtful gifting.</h2>
-        <p class="lead">
+        <div class="mini-title reveal-text">Featured Gift</div>
+        <h2 class="reveal-text delay-1">Lavender jadeite earrings for thoughtful gifting.</h2>
+        <p class="lead reveal-text delay-2">
           A refined, effortless piece often chosen for birthdays, Mother’s Day, or as a meaningful souvenir from Singapore.
         </p>
-        <p>
+        <p class="reveal-text delay-2">
           As an affordable entry point into the brand, this piece is appreciated for its quiet charm and ease of wear — a gentle introduction to something more meaningful.
         </p>
-        <p>
+        <p class="luxury-text reveal-text delay-3">
           Simple, feminine and quietly memorable — soft enough to give easily, refined enough to be remembered.
         </p>
 
-        <div class="pill-row">
+        <div class="pill-row reveal-text delay-3">
           <span class="pill">Brand Entry Point</span>
           <span class="pill">Birthday Choice</span>
           <span class="pill">Mother’s Day</span>
@@ -732,7 +791,7 @@
         </div>
 
         <div style="margin-top:14px;">
-          <a href="https://instagram.com/ixchelljewellery" class="button button-dark" target="_blank" rel="noopener">Enquire via Instagram</a>
+          <a href="https://instagram.com/ixchelljewellery" class="button button-dark reveal-text delay-3" target="_blank" rel="noopener">Enquire via Instagram</a>
         </div>
       </div>
 
@@ -742,66 +801,66 @@
     </div>
 
     <div class="card left reveal">
-      <div class="mini-title">Meaning in Design</div>
-      <h2>The butterfly, reimagined in jadeite.</h2>
-      <p>
+      <div class="mini-title reveal-text">Meaning in Design</div>
+      <h2 class="reveal-text delay-1">The butterfly, reimagined in jadeite.</h2>
+      <p class="luxury-text reveal-text delay-2">
         In Peranakan and Straits Chinese heritage, the butterfly is more than a decorative motif.
       </p>
-      <p>
+      <p class="luxury-text reveal-text delay-3">
         It symbolises transformation, grace and a beauty that unfolds over time — something gentle, yet unforgettable.
       </p>
-      <p>
+      <p class="luxury-text reveal-text delay-3">
         Paired with lavender jadeite, it reflects calmness, softness and quiet elegance, making the piece feel both thoughtful and lasting.
       </p>
     </div>
 
     <div class="card left reveal">
-      <div class="mini-title">Collector Philosophy</div>
-      <h2>No two jadeite pieces are ever the same.</h2>
-      <p class="lead">
+      <div class="mini-title reveal-text">Collector Philosophy</div>
+      <h2 class="reveal-text delay-1">No two jadeite pieces are ever the same.</h2>
+      <p class="lead reveal-text delay-2">
         Jadeite is formed naturally over millions of years beneath the earth.
       </p>
-      <p>
+      <p class="reveal-text delay-2">
         Even when two pieces are carved from the same stone, they will never share the same colour, translucency, texture or life.
       </p>
-      <p>
+      <p class="reveal-text delay-3">
         Each piece exists only once — not reproduced, not repeated, not standardised.
       </p>
-      <p>
+      <p class="reveal-text delay-3">
         This is what makes jadeite fundamentally different from conventional jewellery.
       </p>
-      <p class="lead">
+      <p class="luxury-text reveal-text delay-3">
         Every piece is, in its own way, a quiet limited edition.
       </p>
     </div>
 
     <div class="card left reveal">
-      <div class="mini-title">Gift & Souvenir Perspective</div>
-      <h2>Why this piece is often chosen as a gift from Singapore.</h2>
-      <p class="lead">
+      <div class="mini-title reveal-text">Gift & Souvenir Perspective</div>
+      <h2 class="reveal-text delay-1">Why this piece is often chosen as a gift from Singapore.</h2>
+      <p class="lead reveal-text delay-2">
         Some gifts are remembered not because they are large, but because they feel considered.
       </p>
-      <p>
+      <p class="reveal-text delay-3">
         These lavender jadeite earrings are often selected by clients looking for something more personal than a typical souvenir — something light, elegant and easy to wear, yet still meaningful.
       </p>
 
       <div class="gift-grid">
-        <div class="gift-item">
+        <div class="gift-item reveal-text delay-1">
           <strong>For birthdays</strong>
           A soft, feminine piece that feels charming without being difficult to choose.
         </div>
 
-        <div class="gift-item">
+        <div class="gift-item reveal-text delay-2">
           <strong>For Mother’s Day</strong>
           A thoughtful gesture that feels graceful, wearable and quietly special.
         </div>
 
-        <div class="gift-item">
+        <div class="gift-item reveal-text delay-3">
           <strong>For Singapore visitors</strong>
           A more refined souvenir from Singapore — one that carries memory, not just decoration.
         </div>
 
-        <div class="gift-item">
+        <div class="gift-item reveal-text delay-3">
           <strong>For first-time jadeite buyers</strong>
           A gentle introduction for those discovering jadeite for the first time.
         </div>
@@ -809,14 +868,14 @@
     </div>
 
     <div id="collection" class="card left reveal">
-      <div class="mini-title">Collection Highlights</div>
-      <h2>A quieter expression of jadeite elegance.</h2>
-      <p class="lead">
+      <div class="mini-title reveal-text">Collection Highlights</div>
+      <h2 class="reveal-text delay-1">A quieter expression of jadeite elegance.</h2>
+      <p class="lead reveal-text delay-2">
         Not every piece needs to be grand to be memorable. Some are chosen for ease, some for sentiment, and some simply because they feel right the moment they are seen.
       </p>
 
       <div class="editorial-grid">
-        <div class="editorial-card">
+        <div class="editorial-card reveal-text delay-1">
           <img src="./earring2.jpg" alt="Floral jadeite earrings Singapore" />
           <div class="editorial-copy">
             <h3>Floral jadeite earrings</h3>
@@ -826,7 +885,7 @@
           </div>
         </div>
 
-        <div class="editorial-card">
+        <div class="editorial-card reveal-text delay-2">
           <img src="./earring3.jpg" alt="Green jadeite bead earrings Singapore" />
           <div class="editorial-copy">
             <h3>Green bead earrings</h3>
@@ -836,7 +895,7 @@
           </div>
         </div>
 
-        <div class="editorial-card">
+        <div class="editorial-card reveal-text delay-3">
           <img src="./pendant1.jpg" alt="Green jadeite pendant Singapore" />
           <div class="editorial-copy">
             <h3>Green jadeite pendant</h3>
@@ -849,11 +908,11 @@
     </div>
 
     <div class="card left reveal">
-      <div class="mini-title">Learn Before You Choose</div>
-      <h2>Built for understanding, not only selection.</h2>
+      <div class="mini-title reveal-text">Learn Before You Choose</div>
+      <h2 class="reveal-text delay-1">Built for understanding, not only selection.</h2>
 
       <div class="learn-grid">
-        <div class="learn-item">
+        <div class="learn-item reveal-text delay-1">
           <strong>What is Type A jadeite?</strong>
           A clear explanation of natural jadeite and why it matters.
           <div style="margin-top:10px;">
@@ -861,17 +920,17 @@
           </div>
         </div>
 
-        <div class="learn-item">
+        <div class="learn-item reveal-text delay-2">
           <strong>How to choose jadeite properly</strong>
           Understanding translucency, structure and colour.
         </div>
 
-        <div class="learn-item">
+        <div class="learn-item reveal-text delay-3">
           <strong>Why private viewing matters</strong>
           Seeing jadeite properly before choosing it.
         </div>
 
-        <div class="learn-item">
+        <div class="learn-item reveal-text delay-3">
           <strong>Collector pieces and rare finds</strong>
           Curated selection and future releases.
         </div>
@@ -879,52 +938,52 @@
     </div>
 
     <div class="card center reveal">
-      <div class="mini-title">Gallery</div>
-      <h2>More than a jewellery store.</h2>
-      <p>
+      <div class="mini-title reveal-text">Gallery</div>
+      <h2 class="reveal-text delay-1">More than a jewellery store.</h2>
+      <p class="reveal-text delay-2">
         Hundreds of jadeite bangles, rare carvings and one-of-a-kind pieces presented in a calmer, more focused environment.
       </p>
 
       <div class="gallery">
-        <div class="gallery-item"><img src="./gallery1.jpg" alt="Jadeite bangles Singapore" /></div>
-        <div class="gallery-item"><img src="./gallery2.jpg" alt="Jadeite display Singapore" /></div>
-        <div class="gallery-item"><img src="./gallery3.jpg" alt="Collector jadeite Singapore" /></div>
-        <div class="gallery-item"><img src="./gallery4.jpg" alt="Jadeite carvings Singapore" /></div>
-        <div class="gallery-item"><img src="./gallery5.jpg" alt="Lavender jadeite Singapore" /></div>
-        <div class="gallery-item"><img src="./gallery6.jpg" alt="Fine jadeite jewellery Singapore" /></div>
+        <div class="gallery-item reveal-text delay-1"><img src="./gallery1.jpg" alt="Jadeite bangles Singapore" /></div>
+        <div class="gallery-item reveal-text delay-2"><img src="./gallery2.jpg" alt="Jadeite display Singapore" /></div>
+        <div class="gallery-item reveal-text delay-3"><img src="./gallery3.jpg" alt="Collector jadeite Singapore" /></div>
+        <div class="gallery-item reveal-text delay-1"><img src="./gallery4.jpg" alt="Jadeite carvings Singapore" /></div>
+        <div class="gallery-item reveal-text delay-2"><img src="./gallery5.jpg" alt="Lavender jadeite Singapore" /></div>
+        <div class="gallery-item reveal-text delay-3"><img src="./gallery6.jpg" alt="Fine jadeite jewellery Singapore" /></div>
       </div>
     </div>
 
     <div class="card dark-card reveal">
-      <div class="mini-title">Private Viewing</div>
-      <h2>By appointment, with intention.</h2>
-      <p>
+      <div class="mini-title reveal-text">Private Viewing</div>
+      <h2 class="reveal-text delay-1">By appointment, with intention.</h2>
+      <p class="reveal-text delay-2">
         Kindly DM at least one day in advance so we can prepare your visit with care.
       </p>
-      <p>
+      <p class="reveal-text delay-2">
         All appointments are arranged exclusively via Instagram DM, ensuring a secure and verified point of contact.
       </p>
-      <p>
+      <p class="reveal-text delay-3">
         This allows us to maintain clarity, privacy and consistency for every client interaction.
       </p>
-      <p>
+      <p class="reveal-text delay-3">
         All transactions are conducted in-store, allowing each piece to be viewed and selected with confidence.
       </p>
-      <p>
+      <p class="reveal-text delay-3">
         We accept Visa, MasterCard and American Express for both local and international clients.
       </p>
     </div>
 
     <div id="visit" class="card center reveal">
-      <div class="mini-title">Visit</div>
-      <h2>Visit Us</h2>
+      <div class="mini-title reveal-text">Visit</div>
+      <h2 class="reveal-text delay-1">Visit Us</h2>
       <div class="visit-grid">
-        <div class="visit-tile">
+        <div class="visit-tile reveal-text delay-2">
           <strong>Location</strong>
           The Adelphi, Singapore<br />
           Near City Hall MRT
         </div>
-        <div class="visit-tile">
+        <div class="visit-tile reveal-text delay-3">
           <strong>Hours</strong>
           Mon–Sat, 1pm–6pm
         </div>
@@ -932,49 +991,49 @@
     </div>
 
     <div id="faq" class="card left faq reveal">
-      <div class="mini-title">Your Visit</div>
-      <h2>Your Visit</h2>
+      <div class="mini-title reveal-text">Your Visit</div>
+      <h2 class="reveal-text delay-1">Your Visit</h2>
 
-      <h3>Do I need an appointment?</h3>
-      <p>
+      <h3 class="reveal-text delay-1">Do I need an appointment?</h3>
+      <p class="reveal-text delay-2">
         Walk-ins are welcome if you happen to be at The Adelphi.
       </p>
-      <p>
+      <p class="reveal-text delay-2">
         However, private viewing sessions are prioritised for scheduled appointments.
       </p>
-      <p>
+      <p class="reveal-text delay-3">
         To ensure a proper and uninterrupted experience, we recommend arranging your visit at least one day in advance via Instagram DM.
       </p>
 
-      <h3>Why are appointments arranged through Instagram DM?</h3>
-      <p>
+      <h3 class="reveal-text delay-1">Why are appointments arranged through Instagram DM?</h3>
+      <p class="reveal-text delay-2">
         All appointments are arranged exclusively via Instagram DM, ensuring a secure and verified point of contact.
       </p>
 
-      <h3>How are payments handled?</h3>
-      <p>
+      <h3 class="reveal-text delay-1">How are payments handled?</h3>
+      <p class="reveal-text delay-2">
         All transactions are conducted in-store. We accept Visa, MasterCard and American Express for both local and international clients.
       </p>
 
-      <h3>What languages can be used in the shop?</h3>
-      <p>
+      <h3 class="reveal-text delay-1">What languages can be used in the shop?</h3>
+      <p class="reveal-text delay-2">
         We assist clients in English, Mandarin, Bahasa Malaysia and Bahasa Indonesia.
       </p>
-      <p>
+      <p class="reveal-text delay-3">
         Common Chinese dialects can also be accommodated where possible, allowing for a more natural and comfortable viewing experience.
       </p>
-      <p>
+      <p class="reveal-text delay-3">
         Language, for us, is not simply a means of communication. It allows us to understand each client more precisely, so that every piece is chosen with clarity, rather than assumption.
       </p>
 
-      <h3>Do you evaluate jade not bought from your shop?</h3>
-      <p>
+      <h3 class="reveal-text delay-1">Do you evaluate jade not bought from your shop?</h3>
+      <p class="reveal-text delay-2">
         No. Out of respect for our work and clients, we only advise on our own collection.
       </p>
     </div>
 
     <div class="card center reveal">
-      <p class="closing">
+      <p class="closing reveal-text">
         Some come to look.<br />
         Some come to understand.<br /><br />
         The difference is everything.
@@ -988,6 +1047,14 @@
   </a>
 
   <script>
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("luxury-loader");
+      setTimeout(() => {
+        loader.style.opacity = "0";
+        setTimeout(() => loader.style.display = "none", 1000);
+      }, 1500);
+    });
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -997,6 +1064,16 @@
     }, { threshold: 0.12 });
 
     document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+    const textObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.18 });
+
+    document.querySelectorAll('.reveal-text').forEach((el) => textObserver.observe(el));
 
     const heroInner = document.getElementById('heroInner');
     const spotlightImage = document.getElementById('spotlightImage');
