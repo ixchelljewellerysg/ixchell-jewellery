@@ -18,6 +18,7 @@
     --brand-dark:#10233d;
     --line:rgba(17,24,39,0.08);
     --shadow:0 14px 34px rgba(15,23,42,0.08);
+    --shadow-hover:0 22px 46px rgba(15,23,42,0.12);
     --radius:22px;
     --max:980px;
   }
@@ -84,6 +85,11 @@
     text-decoration:none;
     color:#314155;
     font-weight:600;
+    transition:opacity 0.25s ease;
+  }
+
+  .topbar-link:hover{
+    opacity:0.7;
   }
 
   .hero{
@@ -101,12 +107,29 @@
 
   .hero-inner{
     max-width:780px;
+    animation:heroFade 1.2s ease both;
+  }
+
+  @keyframes heroFade{
+    from{
+      opacity:0;
+      transform:translateY(18px);
+    }
+    to{
+      opacity:1;
+      transform:translateY(0);
+    }
   }
 
   .logo-hero{
     width:78px;
     margin:0 auto 18px;
     opacity:0.96;
+    transition:transform 0.4s ease;
+  }
+
+  .logo-hero:hover{
+    transform:translateY(-2px) scale(1.02);
   }
 
   .hero-tag{
@@ -152,18 +175,22 @@
     text-decoration:none;
     font-weight:700;
     font-size:15px;
-    transition:transform 0.22s ease, opacity 0.22s ease;
+    transition:transform 0.22s ease, opacity 0.22s ease, box-shadow 0.22s ease;
   }
 
   .button:hover{
     transform:translateY(-2px);
-    opacity:0.96;
+    opacity:0.98;
   }
 
   .primary{
     background:white;
     color:#111111;
     box-shadow:0 10px 26px rgba(0,0,0,0.16);
+  }
+
+  .primary:hover{
+    box-shadow:0 16px 30px rgba(0,0,0,0.18);
   }
 
   .secondary{
@@ -196,6 +223,23 @@
     padding:24px 20px;
     margin-top:14px;
     box-shadow:var(--shadow);
+    transition:transform 0.28s ease, box-shadow 0.28s ease;
+  }
+
+  .card:hover{
+    transform:translateY(-3px);
+    box-shadow:var(--shadow-hover);
+  }
+
+  .reveal{
+    opacity:0;
+    transform:translateY(24px);
+    transition:opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible{
+    opacity:1;
+    transform:translateY(0);
   }
 
   .center{
@@ -268,6 +312,12 @@
     color:var(--brand);
     font-size:14px;
     font-weight:700;
+    transition:transform 0.22s ease, background 0.22s ease;
+  }
+
+  .pill:hover{
+    transform:translateY(-1px);
+    background:#eef4fb;
   }
 
   .trust-list{
@@ -284,6 +334,12 @@
     color:var(--brand-dark);
     font-weight:700;
     line-height:1.5;
+    transition:transform 0.22s ease, background 0.22s ease;
+  }
+
+  .trust-item:hover{
+    transform:translateY(-1px);
+    background:#f3f8ff;
   }
 
   .spotlight{
@@ -294,9 +350,21 @@
   }
 
   .spotlight-visual{
+    position:relative;
     background:linear-gradient(180deg,#faf3ff,#f7f9ff);
     border-radius:18px;
     padding:16px;
+    overflow:hidden;
+  }
+
+  .spotlight-visual::after{
+    content:"";
+    position:absolute;
+    inset:auto -10% -25% auto;
+    width:180px;
+    height:180px;
+    background:radial-gradient(circle, rgba(201,170,255,0.20) 0%, rgba(201,170,255,0) 70%);
+    pointer-events:none;
   }
 
   .spotlight-visual img{
@@ -304,6 +372,7 @@
     aspect-ratio:1 / 1;
     object-fit:cover;
     border-radius:14px;
+    box-shadow:0 18px 34px rgba(24,49,83,0.10);
   }
 
   .float-slow{
@@ -314,6 +383,26 @@
     0%{transform:translateY(0px);}
     50%{transform:translateY(-8px);}
     100%{transform:translateY(0px);}
+  }
+
+  .gift-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-top:12px;
+  }
+
+  .gift-item{
+    background:var(--bg-soft);
+    border:1px solid rgba(24,49,83,0.08);
+    border-radius:14px;
+    padding:14px;
+  }
+
+  .gift-item strong{
+    display:block;
+    color:#111827;
+    margin-bottom:6px;
   }
 
   .gallery{
@@ -334,6 +423,11 @@
     width:100%;
     aspect-ratio:1 / 1;
     object-fit:cover;
+    transition:transform 0.45s ease;
+  }
+
+  .gallery-item:hover img{
+    transform:scale(1.03);
   }
 
   .dark-card{
@@ -361,6 +455,12 @@
     border-radius:14px;
     padding:14px;
     text-align:left;
+    transition:transform 0.24s ease, box-shadow 0.24s ease;
+  }
+
+  .education-item:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 24px rgba(24,49,83,0.08);
   }
 
   .education-item strong{
@@ -381,6 +481,11 @@
     padding:14px;
     border-radius:14px;
     text-align:left;
+    transition:transform 0.22s ease;
+  }
+
+  .visit-tile:hover{
+    transform:translateY(-2px);
   }
 
   .visit-tile strong{
@@ -422,11 +527,18 @@
     font-weight:700;
     box-shadow:0 10px 24px rgba(0,0,0,0.18);
     z-index:999;
+    transition:transform 0.22s ease, box-shadow 0.22s ease;
+  }
+
+  .floating:hover{
+    transform:translateY(-2px);
+    box-shadow:0 16px 28px rgba(0,0,0,0.20);
   }
 
   @media (max-width:760px){
     .split,
     .spotlight,
+    .gift-grid,
     .education-grid,
     .visit-grid{
       grid-template-columns:1fr;
@@ -442,6 +554,7 @@
     <div class="topbar-brand">Ixchell Jewellery Singapore</div>
     <div class="topbar-links">
       <a class="topbar-link" href="#spotlight">Spotlight</a>
+      <a class="topbar-link" href="#gifting">Gifting</a>
       <a class="topbar-link" href="#visit">Visit</a>
       <a class="topbar-link" href="#faq">FAQ</a>
     </div>
@@ -469,16 +582,16 @@
 
 <div class="page">
 
-  <img src="./logo.png" alt="Ixchell Jewellery" class="logo-divider">
+  <img src="./logo.png" alt="Ixchell Jewellery" class="logo-divider reveal">
 
-  <div class="card center">
+  <div class="card center reveal">
     <h2>Ixchell Jewellery Singapore</h2>
     <p class="statement">
       A private jadeite boutique near City Hall MRT, specialising in natural Type A Burmese jadeite and a quieter, more considered way of choosing jewellery.
     </p>
   </div>
 
-  <div class="card left">
+  <div class="card left reveal">
     <h2>This is where people finally understand jadeite.</h2>
     <p class="lead">Most people only see jadeite through photos.</p>
     <p class="lead">In person, colour, structure, depth and presence become something entirely different.</p>
@@ -486,7 +599,7 @@
   </div>
 
   <div class="split">
-    <div class="card left">
+    <div class="card left reveal">
       <div class="mini-title">Why Ixchell</div>
       <h2>For those who prefer to choose with understanding.</h2>
       <p class="lead">
@@ -504,7 +617,7 @@
       </div>
     </div>
 
-    <div class="card left">
+    <div class="card left reveal">
       <div class="mini-title">Trust Signals</div>
       <div class="trust-list">
         <div class="trust-item">Natural Type A Burmese jadeite only</div>
@@ -515,7 +628,7 @@
     </div>
   </div>
 
-  <div id="spotlight" class="card spotlight">
+  <div id="spotlight" class="card spotlight reveal">
     <div class="left">
       <div class="mini-title">Featured Gift</div>
       <h2>Lavender jadeite earrings for thoughtful gifting.</h2>
@@ -548,7 +661,7 @@
     </div>
   </div>
 
-  <div class="card left">
+  <div class="card left reveal">
     <div class="mini-title">Meaning in Design</div>
     <h2>The butterfly, reimagined in jadeite.</h2>
     <p>
@@ -562,7 +675,40 @@
     </p>
   </div>
 
-  <div class="card left">
+  <div id="gifting" class="card left reveal">
+    <div class="mini-title">Gift & Souvenir Perspective</div>
+    <h2>Why this piece is often chosen as a gift from Singapore.</h2>
+    <p class="lead">
+      Some gifts are remembered not because they are large, but because they feel considered.
+    </p>
+    <p>
+      These lavender jadeite earrings are often selected by clients looking for something more personal than a typical souvenir — something light, elegant and easy to wear, yet still meaningful.
+    </p>
+
+    <div class="gift-grid">
+      <div class="gift-item">
+        <strong>For birthdays</strong>
+        A soft, feminine piece that feels charming without being difficult to choose.
+      </div>
+
+      <div class="gift-item">
+        <strong>For Mother’s Day</strong>
+        A thoughtful gesture that feels graceful, wearable and quietly special.
+      </div>
+
+      <div class="gift-item">
+        <strong>For Singapore visitors</strong>
+        A more refined souvenir from Singapore — one that carries memory, not just decoration.
+      </div>
+
+      <div class="gift-item">
+        <strong>For first-time jadeite buyers</strong>
+        A gentle entry point into jadeite jewellery, especially for those discovering it for the first time.
+      </div>
+    </div>
+  </div>
+
+  <div class="card left reveal">
     <div class="mini-title">Learn Before You Choose</div>
     <h2>Built for understanding, not only selection.</h2>
 
@@ -595,7 +741,7 @@
     </div>
   </div>
 
-  <div class="card center">
+  <div class="card center reveal">
     <h2>More than a jewellery store.</h2>
     <p>
       Hundreds of jadeite bangles, rare carvings and one-of-a-kind pieces presented in a calmer, more focused environment.
@@ -611,7 +757,7 @@
     </div>
   </div>
 
-  <div class="card dark-card">
+  <div class="card dark-card reveal">
     <div class="mini-title">Private Viewing</div>
     <h2>By appointment, with intention.</h2>
     <p>
@@ -631,7 +777,7 @@
     </p>
   </div>
 
-  <div id="visit" class="card center">
+  <div id="visit" class="card center reveal">
     <h2>Visit Us</h2>
     <div class="visit-grid">
       <div class="visit-tile">
@@ -646,7 +792,7 @@
     </div>
   </div>
 
-  <div id="faq" class="card left faq">
+  <div id="faq" class="card left faq reveal">
     <h2>Your Visit</h2>
 
     <h3>Do I need an appointment?</h3>
@@ -687,7 +833,7 @@
     </p>
   </div>
 
-  <div class="card center">
+  <div class="card center reveal">
     <p class="closing">
       Some come to look.<br>
       Some come to understand.<br><br>
@@ -700,6 +846,18 @@
 <a href="https://instagram.com/ixchelljewellery" class="floating" target="_blank" rel="noopener">
   Book via Instagram
 </a>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+</script>
 
 </body>
 </html>
