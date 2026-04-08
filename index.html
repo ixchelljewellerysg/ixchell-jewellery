@@ -15,7 +15,7 @@
 
   <style>
     :root{
-      --bg:#f7f8fb;
+      --bg:#f6f7fb;
       --bg-soft:#eef2f7;
       --card:#ffffff;
       --text:#111827;
@@ -143,7 +143,7 @@
       padding:24px 16px;
       overflow:hidden;
       background:
-        linear-gradient(rgba(0,0,0,0.38), rgba(0,0,0,0.60)),
+        linear-gradient(rgba(0,0,0,0.42), rgba(0,0,0,0.62)),
         url('./hero.jpg') center/cover no-repeat;
     }
 
@@ -152,14 +152,14 @@
       position:absolute;
       inset:0;
       background:
-        radial-gradient(circle at 50% 18%, rgba(255,255,255,0.14), transparent 34%),
+        radial-gradient(circle at 50% 18%, rgba(255,255,255,0.12), transparent 34%),
         radial-gradient(circle at 78% 72%, rgba(185,160,255,0.12), transparent 30%);
       animation:heroGlow 10s ease-in-out infinite alternate;
       pointer-events:none;
     }
 
     @keyframes heroGlow{
-      from{ transform:scale(1) translateY(0); opacity:.9; }
+      from{ transform:scale(1) translateY(0); opacity:.88; }
       to{ transform:scale(1.06) translateY(-8px); opacity:1; }
     }
 
@@ -205,7 +205,7 @@
 
     .hero p{
       margin:16px auto 0;
-      max-width:720px;
+      max-width:740px;
       font-size:clamp(17px, 4.6vw, 22px);
       line-height:1.62;
       color:rgba(255,255,255,0.92);
@@ -213,7 +213,7 @@
     }
 
     .hero-actions{
-      margin-top:26px;
+      margin-top:28px;
       display:flex;
       justify-content:center;
       gap:12px;
@@ -227,7 +227,7 @@
       padding:14px 22px;
       font-size:15px;
       font-weight:700;
-      transition:transform .22s ease, box-shadow .22s ease, opacity .22s ease;
+      transition:transform .22s ease, box-shadow .22s ease, opacity .22s ease, background .22s ease;
       max-width:100%;
       font-family:'Space Grotesk',sans-serif;
       letter-spacing:0.02em;
@@ -245,7 +245,7 @@
     }
 
     .button-secondary{
-      background:rgba(255,255,255,0.12);
+      background:rgba(255,255,255,0.10);
       color:white;
       border:1px solid rgba(255,255,255,0.24);
     }
@@ -305,8 +305,8 @@
 
     .reveal{
       opacity:0;
-      transform:translateY(26px);
-      transition:opacity .75s ease, transform .75s ease;
+      transform:translateY(28px);
+      transition:opacity .85s ease, transform .85s ease;
     }
 
     .reveal.visible{
@@ -317,7 +317,7 @@
     .reveal-text{
       opacity:0;
       transform:translateY(18px);
-      transition:opacity .9s ease, transform .9s ease;
+      transition:opacity .95s ease, transform .95s ease;
     }
 
     .reveal-text.show{
@@ -392,6 +392,7 @@
 
     .two-col,
     .spotlight,
+    .feature,
     .gift-grid,
     .learn-grid,
     .visit-grid,
@@ -400,15 +401,6 @@
       display:grid;
       gap:14px;
       width:100%;
-    }
-
-    .two-col,
-    .spotlight,
-    .gift-grid,
-    .learn-grid,
-    .visit-grid,
-    .editorial-grid,
-    .gallery{
       grid-template-columns:1fr;
     }
 
@@ -457,7 +449,8 @@
       transform:translateY(-2px);
     }
 
-    .spotlight-visual{
+    .spotlight-visual,
+    .feature-image{
       position:relative;
       border-radius:20px;
       overflow:hidden;
@@ -466,24 +459,26 @@
       isolation:isolate;
     }
 
-    .spotlight-visual::before{
+    .spotlight-visual::before,
+    .feature-image::before{
       content:"";
       position:absolute;
       inset:0;
-      background:radial-gradient(circle at 30% 20%, rgba(255,255,255,0.36), transparent 32%);
+      background:radial-gradient(circle at 30% 20%, rgba(255,255,255,0.34), transparent 32%);
       animation:shineBreath 5s ease-in-out infinite alternate;
       pointer-events:none;
       z-index:0;
     }
 
-    .spotlight-visual::after{
+    .spotlight-visual::after,
+    .feature-image::after{
       content:"";
       position:absolute;
       right:-10%;
       bottom:-22%;
       width:220px;
       height:220px;
-      background:radial-gradient(circle, rgba(191,164,255,0.20) 0%, rgba(191,164,255,0) 72%);
+      background:radial-gradient(circle, rgba(191,164,255,0.18) 0%, rgba(191,164,255,0) 72%);
       pointer-events:none;
       z-index:0;
     }
@@ -493,7 +488,8 @@
       to{ opacity:1; transform:scale(1.08); }
     }
 
-    .spotlight-visual img{
+    .spotlight-visual img,
+    .feature-image img{
       position:relative;
       z-index:1;
       width:100%;
@@ -502,6 +498,7 @@
       border-radius:14px;
       box-shadow:0 18px 34px rgba(24,49,83,0.10);
       will-change:transform;
+      transition:transform .5s ease;
     }
 
     .float-slow{
@@ -512,6 +509,49 @@
       0%{ transform:translateY(0px) scale(1); }
       50%{ transform:translateY(-8px) scale(1.015); }
       100%{ transform:translateY(0px) scale(1); }
+    }
+
+    .cinematic{
+      background:#0d1b2a;
+      color:#fff;
+      padding:72px 22px;
+      border-radius:28px;
+      margin-top:16px;
+      text-align:center;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .cinematic::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 50% 30%, rgba(255,255,255,0.08), transparent 34%),
+        radial-gradient(circle at 70% 70%, rgba(161,179,255,0.08), transparent 28%);
+      animation:cinematicGlow 9s ease-in-out infinite alternate;
+      pointer-events:none;
+    }
+
+    @keyframes cinematicGlow{
+      from{ transform:scale(1); opacity:.8; }
+      to{ transform:scale(1.05); opacity:1; }
+    }
+
+    .cinematic-inner{
+      position:relative;
+      z-index:1;
+      max-width:760px;
+      margin:0 auto;
+    }
+
+    .cinematic h2,
+    .cinematic p{
+      color:#fff;
+    }
+
+    .cinematic p{
+      opacity:.84;
     }
 
     .gift-item,
@@ -558,11 +598,11 @@
       width:100%;
       aspect-ratio:4/5;
       object-fit:cover;
-      transition:transform .45s ease;
+      transition:transform .55s ease;
     }
 
     .editorial-card:hover img{
-      transform:scale(1.03);
+      transform:scale(1.035);
     }
 
     .editorial-copy{
@@ -580,6 +620,14 @@
       line-height:1.68;
     }
 
+    .authority{
+      text-align:center;
+      font-size:14px;
+      opacity:.74;
+      margin-top:20px;
+      font-family:'Playfair Display',serif;
+    }
+
     .gallery-item{
       overflow:hidden;
       border-radius:16px;
@@ -591,11 +639,11 @@
       width:100%;
       aspect-ratio:1/1;
       object-fit:cover;
-      transition:transform .45s ease;
+      transition:transform .55s ease;
     }
 
     .gallery-item:hover img{
-      transform:scale(1.03);
+      transform:scale(1.035);
     }
 
     .dark-card{
@@ -628,6 +676,7 @@
       color:#111827;
       text-align:center;
       font-family:'Playfair Display',serif;
+      padding:18px 0 4px;
     }
 
     .floating{
@@ -670,8 +719,10 @@
         grid-template-columns:1.03fr 0.97fr;
       }
 
-      .spotlight{
+      .spotlight,
+      .feature{
         grid-template-columns:1fr 1fr;
+        align-items:center;
       }
 
       .gift-grid,
@@ -712,11 +763,13 @@
       <img src="./logo.png" alt="Ixchell Jewellery Singapore" class="logo-hero reveal-text" />
       <div class="hero-tag reveal-text delay-1">Private Jadeite Boutique</div>
       <h1 class="reveal-text delay-1">Not all jade is jadeite.</h1>
-      <p class="reveal-text delay-2">Seen everywhere. Understood by few. Chosen by those who know.</p>
+      <p class="reveal-text delay-2">
+        Seen everywhere. Understood by few. Chosen quietly by those who recognise the difference.
+      </p>
 
       <div class="hero-actions">
-        <a href="https://instagram.com/ixchelljewellery" class="button button-primary reveal-text delay-2" target="_blank" rel="noopener">Book Private Viewing</a>
-        <a href="#visit" class="button button-secondary reveal-text delay-3">Plan Your Visit</a>
+        <a href="#visit" class="button button-primary reveal-text delay-2">Book Private Viewing</a>
+        <a href="#story" class="button button-secondary reveal-text delay-3">Discover More</a>
       </div>
     </div>
   </section>
@@ -732,7 +785,7 @@
       </p>
     </div>
 
-    <div class="card left reveal">
+    <div id="story" class="card left reveal">
       <h2 class="reveal-text">This is where people finally understand jadeite.</h2>
       <p class="lead reveal-text delay-1">Most people only see jadeite through photos.</p>
       <p class="lead reveal-text delay-2">In person, colour, structure, depth and presence become something entirely different.</p>
@@ -769,50 +822,56 @@
       </div>
     </div>
 
-    <div id="spotlight" class="card spotlight reveal">
-      <div class="left">
-        <div class="mini-title reveal-text">Featured Gift</div>
-        <h2 class="reveal-text delay-1">Lavender jadeite earrings for thoughtful gifting.</h2>
-        <p class="lead reveal-text delay-2">
-          A refined, effortless piece often chosen for birthdays, Mother’s Day, or as a meaningful souvenir from Singapore.
-        </p>
+    <section class="card feature reveal">
+      <div class="feature-image">
+        <img src="./earring1.jpg" alt="Lavender jadeite earrings" class="float-slow" id="featureImage" />
+      </div>
+
+      <div class="feature-text left">
+        <div class="mini-title reveal-text">Signature Piece</div>
+        <h2 class="reveal-text delay-1">Lavender jadeite, in its most effortless form.</h2>
+
         <p class="reveal-text delay-2">
-          As an affordable entry point into the brand, this piece is appreciated for its quiet charm and ease of wear — a gentle introduction to something more meaningful.
+          A refined expression of jadeite for modern gifting. Light in presence, gentle in colour, and quietly distinctive.
         </p>
+
+        <p class="reveal-text delay-2">
+          Often chosen for birthdays, Mother’s Day, or as a meaningful souvenir from Singapore — not for its price, but for the feeling it carries.
+        </p>
+
         <p class="luxury-text reveal-text delay-3">
-          Simple, feminine and quietly memorable — soft enough to give easily, refined enough to be remembered.
+          Entry pieces begin from S$68 — a considered introduction, not a compromise.
         </p>
 
         <div class="pill-row reveal-text delay-3">
-          <span class="pill">Brand Entry Point</span>
-          <span class="pill">Birthday Choice</span>
           <span class="pill">Mother’s Day</span>
           <span class="pill">Singapore Souvenir</span>
-        </div>
-
-        <div style="margin-top:14px;">
-          <a href="https://instagram.com/ixchelljewellery" class="button button-dark reveal-text delay-3" target="_blank" rel="noopener">Enquire via Instagram</a>
+          <span class="pill">Brand Entry Point</span>
         </div>
       </div>
-
-      <div class="spotlight-visual">
-        <img src="./earring1.jpg" alt="Lavender jadeite butterfly earrings Singapore gift" class="float-slow" id="spotlightImage" />
-      </div>
-    </div>
+    </section>
 
     <div class="card left reveal">
       <div class="mini-title reveal-text">Meaning in Design</div>
       <h2 class="reveal-text delay-1">The butterfly, reimagined in jadeite.</h2>
+
       <p class="luxury-text reveal-text delay-2">
-        In Peranakan and Straits Chinese heritage, the butterfly is more than a decorative motif.
+        In Peranakan and Straits Chinese heritage, the butterfly reflects grace, transformation and enduring beauty.
       </p>
+
       <p class="luxury-text reveal-text delay-3">
-        It symbolises transformation, grace and a beauty that unfolds over time — something gentle, yet unforgettable.
-      </p>
-      <p class="luxury-text reveal-text delay-3">
-        Paired with lavender jadeite, it reflects calmness, softness and quiet elegance, making the piece feel both thoughtful and lasting.
+        Paired with lavender jadeite, it becomes a quiet expression of softness, calm and understated elegance — a gift that carries meaning beyond the moment.
       </p>
     </div>
+
+    <section class="cinematic reveal">
+      <div class="cinematic-inner">
+        <h2 class="reveal-text">Jadeite is never chosen in a rush.</h2>
+        <p class="reveal-text delay-1">
+          It is observed. Understood. And only then, quietly recognised.
+        </p>
+      </div>
+    </section>
 
     <div class="card left reveal">
       <div class="mini-title reveal-text">Collector Philosophy</div>
@@ -825,9 +884,6 @@
       </p>
       <p class="reveal-text delay-3">
         Each piece exists only once — not reproduced, not repeated, not standardised.
-      </p>
-      <p class="reveal-text delay-3">
-        This is what makes jadeite fundamentally different from conventional jewellery.
       </p>
       <p class="luxury-text reveal-text delay-3">
         Every piece is, in its own way, a quiet limited edition.
@@ -905,6 +961,10 @@
           </div>
         </div>
       </div>
+
+      <p class="authority reveal-text delay-3">
+        No two pieces are ever the same. Each jadeite forms over millions of years — and each carries its own character.
+      </p>
     </div>
 
     <div class="card left reveal">
@@ -954,25 +1014,30 @@
       </div>
     </div>
 
-    <div class="card dark-card reveal">
+    <section class="card dark-card reveal">
       <div class="mini-title reveal-text">Private Viewing</div>
-      <h2 class="reveal-text delay-1">By appointment, with intention.</h2>
+      <h2 class="reveal-text delay-1">Private Viewing Only</h2>
+
       <p class="reveal-text delay-2">
-        Kindly DM at least one day in advance so we can prepare your visit with care.
+        Each visit is arranged individually to ensure a calm, focused and personal experience.
       </p>
+
       <p class="reveal-text delay-2">
+        Walk-ins may be accommodated when the space allows, though priority is always given to private appointments.
+      </p>
+
+      <p class="reveal-text delay-3">
+        This allows us to listen first — and guide only when needed.
+      </p>
+
+      <p class="reveal-text delay-3">
         All appointments are arranged exclusively via Instagram DM, ensuring a secure and verified point of contact.
       </p>
+
       <p class="reveal-text delay-3">
-        This allows us to maintain clarity, privacy and consistency for every client interaction.
+        All transactions are conducted in-store. We accept Visa, MasterCard and American Express for both local and international clients.
       </p>
-      <p class="reveal-text delay-3">
-        All transactions are conducted in-store, allowing each piece to be viewed and selected with confidence.
-      </p>
-      <p class="reveal-text delay-3">
-        We accept Visa, MasterCard and American Express for both local and international clients.
-      </p>
-    </div>
+    </section>
 
     <div id="visit" class="card center reveal">
       <div class="mini-title reveal-text">Visit</div>
@@ -1032,13 +1097,12 @@
       </p>
     </div>
 
-    <div class="card center reveal">
+    <section class="card center reveal">
       <p class="closing reveal-text">
-        Some come to look.<br />
-        Some come to understand.<br /><br />
-        The difference is everything.
+        You are not here to buy jewellery.<br />
+        You are here to recognise one.
       </p>
-    </div>
+    </section>
 
   </div>
 
@@ -1076,7 +1140,7 @@
     document.querySelectorAll('.reveal-text').forEach((el) => textObserver.observe(el));
 
     const heroInner = document.getElementById('heroInner');
-    const spotlightImage = document.getElementById('spotlightImage');
+    const featureImage = document.getElementById('featureImage');
 
     document.addEventListener('mousemove', (e) => {
       const x = (window.innerWidth / 2 - e.clientX) / 55;
@@ -1086,14 +1150,14 @@
         heroInner.style.transform = `translate3d(${(-x/3)}px, ${(-y/3)}px, 0)`;
       }
 
-      if (spotlightImage && window.innerWidth > 760) {
-        spotlightImage.style.transform = `translate3d(${(-x/2)}px, ${(-y/2)}px, 0) scale(1.02)`;
+      if (featureImage && window.innerWidth > 760) {
+        featureImage.style.transform = `translate3d(${(-x/2)}px, ${(-y/2)}px, 0) scale(1.02)`;
       }
     });
 
     document.addEventListener('mouseleave', () => {
       if (heroInner) heroInner.style.transform = '';
-      if (spotlightImage) spotlightImage.style.transform = '';
+      if (featureImage) featureImage.style.transform = '';
     });
   </script>
 </body>
