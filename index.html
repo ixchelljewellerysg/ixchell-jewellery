@@ -23,8 +23,6 @@
       --brand:#183153;
       --brand-deep:#10233d;
       --line:rgba(17,24,39,0.08);
-      --shadow:0 16px 38px rgba(15,23,42,0.08);
-      --shadow-hover:0 24px 52px rgba(15,23,42,0.12);
       --radius:24px;
       --max:1120px;
     }
@@ -403,6 +401,7 @@
       line-height:1.74;
       color:#111827;
       font-family:'Playfair Display',serif;
+      text-rendering:optimizeLegibility;
     }
 
     .lead{
@@ -416,11 +415,6 @@
       line-height:1.78;
       color:#4c5564;
       letter-spacing:0.003em;
-    }
-
-    .statement,
-    .luxury-text,
-    .closing{
       text-rendering:optimizeLegibility;
     }
 
@@ -736,14 +730,14 @@
       overflow:hidden;
       border-radius:18px;
       background:white;
-      border:1px solid var(--line);
-      box-shadow:var(--shadow);
+      border:1px solid rgba(17,24,39,0.08);
+      box-shadow:0 16px 38px rgba(15,23,42,0.08);
       transition:transform .28s ease, box-shadow .28s ease;
     }
 
     .editorial-card:hover{
       transform:translateY(-4px);
-      box-shadow:var(--shadow-hover);
+      box-shadow:0 24px 52px rgba(15,23,42,0.12);
     }
 
     .editorial-card img{
@@ -781,11 +775,17 @@
       letter-spacing:0.01em;
     }
 
+    .gallery{
+      align-items:start;
+    }
+
     .gallery-item{
+      position:relative;
       overflow:hidden;
       border-radius:16px;
-      border:1px solid var(--line);
+      border:1px solid rgba(17,24,39,0.08);
       background:white;
+      transform:none !important;
     }
 
     .gallery-item img{
@@ -793,7 +793,7 @@
       aspect-ratio:1/1;
       object-fit:cover;
       transition:transform .55s ease;
-      will-change:transform;
+      transform:none !important;
     }
 
     .gallery-item:hover img{
@@ -831,6 +831,7 @@
       text-align:center;
       font-family:'Playfair Display',serif;
       padding:18px 0 4px;
+      text-rendering:optimizeLegibility;
     }
 
     .floating{
@@ -982,7 +983,7 @@
   </div>
 
   <section class="hero" id="hero">
-    <div class="hero-inner hero-content" id="heroInner">
+    <div class="hero-inner" id="heroInner">
       <img src="./logo.png" alt="Ixchell Jewellery Singapore" class="logo-hero reveal-text" />
       <div class="hero-tag reveal-text delay-1">Private Jadeite Boutique</div>
       <h1 class="reveal-text delay-1">Not all jade is jadeite.</h1>
@@ -1231,12 +1232,12 @@
       </p>
 
       <div class="gallery">
-        <div class="gallery-item reveal-text delay-1 soft-zoom image-drift depth-layer"><img src="./gallery1.jpg" alt="Jadeite bangles Singapore" /></div>
-        <div class="gallery-item reveal-text delay-2 soft-zoom image-drift depth-layer"><img src="./gallery2.jpg" alt="Jadeite display Singapore" /></div>
-        <div class="gallery-item reveal-text delay-3 soft-zoom image-drift depth-layer"><img src="./gallery3.jpg" alt="Collector jadeite Singapore" /></div>
-        <div class="gallery-item reveal-text delay-1 soft-zoom image-drift depth-layer"><img src="./gallery4.jpg" alt="Jadeite carvings Singapore" /></div>
-        <div class="gallery-item reveal-text delay-2 soft-zoom image-drift depth-layer"><img src="./gallery5.jpg" alt="Lavender jadeite Singapore" /></div>
-        <div class="gallery-item reveal-text delay-3 soft-zoom image-drift depth-layer"><img src="./gallery6.jpg" alt="Fine jadeite jewellery Singapore" /></div>
+        <div class="gallery-item reveal-text delay-1 soft-zoom"><img src="./gallery1.jpg" alt="Jadeite bangles Singapore" /></div>
+        <div class="gallery-item reveal-text delay-2 soft-zoom"><img src="./gallery2.jpg" alt="Jadeite display Singapore" /></div>
+        <div class="gallery-item reveal-text delay-3 soft-zoom"><img src="./gallery3.jpg" alt="Collector jadeite Singapore" /></div>
+        <div class="gallery-item reveal-text delay-1 soft-zoom"><img src="./gallery4.jpg" alt="Jadeite carvings Singapore" /></div>
+        <div class="gallery-item reveal-text delay-2 soft-zoom"><img src="./gallery5.jpg" alt="Lavender jadeite Singapore" /></div>
+        <div class="gallery-item reveal-text delay-3 soft-zoom"><img src="./gallery6.jpg" alt="Fine jadeite jewellery Singapore" /></div>
       </div>
     </div>
 
@@ -1405,6 +1406,8 @@
       });
 
       document.querySelectorAll('.image-drift img').forEach((img) => {
+        if (img.closest('.gallery-item')) return;
+
         const rect = img.getBoundingClientRect();
         const center = window.innerHeight / 2;
         const distance = rect.top + rect.height / 2 - center;
