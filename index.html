@@ -136,11 +136,11 @@
       position:relative;
       min-height:100svh;
       display:flex;
-      align-items:center;
+      align-items:flex-end;
       justify-content:center;
       text-align:center;
       color:#fff;
-      padding:24px 16px;
+      padding:32px 16px 56px;
       overflow:hidden;
       background:
         linear-gradient(rgba(0,0,0,0.42), rgba(0,0,0,0.62)),
@@ -155,6 +155,20 @@
         radial-gradient(circle at 50% 18%, rgba(255,255,255,0.12), transparent 34%),
         radial-gradient(circle at 78% 72%, rgba(185,160,255,0.12), transparent 30%);
       animation:heroGlow 10s ease-in-out infinite alternate;
+      pointer-events:none;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(
+        to top,
+        rgba(0,0,0,0.65) 0%,
+        rgba(0,0,0,0.35) 35%,
+        rgba(0,0,0,0.15) 60%,
+        rgba(0,0,0,0.0) 100%
+      );
       pointer-events:none;
     }
 
@@ -197,17 +211,17 @@
     .hero h1{
       margin:0;
       font-family:'Space Grotesk',sans-serif;
-      font-size:clamp(40px, 9vw, 84px);
-      line-height:0.96;
-      letter-spacing:-0.05em;
+      font-size:clamp(38px, 8.6vw, 82px);
+      line-height:0.97;
+      letter-spacing:-0.055em;
       text-wrap:balance;
     }
 
     .hero p{
-      margin:16px auto 0;
-      max-width:740px;
-      font-size:clamp(17px, 4.6vw, 22px);
-      line-height:1.62;
+      margin:18px auto 0;
+      max-width:720px;
+      font-size:clamp(17px, 4.4vw, 22px);
+      line-height:1.72;
       color:rgba(255,255,255,0.92);
       text-wrap:balance;
     }
@@ -259,7 +273,7 @@
     .page{
       width:min(100%, var(--max));
       margin:0 auto;
-      padding:24px 14px 190px;
+      padding:34px 16px 250px;
     }
 
     .logo-divider{
@@ -271,14 +285,15 @@
     .card{
       position:relative;
       width:100%;
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      padding:26px 20px;
-      margin-top:16px;
-      box-shadow:var(--shadow);
-      transition:transform .28s ease, box-shadow .28s ease;
+      background:rgba(255,255,255,0.96);
+      border:1px solid rgba(17,24,39,0.06);
+      border-radius:30px;
+      padding:30px 22px;
+      margin-top:22px;
+      box-shadow:0 18px 42px rgba(15,23,42,0.06);
+      transition:transform .32s ease, box-shadow .32s ease, border-color .32s ease;
       overflow:hidden;
+      backdrop-filter:blur(6px);
     }
 
     .card::after{
@@ -295,8 +310,9 @@
     }
 
     .card:hover{
-      transform:translateY(-4px);
-      box-shadow:var(--shadow-hover);
+      transform:translateY(-5px);
+      box-shadow:0 26px 56px rgba(15,23,42,0.10);
+      border-color:rgba(24,49,83,0.10);
     }
 
     .card:hover::after{
@@ -321,6 +337,17 @@
     }
 
     .reveal-text.show{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    .slow-reveal{
+      opacity:0;
+      transform:translateY(34px);
+      transition:opacity 1.05s ease, transform 1.05s ease;
+    }
+
+    .slow-reveal.visible{
       opacity:1;
       transform:translateY(0);
     }
@@ -388,11 +415,16 @@
       font-size:17px;
       line-height:1.78;
       color:#4c5564;
+      letter-spacing:0.003em;
+    }
+
+    .statement,
+    .luxury-text,
+    .closing{
+      text-rendering:optimizeLegibility;
     }
 
     .two-col,
-    .spotlight,
-    .feature,
     .gift-grid,
     .learn-grid,
     .visit-grid,
@@ -449,18 +481,76 @@
       transform:translateY(-2px);
     }
 
-    .spotlight-visual,
-    .feature-image{
-      position:relative;
-      border-radius:20px;
+    .depth-layer{
+      will-change:transform;
+      transition:transform 0.12s linear;
+    }
+
+    .soft-zoom{
       overflow:hidden;
-      background:linear-gradient(180deg,#fbf5ff,#f6f8ff);
+      border-radius:20px;
+    }
+
+    .soft-zoom img{
+      transition:transform 1.1s ease;
+      will-change:transform;
+    }
+
+    .soft-zoom:hover img{
+      transform:scale(1.04);
+    }
+
+    .parallax-section{
+      position:relative;
+      overflow:hidden;
+    }
+
+    .parallax-bg{
+      position:absolute;
+      inset:-8% 0 -8% 0;
+      z-index:0;
+      pointer-events:none;
+      opacity:0.18;
+      background:
+        radial-gradient(circle at 20% 30%, rgba(24,49,83,0.08), transparent 32%),
+        radial-gradient(circle at 80% 70%, rgba(143,170,255,0.10), transparent 28%);
+      will-change:transform;
+    }
+
+    .parallax-content{
+      position:relative;
+      z-index:1;
+    }
+
+    .section-divider{
+      height:1px;
+      margin:24px 0 0;
+      background:linear-gradient(
+        90deg,
+        rgba(24,49,83,0) 0%,
+        rgba(24,49,83,0.18) 50%,
+        rgba(24,49,83,0) 100%
+      );
+    }
+
+    .campaign{
+      margin:76px 0 68px;
+      display:flex;
+      flex-direction:column;
+      gap:26px;
+    }
+
+    .campaign-image{
+      border-radius:28px;
+      overflow:hidden;
+      background:linear-gradient(180deg,#fbf8ff,#f6f7fb);
       padding:16px;
+      box-shadow:0 18px 44px rgba(18,30,54,0.08);
+      position:relative;
       isolation:isolate;
     }
 
-    .spotlight-visual::before,
-    .feature-image::before{
+    .campaign-image::before{
       content:"";
       position:absolute;
       inset:0;
@@ -470,8 +560,7 @@
       z-index:0;
     }
 
-    .spotlight-visual::after,
-    .feature-image::after{
+    .campaign-image::after{
       content:"";
       position:absolute;
       right:-10%;
@@ -488,38 +577,60 @@
       to{ opacity:1; transform:scale(1.08); }
     }
 
-    .spotlight-visual img,
-    .feature-image img{
+    .campaign-image img{
       position:relative;
       z-index:1;
       width:100%;
-      aspect-ratio:1 / 1;
-      object-fit:cover;
+      display:block;
       border-radius:14px;
       box-shadow:0 18px 34px rgba(24,49,83,0.10);
+      transform:scale(1);
+      transition:transform 1.2s ease;
       will-change:transform;
-      transition:transform .5s ease;
     }
 
-    .float-slow{
-      animation:floatSlow 6s ease-in-out infinite;
+    .campaign:hover img{
+      transform:scale(1.05);
     }
 
-    @keyframes floatSlow{
-      0%{ transform:translateY(0px) scale(1); }
-      50%{ transform:translateY(-8px) scale(1.015); }
-      100%{ transform:translateY(0px) scale(1); }
+    .campaign-text{
+      padding:6px 8px 0;
+    }
+
+    .label{
+      font-size:11px;
+      letter-spacing:2px;
+      color:#8a8a8a;
+      font-family:'Space Grotesk',sans-serif;
+      text-transform:uppercase;
+    }
+
+    .campaign h2{
+      font-size:clamp(30px, 6vw, 42px);
+      line-height:1.02;
+      letter-spacing:-0.03em;
+      margin:10px 0 16px;
+    }
+
+    .campaign p{
+      color:var(--muted);
+      margin-bottom:12px;
+      font-size:16px;
+      line-height:1.82;
     }
 
     .cinematic{
-      background:#0d1b2a;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(33,72,118,0.52), transparent 30%),
+        linear-gradient(180deg,#081728 0%, #0d1b2a 100%);
       color:#fff;
-      padding:72px 22px;
-      border-radius:28px;
-      margin-top:16px;
+      padding:86px 24px;
+      border-radius:34px;
+      margin-top:24px;
       text-align:center;
       overflow:hidden;
       position:relative;
+      box-shadow:0 24px 60px rgba(7,17,32,0.22);
     }
 
     .cinematic::before{
@@ -545,13 +656,54 @@
       margin:0 auto;
     }
 
-    .cinematic h2,
-    .cinematic p{
+    .cinematic h2{
       color:#fff;
+      font-size:clamp(34px, 7vw, 54px);
+      line-height:1.04;
+      letter-spacing:-0.04em;
     }
 
     .cinematic p{
-      opacity:.84;
+      color:rgba(255,255,255,0.84);
+      font-size:18px;
+      line-height:1.8;
+      max-width:680px;
+      margin:0 auto;
+    }
+
+    .collector{
+      margin:78px 0;
+      padding:52px 28px;
+      border-radius:34px;
+      background:
+        radial-gradient(circle at 50% 28%, rgba(51,104,164,0.34), transparent 28%),
+        linear-gradient(180deg, #143050 0%, #0f243c 100%);
+      color:white;
+      text-align:center;
+      box-shadow:0 24px 60px rgba(15,36,60,0.20);
+    }
+
+    .collector-inner{
+      max-width:560px;
+      margin:0 auto;
+    }
+
+    .collector h2{
+      font-size:clamp(32px, 7vw, 46px);
+      line-height:1.04;
+      letter-spacing:-0.04em;
+      margin:12px 0 18px;
+    }
+
+    .collector p{
+      color:rgba(255,255,255,0.86);
+      margin-bottom:12px;
+      font-size:16px;
+      line-height:1.84;
+    }
+
+    .collector .label{
+      color:rgba(255,255,255,0.78);
     }
 
     .gift-item,
@@ -626,6 +778,7 @@
       opacity:.74;
       margin-top:20px;
       font-family:'Playfair Display',serif;
+      letter-spacing:0.01em;
     }
 
     .gallery-item{
@@ -640,6 +793,7 @@
       aspect-ratio:1/1;
       object-fit:cover;
       transition:transform .55s ease;
+      will-change:transform;
     }
 
     .gallery-item:hover img{
@@ -681,30 +835,98 @@
 
     .floating{
       position:fixed;
-      left:12px;
-      right:12px;
-      bottom:20px;
+      left:18px;
+      right:18px;
+      bottom:18px;
       z-index:999;
       text-align:center;
       text-decoration:none;
-      background:var(--brand);
+      background:linear-gradient(180deg,#1b3c69,#183153);
       color:white;
-      padding:14px;
+      padding:13px 18px;
       border-radius:999px;
       font-weight:700;
-      box-shadow:0 12px 26px rgba(0,0,0,0.18);
-      transition:transform .22s ease, box-shadow .22s ease;
+      box-shadow:0 14px 30px rgba(10,23,43,0.24);
+      transition:transform .22s ease, box-shadow .22s ease, opacity .22s ease;
       font-family:'Space Grotesk',sans-serif;
+      font-size:15px;
+      letter-spacing:0.01em;
     }
 
     .floating:hover{
       transform:translateY(-2px);
-      box-shadow:0 16px 30px rgba(0,0,0,0.20);
+      box-shadow:0 18px 36px rgba(10,23,43,0.28);
+      opacity:.99;
+    }
+
+    .card + .cinematic,
+    .cinematic + .collector,
+    .collector + .card{
+      margin-top:28px;
+    }
+
+    @media (max-width: 760px){
+      .hero h1{
+        font-size:clamp(34px, 8.4vw, 48px);
+        line-height:1.0;
+      }
+
+      .hero p{
+        font-size:18px;
+        line-height:1.58;
+        max-width:320px;
+      }
+
+      .hero-actions{
+        gap:10px;
+      }
+
+      .button{
+        padding:13px 18px;
+        font-size:14px;
+      }
+
+      .parallax-bg{
+        opacity:0.12;
+      }
+
+      .soft-zoom:hover img{
+        transform:none;
+      }
+
+      .campaign h2,
+      .collector h2,
+      .cinematic h2{
+        max-width:11ch;
+        margin-left:auto;
+        margin-right:auto;
+      }
+
+      .campaign-text,
+      .collector-inner{
+        text-align:left;
+      }
+
+      .collector{
+        text-align:left;
+      }
+
+      .cinematic{
+        padding:72px 22px;
+      }
+
+      .cinematic p{
+        font-size:17px;
+      }
     }
 
     @media (min-width: 761px){
       .page{
-        padding:24px 16px 190px;
+        padding:40px 22px 260px;
+      }
+
+      .card{
+        padding:34px 30px;
       }
 
       .mobile-bar-inner{
@@ -719,12 +941,6 @@
         grid-template-columns:1.03fr 0.97fr;
       }
 
-      .spotlight,
-      .feature{
-        grid-template-columns:1fr 1fr;
-        align-items:center;
-      }
-
       .gift-grid,
       .learn-grid,
       .visit-grid{
@@ -734,6 +950,13 @@
       .editorial-grid,
       .gallery{
         grid-template-columns:1fr 1fr;
+      }
+
+      .campaign{
+        display:grid;
+        grid-template-columns:1.02fr 0.98fr;
+        gap:36px;
+        align-items:center;
       }
     }
 
@@ -759,12 +982,12 @@
   </div>
 
   <section class="hero" id="hero">
-    <div class="hero-inner" id="heroInner">
+    <div class="hero-inner hero-content" id="heroInner">
       <img src="./logo.png" alt="Ixchell Jewellery Singapore" class="logo-hero reveal-text" />
       <div class="hero-tag reveal-text delay-1">Private Jadeite Boutique</div>
       <h1 class="reveal-text delay-1">Not all jade is jadeite.</h1>
       <p class="reveal-text delay-2">
-        Seen everywhere. Understood by few. Chosen quietly by those who recognise the difference.
+        Seen often. Understood rarely. Chosen quietly by those who recognise the difference.
       </p>
 
       <div class="hero-actions">
@@ -783,13 +1006,16 @@
       <p class="statement reveal-text delay-1">
         A private jadeite boutique near City Hall MRT, specialising in natural Type A Burmese jadeite and a quieter, more considered way of choosing jewellery.
       </p>
+      <p class="luxury-text reveal-text delay-2">
+        Not merely to purchase, but to recognise what deserves to be chosen.
+      </p>
     </div>
 
     <div id="story" class="card left reveal">
       <h2 class="reveal-text">This is where people finally understand jadeite.</h2>
-      <p class="lead reveal-text delay-1">Most people only see jadeite through photos.</p>
-      <p class="lead reveal-text delay-2">In person, colour, structure, depth and presence become something entirely different.</p>
-      <p class="lead reveal-text delay-3">That is when the difference becomes clear.</p>
+      <p class="lead reveal-text delay-1">Most people only encounter jadeite through photographs.</p>
+      <p class="lead reveal-text delay-2">In person, colour, structure, translucency and presence reveal an entirely different reality.</p>
+      <p class="lead reveal-text delay-3">That is where the difference begins.</p>
     </div>
 
     <div class="two-col">
@@ -822,13 +1048,14 @@
       </div>
     </div>
 
-    <section class="card feature reveal">
-      <div class="feature-image">
-        <img src="./earring1.jpg" alt="Lavender jadeite earrings" class="float-slow" id="featureImage" />
+    <section class="campaign reveal">
+      <div class="campaign-image soft-zoom image-drift depth-layer">
+        <img src="./earring1.jpg" alt="Lavender jadeite butterfly earrings" class="float-slow" id="featureImage" />
       </div>
 
-      <div class="feature-text left">
-        <div class="mini-title reveal-text">Signature Piece</div>
+      <div class="campaign-text left">
+        <span class="label reveal-text">Signature Piece</span>
+
         <h2 class="reveal-text delay-1">Lavender jadeite, in its most effortless form.</h2>
 
         <p class="reveal-text delay-2">
@@ -836,18 +1063,12 @@
         </p>
 
         <p class="reveal-text delay-2">
-          Often chosen for birthdays, Mother’s Day, or as a meaningful souvenir from Singapore — not for its price, but for the feeling it carries.
+          Often chosen for birthdays, Mother’s Day, or as a meaningful souvenir from Singapore — not for the price attached to it, but for the feeling it leaves behind.
         </p>
 
         <p class="luxury-text reveal-text delay-3">
-          Entry pieces begin from S$68 — a considered introduction, not a compromise.
+          Entry pieces begin from S$68 — an accessible introduction to the brand, never a compromise in character.
         </p>
-
-        <div class="pill-row reveal-text delay-3">
-          <span class="pill">Mother’s Day</span>
-          <span class="pill">Singapore Souvenir</span>
-          <span class="pill">Brand Entry Point</span>
-        </div>
       </div>
     </section>
 
@@ -856,39 +1077,44 @@
       <h2 class="reveal-text delay-1">The butterfly, reimagined in jadeite.</h2>
 
       <p class="luxury-text reveal-text delay-2">
-        In Peranakan and Straits Chinese heritage, the butterfly reflects grace, transformation and enduring beauty.
+        In Peranakan and Straits Chinese heritage, the butterfly is associated with grace, transformation and enduring beauty.
       </p>
 
       <p class="luxury-text reveal-text delay-3">
-        Paired with lavender jadeite, it becomes a quiet expression of softness, calm and understated elegance — a gift that carries meaning beyond the moment.
+        Paired with lavender jadeite, it becomes a quieter expression of softness, calm and understated elegance — a gift that carries meaning long after the moment has passed.
       </p>
     </div>
 
-    <section class="cinematic reveal">
-      <div class="cinematic-inner">
-        <h2 class="reveal-text">Jadeite is never chosen in a rush.</h2>
-        <p class="reveal-text delay-1">
+    <section class="cinematic reveal parallax-section">
+      <div class="parallax-bg depth-layer"></div>
+      <div class="cinematic-inner parallax-content">
+        <h2 class="reveal-text slow-reveal">Jadeite is never chosen in a rush.</h2>
+        <p class="reveal-text delay-1 slow-reveal">
           It is observed. Understood. And only then, quietly recognised.
         </p>
+        <div class="section-divider"></div>
       </div>
     </section>
 
-    <div class="card left reveal">
-      <div class="mini-title reveal-text">Collector Philosophy</div>
-      <h2 class="reveal-text delay-1">No two jadeite pieces are ever the same.</h2>
-      <p class="lead reveal-text delay-2">
-        Jadeite is formed naturally over millions of years beneath the earth.
-      </p>
-      <p class="reveal-text delay-2">
-        Even when two pieces are carved from the same stone, they will never share the same colour, translucency, texture or life.
-      </p>
-      <p class="reveal-text delay-3">
-        Each piece exists only once — not reproduced, not repeated, not standardised.
-      </p>
-      <p class="luxury-text reveal-text delay-3">
-        Every piece is, in its own way, a quiet limited edition.
-      </p>
-    </div>
+    <section class="collector reveal">
+      <div class="collector-inner">
+        <span class="label reveal-text">Collector Philosophy</span>
+
+        <h2 class="reveal-text delay-1">No two jadeite pieces are ever the same.</h2>
+
+        <p class="reveal-text delay-2">
+          Jadeite is formed naturally over millions of years beneath the earth. Even when carved from the same stone, each piece carries its own colour, translucency, texture and life.
+        </p>
+
+        <p class="reveal-text delay-3">
+          This is why jadeite is never truly standard. Never repeated. Never entirely replaceable.
+        </p>
+
+        <p class="luxury-text reveal-text delay-3">
+          Each piece stands quietly on its own — as it always should.
+        </p>
+      </div>
+    </section>
 
     <div class="card left reveal">
       <div class="mini-title reveal-text">Gift & Souvenir Perspective</div>
@@ -963,7 +1189,7 @@
       </div>
 
       <p class="authority reveal-text delay-3">
-        No two pieces are ever the same. Each jadeite forms over millions of years — and each carries its own character.
+        No two pieces are ever the same. Each jadeite forms over millions of years — and each carries its own character, presence and quiet authority.
       </p>
     </div>
 
@@ -1005,12 +1231,12 @@
       </p>
 
       <div class="gallery">
-        <div class="gallery-item reveal-text delay-1"><img src="./gallery1.jpg" alt="Jadeite bangles Singapore" /></div>
-        <div class="gallery-item reveal-text delay-2"><img src="./gallery2.jpg" alt="Jadeite display Singapore" /></div>
-        <div class="gallery-item reveal-text delay-3"><img src="./gallery3.jpg" alt="Collector jadeite Singapore" /></div>
-        <div class="gallery-item reveal-text delay-1"><img src="./gallery4.jpg" alt="Jadeite carvings Singapore" /></div>
-        <div class="gallery-item reveal-text delay-2"><img src="./gallery5.jpg" alt="Lavender jadeite Singapore" /></div>
-        <div class="gallery-item reveal-text delay-3"><img src="./gallery6.jpg" alt="Fine jadeite jewellery Singapore" /></div>
+        <div class="gallery-item reveal-text delay-1 soft-zoom image-drift depth-layer"><img src="./gallery1.jpg" alt="Jadeite bangles Singapore" /></div>
+        <div class="gallery-item reveal-text delay-2 soft-zoom image-drift depth-layer"><img src="./gallery2.jpg" alt="Jadeite display Singapore" /></div>
+        <div class="gallery-item reveal-text delay-3 soft-zoom image-drift depth-layer"><img src="./gallery3.jpg" alt="Collector jadeite Singapore" /></div>
+        <div class="gallery-item reveal-text delay-1 soft-zoom image-drift depth-layer"><img src="./gallery4.jpg" alt="Jadeite carvings Singapore" /></div>
+        <div class="gallery-item reveal-text delay-2 soft-zoom image-drift depth-layer"><img src="./gallery5.jpg" alt="Lavender jadeite Singapore" /></div>
+        <div class="gallery-item reveal-text delay-3 soft-zoom image-drift depth-layer"><img src="./gallery6.jpg" alt="Fine jadeite jewellery Singapore" /></div>
       </div>
     </div>
 
@@ -1027,7 +1253,7 @@
       </p>
 
       <p class="reveal-text delay-3">
-        This allows us to listen first — and guide only when needed.
+        This allows us to listen first, understand what is needed, and guide only where it is useful.
       </p>
 
       <p class="reveal-text delay-3">
@@ -1035,7 +1261,7 @@
       </p>
 
       <p class="reveal-text delay-3">
-        All transactions are conducted in-store. We accept Visa, MasterCard and American Express for both local and international clients.
+        All transactions are completed in-store. We accept Visa, MasterCard and American Express for both local and international clients.
       </p>
     </section>
 
@@ -1099,8 +1325,8 @@
 
     <section class="card center reveal">
       <p class="closing reveal-text">
-        You are not here to buy jewellery.<br />
-        You are here to recognise one.
+        You are not here merely to buy jewellery.<br />
+        You are here to recognise what is yours.
       </p>
     </section>
 
@@ -1139,6 +1365,16 @@
 
     document.querySelectorAll('.reveal-text').forEach((el) => textObserver.observe(el));
 
+    const slowObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.18 });
+
+    document.querySelectorAll('.slow-reveal').forEach((el) => slowObserver.observe(el));
+
     const heroInner = document.getElementById('heroInner');
     const featureImage = document.getElementById('featureImage');
 
@@ -1159,6 +1395,32 @@
       if (heroInner) heroInner.style.transform = '';
       if (featureImage) featureImage.style.transform = '';
     });
+
+    function handleScrollDepth() {
+      const scrollY = window.scrollY;
+
+      document.querySelectorAll('.depth-layer').forEach((el, index) => {
+        const speed = 0.03 + (index % 3) * 0.012;
+        el.style.transform = `translate3d(0, ${scrollY * speed}px, 0)`;
+      });
+
+      document.querySelectorAll('.image-drift img').forEach((img) => {
+        const rect = img.getBoundingClientRect();
+        const center = window.innerHeight / 2;
+        const distance = rect.top + rect.height / 2 - center;
+        const offset = distance * -0.015;
+
+        if (window.innerWidth > 760) {
+          img.style.transform = `translate3d(0, ${offset}px, 0) scale(1.02)`;
+        } else {
+          img.style.transform = 'translate3d(0, 0, 0) scale(1)';
+        }
+      });
+    }
+
+    window.addEventListener('scroll', handleScrollDepth, { passive: true });
+    window.addEventListener('load', handleScrollDepth);
+    window.addEventListener('resize', handleScrollDepth);
   </script>
 </body>
 </html>
