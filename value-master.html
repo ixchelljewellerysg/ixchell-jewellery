@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>What Determines Jadeite Value | Ixchell Jewellery Singapore</title>
+
+<meta name="description" content="A detailed guide to what determines jadeite value, from structure and translucency to texture, colour, craftsmanship and presence.">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#f6f7fb;
+    --card:#ffffff;
+    --text:#111827;
+    --muted:#5f6978;
+    --brand:#183153;
+    --brand-deep:#10233d;
+    --line:rgba(17,24,39,0.08);
+    --shadow:0 18px 42px rgba(15,23,42,0.06);
+    --shadow-strong:0 26px 56px rgba(15,23,42,0.10);
+    --max:920px;
+  }
+
+  *{
+    box-sizing:border-box;
+  }
+
+  html{
+    scroll-behavior:smooth;
+    -webkit-text-size-adjust:100%;
+  }
+
+  body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background:
+      radial-gradient(circle at top left, #ffffff 0%, #f7f8fb 40%, #edf2f7 100%);
+    color:var(--text);
+    overflow-x:hidden;
+  }
+
+  a{
+    color:inherit;
+  }
+
+  .hero{
+    position:relative;
+    min-height:48vh;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+    padding:32px 16px 44px;
+    overflow:hidden;
+    background:
+      linear-gradient(rgba(0,0,0,0.42), rgba(0,0,0,0.62)),
+      url('./hero.jpg') center/cover no-repeat;
+  }
+
+  .hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+      to top,
+      rgba(0,0,0,0.68) 0%,
+      rgba(0,0,0,0.30) 45%,
+      rgba(0,0,0,0.08) 100%
+    );
+    pointer-events:none;
+  }
+
+  .hero-inner{
+    position:relative;
+    z-index:2;
+    width:min(100%, 820px);
+  }
+
+  .eyebrow{
+    display:inline-block;
+    padding:8px 14px;
+    margin-bottom:14px;
+    border-radius:999px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.10em;
+    text-transform:uppercase;
+    background:rgba(255,255,255,0.10);
+    border:1px solid rgba(255,255,255,0.24);
+    font-family:'Space Grotesk',sans-serif;
+  }
+
+  .hero h1{
+    margin:0;
+    font-family:'Space Grotesk',sans-serif;
+    font-size:clamp(34px, 7vw, 64px);
+    line-height:0.98;
+    letter-spacing:-0.05em;
+    text-wrap:balance;
+  }
+
+  .hero p{
+    margin:16px auto 0;
+    max-width:700px;
+    font-size:clamp(17px, 3.8vw, 21px);
+    line-height:1.72;
+    color:rgba(255,255,255,0.92);
+    text-wrap:balance;
+    font-family:'Playfair Display',serif;
+  }
+
+  .page{
+    width:min(100%, var(--max));
+    margin:0 auto;
+    padding:34px 16px 140px;
+  }
+
+  .card{
+    background:rgba(255,255,255,0.97);
+    border:1px solid var(--line);
+    border-radius:28px;
+    padding:28px 22px;
+    margin-top:18px;
+    box-shadow:var(--shadow);
+  }
+
+  .card:hover{
+    box-shadow:var(--shadow-strong);
+  }
+
+  .intro{
+    text-align:center;
+  }
+
+  .mini-title{
+    margin-bottom:10px;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:0.10em;
+    text-transform:uppercase;
+    color:var(--brand);
+    font-family:'Space Grotesk',sans-serif;
+  }
+
+  h2{
+    margin:0 0 12px;
+    font-family:'Space Grotesk',sans-serif;
+    font-size:clamp(26px, 5vw, 38px);
+    line-height:1.08;
+    letter-spacing:-0.03em;
+    text-wrap:balance;
+  }
+
+  p{
+    margin:0 0 12px;
+    color:var(--muted);
+    font-size:16px;
+    line-height:1.82;
+    text-wrap:pretty;
+    overflow-wrap:break-word;
+  }
+
+  .statement{
+    font-family:'Playfair Display',serif;
+    font-size:20px;
+    line-height:1.76;
+    color:#111827;
+    text-rendering:optimizeLegibility;
+  }
+
+  .luxury{
+    font-family:'Playfair Display',serif;
+    font-size:17px;
+    line-height:1.8;
+    color:#4c5564;
+    text-rendering:optimizeLegibility;
+  }
+
+  .highlight{
+    background:#eef4fb;
+    border:1px solid rgba(24,49,83,0.10);
+    border-radius:18px;
+    padding:16px;
+    margin-top:12px;
+  }
+
+  .highlight p{
+    margin:0;
+    color:#183153;
+    font-weight:600;
+  }
+
+  .button-row{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:18px;
+  }
+
+  .button{
+    display:inline-block;
+    text-decoration:none;
+    border-radius:999px;
+    padding:14px 22px;
+    font-size:15px;
+    font-weight:700;
+    font-family:'Space Grotesk',sans-serif;
+    letter-spacing:0.02em;
+    transition:transform .22s ease, opacity .22s ease;
+  }
+
+  .button:hover{
+    transform:translateY(-2px);
+    opacity:.98;
+  }
+
+  .button-dark{
+    background:var(--brand);
+    color:white;
+    box-shadow:0 12px 24px rgba(24,49,83,0.16);
+  }
+
+  .button-light{
+    background:#ffffff;
+    color:#111827;
+    border:1px solid rgba(17,24,39,0.10);
+  }
+
+  .continue-grid{
+    display:grid;
+    gap:14px;
+    grid-template-columns:1fr;
+    margin-top:10px;
+  }
+
+  .continue-item{
+    background:#f8fbff;
+    border:1px solid #dde7f2;
+    border-radius:18px;
+    padding:16px;
+  }
+
+  .continue-item strong{
+    display:block;
+    margin-bottom:6px;
+    font-family:'Space Grotesk',sans-serif;
+    color:#111827;
+  }
+
+  .closing{
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    font-size:20px;
+    line-height:1.82;
+    color:#111827;
+  }
+
+  .floating{
+    position:fixed;
+    left:18px;
+    right:18px;
+    bottom:18px;
+    z-index:999;
+    text-align:center;
+    text-decoration:none;
+    background:linear-gradient(180deg,#1b3c69,#183153);
+    color:white;
+    padding:13px 18px;
+    border-radius:999px;
+    font-weight:700;
+    box-shadow:0 14px 30px rgba(10,23,43,0.24);
+    transition:transform .22s ease, box-shadow .22s ease, opacity .22s ease;
+    font-family:'Space Grotesk',sans-serif;
+    font-size:15px;
+    letter-spacing:0.01em;
+  }
+
+  .floating:hover{
+    transform:translateY(-2px);
+    box-shadow:0 18px 36px rgba(10,23,43,0.28);
+    opacity:.99;
+  }
+
+  @media (min-width: 761px){
+    .page{
+      padding:40px 22px 150px;
+    }
+
+    .card{
+      padding:34px 30px;
+    }
+
+    .continue-grid{
+      grid-template-columns:1fr 1fr 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Jadeite Knowledge</div>
+    <h1>What Determines Jadeite Value</h1>
+    <p>
+      Beyond colour, beyond first impressions — what truly gives jadeite its value.
+    </p>
+  </div>
+</section>
+
+<div class="page">
+
+  <div class="card intro">
+    <div class="mini-title">Master Guide</div>
+    <h2>Not all jadeite is valued the same.</h2>
+    <p class="statement">
+      Two pieces may appear similar at first glance. Yet one may be worth hundreds, and another far more. The difference is rarely obvious at first. But it is always there.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Value is not colour alone.</h2>
+    <p>
+      Most people begin with colour. Green, lavender, white, icy tones. But colour alone does not determine value.
+    </p>
+    <p>
+      In jadeite, value is built through a balance of structure, translucency, texture, purity, craftsmanship, proportion, rarity and presence.
+    </p>
+    <div class="highlight">
+      <p>Colour draws attention first. Character holds value longer.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Structure is the foundation.</h2>
+    <p>
+      Structure refers to the internal grain and crystal formation of the jadeite. Fine structure appears smoother, denser and more refined. Coarser structure appears grainier and less cohesive.
+    </p>
+    <p>
+      The finer the structure, the more elegant the jadeite feels under light. This is one of the reasons two stones with similar colour can sit in entirely different value categories.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Translucency creates life.</h2>
+    <p>
+      Translucency is how light enters and moves through the stone. It gives jadeite depth, softness and a sense of life within the material.
+    </p>
+    <p>
+      Higher translucency often creates a quieter but more refined beauty. It is not surface sparkle. It is internal presence.
+    </p>
+    <p class="luxury">
+      This is why some jadeite does not shout at first glance, yet becomes unforgettable when seen properly.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Texture affects refinement.</h2>
+    <p>
+      Texture is the visual feel of the stone. A refined texture appears smooth, even and gentle. A rougher texture may look dry, uneven or less alive.
+    </p>
+    <p>
+      Texture reflects the quality of formation. In fine jadeite, even a softer colour can feel elevated if the texture is beautiful enough.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Purity is about balance, not perfection.</h2>
+    <p>
+      Purity refers to cracks, inclusions and interruptions within the material. But in jadeite, value does not come from an unrealistic idea of flawlessness.
+    </p>
+    <p>
+      It comes from harmony. A piece may carry natural features and still be highly valuable if its structure, translucency and overall presence remain strong.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Colour matters — but quality of colour matters more.</h2>
+    <p>
+      A vivid tone is not enough on its own. What matters is how even the colour is, how naturally it sits in the material, and whether it works with the stone’s structure.
+    </p>
+    <p>
+      A softer colour with fine structure and translucency can often feel more valuable than a brighter colour sitting in weaker material.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Craftsmanship shapes the experience.</h2>
+    <p>
+      Jadeite is not only formed. It is also cut, polished and balanced. Good craftsmanship allows the material to speak without forcing it.
+    </p>
+    <p>
+      A well-made piece feels proportionate, elegant and complete. The workmanship should support the jadeite, not overpower it.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Size alone does not decide value.</h2>
+    <p>
+      Larger pieces are rarer, but size on its own is not enough. A smaller piece with fine structure, good translucency and calm presence may hold more value than a larger but weaker stone.
+    </p>
+    <p>
+      In jadeite, quality does not always become louder as size increases.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Origin gives context, not automatic superiority.</h2>
+    <p>
+      Certain origins, especially Myanmar, are historically associated with higher-quality jadeite. That matters. But origin alone is not the final answer.
+    </p>
+    <p>
+      The stone itself must still be judged on structure, translucency, treatment status and overall presence.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Presence is the intangible factor.</h2>
+    <p>
+      Some jadeite pieces feel calm, complete and quietly resolved. Others may appear attractive, but do not hold the same emotional weight.
+    </p>
+    <p>
+      This is what experienced buyers often recognise immediately. Not just beauty — but presence.
+    </p>
+    <div class="highlight">
+      <p>Jadeite is not valued only by what it looks like. It is valued by what it reveals over time.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Why prices vary so widely.</h2>
+    <p>
+      Because jadeite is not standardised. Every piece is naturally formed, structurally unique and visually different. There is no single formula that makes all jadeite equal.
+    </p>
+    <p>
+      What differs is depth, rarity, stability, workmanship, and the quality of the material itself.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>At Ixchell, value begins with understanding.</h2>
+    <p>
+      We curate across a range — from entry pieces for appreciation and gifting, to collector pieces chosen for stronger structure, rarity and presence.
+    </p>
+    <p>
+      Each piece is selected for natural character and integrity, not simply for the quickest visual impression.
+    </p>
+    <p class="luxury">
+      Value is not about spending more. It is about understanding more.
+    </p>
+  </div>
+
+  <div class="card center">
+    <p class="closing">
+      Jadeite is not valued by what it looks like at first glance.<br />
+      It is valued by what it reveals over time.
+    </p>
+
+    <div class="button-row" style="justify-content:center;">
+      <a href="./index.html" class="button button-light">Back to Homepage</a>
+      <a href="./type-a-jadeite.html" class="button button-dark">What is Type A Jadeite?</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="mini-title">Continue Learning</div>
+    <div class="continue-grid">
+      <div class="continue-item">
+        <strong>Type A vs Type B vs Type C</strong>
+        The difference most people never learn.
+        <div style="margin-top:10px;">
+          <a href="./type-a-vs-b-vs-c.html" class="button button-dark">Read the Truth</a>
+        </div>
+      </div>
+
+      <div class="continue-item">
+        <strong>What is Type A jadeite?</strong>
+        The standard of natural jade.
+        <div style="margin-top:10px;">
+          <a href="./type-a-jadeite.html" class="button button-dark">Read Guide</a>
+        </div>
+      </div>
+
+      <div class="continue-item">
+        <strong>Back to Ixchell Jewellery</strong>
+        Return to the main site and continue browsing.
+        <div style="margin-top:10px;">
+          <a href="./index.html" class="button button-dark">Homepage</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<a href="https://instagram.com/ixchelljewellery" class="floating" target="_blank" rel="noopener">
+  Begin your private viewing
+</a>
+
+</body>
+</html>
