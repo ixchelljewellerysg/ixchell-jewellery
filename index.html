@@ -68,6 +68,48 @@
       text-decoration:none;
     }
 
+    .site-loader{
+      position:fixed;
+      inset:0;
+      z-index:9999;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#000;
+      transition:opacity 0.8s ease, visibility 0.8s ease;
+    }
+
+    .site-loader.hidden{
+      opacity:0;
+      visibility:hidden;
+      pointer-events:none;
+    }
+
+    .site-loader__wordmark{
+      color:#fff;
+      font-family:"Space Grotesk",sans-serif;
+      font-size:22px;
+      font-weight:600;
+      letter-spacing:0.18em;
+      text-transform:uppercase;
+      text-align:center;
+      padding:0 20px;
+      animation:loaderPulse 1.7s ease forwards;
+    }
+
+    @keyframes loaderPulse{
+      from{
+        opacity:0;
+        transform:scale(0.985);
+        letter-spacing:0.32em;
+      }
+      to{
+        opacity:1;
+        transform:scale(1);
+        letter-spacing:0.18em;
+      }
+    }
+
     .topbar{
       position:sticky;
       top:0;
@@ -114,7 +156,7 @@
       padding:32px 16px 56px;
       color:#fff;
       background:
-        linear-gradient(rgba(0,0,0,0.42), rgba(0,0,0,0.62)),
+        linear-gradient(rgba(0,0,0,0.44), rgba(0,0,0,0.64)),
         url("./hero.jpg") center/cover no-repeat;
       overflow:hidden;
     }
@@ -123,7 +165,7 @@
       content:"";
       position:absolute;
       inset:0;
-      background:linear-gradient(to top, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.28) 45%, rgba(0,0,0,0.08) 100%);
+      background:linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.28) 45%, rgba(0,0,0,0.08) 100%);
       pointer-events:none;
     }
 
@@ -159,7 +201,7 @@
     .hero h1{
       margin:0;
       font-family:"Space Grotesk",sans-serif;
-      font-size:clamp(38px, 8.2vw, 74px);
+      font-size:clamp(38px, 8.2vw, 72px);
       line-height:0.98;
       letter-spacing:-0.05em;
       text-wrap:balance;
@@ -538,7 +580,7 @@
     }
 
     .gallery-item img{
-      aspect-ratio:1 / 1;
+      aspect-ratio:1/1;
       object-fit:cover;
     }
 
@@ -688,6 +730,10 @@
 </head>
 <body>
 
+  <div class="site-loader" id="siteLoader">
+    <div class="site-loader__wordmark">Ixchell Jewellery</div>
+  </div>
+
   <div class="topbar">
     <div class="topbar-inner">
       <div class="topbar-brand">Ixchell Jewellery Singapore</div>
@@ -762,7 +808,7 @@
 
     <section class="campaign">
       <div class="campaign-image">
-        <img src="./earring1.jpg" alt="Lavender jadeite butterfly earrings" />
+        <img src="./earring-main.jpg" alt="Lavender jadeite butterfly earrings" />
       </div>
 
       <div class="campaign-text left">
@@ -864,21 +910,21 @@
 
       <div class="editorial-grid">
         <article class="editorial-card">
-          <img src="./earring2.jpg" alt="Floral jadeite earrings Singapore" />
+          <img src="./earring-worn.jpg" alt="Butterfly jadeite earrings worn" />
           <div class="editorial-copy">
-            <h3>Floral jadeite earrings</h3>
+            <h3>Seen in wear</h3>
             <p>
-              A softer, more classic expression for clients who prefer something graceful, neat and easy to gift.
+              A softer, more personal sense of scale and elegance when worn close to the face.
             </p>
           </div>
         </article>
 
         <article class="editorial-card">
-          <img src="./earring3.jpg" alt="Green jadeite bead earrings Singapore" />
+          <img src="./earring1.jpg" alt="Butterfly jadeite earrings on black stone" />
           <div class="editorial-copy">
-            <h3>Green jadeite bead earrings</h3>
+            <h3>Butterfly jadeite earrings</h3>
             <p>
-              Light, wearable and quietly polished — an elegant everyday piece with a more traditional rhythm.
+              Light, feminine and quietly memorable — chosen for meaning as much as appearance.
             </p>
           </div>
         </article>
@@ -888,7 +934,7 @@
           <div class="editorial-copy">
             <h3>Green jadeite pendant</h3>
             <p>
-              A stronger statement within the collection for those drawn to vivid colour, presence and deeper jadeite character.
+              A stronger statement within the collection for those drawn to vivid colour and deeper jadeite character.
             </p>
           </div>
         </article>
@@ -1090,6 +1136,17 @@
   >
     Begin your private viewing
   </a>
+
+  <script>
+    window.addEventListener("load", function () {
+      var loader = document.getElementById("siteLoader");
+      if (loader) {
+        setTimeout(function () {
+          loader.classList.add("hidden");
+        }, 1500);
+      }
+    });
+  </script>
 
 </body>
 </html>
