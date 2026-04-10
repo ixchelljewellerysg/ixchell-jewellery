@@ -366,7 +366,8 @@
     .learn-grid,
     .visit-grid,
     .editorial-grid,
-    .gallery-grid{
+    .gallery-grid,
+    .focus-grid{
       display:grid;
       grid-template-columns:1fr;
       gap:14px;
@@ -404,6 +405,26 @@
       color:var(--brand-deep);
       font-weight:700;
       line-height:1.55;
+    }
+
+    .focus-item,
+    .gift-item,
+    .learn-item,
+    .visit-tile{
+      padding:16px;
+      border-radius:18px;
+      background:var(--bg-soft);
+      border:1px solid rgba(24,49,83,0.08);
+    }
+
+    .focus-item strong,
+    .gift-item strong,
+    .learn-item strong,
+    .visit-tile strong{
+      display:block;
+      margin-bottom:6px;
+      font-family:"Space Grotesk",sans-serif;
+      color:#111827;
     }
 
     .campaign{
@@ -499,24 +520,6 @@
 
     .collector p{
       color:rgba(255,255,255,0.86);
-    }
-
-    .gift-item,
-    .learn-item,
-    .visit-tile{
-      padding:16px;
-      border-radius:18px;
-      background:var(--bg-soft);
-      border:1px solid rgba(24,49,83,0.08);
-    }
-
-    .gift-item strong,
-    .learn-item strong,
-    .visit-tile strong{
-      display:block;
-      margin-bottom:6px;
-      font-family:"Space Grotesk",sans-serif;
-      color:#111827;
     }
 
     .featured-learn{
@@ -703,7 +706,8 @@
 
       .gift-grid,
       .learn-grid,
-      .visit-grid{
+      .visit-grid,
+      .focus-grid{
         grid-template-columns:1fr 1fr;
       }
 
@@ -869,6 +873,39 @@
     </section>
 
     <section class="card left">
+      <div class="mini-title">Why Appointments Help</div>
+      <h2>A calmer and more focused way to view jewellery.</h2>
+      <p class="lead">
+        Appointments are not only for preparation. They allow us to focus more clearly on what each client is truly looking for, without pressure and without unnecessary interruption.
+      </p>
+      <p>
+        Because the boutique is intimate rather than large, private viewing also helps us respect each client’s comfort, privacy and pace.
+      </p>
+      <p>
+        Some visitors come with a very specific colour, size or budget in mind. Others may wish to discuss gifting, family pieces, cultural meanings, or something rather personal. A scheduled visit allows that conversation to remain discreet and properly attended to.
+      </p>
+
+      <div class="focus-grid">
+        <div class="focus-item">
+          <strong>More focused guidance</strong>
+          We can prepare around your preferences and help you view more meaningfully.
+        </div>
+        <div class="focus-item">
+          <strong>Greater privacy</strong>
+          A quieter setting for those who value discretion or wish to discuss personal needs.
+        </div>
+        <div class="focus-item">
+          <strong>No pressure to buy</strong>
+          The purpose is to understand what suits you properly, not to rush a decision.
+        </div>
+        <div class="focus-item">
+          <strong>Better use of your time</strong>
+          Especially helpful if you are visiting from overseas or planning a dedicated trip.
+        </div>
+      </div>
+    </section>
+
+    <section class="card left">
       <div class="mini-title">Gift & Souvenir Perspective</div>
       <h2>Why this piece is often chosen as a gift from Singapore.</h2>
       <p class="lead">
@@ -951,9 +988,11 @@
 
       <div class="featured-learn">
         <div class="mini-title" style="margin-bottom:6px;">Featured Guide</div>
-        <h3>Type A vs Type B vs Type C Jadeite — The Truth</h3>
-        <p>The difference most people never learn — and why it changes everything.</p>
-        <a href="./type-a-vs-b-vs-c.html" class="button button-dark">Read the Truth</a>
+        <h3>Why Type A jadeite is correct — not Grade A jade</h3>
+        <p>
+          A gemological correction guide explaining why official reports state Type A jadeite (Fei Cui), not “Grade A jade”.
+        </p>
+        <a href="./grade-a-vs-type-a-jadeite.html" class="button button-dark">Read the Truth</a>
       </div>
 
       <div class="learn-grid">
@@ -1039,22 +1078,22 @@
 
     <section class="card card-dark">
       <div class="mini-title">Private Viewing</div>
-      <h2>Private Viewing Only</h2>
+      <h2>Private Viewing Preferred</h2>
 
       <p>
-        Each visit is arranged individually to ensure a calm, focused and personal experience.
+        Each visit is arranged as calmly and personally as possible, so that clients may view jadeite with proper focus, comfort and privacy.
       </p>
 
       <p>
-        Walk-ins may be accommodated when the space allows, though priority is always given to private appointments.
+        Walk-ins may be accommodated when space and timing allow, though scheduled appointments are always prioritised.
       </p>
 
       <p>
-        This allows us to listen first, understand what is needed, and guide only where it is useful.
+        This helps us understand what each client needs without pressure, and allows a more thoughtful viewing experience in an intimate setting.
       </p>
 
       <p>
-        All appointments are arranged exclusively via Instagram DM, ensuring a secure and verified point of contact.
+        All appointments are arranged via Instagram DM, providing a direct and verified point of contact.
       </p>
 
       <p>
@@ -1087,10 +1126,15 @@
         Walk-ins are welcome if you happen to be at The Adelphi.
       </p>
       <p>
-        However, private viewing sessions are prioritised for scheduled appointments.
+        However, because the boutique is intimate and private viewings are prioritised, arranging your visit in advance is always recommended.
       </p>
       <p>
-        To ensure a proper and uninterrupted experience, we recommend arranging your visit at least one day in advance via Instagram DM.
+        This allows us to focus more clearly on what you need, while giving you a calmer and more comfortable experience.
+      </p>
+
+      <h3>Why are appointments recommended?</h3>
+      <p>
+        Appointments are not simply for preparation. They allow us to guide more precisely, avoid unnecessary pressure, and respect the privacy of clients who may have very personal preferences or conversations to discuss.
       </p>
 
       <h3>Why are appointments arranged through Instagram DM?</h3>
