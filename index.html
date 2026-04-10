@@ -12,12 +12,15 @@
     content="Ixchell Jewellery is a private jadeite boutique in Singapore near City Hall MRT, specialising in natural Type A Burmese jadeite jewellery, bangles, earrings and collector pieces. Private viewing by appointment."
   />
   <meta name="theme-color" content="#183153" />
+  <meta name="robots" content="index, follow" />
   <meta
     name="keywords"
     content="jadeite Singapore, Type A jadeite, Burmese jade jewellery Singapore, real jade Singapore, jadeite bangle Singapore, jewellery shop Singapore, City Hall jadeite, Adelphi jadeite"
   />
 
   <link rel="canonical" href="https://ixchelljewellery.com/" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preload" as="image" href="./hero.jpg" />
 
   <meta property="og:title" content="Ixchell Jewellery Singapore | Type A Burmese Jadeite Boutique Near City Hall MRT" />
   <meta property="og:description" content="Private jadeite boutique in Singapore specialising in natural Type A Burmese jadeite jewellery, bangles, earrings and collector pieces." />
@@ -83,6 +86,23 @@
     a{
       color:inherit;
       text-decoration:none;
+    }
+
+    .skip-link{
+      position:absolute;
+      left:-9999px;
+      top:auto;
+      background:#183153;
+      color:#fff;
+      padding:10px 14px;
+      border-radius:8px;
+      font-size:14px;
+      z-index:9999;
+    }
+
+    .skip-link:focus{
+      left:16px;
+      top:16px;
     }
 
     .site-loader{
@@ -281,7 +301,7 @@
     .page{
       width:min(100%, var(--max));
       margin:0 auto;
-      padding:40px 16px 220px;
+      padding:40px 16px 260px;
     }
 
     .logo-divider{
@@ -699,11 +719,19 @@
       .cinematic p{
         font-size:17px;
       }
+
+      .floating-cta{
+        left:14px;
+        right:14px;
+        bottom:14px;
+        padding:12px 16px;
+        font-size:14px;
+      }
     }
 
     @media (min-width:761px){
       .page{
-        padding:40px 22px 250px;
+        padding:40px 22px 290px;
       }
 
       .card{
@@ -752,7 +780,7 @@
 </head>
 <body>
 
-  <a href="#main-content" style="position:absolute; left:-9999px; top:auto;">
+  <a href="#main-content" class="skip-link">
     Skip to main content
   </a>
 
@@ -1439,12 +1467,12 @@
   }
   </script>
 
-  <footer style="text-align:center; padding:40px 20px; font-size:14px; color:#6b7280;">
+  <footer style="text-align:center; padding:40px 20px 120px; font-size:14px; color:#6b7280;">
     <p><strong>Ixchell Jewellery Singapore</strong></p>
     <p>Private jadeite boutique near City Hall MRT</p>
     <p>Specialising in natural Type A Burmese jadeite</p>
     <p style="margin-top:10px;">
-      <a href="https://instagram.com/ixchelljewellery" target="_blank">Instagram</a>
+      <a href="https://instagram.com/ixchelljewellery" target="_blank" rel="noopener">Instagram</a>
     </p>
     <p style="margin-top:12px;">© Ixchell Jewellery</p>
   </footer>
