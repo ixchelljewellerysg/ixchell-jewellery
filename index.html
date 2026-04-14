@@ -107,7 +107,6 @@
       top:16px;
     }
 
-    /* ===== NEXT LEVEL LUXURY LOADER ===== */
     .site-loader{
       position:fixed;
       inset:0;
@@ -1519,24 +1518,19 @@
 
       function tryPlaySound() {
         if (soundPlayed || !introSound) return;
-        introSound.volume = 0.35;
+
+        introSound.volume = 0.2;
+        introSound.currentTime = 0;
+
         introSound.play().then(function () {
           soundPlayed = true;
         }).catch(function () {
-          /* autoplay may be blocked until user interaction */
+          console.log("Sound blocked until user interaction.");
         });
       }
 
-      function playOnFirstInteraction() {
-        tryPlaySound();
-        document.removeEventListener("click", playOnFirstInteraction);
-        document.removeEventListener("touchstart", playOnFirstInteraction);
-      }
-
-      document.addEventListener("click", playOnFirstInteraction, { once: true });
-      document.addEventListener("touchstart", playOnFirstInteraction, { once: true });
-
-      tryPlaySound();
+      document.body.addEventListener("click", tryPlaySound, { once: true });
+      document.body.addEventListener("touchstart", tryPlaySound, { once: true });
 
       if (loader) {
         setTimeout(function () {
