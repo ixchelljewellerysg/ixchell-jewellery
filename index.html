@@ -114,8 +114,11 @@
       display:flex;
       align-items:center;
       justify-content:center;
-      background:#ffffff;
-      transition:opacity 0.9s ease, visibility 0.9s ease;
+      background:
+        radial-gradient(circle at 50% 20%, rgba(48,87,141,0.18), transparent 26%),
+        linear-gradient(180deg, #f9fbff 0%, #eef3f9 45%, #e7edf5 100%);
+      transition:opacity 1.05s ease, visibility 1.05s ease;
+      overflow:hidden;
     }
 
     .site-loader.hidden{
@@ -124,83 +127,202 @@
       pointer-events:none;
     }
 
+    .site-loader__veil{
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.68), rgba(255,255,255,0.18));
+      backdrop-filter:blur(2px);
+    }
+
+    .site-loader__glow{
+      position:absolute;
+      width:52vw;
+      height:52vw;
+      max-width:520px;
+      max-height:520px;
+      border-radius:50%;
+      background:
+        radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(210,225,243,0.55) 34%, rgba(255,255,255,0) 72%);
+      filter:blur(10px);
+      animation:loaderGlow 4.2s ease-in-out infinite;
+      opacity:0.9;
+    }
+
     .site-loader__inner{
+      position:relative;
+      z-index:2;
       display:flex;
       flex-direction:column;
       align-items:center;
       justify-content:center;
-      gap:20px;
-      padding:20px;
+      gap:18px;
+      padding:28px 24px;
+      text-align:center;
+    }
+
+    .site-loader__crest-wrap{
+      width:84px;
+      height:84px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      background:rgba(255,255,255,0.68);
+      box-shadow:
+        0 12px 36px rgba(16,35,61,0.10),
+        inset 0 1px 0 rgba(255,255,255,0.78);
+      animation:crestFloat 3.6s ease-in-out infinite;
+    }
+
+    .site-loader__crest{
+      width:52px;
+      height:auto;
+      object-fit:contain;
+      opacity:0;
+      transform:translateY(6px) scale(0.98);
+      animation:crestReveal 1.2s ease forwards;
+      animation-delay:0.18s;
     }
 
     .site-loader__wordmark{
-      color:#000000;
+      color:#10233d;
       font-family:"Space Grotesk",sans-serif;
-      font-size:clamp(22px, 4vw, 34px);
+      font-size:clamp(20px, 4vw, 34px);
       font-weight:700;
       letter-spacing:0.22em;
       text-transform:uppercase;
-      text-align:center;
-      animation:luxuryReveal 1.8s ease forwards;
+      opacity:0;
+      transform:translateY(10px);
+      animation:wordReveal 1.15s ease forwards;
+      animation-delay:0.38s;
     }
 
     .site-loader__line{
       width:0;
       height:1px;
-      background:#111111;
-      opacity:0.8;
-      animation:lineGrow 1.2s ease forwards;
-      animation-delay:0.25s;
+      background:linear-gradient(90deg, rgba(16,35,61,0), rgba(16,35,61,0.88), rgba(16,35,61,0));
+      opacity:0;
+      animation:lineGrowLux 1.25s ease forwards;
+      animation-delay:0.75s;
     }
 
     .site-loader__hint{
       font-family:"Inter",sans-serif;
       font-size:12px;
-      letter-spacing:0.08em;
+      letter-spacing:0.12em;
       text-transform:uppercase;
       color:#6b7280;
       opacity:0;
-      animation:hintFade 0.8s ease forwards;
-      animation-delay:1.2s;
+      transform:translateY(8px);
+      animation:hintLift 1s ease forwards;
+      animation-delay:1.05s;
     }
 
-    @keyframes luxuryReveal{
-      0%{
+    .site-loader__enter{
+      appearance:none;
+      border:none;
+      border-radius:999px;
+      padding:12px 22px;
+      background:linear-gradient(180deg, #1b3c69, #183153);
+      color:#ffffff;
+      font-family:"Space Grotesk",sans-serif;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      cursor:pointer;
+      box-shadow:0 12px 30px rgba(16,35,61,0.18);
+      opacity:0;
+      transform:translateY(10px);
+      animation:enterFade 1s ease forwards;
+      animation-delay:1.35s;
+      transition:transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+    }
+
+    .site-loader__enter:hover{
+      transform:translateY(-1px);
+      box-shadow:0 16px 34px rgba(16,35,61,0.22);
+    }
+
+    .site-loader__enter:active{
+      transform:translateY(0);
+    }
+
+    @keyframes crestReveal{
+      from{
         opacity:0;
-        transform:scale(0.985);
-        letter-spacing:0.34em;
+        transform:translateY(6px) scale(0.96);
       }
-      60%{
+      to{
         opacity:1;
-        transform:scale(1);
-        letter-spacing:0.24em;
+        transform:translateY(0) scale(1);
       }
-      100%{
+    }
+
+    @keyframes wordReveal{
+      from{
+        opacity:0;
+        transform:translateY(10px);
+        letter-spacing:0.30em;
+      }
+      to{
         opacity:1;
-        transform:scale(1);
+        transform:translateY(0);
         letter-spacing:0.22em;
       }
     }
 
-    @keyframes lineGrow{
+    @keyframes lineGrowLux{
       from{
         width:0;
         opacity:0;
       }
       to{
-        width:min(240px, 58vw);
-        opacity:0.85;
+        width:min(280px, 68vw);
+        opacity:1;
       }
     }
 
-    @keyframes hintFade{
+    @keyframes hintLift{
       from{
         opacity:0;
-        transform:translateY(4px);
+        transform:translateY(8px);
       }
       to{
         opacity:1;
         transform:translateY(0);
+      }
+    }
+
+    @keyframes enterFade{
+      from{
+        opacity:0;
+        transform:translateY(10px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes loaderGlow{
+      0%, 100%{
+        transform:scale(0.96);
+        opacity:0.82;
+      }
+      50%{
+        transform:scale(1.05);
+        opacity:1;
+      }
+    }
+
+    @keyframes crestFloat{
+      0%, 100%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-4px);
       }
     }
 
@@ -733,6 +855,25 @@
     }
 
     @media (max-width:760px){
+      .site-loader__crest-wrap{
+        width:76px;
+        height:76px;
+      }
+
+      .site-loader__crest{
+        width:46px;
+      }
+
+      .site-loader__wordmark{
+        font-size:clamp(18px, 6vw, 28px);
+        letter-spacing:0.18em;
+      }
+
+      .site-loader__enter{
+        padding:11px 20px;
+        font-size:12px;
+      }
+
       .hero h1{
         font-size:clamp(34px, 8.3vw, 48px);
         line-height:1.0;
@@ -843,10 +984,21 @@
   </a>
 
   <div class="site-loader" id="siteLoader">
+    <div class="site-loader__veil"></div>
+    <div class="site-loader__glow"></div>
+
     <div class="site-loader__inner">
+      <div class="site-loader__crest-wrap">
+        <img src="./logo.png" alt="Ixchell Jewellery" class="site-loader__crest" />
+      </div>
+
       <div class="site-loader__wordmark">IXCHELL&nbsp;&nbsp;JEWELLERY</div>
       <div class="site-loader__line"></div>
       <div class="site-loader__hint">Enter the private viewing</div>
+
+      <button class="site-loader__enter" id="enterBoutique" type="button">
+        Enter
+      </button>
     </div>
   </div>
 
@@ -1507,36 +1659,76 @@
   </a>
 
   <audio id="introSound" preload="auto">
-    <source src="./intro.mp3" type="audio/mpeg" />
+    <source src="intro.mp3" type="audio/mpeg" />
   </audio>
 
   <script>
     window.addEventListener("load", function () {
-      var loader = document.getElementById("siteLoader");
-      var introSound = document.getElementById("introSound");
-      var soundPlayed = false;
+      const loader = document.getElementById("siteLoader");
+      const introSound = document.getElementById("introSound");
+      const enterButton = document.getElementById("enterBoutique");
 
-      function tryPlaySound() {
-        if (soundPlayed || !introSound) return;
+      let hasPlayed = false;
+      let hasClosed = false;
 
-        introSound.volume = 0.2;
+      function fadeInAudio(audio, targetVolume = 0.22, duration = 900) {
+        if (!audio) return;
+        audio.volume = 0;
+        const steps = 18;
+        const stepTime = duration / steps;
+        const increment = targetVolume / steps;
+        let current = 0;
+
+        const fade = setInterval(() => {
+          current += increment;
+          if (current >= targetVolume) {
+            audio.volume = targetVolume;
+            clearInterval(fade);
+          } else {
+            audio.volume = current;
+          }
+        }, stepTime);
+      }
+
+      function playIntro() {
+        if (!introSound || hasPlayed) return;
+
         introSound.currentTime = 0;
 
-        introSound.play().then(function () {
-          soundPlayed = true;
-        }).catch(function () {
-          console.log("Sound blocked until user interaction.");
-        });
+        const playPromise = introSound.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            hasPlayed = true;
+            fadeInAudio(introSound, 0.22, 900);
+          }).catch(() => {
+          });
+        }
       }
 
-      document.body.addEventListener("click", tryPlaySound, { once: true });
-      document.body.addEventListener("touchstart", tryPlaySound, { once: true });
-
-      if (loader) {
-        setTimeout(function () {
-          loader.classList.add("hidden");
-        }, 2200);
+      function closeLoader() {
+        if (!loader || hasClosed) return;
+        hasClosed = true;
+        loader.classList.add("hidden");
       }
+
+      function enterBoutique() {
+        playIntro();
+        setTimeout(closeLoader, 380);
+      }
+
+      playIntro();
+
+      document.addEventListener("click", playIntro, { once: true });
+      document.addEventListener("touchstart", playIntro, { once: true });
+
+      if (enterButton) {
+        enterButton.addEventListener("click", enterBoutique);
+        enterButton.addEventListener("touchstart", enterBoutique, { passive: true });
+      }
+
+      setTimeout(() => {
+        if (!hasClosed) closeLoader();
+      }, 3200);
     });
   </script>
 
