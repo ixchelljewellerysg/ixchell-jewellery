@@ -219,6 +219,36 @@
       animation-delay:1.05s;
     }
 
+    .site-loader__enter{
+      appearance:none;
+      border:none;
+      border-radius:999px;
+      padding:12px 22px;
+      background:linear-gradient(180deg, #1b3c69, #183153);
+      color:#ffffff;
+      font-family:"Space Grotesk",sans-serif;
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      cursor:pointer;
+      box-shadow:0 12px 30px rgba(16,35,61,0.18);
+      opacity:0;
+      transform:translateY(10px);
+      animation:enterFade 1s ease forwards;
+      animation-delay:1.35s;
+      transition:transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+    }
+
+    .site-loader__enter:hover{
+      transform:translateY(-1px);
+      box-shadow:0 16px 34px rgba(16,35,61,0.22);
+    }
+
+    .site-loader__enter:active{
+      transform:translateY(0);
+    }
+
     @keyframes crestReveal{
       from{
         opacity:0;
@@ -258,6 +288,17 @@
       from{
         opacity:0;
         transform:translateY(8px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes enterFade{
+      from{
+        opacity:0;
+        transform:translateY(10px);
       }
       to{
         opacity:1;
@@ -828,6 +869,11 @@
         letter-spacing:0.18em;
       }
 
+      .site-loader__enter{
+        padding:11px 20px;
+        font-size:12px;
+      }
+
       .hero h1{
         font-size:clamp(34px, 8.3vw, 48px);
         line-height:1.0;
@@ -949,6 +995,10 @@
       <div class="site-loader__wordmark">IXCHELL&nbsp;&nbsp;JEWELLERY</div>
       <div class="site-loader__line"></div>
       <div class="site-loader__hint">Enter the private viewing</div>
+
+      <button class="site-loader__enter" id="enterBoutique" type="button">
+        Enter
+      </button>
     </div>
   </div>
 
@@ -1616,13 +1666,16 @@
     window.addEventListener("load", function () {
       const loader = document.getElementById("siteLoader");
       const introSound = document.getElementById("introSound");
+      const enterButton = document.getElementById("enterBoutique");
 
       let hasPlayed = false;
       let hasClosed = false;
+      let minimumTimePassed = false;
 
       function fadeInAudio(audio, targetVolume = 0.22, duration = 900) {
         if (!audio) return;
         audio.volume = 0;
+
         const steps = 18;
         const stepTime = duration / steps;
         const increment = targetVolume / steps;
@@ -1655,17 +1708,23 @@
       }
 
       function closeLoader() {
-        if (!loader || hasClosed) return;
+        if (!loader || hasClosed || !minimumTimePassed) return;
         hasClosed = true;
         loader.classList.add("hidden");
       }
 
-      playIntro();
+      function enterBoutique() {
+        playIntro();
+        closeLoader();
+      }
 
-      document.addEventListener("click", playIntro, { once: true });
-      document.addEventListener("touchstart", playIntro, { once: true });
+      if (enterButton) {
+        enterButton.addEventListener("click", enterBoutique);
+        enterButton.addEventListener("touchstart", enterBoutique, { passive: true });
+      }
 
       setTimeout(() => {
+        minimumTimePassed = true;
         closeLoader();
       }, 4000);
     });
