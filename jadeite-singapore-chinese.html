@@ -95,7 +95,7 @@ a{text-decoration:none;color:inherit}
   padding:90px 22px 70px;
   background:
     linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.76)),
-    url("./hero.jpg") center/cover no-repeat;
+    url("./hero.jpg") center 45%/cover no-repeat;
   overflow:hidden;
 }
 
@@ -119,11 +119,13 @@ a{text-decoration:none;color:inherit}
 }
 
 .logo{
-  width:86px;
-  margin:0 auto 22px;
-  background:rgba(255,255,255,.95);
-  padding:9px;
-  box-shadow:0 22px 48px rgba(0,0,0,.26);
+  width:64px;
+  margin:0 auto 28px;
+  background:transparent;
+  padding:0;
+  filter:
+    drop-shadow(0 10px 24px rgba(0,0,0,.35))
+    brightness(1.1);
 }
 
 .tag{
@@ -249,7 +251,7 @@ main{overflow:hidden}
   align-items:center;
 }
 
-/* IMAGE FIX — no more oversized card look */
+/* IMAGE FIX */
 .image-frame{
   position:relative;
   width:100%;
@@ -265,6 +267,7 @@ main{overflow:hidden}
   border-radius:32px;
   aspect-ratio:4/5;
   object-fit:cover;
+  object-position:center 38%;
   box-shadow:0 40px 100px rgba(0,0,0,.18);
 }
 
@@ -360,6 +363,7 @@ main{overflow:hidden}
   }
 
   .split .image-frame{
+    justify-self:center;
     transform:translateY(36px);
   }
 
@@ -571,67 +575,6 @@ const observer = new IntersectionObserver(entries => {
 },{threshold:0.2});
 
 items.forEach(item => observer.observe(item));
-</script>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"JewelryStore",
-  "name":"Ixchell Jewellery",
-  "alternateName":["翡坊翠藝","Ixchell Jewellery Singapore"],
-  "url":"https://ixchelljewellery.com/jadeite-singapore-chinese.html",
-  "description":"翡坊翠藝 Ixchell Jewellery 是位於新加坡 The Adelphi、靠近 City Hall MRT 的私人翡翠珠寶店，專注天然 Type A 緬甸翡翠。",
-  "address":{
-    "@type":"PostalAddress",
-    "streetAddress":"The Adelphi, 1 Coleman Street",
-    "addressLocality":"Singapore",
-    "addressCountry":"SG"
-  },
-  "areaServed":["Singapore","Malaysia","Indonesia","Brunei","Taiwan"],
-  "knowsLanguage":["Chinese","English","Bahasa Malaysia","Bahasa Indonesia"],
-  "sameAs":["https://instagram.com/ixchelljewellery"]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {
-      "@type":"Question",
-      "name":"什麼是 Type A 翡翠？",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"在 Ixchell Jewellery 的定義中，Type A 翡翠代表未經處理的天然狀態。"
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"翡翠和玉一樣嗎？",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"翡翠是玉的一種，但並非所有玉都是翡翠。"
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"為什麼建議親自看翡翠？",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"在 Ixchell Jewellery，看見與理解之間，往往需要親自觀察。"
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"翡翠的價值應該怎麼理解？",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"在 Ixchell Jewellery，我們不以價格作為理解翡翠的方式，而是讓你看見它本來的結構與形成。"
-      }
-    }
-  ]
-}
 </script>
 
 </body>
