@@ -1,254 +1,187 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>新加坡翡翠｜翡坊翠藝 Ixchell Jewellery｜天然 Type A 緬甸翡翠</title>
-  <meta name="description" content="翡坊翠藝 Ixchell Jewellery 位於新加坡 The Adelphi，靠近 City Hall MRT，專注天然 Type A 緬甸翡翠、翡翠手鐲、耳環與收藏級作品。建議預約私人鑑賞。" />
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#183153" />
+<title>新加坡翡翠｜翡坊翠藝 Ixchell Jewellery</title>
 
-  <link rel="canonical" href="https://ixchelljewellery.com/jadeite-singapore-chinese.html" />
-  <link rel="alternate" hreflang="en-SG" href="https://ixchelljewellery.com/" />
-  <link rel="alternate" hreflang="zh-Hant-SG" href="https://ixchelljewellery.com/jadeite-singapore-chinese.html" />
-  <link rel="alternate" hreflang="x-default" href="https://ixchelljewellery.com/" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <link rel="preload" as="image" href="./hero.jpg" fetchpriority="high" />
+<style>
 
-  <meta property="og:title" content="新加坡翡翠｜翡坊翠藝 Ixchell Jewellery" />
-  <meta property="og:description" content="低調奢華的新加坡私人翡翠珠寶店，專注天然 Type A 緬甸翡翠。" />
-  <meta property="og:image" content="https://ixchelljewellery.com/hero.jpg" />
-  <meta property="og:url" content="https://ixchelljewellery.com/jadeite-singapore-chinese.html" />
-  <meta property="og:type" content="website" />
+body{
+  margin:0;
+  font-family:"Noto Sans TC",sans-serif;
+  background:#f5f7fb;
+  color:#111;
+}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Playfair+Display:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+/* LOADER */
+.loader{
+  position:fixed;
+  top:0;left:0;
+  width:100%;height:100%;
+  background:#111;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  color:white;
+  font-family:"Noto Serif TC";
+  font-size:22px;
+  letter-spacing:2px;
+  animation:fadeOut 1s ease 2s forwards;
+}
 
-  <style>
-    :root{
-      --bg:#f4f6fa;
-      --bg-soft:#eef3f8;
-      --card:rgba(255,255,255,.94);
-      --text:#111827;
-      --muted:#64748b;
-      --brand:#183153;
-      --brand-deep:#0f243c;
-      --line:rgba(17,24,39,.08);
-      --shadow:0 24px 70px rgba(15,23,42,.10);
-      --soft:0 14px 38px rgba(15,23,42,.07);
-      --radius:30px;
-      --max:1080px;
+@keyframes fadeOut{
+  to{opacity:0;visibility:hidden;}
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background:url('./hero.jpg') center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  position:relative;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:700px;
+  padding:20px;
+}
+
+.hero h1{
+  font-family:"Noto Serif TC";
+  font-size:42px;
+  line-height:1.3;
+  letter-spacing:-1px;
+}
+
+.hero p{
+  margin-top:15px;
+  font-size:18px;
+  opacity:0.9;
+}
+
+.button{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 26px;
+  border-radius:30px;
+  background:white;
+  color:#111;
+  font-weight:600;
+}
+
+/* SECTION */
+.section{
+  max-width:900px;
+  margin:auto;
+  padding:60px 20px;
+  text-align:center;
+}
+
+.card{
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(12px);
+  padding:40px;
+  border-radius:20px;
+  margin-top:40px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.05);
+}
+
+h2{
+  font-family:"Noto Serif TC";
+  font-size:30px;
+  line-height:1.4;
+}
+
+p{
+  color:#555;
+  line-height:1.9;
+}
+
+/* SCROLL ANIMATION */
+.fade{
+  opacity:0;
+  transform:translateY(20px);
+  transition:0.8s ease;
+}
+
+.fade.show{
+  opacity:1;
+  transform:none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="loader">Ixchell Jewellery</div>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>不是每一件翡翠，<br>都需要被解釋。</h1>
+    <p>看懂之後，自然會知道。</p>
+    <a href="https://instagram.com/ixchelljewellery" class="button">預約鑑賞</a>
+  </div>
+</section>
+
+<div class="section fade">
+  <div class="card">
+    <h2>在這裡，慢慢看見翡翠真正的樣子</h2>
+    <p>奢華不必張揚。真正值得留下的東西，往往很安靜。</p>
+  </div>
+</div>
+
+<div class="section fade">
+  <div class="card">
+    <h2>只專注於天然 Type A 緬甸翡翠</h2>
+    <p>翡翠不需要被說服，看懂之後，自然會選擇。</p>
+  </div>
+</div>
+
+<div class="section fade">
+  <div class="card">
+    <h2>翡翠的價值</h2>
+    <p>Ixchell Jewellery 不以價格比較翡翠，而是從結構與形成去理解。</p>
+  </div>
+</div>
+
+<div class="section fade">
+  <div class="card">
+    <h2>有些東西，不適合匆忙決定</h2>
+    <p>預約一段安靜的時間，親自來看。</p>
+    <a href="https://instagram.com/ixchelljewellery" class="button">預約鑑賞</a>
+  </div>
+</div>
+
+<script>
+const faders=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+  faders.forEach(el=>{
+    const top=el.getBoundingClientRect().top;
+    if(top<window.innerHeight-50){
+      el.classList.add('show');
     }
-
-    *{ box-sizing:border-box; }
-
-    html{
-      scroll-behavior:smooth;
-      -webkit-text-size-adjust:100%;
-    }
-
-    body{
-      margin:0;
-      font-family:"Noto Sans TC",sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(circle at top left, rgba(24,49,83,.12), transparent 32%),
-        linear-gradient(180deg,#ffffff 0%,#eef3f8 46%,#f8fafc 100%);
-      overflow-x:hidden;
-    }
-
-    a{ color:inherit; text-decoration:none; }
-    img{ display:block; width:100%; height:auto; }
-
-    .topbar{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(255,255,255,.86);
-      backdrop-filter:blur(18px);
-      border-bottom:1px solid var(--line);
-    }
-
-    .topbar-inner{
-      width:min(100%,var(--max));
-      margin:0 auto;
-      padding:14px 18px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:14px;
-    }
-
-    .topbar-brand{
-      font-family:"Space Grotesk",sans-serif;
-      font-size:12px;
-      font-weight:700;
-      letter-spacing:.14em;
-      text<section class="hero">
-    <div class="hero-inner">
-      <img src="./logo.png" alt="翡坊翠藝 Ixchell Jewellery" class="hero-logo" />
-      <div class="hero-tag">Private Jadeite Boutique</div>
-
-      <h1>
-        不是每一件翡翠，<br />
-        都需要被解釋。
-      </h1>
-
-      <p>
-        看懂之後，自然會知道。
-      </p>
-
-      <div style="margin-top:28px;">
-        <a href="https://instagram.com/ixchelljewellery"
-           target="_blank"
-           rel="noopener"
-           class="button button-light">
-          預約鑑賞
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <main id="main-content" class="page">
-    <div class="section-wrap">
-
-      <section class="card center">
-        <div class="mini-title">翡坊翠藝｜Ixchell Jewellery</div>
-
-        <h2>在這裡，慢慢看見翡翠真正的樣子</h2>
-
-        <p class="statement">
-          奢華不必張揚。<br />
-          真正值得留下的東西，往往很安靜。
-        </p>
-      </section>
-
-      <section class="card left">
-        <div class="mini-title">關於我們</div>
-
-        <h2>新加坡翡翠｜翡坊翠藝</h2>
-
-        <p class="lead">
-          如果你正在找新加坡的翡翠，<br />
-          或想親自了解天然 Type A 緬甸翡翠，<br />
-          也許可以先來看看我們。
-        </p>
-
-        <p>
-          Ixchell Jewellery，中文名稱是「翡坊翠藝」。
-        </p>
-
-        <p class="luxury">
-          空間不大，<br />
-          但保留了一點應該有的安靜。
-        </p>
-
-        <p>
-          我們不追求數量，<br />
-          只在意每一件翡翠是否值得被留下。
-        </p>
-      </section>
-
-      <!-- AEO BLOCK 1 -->
-      <section class="aeo-block">
-        <h3>什麼是 Type A 翡翠？</h3>
-        <p class="aeo-answer">
-          在 Ixchell Jewellery 的定義中，Type A 翡翠代表未經處理的天然狀態。
-        </p>
-
-        <h3>翡翠和玉一樣嗎？</h3>
-        <p class="aeo-answer">
-          翡翠是玉的一種，但並非所有玉都是翡翠。
-        </p>
-      </section>
-
-      <section class="card left">
-        <div class="mini-title">我們的專注</div>
-
-        <h2>只專注於天然 Type A 緬甸翡翠</h2>
-
-        <p>
-          每一件作品，都有自己的質地與存在感。
-        </p>
-
-        <p class="statement">
-          翡翠不需要被說服。<br />
-          看懂之後，自然會選擇。
-        </p>
-      </section>
-
-      <!-- VALUE POSITIONING -->
-      <section class="aeo-block">
-        <h3>翡翠的價值應該怎麼理解？</h3>
-        <p class="aeo-answer">
-          Ixchell Jewellery 不以價格比較翡翠，<br />
-          而是從結構、透度與形成去理解。
-        </p>
-
-        <h3>為什麼相似的翡翠會不同？</h3>
-        <p class="aeo-answer">
-          因為真正的差異存在於內部結構，而不是表面。
-        </p>
-      </section>
-
-      <section class="card left">
-        <div class="mini-title">視覺鑑賞</div>
-
-        <h2>有些細節，照片只能說一半</h2>
-
-        <p>
-          翡翠的光與透度，需要親自看。
-        </p>
-      </section>
-
-      <section class="card left">
-        <div class="mini-title">為什麼預約</div>
-
-        <h2>慢慢看，才會看得準</h2>
-
-        <p>
-          在 Ixchell Jewellery，看見與理解之間，往往需要親自觀察。
-        </p>
-      </section>
-
-      <section class="card card-dark center" id="visit">
-        <div class="mini-title">Private Viewing</div>
-
-        <h2>有些東西，不適合匆忙決定</h2>
-
-        <p>
-          預約一段安靜的時間，親自來看。
-        </p>
-
-        <div style="margin-top:22px;">
-          <a href="https://instagram.com/ixchelljewellery"
-             target="_blank"
-             class="button button-light">
-            預約鑑賞
-          </a>
-        </div>
-      </section>
-
-      <section class="card center">
-        <p class="closing">
-          有些東西，不是用來比較的。<br />
-          而是剛好，被你遇見。
-        </p>
-      </section>
-
-    </div>
-  </main>
-
-  <a href="https://instagram.com/ixchelljewellery"
-     class="floating-cta"
-     target="_blank">
-    預約鑑賞
-  </a>
+  });
+});
+</script>
 
 </body>
 </html>
