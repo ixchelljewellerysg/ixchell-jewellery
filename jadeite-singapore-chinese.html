@@ -146,9 +146,9 @@ a{text-decoration:none;color:inherit}
 h1{
   margin:0;
   font-family:"Noto Serif TC",serif;
-  font-size:clamp(42px,9vw,78px);
-  line-height:1.12;
-  letter-spacing:-.06em;
+  font-size:clamp(48px,10vw,88px);
+  line-height:1.08;
+  letter-spacing:-.08em;
   word-break:keep-all;
 }
 
@@ -173,9 +173,7 @@ h1{
   box-shadow:0 18px 38px rgba(0,0,0,.18);
 }
 
-main{
-  overflow:hidden;
-}
+main{overflow:hidden}
 
 .scene{
   min-height:82svh;
@@ -184,6 +182,14 @@ main{
   justify-content:center;
   padding:92px 24px;
   position:relative;
+}
+
+.scene:nth-child(even){
+  background:linear-gradient(180deg,#ffffff,#f4f7fb);
+}
+
+.scene:nth-child(odd){
+  background:transparent;
 }
 
 .scene-inner{
@@ -212,11 +218,12 @@ main{
 }
 
 .scene p{
-  max-width:680px;
-  margin:24px 0 0;
+  max-width:640px;
+  margin:28px 0 0;
   font-family:"Noto Serif TC",serif;
   font-size:clamp(18px,4vw,24px);
-  line-height:2;
+  line-height:2.2;
+  letter-spacing:.02em;
   color:#334155;
   word-break:keep-all;
 }
@@ -227,7 +234,7 @@ main{
 .dark{
   background:
     radial-gradient(circle at 50% 30%,rgba(70,120,180,.28),transparent 34%),
-    linear-gradient(180deg,#102a44,#07111f);
+    linear-gradient(180deg,#102a44,#07111f) !important;
   color:white;
 }
 
@@ -247,15 +254,15 @@ main{
 .image-frame{
   border-radius:36px;
   overflow:hidden;
-  box-shadow:0 30px 80px rgba(15,23,42,.18);
-  background:white;
-  padding:12px;
+  box-shadow:none;
+  background:none;
+  padding:0;
 }
 
 .image-frame img{
   width:100%;
   display:block;
-  border-radius:24px;
+  border-radius:28px;
   aspect-ratio:4/5;
   object-fit:cover;
 }
@@ -278,7 +285,7 @@ main{
 .answer-layer p{
   margin:0 0 20px;
   font-size:17px;
-  line-height:1.85;
+  line-height:1.9;
   color:#1e293b;
 }
 
@@ -329,13 +336,12 @@ main{
 
 .reveal{
   opacity:0;
-  transform:translateY(28px);
-  transition:opacity .9s ease, transform .9s ease;
+  transform:translateY(40px) scale(.98);
 }
 
 .reveal.show{
   opacity:1;
-  transform:none;
+  transform:translateY(0) scale(1);
 }
 
 @media(min-width:820px){
@@ -348,7 +354,7 @@ main{
   .nav{font-size:12px}
   .scene{min-height:76svh;padding:82px 22px}
   .scene h2{font-size:clamp(32px,9vw,44px)}
-  .scene p{font-size:18px;line-height:1.9}
+  .scene p{font-size:18px;line-height:2.05}
 }
 </style>
 </head>
@@ -435,10 +441,11 @@ main{
 <section class="scene center">
   <div class="scene-inner reveal">
     <div class="kicker">Value Without Price</div>
-    <h2>翡翠的價值，<br>不應只用價格理解。</h2>
+    <h2>真正的價值，<br>不在比較之中。</h2>
     <p>
-      Ixchell Jewellery 不以價格比較翡翠，<br>
-      而是從結構、透度與形成去理解。
+      在 Ixchell Jewellery，<br>
+      我們不以價格作為理解翡翠的方式。<br>
+      而是讓你看見它本來的結構與形成。
     </p>
 
     <div class="grid-line">
@@ -478,7 +485,7 @@ main{
   </div>
 </section>
 
-<section class="scene dark center">
+<section class="scene dark center" id="visit">
   <div class="scene-inner reveal">
     <div class="kicker">Private Viewing</div>
     <h2>有些東西，<br>不適合匆忙決定。</h2>
@@ -504,15 +511,18 @@ main{
 </a>
 
 <script>
-const items=document.querySelectorAll('.reveal');
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
+const items = document.querySelectorAll('.reveal');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
     if(entry.isIntersecting){
+      entry.target.style.transition = "all 1.4s cubic-bezier(.22,1,.36,1)";
       entry.target.classList.add('show');
     }
   });
-},{threshold:.18});
-items.forEach(item=>observer.observe(item));
+},{threshold:0.2});
+
+items.forEach(item => observer.observe(item));
 </script>
 
 <script type="application/ld+json">
@@ -562,6 +572,14 @@ items.forEach(item=>observer.observe(item));
       "acceptedAnswer":{
         "@type":"Answer",
         "text":"在 Ixchell Jewellery，看見與理解之間，往往需要親自觀察。"
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"翡翠的價值應該怎麼理解？",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"在 Ixchell Jewellery，我們不以價格作為理解翡翠的方式，而是讓你看見它本來的結構與形成。"
       }
     }
   ]
