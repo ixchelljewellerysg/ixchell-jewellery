@@ -52,7 +52,7 @@ a{text-decoration:none;color:inherit}
   left:0;
   right:0;
   z-index:50;
-  background:rgba(255,255,255,.80);
+  background:rgba(255,255,255,.82);
   backdrop-filter:blur(18px);
   border-bottom:1px solid rgba(15,23,42,.08);
 }
@@ -94,8 +94,8 @@ a{text-decoration:none;color:inherit}
   color:white;
   padding:90px 22px 70px;
   background:
-    linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,.76)),
-    url("./hero.jpg") center 45%/cover no-repeat;
+    linear-gradient(180deg,rgba(0,0,0,.20),rgba(0,0,0,.78)),
+    url("./hero.jpg") center 38%/cover no-repeat;
   overflow:hidden;
 }
 
@@ -103,7 +103,7 @@ a{text-decoration:none;color:inherit}
   content:"";
   position:absolute;
   inset:-20%;
-  background:radial-gradient(circle at 50% 45%,rgba(255,255,255,.22),transparent 30%);
+  background:radial-gradient(circle at 50% 45%,rgba(255,255,255,.18),transparent 30%);
   animation:glow 8s ease-in-out infinite;
 }
 
@@ -118,21 +118,11 @@ a{text-decoration:none;color:inherit}
   max-width:850px;
 }
 
-.logo{
-  width:64px;
-  margin:0 auto 28px;
-  background:transparent;
-  padding:0;
-  filter:
-    drop-shadow(0 10px 24px rgba(0,0,0,.35))
-    brightness(1.1);
-}
-
 .tag{
   display:inline-block;
-  margin-bottom:22px;
+  margin-bottom:24px;
   padding:8px 16px;
-  border:1px solid rgba(255,255,255,.30);
+  border:1px solid rgba(255,255,255,.32);
   border-radius:999px;
   background:rgba(255,255,255,.10);
   backdrop-filter:blur(12px);
@@ -146,25 +136,29 @@ a{text-decoration:none;color:inherit}
 h1{
   margin:0;
   font-family:"Noto Serif TC",serif;
-  font-size:clamp(48px,10vw,88px);
+  font-size:clamp(46px,10vw,86px);
   line-height:1.08;
   letter-spacing:-.08em;
   word-break:keep-all;
+  text-shadow:
+    0 4px 18px rgba(0,0,0,.55),
+    0 1px 0 rgba(255,255,255,.12);
 }
 
 .hero p{
-  margin:22px auto 0;
+  margin:24px auto 0;
   max-width:700px;
   font-family:"Noto Serif TC",serif;
   font-size:clamp(18px,4vw,25px);
   line-height:1.9;
   color:rgba(255,255,255,.9);
   word-break:keep-all;
+  text-shadow:0 4px 16px rgba(0,0,0,.45);
 }
 
 .btn{
   display:inline-flex;
-  margin-top:30px;
+  margin-top:32px;
   padding:14px 26px;
   border-radius:999px;
   background:white;
@@ -251,11 +245,10 @@ main{overflow:hidden}
   align-items:center;
 }
 
-/* IMAGE FIX */
 .image-frame{
   position:relative;
   width:100%;
-  max-width:420px;
+  max-width:360px;
   margin:40px auto 0;
   border-radius:32px;
   overflow:hidden;
@@ -267,7 +260,7 @@ main{overflow:hidden}
   border-radius:32px;
   aspect-ratio:4/5;
   object-fit:cover;
-  object-position:center 38%;
+  object-position:48% 42%;
   box-shadow:0 40px 100px rgba(0,0,0,.18);
 }
 
@@ -276,7 +269,7 @@ main{overflow:hidden}
   position:absolute;
   inset:0;
   border-radius:32px;
-  background:radial-gradient(circle at 50% 40%,rgba(255,255,255,.18),transparent 40%);
+  background:radial-gradient(circle at 50% 40%,rgba(255,255,255,.16),transparent 42%);
   pointer-events:none;
 }
 
@@ -364,7 +357,7 @@ main{overflow:hidden}
 
   .split .image-frame{
     justify-self:center;
-    transform:translateY(36px);
+    transform:translateY(24px);
   }
 
   .grid-line{
@@ -391,14 +384,14 @@ main{overflow:hidden}
   }
 
   .image-frame{
-    max-width:86vw;
+    max-width:78vw;
     margin:36px auto 0;
     border-radius:28px;
   }
 
   .image-frame img{
     border-radius:28px;
-    max-height:520px;
+    max-height:480px;
     object-fit:cover;
   }
 
@@ -427,7 +420,6 @@ main{overflow:hidden}
 
 <section class="hero">
   <div class="hero-inner reveal">
-    <img src="./logo.png" alt="翡坊翠藝 Ixchell Jewellery" class="logo">
     <div class="tag">Private Jadeite Boutique</div>
     <h1>不是每一件翡翠，<br>都需要被解釋。</h1>
     <p>看懂之後，自然會知道。</p>
@@ -499,41 +491,6 @@ main{overflow:hidden}
       我們不以價格作為理解翡翠的方式。<br>
       而是讓你看見它本來的結構與形成。
     </p>
-
-    <div class="grid-line">
-      <div class="item">
-        <strong>結構</strong>
-        <span>真正的差異，往往在內部。</span>
-      </div>
-      <div class="item">
-        <strong>透度</strong>
-        <span>光進入石頭後，才看見層次。</span>
-      </div>
-      <div class="item">
-        <strong>色澤</strong>
-        <span>不是越鮮越好，而是是否自然。</span>
-      </div>
-      <div class="item">
-        <strong>形成</strong>
-        <span>時間留下的，不會完全重複。</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="scene">
-  <div class="scene-inner split reveal">
-    <div class="image-frame">
-      <img src="./pendant1.jpg" alt="天然 Type A 緬甸翡翠吊墜 新加坡 翡坊翠藝">
-    </div>
-    <div>
-      <div class="kicker">Visual Understanding</div>
-      <h2>有些細節，<br>照片只能說一半。</h2>
-      <p>
-        翡翠的光、色、透度與結構，<br>
-        需要在不同角度與距離中慢慢看。
-      </p>
-    </div>
   </div>
 </section>
 
