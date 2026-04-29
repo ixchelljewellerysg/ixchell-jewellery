@@ -24,9 +24,7 @@
 :root{
   --brand:#183153;
   --deep:#08111f;
-  --soft:#f4f7fb;
   --muted:#6b7280;
-  --gold:#c8a96a;
 }
 
 *{box-sizing:border-box}
@@ -54,7 +52,7 @@ a{text-decoration:none;color:inherit}
   left:0;
   right:0;
   z-index:50;
-  background:rgba(255,255,255,.78);
+  background:rgba(255,255,255,.80);
   backdrop-filter:blur(18px);
   border-bottom:1px solid rgba(15,23,42,.08);
 }
@@ -247,24 +245,36 @@ main{overflow:hidden}
 .split{
   display:grid;
   grid-template-columns:1fr;
-  gap:36px;
+  gap:60px;
   align-items:center;
 }
 
+/* IMAGE FIX — no more oversized card look */
 .image-frame{
-  border-radius:36px;
+  position:relative;
+  width:100%;
+  max-width:420px;
+  margin:40px auto 0;
+  border-radius:32px;
   overflow:hidden;
-  box-shadow:none;
-  background:none;
-  padding:0;
 }
 
 .image-frame img{
   width:100%;
   display:block;
-  border-radius:28px;
+  border-radius:32px;
   aspect-ratio:4/5;
   object-fit:cover;
+  box-shadow:0 40px 100px rgba(0,0,0,.18);
+}
+
+.image-frame::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:32px;
+  background:radial-gradient(circle at 50% 40%,rgba(255,255,255,.18),transparent 40%);
+  pointer-events:none;
 }
 
 .answer-layer{
@@ -345,16 +355,54 @@ main{overflow:hidden}
 }
 
 @media(min-width:820px){
-  .split{grid-template-columns:1fr 1fr}
-  .grid-line{grid-template-columns:repeat(4,1fr)}
+  .split{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .split .image-frame{
+    transform:translateY(36px);
+  }
+
+  .grid-line{
+    grid-template-columns:repeat(4,1fr);
+  }
 }
 
 @media(max-width:600px){
   .brand{font-size:10px}
   .nav{font-size:12px}
-  .scene{min-height:76svh;padding:82px 22px}
-  .scene h2{font-size:clamp(32px,9vw,44px)}
-  .scene p{font-size:18px;line-height:2.05}
+
+  .scene{
+    min-height:auto;
+    padding:82px 22px;
+  }
+
+  .scene h2{
+    font-size:clamp(32px,9vw,44px);
+  }
+
+  .scene p{
+    font-size:18px;
+    line-height:2.05;
+  }
+
+  .image-frame{
+    max-width:86vw;
+    margin:36px auto 0;
+    border-radius:28px;
+  }
+
+  .image-frame img{
+    border-radius:28px;
+    max-height:520px;
+    object-fit:cover;
+  }
+
+  .floating{
+    left:14px;
+    right:14px;
+    padding:13px 18px;
+  }
 }
 </style>
 </head>
