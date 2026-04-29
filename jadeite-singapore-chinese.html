@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
 
   <title>新加坡翡翠｜翡坊翠藝 Ixchell Jewellery｜天然 Type A 緬甸翡翠</title>
-
-  <meta name="description" content="翡坊翠藝 Ixchell Jewellery 是位於新加坡 The Adelphi、靠近 City Hall MRT 的私人翡翠珠寶店，專注天然 Type A 緬甸翡翠、翡翠手鐲、耳環與收藏級作品。" />
+  <meta name="description" content="翡坊翠藝 Ixchell Jewellery 位於新加坡 The Adelphi，靠近 City Hall MRT，專注天然 Type A 緬甸翡翠、翡翠手鐲、耳環與收藏級作品。建議預約私人鑑賞。" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#183153" />
 
@@ -19,7 +18,7 @@
   <link rel="preload" href="./intro.mp3" as="audio" />
 
   <meta property="og:title" content="新加坡翡翠｜翡坊翠藝 Ixchell Jewellery" />
-  <meta property="og:description" content="位於新加坡 The Adelphi 的私人翡翠珠寶店，專注天然 Type A 緬甸翡翠。" />
+  <meta property="og:description" content="低調奢華的新加坡私人翡翠珠寶店，專注天然 Type A 緬甸翡翠。" />
   <meta property="og:image" content="https://ixchelljewellery.com/hero.jpg" />
   <meta property="og:url" content="https://ixchelljewellery.com/jadeite-singapore-chinese.html" />
   <meta property="og:type" content="website" />
@@ -113,10 +112,10 @@
       align-items:flex-end;
       justify-content:center;
       text-align:center;
-      padding:40px 18px 78px;
+      padding:40px 18px 82px;
       color:white;
       background:
-        linear-gradient(180deg,rgba(0,0,0,.16),rgba(0,0,0,.78)),
+        linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.80)),
         url("./hero.jpg") center/cover no-repeat;
       overflow:hidden;
     }
@@ -190,6 +189,16 @@
       width:min(100%,var(--max));
       margin:0 auto;
       padding:46px 16px 300px;
+    }
+
+    .section-wrap{
+      margin-top:24px;
+      padding:10px;
+      border-radius:38px;
+      background:
+        radial-gradient(circle at top left,rgba(24,49,83,.08),transparent 34%),
+        linear-gradient(180deg,rgba(255,255,255,.62),rgba(238,243,248,.56));
+      border:1px solid rgba(17,24,39,.05);
     }
 
     .card{
@@ -290,6 +299,33 @@
       color:#0f172a;
     }
 
+    .visual-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:16px;
+      margin-top:20px;
+    }
+
+    .visual-card{
+      overflow:hidden;
+      border-radius:24px;
+      background:#fff;
+      box-shadow:var(--soft);
+      border:1px solid var(--line);
+    }
+
+    .visual-card img{
+      aspect-ratio:4/5;
+      object-fit:cover;
+    }
+
+    .visual-card p{
+      padding:16px;
+      margin:0;
+      font-family:"Noto Serif TC","Playfair Display",serif;
+      color:#334155;
+    }
+
     .button{
       display:inline-flex;
       align-items:center;
@@ -342,20 +378,11 @@
       box-shadow:0 18px 40px rgba(16,42,68,.28);
     }
 
-    .section-wrap{
-      margin-top:24px;
-      padding:10px;
-      border-radius:38px;
-      background:
-        radial-gradient(circle at top left,rgba(24,49,83,.08),transparent 34%),
-        linear-gradient(180deg,rgba(255,255,255,.62),rgba(238,243,248,.56));
-      border:1px solid rgba(17,24,39,.05);
-    }
-
     @media(min-width:761px){
       .page{padding:56px 22px 290px;}
       .card{padding:42px 38px;}
       .focus-grid{grid-template-columns:1fr 1fr;}
+      .visual-grid{grid-template-columns:1fr 1fr;}
     }
 
     @media(max-width:600px){
@@ -473,6 +500,29 @@
           翡翠不需要被說服。<br />
           看懂之後，自然會選擇。
         </p>
+      </section>
+
+      <section class="card left" lang="zh-Hant">
+        <div class="mini-title">視覺鑑賞</div>
+
+        <h2>有些細節，照片只能說一半</h2>
+
+        <p>
+          翡翠的光、色、透度與結構，<br />
+          需要在不同角度與距離中慢慢看。
+        </p>
+
+        <div class="visual-grid">
+          <div class="visual-card">
+            <img src="./earring-main.jpg" alt="天然 Type A 翡翠耳環 新加坡 翡坊翠藝" loading="lazy" decoding="async" />
+            <p>日常佩戴的翡翠，也可以很安靜、很有存在感。</p>
+          </div>
+
+          <div class="visual-card">
+            <img src="./pendant1.jpg" alt="天然 Type A 緬甸翡翠吊墜 新加坡 翡坊翠藝" loading="lazy" decoding="async" />
+            <p>每一件作品，都有自己的色澤、線條與氣質。</p>
+          </div>
+        </div>
       </section>
 
       <section class="card left" lang="zh-Hant">
