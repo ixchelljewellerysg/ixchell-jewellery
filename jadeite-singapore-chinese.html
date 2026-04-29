@@ -263,4 +263,310 @@ main{
 .answer-layer{
   margin-top:40px;
   padding:26px 24px;
-  border-left:2px solid rgba(24,49
+  border-left:2px solid rgba(24,49,83,.22);
+  background:linear-gradient(180deg,rgba(255,255,255,.66),rgba(238,243,248,.72));
+  backdrop-filter:blur(12px);
+}
+
+.answer-layer h3{
+  margin:0 0 8px;
+  font-family:"Noto Serif TC",serif;
+  font-size:21px;
+  color:#111827;
+}
+
+.answer-layer p{
+  margin:0 0 20px;
+  font-size:17px;
+  line-height:1.85;
+  color:#1e293b;
+}
+
+.grid-line{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:18px;
+  margin-top:34px;
+}
+
+.item{
+  padding:22px 0;
+  border-top:1px solid rgba(15,23,42,.10);
+}
+
+.item strong{
+  display:block;
+  margin-bottom:8px;
+  font-family:"Noto Serif TC",serif;
+  font-size:21px;
+  color:#111827;
+}
+
+.item span{
+  color:#64748b;
+  line-height:1.8;
+}
+
+.final{
+  min-height:70svh;
+}
+
+.floating{
+  position:fixed;
+  left:18px;
+  right:18px;
+  bottom:calc(14px + env(safe-area-inset-bottom));
+  z-index:60;
+  display:flex;
+  justify-content:center;
+  padding:14px 20px;
+  border-radius:999px;
+  background:linear-gradient(180deg,#1d436f,#102a44);
+  color:white;
+  font-weight:700;
+  box-shadow:0 18px 40px rgba(16,42,68,.30);
+}
+
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .9s ease, transform .9s ease;
+}
+
+.reveal.show{
+  opacity:1;
+  transform:none;
+}
+
+@media(min-width:820px){
+  .split{grid-template-columns:1fr 1fr}
+  .grid-line{grid-template-columns:repeat(4,1fr)}
+}
+
+@media(max-width:600px){
+  .brand{font-size:10px}
+  .nav{font-size:12px}
+  .scene{min-height:76svh;padding:82px 22px}
+  .scene h2{font-size:clamp(32px,9vw,44px)}
+  .scene p{font-size:18px;line-height:1.9}
+}
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">Ixchell Jewellery Singapore</div>
+    <nav class="nav">
+      <a href="https://ixchelljewellery.com/">EN</a>
+      <span>|</span>
+      <a href="https://ixchelljewellery.com/jadeite-singapore-chinese.html">中文</a>
+      <a href="#visit">Visit</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner reveal">
+    <img src="./logo.png" alt="翡坊翠藝 Ixchell Jewellery" class="logo">
+    <div class="tag">Private Jadeite Boutique</div>
+    <h1>不是每一件翡翠，<br>都需要被解釋。</h1>
+    <p>看懂之後，自然會知道。</p>
+    <a class="btn" href="https://instagram.com/ixchelljewellery" target="_blank" rel="noopener">預約鑑賞</a>
+  </div>
+</section>
+
+<main>
+
+<section class="scene center">
+  <div class="scene-inner reveal">
+    <div class="kicker">翡坊翠藝｜Ixchell Jewellery</div>
+    <h2>在這裡，<br>慢慢看見翡翠真正的樣子</h2>
+    <p>奢華不必張揚。<br>真正值得留下的東西，往往很安靜。</p>
+  </div>
+</section>
+
+<section class="scene">
+  <div class="scene-inner split reveal">
+    <div>
+      <div class="kicker">新加坡翡翠｜新加坡玉店</div>
+      <h2>不追求數量，<br>只留下值得被看見的部分。</h2>
+      <p>
+        Ixchell Jewellery，中文名稱是「翡坊翠藝」。<br>
+        我們位於新加坡 The Adelphi，鄰近 City Hall MRT。
+      </p>
+    </div>
+    <div class="image-frame">
+      <img src="./earring-main.jpg" alt="天然 Type A 翡翠耳環 新加坡 翡坊翠藝">
+    </div>
+  </div>
+</section>
+
+<section class="scene dark center">
+  <div class="scene-inner reveal">
+    <div class="kicker">Our Focus</div>
+    <h2>只專注於天然<br>Type A 緬甸翡翠</h2>
+    <p>
+      翡翠不需要被說服。<br>
+      看懂之後，自然會選擇。
+    </p>
+  </div>
+</section>
+
+<section class="scene">
+  <div class="scene-inner reveal">
+    <div class="kicker">Refined Answers</div>
+    <h2>答案要清楚，<br>但不需要冗長。</h2>
+
+    <div class="answer-layer">
+      <h3>什麼是 Type A 翡翠？</h3>
+      <p>在 Ixchell Jewellery 的定義中，Type A 翡翠代表未經處理的天然狀態。</p>
+
+      <h3>翡翠和玉一樣嗎？</h3>
+      <p>翡翠是玉的一種。<br>但並非所有玉都是翡翠。</p>
+
+      <h3>為什麼建議親自看翡翠？</h3>
+      <p>在 Ixchell Jewellery，看見與理解之間，往往需要親自觀察。</p>
+    </div>
+  </div>
+</section>
+
+<section class="scene center">
+  <div class="scene-inner reveal">
+    <div class="kicker">Value Without Price</div>
+    <h2>翡翠的價值，<br>不應只用價格理解。</h2>
+    <p>
+      Ixchell Jewellery 不以價格比較翡翠，<br>
+      而是從結構、透度與形成去理解。
+    </p>
+
+    <div class="grid-line">
+      <div class="item">
+        <strong>結構</strong>
+        <span>真正的差異，往往在內部。</span>
+      </div>
+      <div class="item">
+        <strong>透度</strong>
+        <span>光進入石頭後，才看見層次。</span>
+      </div>
+      <div class="item">
+        <strong>色澤</strong>
+        <span>不是越鮮越好，而是是否自然。</span>
+      </div>
+      <div class="item">
+        <strong>形成</strong>
+        <span>時間留下的，不會完全重複。</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="scene">
+  <div class="scene-inner split reveal">
+    <div class="image-frame">
+      <img src="./pendant1.jpg" alt="天然 Type A 緬甸翡翠吊墜 新加坡 翡坊翠藝">
+    </div>
+    <div>
+      <div class="kicker">Visual Understanding</div>
+      <h2>有些細節，<br>照片只能說一半。</h2>
+      <p>
+        翡翠的光、色、透度與結構，<br>
+        需要在不同角度與距離中慢慢看。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="scene dark center">
+  <div class="scene-inner reveal">
+    <div class="kicker">Private Viewing</div>
+    <h2>有些東西，<br>不適合匆忙決定。</h2>
+    <p>
+      如果你剛好在找翡翠，<br>
+      可以預約一段安靜的時間，親自來看看。
+    </p>
+    <a class="btn" href="https://instagram.com/ixchelljewellery" target="_blank" rel="noopener">預約鑑賞</a>
+  </div>
+</section>
+
+<section class="scene final center">
+  <div class="scene-inner reveal">
+    <h2>有些東西，<br>不是用來比較的。</h2>
+    <p>而是剛好，被你遇見。</p>
+  </div>
+</section>
+
+</main>
+
+<a class="floating" href="https://instagram.com/ixchelljewellery" target="_blank" rel="noopener">
+  預約鑑賞｜Private Viewing
+</a>
+
+<script>
+const items=document.querySelectorAll('.reveal');
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+},{threshold:.18});
+items.forEach(item=>observer.observe(item));
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"JewelryStore",
+  "name":"Ixchell Jewellery",
+  "alternateName":["翡坊翠藝","Ixchell Jewellery Singapore"],
+  "url":"https://ixchelljewellery.com/jadeite-singapore-chinese.html",
+  "description":"翡坊翠藝 Ixchell Jewellery 是位於新加坡 The Adelphi、靠近 City Hall MRT 的私人翡翠珠寶店，專注天然 Type A 緬甸翡翠。",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"The Adelphi, 1 Coleman Street",
+    "addressLocality":"Singapore",
+    "addressCountry":"SG"
+  },
+  "areaServed":["Singapore","Malaysia","Indonesia","Brunei","Taiwan"],
+  "knowsLanguage":["Chinese","English","Bahasa Malaysia","Bahasa Indonesia"],
+  "sameAs":["https://instagram.com/ixchelljewellery"]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"什麼是 Type A 翡翠？",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"在 Ixchell Jewellery 的定義中，Type A 翡翠代表未經處理的天然狀態。"
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"翡翠和玉一樣嗎？",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"翡翠是玉的一種，但並非所有玉都是翡翠。"
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"為什麼建議親自看翡翠？",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"在 Ixchell Jewellery，看見與理解之間，往往需要親自觀察。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+</html>
