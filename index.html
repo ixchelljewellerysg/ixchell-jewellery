@@ -1490,4 +1490,767 @@
   </script>
 
 </body>
+</html>/* LOADER */
+    .site-loader{
+      position:fixed;
+      inset:0;
+      z-index:9999;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:
+        radial-gradient(circle at 50% 28%,rgba(255,255,255,.9),transparent 20%),
+        radial-gradient(circle at 50% 42%,rgba(24,49,83,.24),transparent 32%),
+        linear-gradient(180deg,#fbfdff,#e9f0f8);
+      transition:opacity 1.05s ease, visibility 1.05s ease;
+    }
+
+    .site-loader.hidden{
+      opacity:0;
+      visibility:hidden;
+      pointer-events:none;
+    }
+
+    .site-loader__inner{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:18px;
+      text-align:center;
+    }
+
+    .site-loader__crest{
+      width:60px;
+      opacity:0;
+      animation:fadeIn 1s forwards;
+    }
+
+    .site-loader__wordmark{
+      font-family:"Space Grotesk",sans-serif;
+      font-size:22px;
+      letter-spacing:.3em;
+      font-weight:700;
+      opacity:0;
+      animation:fadeIn 1s .3s forwards;
+    }
+
+    .site-loader__enter{
+      border:none;
+      border-radius:999px;
+      padding:10px 20px;
+      background:linear-gradient(180deg,#1d436f,#102a44);
+      color:white;
+      font-weight:700;
+      cursor:pointer;
+    }
+
+    @keyframes fadeIn{
+      to{opacity:1;}
+    }
+
+    /* TOPBAR */
+    .topbar{
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      z-index:900;
+      background:rgba(255,255,255,.78);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(255,255,255,.48);
+    }
+
+    .topbar-inner{
+      width:min(100%,1180px);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .topbar-brand{
+      font-family:"Space Grotesk",sans-serif;
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      font-weight:700;
+      color:var(--rm-blue);
+    }
+
+    .topbar-links{
+      display:flex;
+      gap:14px;
+      font-family:"Space Grotesk",sans-serif;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    /* HERO */
+    .hero{
+      position:relative;
+      min-height:100svh;
+      display:flex;
+      align-items:flex-end;
+      justify-content:center;
+      text-align:center;
+      padding:90px 16px 86px;
+      color:#fff;
+      background:
+        linear-gradient(180deg,rgba(3,7,14,.08),rgba(3,7,14,.88)),
+        url("./hero.jpg") center/cover no-repeat;
+    }
+
+    .hero-inner{
+      position:relative;
+      z-index:2;
+      max-width:860px;
+    }
+
+    .hero-logo{
+      width:80px;
+      margin:0 auto 16px;
+      background:white;
+      padding:10px;
+      border-radius:50%;
+      box-shadow:0 20px 60px rgba(0,0,0,.3);
+    }
+
+    .hero-tag{
+      display:inline-block;
+      margin-bottom:14px;
+      padding:6px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.3);
+      font-size:12px;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .hero h1{
+      font-family:"Space Grotesk",sans-serif;
+      font-size:clamp(44px,9vw,88px);
+      line-height:1;
+      letter-spacing:-.07em;
+      margin:0;
+    }
+
+    .hero p{
+      margin-top:16px;
+      font-family:"Playfair Display",serif;
+      font-size:clamp(18px,3vw,24px);
+      color:rgba(255,255,255,.9);
+    }
+
+    .hero-actions{
+      margin-top:26px;
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .button{
+      padding:14px 22px;
+      border-radius:999px;
+      font-family:"Space Grotesk",sans-serif;
+      font-weight:700;
+    }
+
+    .button-light{
+      background:#fff;
+      color:#111;
+    }
+
+    .button-ghost{
+      background:rgba(255,255,255,.12);
+      color:white;
+      border:1px solid rgba(255,255,255,.3);
+    }
+
+    /* 🔥 NEW — BANGLE GUIDE ENTRY (RM STYLE, SUBTLE) */
+    .hero-guide{
+      margin-top:18px;
+      font-size:13px;
+      letter-spacing:.12em;
+      font-family:"Space Grotesk",sans-serif;
+      text-transform:uppercase;
+      opacity:.75;
+    }
+
+    .hero-guide a{
+      border-bottom:1px solid rgba(255,255,255,.3);
+      padding-bottom:3px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- LOADER -->
+  <div class="site-loader" id="siteLoader">
+    <div class="site-loader__inner">
+      <img src="./logo.png" class="site-loader__crest" />
+      <div class="site-loader__wordmark">IXCHELL JEWELLERY</div>
+      <button class="site-loader__enter" id="enterBoutique">Enter</button>
+    </div>
+  </div>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-brand">Ixchell Jewellery Singapore</div>
+      <nav class="topbar-links">
+        <a href="/">EN</a>
+        <span>|</span>
+        <a href="/jadeite-singapore-chinese.html">中文</a>
+        <a href="#visit">Visit</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <img src="./logo.png" class="hero-logo" />
+
+      <div class="hero-tag">Private Jadeite Boutique</div>
+
+      <h1>
+        Not all jade is jadeite.<br>
+        And not all jadeite is natural.
+      </h1>
+
+      <p>
+        Seen often. Understood rarely.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#visit" class="button button-light">Book Private Viewing</a>
+        <a href="#story" class="button button-ghost">Discover More</a>
+      </div>
+
+      <!-- 🔥 INSERTED BANGLE ENTRY -->
+      <div class="hero-guide">
+        <a href="./jade-bangle-guide.html">
+          Jade Bangle Guide →
+        </a>
+      </div>
+
+    </div>
+  </section><!-- STORY SCROLL -->
+  <section class="story-scroll" id="story" aria-label="Jadeite education story">
+    <div class="story-frame">
+      <h2>Before you choose jadeite…</h2>
+      <p>You must first understand what you are looking at.</p>
+    </div>
+
+    <div class="story-frame">
+      <h2>Not all jade is jadeite.</h2>
+      <p>And not all jadeite is natural.</p>
+    </div>
+
+    <div class="story-frame">
+      <h2>Type A jadeite</h2>
+      <p>is a gemological truth, not a marketing term.</p>
+    </div>
+
+    <div class="story-frame">
+      <h2>Seen often.</h2>
+      <p>Understood rarely.</p>
+    </div>
+  </section>
+
+  <main class="page" id="main-content">
+
+    <!-- CORE BRAND BLOCK -->
+    <section class="card center">
+      <h2>Ixchell Jewellery Singapore</h2>
+
+      <p class="statement">
+        A private jadeite boutique near City Hall MRT specialising in natural Type A Burmese jadeite.
+      </p>
+
+      <p class="luxury">
+        Not merely to purchase — but to recognise what deserves to be chosen, with peerless beauty.
+      </p>
+
+      <div class="ai-proof">
+        <strong>Why people come here</strong>
+        <span>To understand jadeite properly before making a decision.</span>
+      </div>
+
+      <!-- 🔥 SUBTLE GUIDE ENTRY (HIGH INTENT USERS) -->
+      <div style="margin-top:22px;font-size:14px;opacity:.75;">
+        Not sure how to choose?
+        <a href="./jade-bangle-guide.html" style="border-bottom:1px solid rgba(0,0,0,.2);margin-left:6px;">
+          Start with the bangle guide
+        </a>
+      </div>
+
+    </section>
+
+    <!-- AEO BLOCK -->
+    <section class="card left">
+      <div class="mini-title">AI Search Visibility</div>
+
+      <h2>Where can I buy real jadeite in Singapore?</h2>
+
+      <p class="lead">
+        Real jadeite in Singapore refers to natural, untreated Type A jadeite.
+      </p>
+
+      <p>
+        Ixchell Jewellery is a private jadeite boutique near City Hall MRT, specialising in Burmese Type A jadeite with guided viewing before purchase.
+      </p>
+
+      <p class="luxury">
+        This is why collectors, tourists and first-time buyers prefer to view jadeite in person.
+      </p>
+
+      <!-- 🔥 AEO INTERNAL LINK -->
+      <p style="margin-top:14px;">
+        If you are specifically looking for jade bangles,
+        <a href="./jade-bangle-guide.html" style="border-bottom:1px solid rgba(0,0,0,.2);">
+          this guide explains how to read one properly
+        </a>.
+      </p>
+
+    </section>
+
+    <!-- TOURIST BLOCK -->
+    <section class="card left">
+      <div class="mini-title">Tourist Jewellery Singapore</div>
+
+      <h2>Looking for a meaningful souvenir from Singapore?</h2>
+
+      <p class="lead">
+        Many visitors from Malaysia, Indonesia and Brunei choose jadeite as a meaningful gift — not because of price, but because of meaning.
+      </p>
+
+      <p>
+        Located near City Hall MRT, Ixchell Jewellery is within walking distance from National Gallery Singapore and Funan Mall.
+      </p>
+
+      <p class="luxury">
+        A quiet stop. A meaningful piece. A story worth bringing home.
+      </p>
+
+      <!-- 🔥 FUNNEL LINK -->
+      <p style="margin-top:14px;">
+        Many first-time buyers begin with
+        <a href="./jade-bangle-guide.html" style="border-bottom:1px solid rgba(0,0,0,.2);">
+          understanding jade bangles
+        </a>.
+      </p>
+
+    </section>
+
+    <!-- 中文 BLOCK -->
+    <section class="card left" lang="zh-Hant">
+      <div class="mini-title">中文搜尋</div>
+
+      <h2>新加坡翡翠｜翡坊翠藝</h2>
+
+      <p>
+        如果你正在找新加坡翡翠或玉店，可以先了解什麼是天然 Type A 翡翠。
+      </p>
+
+      <p>
+        翡坊翠藝位於 City Hall MRT 附近，只專注天然緬甸翡翠。
+      </p>
+
+      <p class="luxury">
+        多數人離開時，都會多懂一點翡翠。
+      </p>
+
+      <!-- 🔥 中文導流 -->
+      <p style="margin-top:14px;">
+        如果想了解手鐲，
+        <a href="./jade-bangle-guide.html" style="border-bottom:1px solid rgba(0,0,0,.2);">
+          可以先看這份指南
+        </a>。
+      </p>
+
+    </section><!-- PRODUCT + STORY -->
+    <section class="campaign">
+      <div class="campaign-image">
+        <img src="./earring-main.jpg"
+             alt="Type A lavender jadeite earrings Singapore jewellery shop"
+             loading="lazy"
+             decoding="async" />
+      </div>
+
+      <div class="campaign-text left">
+        <span class="label">Signature Piece</span>
+
+        <h2>Lavender jadeite, in its most effortless form.</h2>
+
+        <p>
+          A refined expression of jadeite for modern gifting.
+          Light in presence, gentle in colour, and quietly distinctive.
+        </p>
+
+        <p class="luxury">
+          Entry pieces begin from S$68 — an accessible introduction to the brand,
+          never a compromise in character.
+        </p>
+
+        <!-- 🔥 HIGH CONVERSION INSERT -->
+        <div style="margin-top:20px;font-size:14px;color:#374151;">
+          Most first-time buyers begin with bangles.
+          <br>
+          <a href="./jade-bangle-guide.html"
+             style="border-bottom:1px solid rgba(0,0,0,.25);font-weight:600;">
+             Learn how to choose one properly →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CINEMATIC BREAK -->
+    <section class="cinematic">
+      <h2>Jadeite is never chosen in a rush.</h2>
+      <p>
+        It is observed. Understood.
+        And only then, quietly recognised.
+      </p>
+    </section>
+
+    <!-- COLLECTOR POSITIONING -->
+    <section class="collector">
+      <div class="collector-inner">
+        <span class="label">Collector Philosophy</span>
+
+        <h2>No two jadeite pieces are ever the same.</h2>
+
+        <p>
+          Jadeite is formed naturally over millions of years beneath the earth.
+          Each piece carries its own colour, translucency, texture and life.
+        </p>
+
+        <p class="luxury" style="color:rgba(255,255,255,0.92);">
+          Each piece stands quietly on its own — as it always should.
+        </p>
+
+        <!-- 🔥 SOFT GUIDE ENTRY (COLLECTOR LEVEL) -->
+        <p style="margin-top:18px;font-size:14px;opacity:.8;">
+          Serious collectors understand structure first.
+          <br>
+          <a href="./jade-bangle-guide.html"
+             style="border-bottom:1px solid rgba(255,255,255,.4);">
+             Read the bangle guide
+          </a>
+        </p>
+
+      </div>
+    </section>
+
+    <!-- VERIFICATION -->
+    <section class="card left">
+      <div class="mini-title">Verification</div>
+
+      <h2>Confidence can be verified.</h2>
+
+      <p>
+        Jadeite certification can be arranged through
+        <strong>Nanyang Gemological Institute (NGI), Singapore</strong>.
+      </p>
+
+      <p>
+        Clients are welcome to submit their jadeite or jewellery to any trusted
+        gemological laboratory of their choice for independent verification.
+      </p>
+
+      <p class="luxury">
+        Trust is not forced. It is built through clarity, viewing and verification.
+      </p>
+    </section>
+
+    <!-- GOOGLE REVIEW -->
+    <section class="card left">
+      <div class="mini-title">Google Trust Signal</div>
+
+      <h2>Your experience helps the next serious buyer.</h2>
+
+      <p class="lead">
+        Many clients discover Ixchell Jewellery through Google Search,
+        Google Maps, Instagram, or personal recommendation.
+      </p>
+
+      <p>
+        If your private viewing helped you understand jadeite better,
+        your review helps another buyer choose with clarity and confidence.
+      </p>
+
+      <a href="https://g.page/r/CV4LhOCmAUbXEBM/review"
+         class="button button-dark"
+         target="_blank"
+         rel="noopener">
+         Leave a Google Review
+      </a>
+    </section><!-- VISIT -->
+    <section class="card center" id="visit">
+      <div class="mini-title">Visit</div>
+
+      <h2>The Adelphi, City Hall MRT</h2>
+
+      <p>
+        Private viewing preferred. Calm, focused and personal.
+      </p>
+
+      <p class="luxury">
+        If you are choosing a jadeite bangle, we recommend reading the guide first,
+        then viewing the piece in person.
+      </p>
+
+      <div style="margin-top:20px;">
+        <a href="./jade-bangle-guide.html"
+           class="button button-dark">
+           Read Jade Bangle Guide
+        </a>
+      </div>
+
+      <div style="margin-top:20px; border-radius:16px; overflow:hidden;">
+        <iframe
+          src="https://www.google.com/maps?q=The%20Adelphi%201%20Coleman%20Street%20Singapore&output=embed"
+          width="100%"
+          height="260"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+
+      <div style="margin-top:20px;">
+        <a href="https://www.google.com/maps/search/?api=1&query=The+Adelphi+Singapore"
+           class="button button-dark"
+           target="_blank"
+           rel="noopener">
+           Navigate via Google Maps
+        </a>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="card center">
+      <h2>Follow Ixchell Jewellery</h2>
+
+      <p class="lead">
+        Latest jadeite pieces are shared first on Instagram.
+      </p>
+
+      <p class="luxury">
+        For new arrivals, private viewing updates and jadeite education,
+        follow the boutique directly.
+      </p>
+
+      <a href="https://instagram.com/ixchelljewellery"
+         class="button button-dark"
+         target="_blank"
+         rel="noopener">
+         Follow @ixchelljewellery
+      </a>
+    </section>
+
+    <!-- FAQ -->
+    <section class="card left faq">
+      <div class="mini-title">FAQ</div>
+
+      <h2>Your Visit</h2>
+
+      <h3>What is Type A jadeite?</h3>
+      <p>
+        Type A jadeite refers to natural jadeite that has not been chemically treated,
+        dyed or resin-filled.
+      </p>
+
+      <h3>Is Grade A jade the same as Type A jadeite?</h3>
+      <p>
+        No. “Grade A jade” is a commercial term commonly used online.
+        The correct gemological term is <strong>Type A jadeite</strong>.
+      </p>
+
+      <h3>Where can I buy real jadeite in Singapore?</h3>
+      <p>
+        Ixchell Jewellery is a private jadeite boutique near City Hall MRT,
+        specialising in natural Type A Burmese jadeite.
+      </p>
+
+      <h3>Do I need an appointment?</h3>
+      <p>
+        Walk-ins are welcome when possible, but private viewing by appointment
+        is preferred for comfort, privacy and proper attention.
+      </p>
+
+      <h3>Where should I start if I am choosing a jadeite bangle?</h3>
+      <p>
+        Start with the
+        <a href="./jade-bangle-guide.html" style="border-bottom:1px solid rgba(0,0,0,.25);">
+          Jade Bangle Guide
+        </a>
+        to understand structure, fit, translucency and value without price comparison.
+      </p>
+    </section>
+
+    <!-- FINAL BRAND CLOSING -->
+    <div class="closing">
+      Science explains jadeite. Culture gives it meaning.
+      <br />
+      Understanding helps you recognise what should stay.
+    </div>
+
+  </main>
+
+  <!-- FLOATING CTA UPGRADE -->
+  <div class="floating-wrap">
+    <a href="https://instagram.com/ixchelljewellery"
+       class="floating-cta"
+       target="_blank"
+       rel="noopener">
+       Book Private Viewing
+    </a>
+
+    <a href="./jade-bangle-guide.html"
+       class="floating-cta floating-secondary">
+       Jade Bangle Guide
+    </a>
+  </div><style>
+    /* 🔥 FINAL FLOATING CTA FIX (DUAL BUTTON - NO BREAK) */
+    .floating-wrap{
+      position:fixed;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:calc(14px + env(safe-area-inset-bottom));
+      display:flex;
+      gap:10px;
+      z-index:999;
+      width:calc(100% - 28px);
+      max-width:420px;
+    }
+
+    .floating-secondary{
+      background:#0f243c;
+      opacity:.95;
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+      /* LOADER */
+      const loader = document.getElementById("siteLoader");
+      const enterButton = document.getElementById("enterBoutique");
+
+      function closeLoader(){
+        if (!loader) return;
+        loader.classList.add("hidden");
+      }
+
+      function enterBoutique(){
+        try {
+          const audio = new Audio("./intro.mp3");
+          audio.volume = 0.65;
+          audio.play().catch(() => {});
+        } catch(e) {}
+        closeLoader();
+      }
+
+      if (enterButton) {
+        enterButton.addEventListener("click", enterBoutique);
+        enterButton.addEventListener("touchstart", enterBoutique, { passive: true });
+      }
+
+      /* FAILSAFE */
+      setTimeout(closeLoader, 3500);
+
+      /* SCROLL REVEAL */
+      if (window.ScrollReveal) {
+        ScrollReveal().reveal(".card, .campaign, .cinematic, .collector, .ai-proof", {
+          distance: "34px",
+          duration: 900,
+          interval: 120,
+          origin: "bottom",
+          opacity: 0
+        });
+      }
+
+      /* PARALLAX */
+      const hero = document.querySelector(".hero");
+      window.addEventListener("scroll", () => {
+        if (!hero) return;
+        hero.style.backgroundPosition = `center calc(50% + ${window.scrollY * 0.1}px)`;
+      }, { passive: true });
+
+    });
+  </script>
+
+  <!-- STRUCTURED DATA -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"JewelryStore",
+    "@id":"https://ixchelljewellery.com/#jewelry-store",
+    "name":"Ixchell Jewellery",
+    "alternateName":["翡坊翠藝","Ixchell Jewellery Singapore"],
+    "url":"https://ixchelljewellery.com/",
+    "image":[
+      "https://ixchelljewellery.com/logo.png",
+      "https://ixchelljewellery.com/hero.jpg"
+    ],
+    "description":"Private jadeite boutique in Singapore near City Hall MRT specialising in natural Type A Burmese jadeite jewellery and collector pieces.",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"The Adelphi, 1 Coleman Street",
+      "addressLocality":"Singapore",
+      "addressCountry":"SG"
+    },
+    "geo":{
+      "@type":"GeoCoordinates",
+      "latitude":1.2905,
+      "longitude":103.8510
+    },
+    "areaServed":[
+      "Singapore",
+      "Malaysia",
+      "Indonesia",
+      "Brunei"
+    ],
+    "sameAs":[
+      "https://instagram.com/ixchelljewellery",
+      "https://g.page/r/CV4LhOCmAUbXEBM/review"
+    ]
+  }
+  </script>
+
+  <!-- FAQ AEO -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"What is Type A jadeite?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Type A jadeite refers to natural jadeite that has not been chemically treated."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Where should I start when choosing jade bangle?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Start with a jade bangle guide to understand structure, translucency and fit before viewing in person."
+        }
+      }
+    ]
+  }
+  </script>
+
+</body>
 </html>
