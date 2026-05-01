@@ -1,25 +1,598 @@
 <!DOCTYPE html>
-<html lang="en-SG">
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
 
-<title>Jade Bangle Guide Singapore｜Ixchell Jewellery｜Type A Jadeite Bangles</title>
-<meta name="description" content="A refined jade bangle guide by Ixchell Jewellery Singapore. Learn whether jade bangles change colour, which hand to wear them on, how to understand value, and why Type A jadeite should be viewed in person." />
-<meta name="robots" content="index, follow" />
-<meta name="theme-color" content="#183153" />
+  <title>Jade Bangle Guide Singapore | Ixchell Jewellery</title>
+  <meta name="description" content="A refined jade bangle guide by Ixchell Jewellery Singapore, explaining how to understand Type A Burmese jadeite bangles through structure, translucency, colour, fit and viewing." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#183153" />
 
-<link rel="canonical" href="https://ixchelljewellery.com/jade-bangle-guide.html" />
-<link rel="alternate" hreflang="en-SG" href="https://ixchelljewellery.com/jade-bangle-guide.html" />
-<link rel="alternate" hreflang="zh-Hant-SG" href="https://ixchelljewellery.com/jadeite-singapore-chinese.html" />
-<link rel="alternate" hreflang="x-default" href="https://ixchelljewellery.com/jade-bangle-guide.html" />
+  <link rel="canonical" href="https://ixchelljewellery.com/jade-bangle-guide.html" />
+  <link rel="alternate" hreflang="en-SG" href="https://ixchelljewellery.com/jade-bangle-guide.html" />
+  <link rel="alternate" hreflang="zh-Hant-SG" href="https://ixchelljewellery.com/jadeite-singapore-chinese.html" />
+  <link rel="alternate" hreflang="x-default" href="https://ixchelljewellery.com/" />
 
-<link rel="preload" as="image" href="./bangle-hero.jpg" fetchpriority="high" />
+  <link rel="preload" as="image" href="./bangle-hero.jpg" fetchpriority="high" />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <meta property="og:title" content="Jade Bangle Guide Singapore | Ixchell Jewellery" />
+  <meta property="og:description" content="Understand jadeite bangles through structure, translucency, colour and fit before viewing in person." />
+  <meta property="og:image" content="https://ixchelljewellery.com/bangle-hero.jpg" />
+  <meta property="og:url" content="https://ixchelljewellery.com/jade-bangle-guide.html" />
+  <meta property="og:type" content="article" />
 
-<style>
-:root{
-  --brand:#183153;
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --brand:#183153;
+      --deep:#07111f;
+      --blue:#102a44;
+      --gold:#c8aa6e;
+      --text:#111827;
+      --muted:#64748b;
+      --soft:#eef3f8;
+      --max:1080px;
+      --shadow:0 34px 90px rgba(7,17,31,.18);
+    }
+
+    *{box-sizing:border-box}
+
+    html{
+      scroll-behavior:smooth;
+      -webkit-text-size-adjust:100%;
+    }
+
+    body{
+      margin:0;
+      font-family:"Inter",sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 12% 8%,rgba(24,49,83,.18),transparent 32%),
+        radial-gradient(circle at 88% 18%,rgba(200,170,110,.12),transparent 26%),
+        linear-gradient(180deg,#ffffff 0%,#edf3f9 44%,#f8fafc 100%);
+      overflow-x:hidden;
+    }
+
+    img{
+      display:block;
+      width:100%;
+      height:auto;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .topbar{
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      z-index:900;
+      background:rgba(255,255,255,.84);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(15,23,42,.08);
+    }
+
+    .topbar-inner{
+      width:min(100%,1180px);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+    }
+
+    .brand{
+      font-family:"Space Grotesk",sans-serif;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--blue);
+      white-space:nowrap;
+    }
+
+    .nav{
+      display:flex;
+      gap:14px;
+      align-items:center;
+      font-family:"Space Grotesk",sans-serif;
+      font-size:13px;
+      font-weight:700;
+      color:var(--blue);
+      white-space:nowrap;
+    }
+
+    .hero{
+      min-height:100svh;
+      position:relative;
+      display:flex;
+      align-items:flex-end;
+      justify-content:center;
+      text-align:center;
+      padding:90px 18px 92px;
+      color:#fff;
+      background:
+        linear-gradient(180deg,rgba(3,7,14,.12),rgba(3,7,14,.86)),
+        url("./bangle-hero.jpg") center/cover no-repeat;
+      overflow:hidden;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 50% 62%,rgba(255,255,255,.18),transparent 28%),
+        linear-gradient(to top,rgba(3,7,14,.80),transparent 55%);
+      pointer-events:none;
+    }
+
+    .hero-inner{
+      position:relative;
+      z-index:2;
+      width:min(100%,860px);
+    }
+
+    .eyebrow{
+      display:inline-block;
+      margin-bottom:18px;
+      padding:8px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.32);
+      background:rgba(255,255,255,.10);
+      backdrop-filter:blur(16px);
+      font-family:"Space Grotesk",sans-serif;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      margin:0;
+      font-family:"Space Grotesk",sans-serif;
+      font-size:clamp(44px,10vw,90px);
+      line-height:.95;
+      letter-spacing:-.075em;
+      text-shadow:0 30px 80px rgba(0,0,0,.52);
+    }
+
+    .hero p{
+      max-width:720px;
+      margin:20px auto 0;
+      font-family:"Playfair Display",serif;
+      font-size:clamp(18px,3vw,25px);
+      line-height:1.68;
+      color:rgba(255,255,255,.9);
+    }
+
+    .button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      margin-top:28px;
+      padding:14px 24px;
+      border-radius:999px;
+      font-family:"Space Grotesk",sans-serif;
+      font-size:14px;
+      font-weight:700;
+      letter-spacing:.04em;
+      background:#fff;
+      color:#111827;
+      box-shadow:0 18px 44px rgba(0,0,0,.22);
+    }
+
+    .button-dark{
+      background:linear-gradient(180deg,#1d436f,#102a44);
+      color:#fff;
+    }
+
+    main{
+      width:min(100%,var(--max));
+      margin:0 auto;
+      padding:48px 16px 180px;
+    }
+
+    .card{
+      margin-top:24px;
+      padding:30px 24px;
+      border-radius:34px;
+      background:linear-gradient(180deg,rgba(255,255,255,.90),rgba(255,255,255,.72));
+      border:1px solid rgba(15,23,42,.08);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+    }
+
+    .card-dark{
+      background:
+        radial-gradient(circle at 50% 10%,rgba(255,255,255,.15),transparent 30%),
+        linear-gradient(180deg,#102a44,#07111f);
+      color:#fff;
+    }
+
+    .card-dark p,
+    .card-dark h2,
+    .card-dark .mini{
+      color:#fff;
+    }
+
+    .center{text-align:center}
+
+    .mini{
+      margin-bottom:10px;
+      font-family:"Space Grotesk",sans-serif;
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:var(--brand);
+    }
+
+    h2{
+      margin:0 0 14px;
+      font-family:"Space Grotesk",sans-serif;
+      font-size:clamp(30px,7vw,50px);
+      line-height:1.06;
+      letter-spacing:-.05em;
+    }
+
+    h3{
+      margin:0 0 8px;
+      font-family:"Space Grotesk",sans-serif;
+      font-size:20px;
+      line-height:1.25;
+    }
+
+    p{
+      margin:0 0 14px;
+      font-size:16px;
+      line-height:1.85;
+      color:var(--muted);
+    }
+
+    .lead{
+      font-size:18px;
+      color:#1f2937;
+    }
+
+    .luxury{
+      font-family:"Playfair Display",serif;
+      font-size:18px;
+      line-height:1.85;
+      color:#2c3646;
+    }
+
+    .story-grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:18px;
+      margin-top:28px;
+    }
+
+    .story-item{
+      padding:20px;
+      border-radius:24px;
+      background:#fff;
+      border:1px solid rgba(15,23,42,.08);
+      box-shadow:0 16px 38px rgba(15,23,42,.07);
+    }
+
+    .image-block{
+      margin:70px 0;
+      display:grid;
+      grid-template-columns:1fr;
+      gap:24px;
+      align-items:center;
+    }
+
+    .image-frame{
+      border-radius:34px;
+      overflow:hidden;
+      background:#fff;
+      box-shadow:var(--shadow);
+    }
+
+    .image-frame img{
+      aspect-ratio:4/5;
+      object-fit:cover;
+    }
+
+    .cinematic{
+      margin:80px 0;
+      padding:80px 22px;
+      border-radius:36px;
+      text-align:center;
+      background:
+        radial-gradient(circle at 50% 20%,rgba(200,170,110,.18),transparent 30%),
+        radial-gradient(circle at 80% 80%,rgba(120,160,220,.12),transparent 30%),
+        linear-gradient(180deg,#102a44,#07111f);
+      color:#fff;
+      box-shadow:0 30px 80px rgba(0,0,0,.25);
+    }
+
+    .cinematic h2,
+    .cinematic p{
+      color:#fff;
+    }
+
+    .faq h3{
+      margin-top:24px;
+    }
+
+    .floating{
+      position:fixed;
+      left:50%;
+      bottom:calc(16px + env(safe-area-inset-bottom));
+      transform:translateX(-50%);
+      width:calc(100% - 30px);
+      max-width:480px;
+      z-index:999;
+      display:flex;
+      justify-content:center;
+      padding:14px 18px;
+      border-radius:999px;
+      background:linear-gradient(180deg,#1d436f,#102a44);
+      color:#fff;
+      font-family:"Space Grotesk",sans-serif;
+      font-size:14px;
+      font-weight:700;
+      box-shadow:0 18px 44px rgba(16,42,68,.32);
+    }
+
+    @media(min-width:820px){
+      .story-grid{
+        grid-template-columns:repeat(3,1fr);
+      }
+
+      .image-block{
+        grid-template-columns:1fr 1fr;
+        gap:38px;
+      }
+
+      main{
+        padding-left:22px;
+        padding-right:22px;
+      }
+
+      .card{
+        padding:40px 36px;
+      }
+    }
+
+    @media(max-width:600px){
+      .brand{font-size:10px}
+      .nav{font-size:12px;gap:10px}
+      .hero{padding-bottom:104px}
+      h1{font-size:clamp(40px,12vw,58px)}
+      .card{border-radius:28px;padding:26px 22px}
+      .floating{font-size:13px}
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Ixchell Jewellery Singapore</div>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <span>|</span>
+        <a href="/jadeite-singapore-chinese.html">中文</a>
+        <a href="#visit">Visit</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Jade Bangle Guide</div>
+      <h1>Before you choose a jade bangle, learn how to see it.</h1>
+      <p>
+        A jadeite bangle is not chosen by colour alone. Structure, translucency, fit and feeling matter more than most people realise.
+      </p>
+      <a href="#guide" class="button">Start Reading</a>
+    </div>
+  </section>
+
+  <main id="guide">
+
+    <section class="card center">
+      <div class="mini">Ixchell Jewellery Guide</div>
+      <h2>A jade bangle should not be rushed.</h2>
+      <p class="luxury">
+        At Ixchell Jewellery Singapore, a jadeite bangle is understood through observation first — not pressure, not comparison, and not noise.
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="mini">Answer First</div>
+      <h2>How do you choose a jade bangle?</h2>
+      <p class="lead">
+        To choose a jade bangle, first check the fit, then observe the structure, translucency, colour distribution and how it looks under different lighting.
+      </p>
+      <p>
+        Natural Type A jadeite may appear different under daylight, indoor light and shadow. This is why viewing in person is especially important.
+      </p>
+    </section>
+
+    <section class="image-block">
+      <div class="image-frame">
+        <img src="./bangle-1.jpg" alt="Natural Type A jadeite bangle with lavender and green tones Singapore" loading="lazy" />
+      </div>
+      <div>
+        <div class="mini">Not Colour Alone</div>
+        <h2>The first mistake is judging only by colour.</h2>
+        <p>
+          Colour attracts the eye, but structure tells the deeper story. A bangle may look bright in a photograph yet feel different in person.
+        </p>
+        <p class="luxury">
+          The better question is not “which is cheaper?” but “which one has the presence, structure and feeling that I would still choose years later?”
+        </p>
+      </div>
+    </section>
+
+    <section class="card card-dark center">
+      <div class="mini">Value Without Price War</div>
+      <h2>Jadeite value is not a race to the lowest price.</h2>
+      <p>
+        Ixchell Jewellery does not position jadeite by price comparison. We help clients understand what they are seeing before they decide.
+      </p>
+    </section>
+
+    <section class="card">
+      <div class="mini">Three Things To Observe</div>
+      <h2>When viewing a bangle, slow down here.</h2>
+
+      <div class="story-grid">
+        <div class="story-item">
+          <h3>1. Fit</h3>
+          <p>The bangle should pass the hand properly without becoming uncomfortable or unsafe to wear.</p>
+        </div>
+
+        <div class="story-item">
+          <h3>2. Structure</h3>
+          <p>Look at the internal texture, grain and natural formation. This is where many differences begin.</p>
+        </div>
+
+        <div class="story-item">
+          <h3>3. Light</h3>
+          <p>View it under different angles. Jadeite changes visually as light enters and leaves the stone.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="image-block">
+      <div>
+        <div class="mini">Carved Bangles</div>
+        <h2>Carving is not automatically a flaw cover.</h2>
+        <p>
+          A carved jadeite bangle can be chosen for artistry, symbolism and craftsmanship. It should not be dismissed simply because it is carved.
+        </p>
+        <p class="luxury">
+          The fair way to understand a carved bangle is to examine the whole piece — design, workmanship, structure and natural character.
+        </p>
+      </div>
+      <div class="image-frame">
+        <img src="./bangle-2.jpg" alt="Carved natural jadeite bangle Singapore jade bangle guide" loading="lazy" />
+      </div>
+    </section>
+
+    <section class="cinematic">
+      <h2>A serious bangle is not chosen in one glance.</h2>
+      <p>
+        It is turned in the hand. Seen in light. Compared quietly with your own instinct.
+      </p>
+    </section>
+
+    <section class="image-block">
+      <div class="image-frame">
+        <img src="./bangle-3.jpg" alt="Type A Burmese jadeite bangle displayed in Singapore jadeite boutique" loading="lazy" />
+      </div>
+      <div>
+        <div class="mini">Private Viewing</div>
+        <h2>Photos can begin the interest. Viewing confirms the choice.</h2>
+        <p>
+          A jadeite bangle has weight, proportion, surface, glow and personality. These are difficult to understand fully through a screen.
+        </p>
+        <p class="luxury">
+          This is why Ixchell Jewellery recommends private viewing for serious bangle selection.
+        </p>
+      </div>
+    </section>
+
+    <section class="card faq">
+      <div class="mini">FAQ</div>
+      <h2>Jade Bangle Questions</h2>
+
+      <h3>Can jade change colour over time?</h3>
+      <p>
+        Natural jadeite does not truly change into a different material. It may look slightly different due to lighting, surface condition, body oil, cleaning habits or photography.
+      </p>
+
+      <h3>Does a jade bangle become greener when worn?</h3>
+      <p>
+        A jade bangle does not magically become green. It may appear more lively when the surface is clean, polished and viewed in better light.
+      </p>
+
+      <h3>Is a carved jade bangle bad?</h3>
+      <p>
+        No. Carving itself does not make a bangle bad. It should be judged by naturalness, workmanship, structure, proportion and overall beauty.
+      </p>
+
+      <h3>Where can I view jade bangles in Singapore?</h3>
+      <p>
+        Ixchell Jewellery is a private jadeite boutique near City Hall MRT in Singapore. Private viewing is recommended.
+      </p>
+    </section>
+
+    <section class="card center" id="visit">
+      <div class="mini">Visit Ixchell Jewellery</div>
+      <h2>View jadeite bangles in person.</h2>
+      <p>
+        Private viewing helps you compare fit, light, colour and structure calmly.
+      </p>
+      <a href="https://instagram.com/ixchelljewellery" target="_blank" rel="noopener" class="button button-dark">
+        Book Private Viewing
+      </a>
+    </section>
+
+  </main>
+
+  <a href="https://instagram.com/ixchelljewellery" target="_blank" rel="noopener" class="floating">
+    Book Private Viewing
+  </a>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Can jade change colour over time?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Natural jadeite does not truly change into a different material. It may look slightly different due to lighting, surface condition, body oil, cleaning habits or photography."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Does a jade bangle become greener when worn?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"A jade bangle does not magically become green. It may appear more lively when the surface is clean, polished and viewed in better light."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Is a carved jade bangle bad?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"No. Carving itself does not make a bangle bad. It should be judged by naturalness, workmanship, structure, proportion and overall beauty."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Where can I view jade bangles in Singapore?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Ixchell Jewellery is a private jadeite boutique near City Hall MRT in Singapore. Private viewing is recommended."
+        }
+      }
+    ]
+  }
+  </script>
+
+</body>
+</html>
