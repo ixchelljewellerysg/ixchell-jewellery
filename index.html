@@ -2,201 +2,286 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Ixchell Jewellery Singapore | Type A Burmese Jadeite Boutique at The Adelphi</title>
+  <title>Ixchell Jewellery Singapore | Type A Burmese Jadeite Boutique</title>
 
-  <meta
-    name="description"
-    content="Ixchell Jewellery is a private jadeite boutique at The Adelphi, 1 Coleman Street #02-33, opposite Funan and near City Hall MRT, Singapore. We specialise in natural Type A Burmese jadeite jewellery, bangles, earrings and collector pieces. Learn jadeite properly before choosing."
-  />
+  <meta name="description" content="Ixchell Jewellery is a private jadeite boutique in Singapore at The Adelphi, specialising in natural Type A Burmese jadeite jewellery. Learn jadeite properly before choosing."/>
+  <meta name="keywords" content="jadeite Singapore, Type A jadeite, jade jewellery Singapore, jadeite bangle Singapore, real jade Singapore, Ixchell Jewellery"/>
+  <meta name="robots" content="index, follow"/>
 
-  <meta
-    name="keywords"
-    content="jadeite Singapore, Type A jadeite Singapore, Burmese jadeite Singapore, real jade Singapore, jade jewellery Singapore, jadeite bangle Singapore, The Adelphi jadeite, City Hall jadeite, Funan jadeite, private jadeite boutique Singapore, Ixchell Jewellery, 翡坊翠藝, how to choose jadeite, what is Type A jadeite, jadeite bangle guide Singapore"
-  />
-
-  <meta name="robots" content="index, follow" />
-  <meta name="theme-color" content="#315f9c" />
-  <link rel="canonical" href="https://ixchelljewellery.com/" />
-
-  <meta property="og:title" content="Ixchell Jewellery Singapore | Type A Burmese Jadeite Boutique" />
-  <meta property="og:description" content="A quiet private jadeite boutique at The Adelphi, opposite Funan and near City Hall MRT. Natural Type A Burmese jadeite, selected with care and explained with clarity." />
-  <meta property="og:image" content="https://ixchelljewellery.com/hero.jpg" />
-  <meta property="og:url" content="https://ixchelljewellery.com/" />
-  <meta property="og:type" content="website" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet"/>
 
   <style>
     :root {
-      --sora: #b0e0e6;
-      --gunjyo: #315f9c;
-      --tsuyukusa: #12a8c8;
-      --navy: #10233f;
-      --deep: #071426;
-      --white: #ffffff;
-      --mist: #f5f8fa;
-      --line: rgba(49, 95, 156, 0.16);
-      --text: #1f2933;
-      --muted: #687382;
-      --gold: #b8a06a;
+      --blue-main:#315f9c;
+      --blue-soft:#b0e0e6;
+      --blue-accent:#12a8c8;
+      --navy:#10233f;
+      --deep:#071426;
+      --white:#ffffff;
+      --mist:#f5f8fa;
+      --text:#1f2933;
+      --muted:#687382;
+      --line:rgba(49,95,156,0.15);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    * {margin:0;padding:0;box-sizing:border-box;}
     body {
-      font-family: "Inter", sans-serif;
-      color: var(--text);
-      background: var(--white);
-      line-height: 1.75;
+      font-family:Inter,sans-serif;
+      color:var(--text);
+      background:#fff;
+      line-height:1.75;
+    }
+
+    h1,h2,h3 {
+      font-family:"Playfair Display",serif;
+      color:var(--navy);
     }
 
     .container {
-      width: min(1120px, 90%);
-      margin: 0 auto;
+      width:min(1120px,90%);
+      margin:auto;
     }
 
+    /* INTRO */
+
+    #intro {
+      position:fixed;
+      inset:0;
+      background:linear-gradient(90deg,var(--blue-soft),var(--blue-main),var(--blue-accent));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:9999;
+      color:white;
+      text-align:center;
+    }
+
+    #intro h1 {
+      font-size:3rem;
+      margin-bottom:20px;
+    }
+
+    #enterBtn {
+      padding:12px 28px;
+      border-radius:999px;
+      border:1px solid white;
+      background:rgba(255,255,255,0.2);
+      color:white;
+      cursor:pointer;
+    }
+
+    /* NAV */
+
     header {
-      position: fixed;
-      width: 100%;
-      z-index: 50;
-      background: rgba(255,255,255,0.88);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--line);
+      position:fixed;
+      width:100%;
+      top:0;
+      background:white;
+      border-bottom:1px solid var(--line);
+      z-index:10;
     }
 
     .nav {
-      height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+      height:70px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
     }
 
-    .brand {
-      font-family: "Playfair Display", serif;
-      font-size: 1.28rem;
-      color: var(--navy);
+    .nav a {
+      margin-left:20px;
+      font-size:0.8rem;
+      letter-spacing:0.1em;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 24px;
-      font-size: 0.74rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
+    /* HERO */
 
     .hero {
-      min-height: 100vh;
-      padding-top: 76px;
-      display: grid;
-      align-items: center;
+      padding-top:80px;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
       background:
-        linear-gradient(rgba(255,255,255,0.96), rgba(255,255,255,0.78)),
-        url("hero.jpg") center/cover;
+      linear-gradient(rgba(255,255,255,0.9),rgba(255,255,255,0.7)),
+      url("hero.jpg") center/cover;
     }
 
-    h1, h2, h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--navy);
+    .hero h1 {
+      font-size:3.8rem;
+      margin-bottom:20px;
     }
 
-    section {
-      padding: 120px 0;
+    .hero p {
+      max-width:600px;
     }
 
-    .learning-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
+    .btn {
+      display:inline-block;
+      margin-top:20px;
+      padding:12px 24px;
+      border-radius:999px;
+      background:var(--navy);
+      color:white;
+      font-size:0.75rem;
+      letter-spacing:0.15em;
     }
 
-    .learning-card {
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      padding: 34px;
-      transition: 0.3s;
-    }
-
-    .learning-card:hover {
-      transform: translateY(-4px);
-    }
-
-    @media (max-width: 900px) {
-      .learning-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+    section {padding:100px 0;}
   </style>
 </head>
 
 <body>
 
+<div id="intro">
+  <div>
+    <h1>Ixchell Jewellery</h1>
+    <p>Type A Burmese Jadeite · Singapore</p>
+    <button id="enterBtn">Enter</button>
+  </div>
+</div>
+
 <header>
   <div class="container nav">
-    <div class="brand">Ixchell Jewellery</div>
-    <div class="nav-links">
-      <a href="#learn">Learn</a>
+    <div>Ixchell Jewellery</div>
+    <div>
+      <a href="/">Home</a>
       <a href="type-a-jadeite.html">Type A</a>
-      <a href="how-to-choose-jadeite-properly.html">Choose</a>
       <a href="jadeite-bangle-singapore.html">Bangles</a>
+      <a href="why-jadeite-different.html">Why Jadeite Looks Different</a>
     </div>
   </div>
 </header>
 
-<main>
-
 <section class="hero">
   <div class="container">
     <h1>Jadeite, Curated with Intention</h1>
-    <p>Learn first. View properly. Choose with clarity.</p>
-  </div>
-</section>
 
-<section class="learning-path" id="learn">
+    <p>
+      Ixchell Jewellery is a private jadeite boutique in Singapore,
+      specialising in natural Type A Burmese jadeite jewellery.
+    </p>
+
+    <a class="btn" href="https://instagram.com/ixchelljewellery">Book Viewing</a>
+  </div>
+</section><section>
   <div class="container">
-
-    <h2>Learn jadeite in the right order</h2>
-
-    <div class="learning-grid">
-
-      <a class="learning-card" href="type-a-jadeite.html">
-        <h3>What is Type A jadeite?</h3>
-        <p>Understand natural jadeite and treatment status.</p>
-      </a>
-
-      <a class="learning-card" href="how-to-choose-jadeite-properly.html">
-        <h3>How to choose jadeite properly</h3>
-        <p>Learn colour, translucency, texture and proportion.</p>
-      </a>
-
-      <a class="learning-card" href="jadeite-bangle-singapore.html">
-        <h3>Jadeite bangle guide</h3>
-        <p>Designs, colours, sizes, history and daily wear.</p>
-      </a>
-
-      <a class="learning-card" href="why-jadeite-looks-different-in-person.html">
-        <h3>Why jadeite looks different in person</h3>
-        <p>Understand light, angle and why viewing in person matters.</p>
-      </a>
-
-    </div>
-
+    <h2>Begin with Understanding</h2>
+    <p>
+      Most people choose jadeite by colour first.  
+      That is natural — but not complete.
+    </p>
   </div>
 </section>
 
-</main>
+<section style="background:#f5f8fa;">
+  <div class="container">
+    <h2>What is Type A Jadeite?</h2>
+    <p>
+      Type A jadeite is natural jadeite that has not been chemically treated,
+      dyed, or polymer filled. It retains its original mineral structure and integrity.
+    </p>
+
+    <p>
+      This is the foundation of all jadeite understanding. Without this,
+      appearance alone means very little.
+    </p>
+
+    <a class="btn" href="type-a-jadeite.html">Learn Type A</a>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Jadeite Bangles</h2>
+    <p>
+      A jadeite bangle is one of the most complete expressions of jadeite.
+      Carved from a single piece of stone, it reveals structure, colour,
+      translucency, and balance in a very honest way.
+    </p>
+
+    <p>
+      Design, size, proportion, and comfort all matter.
+      A bangle is not chosen quickly — it is understood, then selected.
+    </p>
+
+    <a class="btn" href="jadeite-bangle-singapore.html">Bangle Guide</a>
+  </div>
+</section>
+
+<section style="background:#f5f8fa;">
+  <div class="container">
+    <h2>Why Jadeite Looks Different in Person</h2>
+    <p>
+      Jadeite changes under light, distance, and skin tone.
+      What you see in photos is only an introduction.
+    </p>
+
+    <p>
+      In person, jadeite may appear deeper, softer, brighter,
+      or more refined depending on its environment.
+    </p>
+
+    <a class="btn" href="why-jadeite-different.html">Understand Why</a>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Why View in Person?</h2>
+    <p>
+      Jadeite is not static. It interacts with light, movement,
+      and the person wearing it.
+    </p>
+
+    <p>
+      This is why we encourage private viewing —
+      to compare pieces properly without pressure.
+    </p>
+  </div>
+</section><section style="background:#f5f8fa;">
+  <div class="container">
+    <h2>Visit Ixchell Jewellery</h2>
+
+    <p>
+      We are located at The Adelphi, 1 Coleman Street #02-33, Singapore,
+      opposite Funan and near City Hall MRT.
+    </p>
+
+    <p>
+      Viewing is by appointment so each client may take time to compare
+      jadeite properly, without pressure.
+    </p>
+
+    <a class="btn" href="https://instagram.com/ixchelljewellery">DM to Book</a>
+  </div>
+</section>
+
+<footer style="background:#071426;color:white;padding:40px 0;">
+  <div class="container">
+    <h3>Ixchell Jewellery</h3>
+    <p>翡坊翠藝 · Since 2014</p>
+    <p>Natural Type A Burmese Jadeite · Singapore</p>
+  </div>
+</footer>
+
+<script>
+  const intro = document.getElementById("intro");
+  const btn = document.getElementById("enterBtn");
+
+  btn.onclick = () => {
+    intro.style.display = "none";
+  };
+
+  window.onload = () => {
+    setTimeout(() => {
+      intro.style.display = "none";
+    }, 5000);
+  };
+</script>
 
 </body>
 </html>
