@@ -4,25 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Ixchell Jewellery Singapore | Type A Burmese Jadeite Boutique Near City Hall MRT</title>
+  <title>Ixchell Jewellery Singapore | Type A Burmese Jadeite Boutique at The Adelphi</title>
 
-  <meta name="description" content="Ixchell Jewellery is a private jadeite boutique in Singapore near City Hall MRT, specialising in natural Type A Burmese jadeite jewellery, bangles, earrings and collector pieces. Learn jadeite properly before choosing." />
+  <meta
+    name="description"
+    content="Ixchell Jewellery is a private jadeite boutique at The Adelphi, 1 Coleman Street #02-33, opposite Funan and near City Hall MRT, Singapore. We specialise in natural Type A Burmese jadeite jewellery, bangles, earrings and collector pieces. Learn jadeite properly before choosing."
+  />
 
-  <meta name="keywords" content="jadeite Singapore, Type A jadeite Singapore, Burmese jadeite Singapore, real jade Singapore, jade jewellery Singapore, jadeite bangle Singapore, City Hall jadeite, private jadeite boutique Singapore, Ixchell Jewellery, 翡坊翠藝" />
+  <meta
+    name="keywords"
+    content="jadeite Singapore, Type A jadeite Singapore, Burmese jadeite Singapore, real jade Singapore, jade jewellery Singapore, jadeite bangle Singapore, The Adelphi jadeite, City Hall jadeite, Funan jadeite, private jadeite boutique Singapore, Ixchell Jewellery, 翡坊翠藝"
+  />
 
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#315f9c" />
   <link rel="canonical" href="https://ixchelljewellery.com/" />
 
   <meta property="og:title" content="Ixchell Jewellery Singapore | Type A Burmese Jadeite Boutique" />
-  <meta property="og:description" content="A quiet private jadeite boutique near City Hall MRT. Natural Type A Burmese jadeite, selected with care and explained with clarity." />
+  <meta property="og:description" content="A quiet private jadeite boutique at The Adelphi, opposite Funan and near City Hall MRT. Natural Type A Burmese jadeite, selected with care and explained with clarity." />
   <meta property="og:image" content="https://ixchelljewellery.com/hero.jpg" />
   <meta property="og:url" content="https://ixchelljewellery.com/" />
   <meta property="og:type" content="website" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
   <style>
     :root {
@@ -39,9 +48,15 @@
       --gold: #b8a06a;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: "Inter", sans-serif;
@@ -50,9 +65,15 @@
       line-height: 1.75;
     }
 
-    img { max-width: 100%; display: block; }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     .container {
       width: min(1120px, 90%);
@@ -67,8 +88,26 @@
       display: grid;
       place-items: center;
       overflow: hidden;
-      background: linear-gradient(90deg, var(--sora), var(--gunjyo), var(--tsuyukusa));
+      background: linear-gradient(
+        90deg,
+        var(--sora) 0%,
+        var(--gunjyo) 52%,
+        var(--tsuyukusa) 100%
+      );
       transition: opacity 1.2s ease, visibility 1.2s ease;
+    }
+
+    #intro-screen::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.16),
+        rgba(0, 0, 0, 0.06) 42%,
+        rgba(0, 0, 0, 0.18)
+      );
+      pointer-events: none;
     }
 
     #intro-screen.hide {
@@ -81,17 +120,19 @@
       position: absolute;
       inset: -20%;
       background:
-        radial-gradient(circle at 18% 22%, rgba(255,255,255,0.5), transparent 36%),
-        radial-gradient(circle at 78% 58%, rgba(18,168,200,0.36), transparent 40%),
-        radial-gradient(circle at 50% 86%, rgba(16,35,63,0.24), transparent 42%);
+        radial-gradient(circle at 18% 22%, rgba(255, 255, 255, 0.68), transparent 38%),
+        radial-gradient(circle at 78% 58%, rgba(18, 168, 200, 0.22), transparent 42%),
+        radial-gradient(circle at 50% 86%, rgba(16, 35, 63, 0.16), transparent 46%);
       animation: introDrift 9s ease-in-out infinite alternate;
     }
 
     .intro-content {
       position: relative;
+      z-index: 2;
       text-align: center;
       color: white;
       padding: 36px;
+      width: min(760px, 92vw);
     }
 
     .intro-logo {
@@ -101,7 +142,7 @@
       transform-origin: center;
       filter:
         brightness(0) invert(1)
-        drop-shadow(0 22px 42px rgba(0,0,0,0.24));
+        drop-shadow(0 22px 42px rgba(0, 0, 0, 0.24));
       animation: logoLuxuryReveal 2.2s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
     }
 
@@ -111,8 +152,8 @@
       text-transform: uppercase;
       opacity: 0;
       margin-bottom: 16px;
-      color: rgba(255,255,255,0.82);
-      text-shadow: 0 8px 24px rgba(0,0,0,0.26);
+      color: rgba(255, 255, 255, 0.94);
+      text-shadow: 0 10px 28px rgba(0, 0, 0, 0.32);
       animation: fadeUp 1s ease 1.75s forwards;
     }
 
@@ -122,34 +163,46 @@
       line-height: 1;
       letter-spacing: -0.04em;
       opacity: 0;
-      color: rgba(255,255,255,0.96);
-      text-shadow: 0 12px 34px rgba(0,0,0,0.28);
+      color: #ffffff;
+      text-shadow: 0 14px 38px rgba(0, 0, 0, 0.34);
       animation: fadeUp 1s ease 2.05s forwards;
     }
 
     .intro-subtitle,
-    .intro-line {
+    .intro-line,
+    .intro-address {
       opacity: 0;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       font-size: 0.78rem;
       margin-top: 20px;
-      color: rgba(255,255,255,0.88);
-      text-shadow: 0 8px 24px rgba(0,0,0,0.28);
+      color: rgba(255, 255, 255, 0.96);
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.32);
       animation: fadeUp 1s ease 2.35s forwards;
     }
 
     .intro-line {
       animation-delay: 2.65s;
-      color: rgba(255,255,255,0.94);
+      color: rgba(255, 255, 255, 0.98);
+    }
+
+    .intro-address {
+      animation-delay: 2.9s;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      color: rgba(255, 255, 255, 0.88);
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
     }
 
     .intro-button {
       margin-top: 34px;
       padding: 14px 30px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.78);
-      background: rgba(255,255,255,0.16);
+      border: 1px solid rgba(255, 255, 255, 0.82);
+      background: rgba(255, 255, 255, 0.18);
       color: white;
       letter-spacing: 0.16em;
       text-transform: uppercase;
@@ -157,11 +210,11 @@
       backdrop-filter: blur(14px);
       cursor: pointer;
       opacity: 0;
-      animation: fadeUp 1s ease 3.05s forwards;
+      animation: fadeUp 1s ease 3.15s forwards;
     }
 
     .intro-button:hover {
-      background: rgba(255,255,255,0.26);
+      background: rgba(255, 255, 255, 0.28);
     }
 
     /* NAV */
@@ -170,7 +223,7 @@
       top: 0;
       width: 100%;
       z-index: 50;
-      background: rgba(255,255,255,0.88);
+      background: rgba(255, 255, 255, 0.88);
       backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--line);
     }
@@ -208,6 +261,10 @@
       color: var(--navy);
     }
 
+    .nav-links a:hover {
+      color: var(--tsuyukusa);
+    }
+
     /* HERO */
     .hero {
       min-height: 100vh;
@@ -215,11 +272,19 @@
       display: grid;
       align-items: center;
       background:
-        linear-gradient(90deg, rgba(255,255,255,0.96), rgba(255,255,255,0.78), rgba(255,255,255,0.1)),
+        linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 0.96),
+          rgba(255, 255, 255, 0.78),
+          rgba(255, 255, 255, 0.1)
+        ),
         url("hero.jpg") center right / cover no-repeat;
     }
 
-    .hero-content { padding: 90px 0; max-width: 720px; }
+    .hero-content {
+      padding: 90px 0;
+      max-width: 720px;
+    }
 
     .eyebrow {
       font-size: 0.74rem;
@@ -230,7 +295,9 @@
       margin-bottom: 22px;
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       font-family: "Playfair Display", serif;
       color: var(--navy);
       line-height: 1.15;
@@ -272,6 +339,13 @@
       font-weight: 500;
     }
 
+    .address-note {
+      margin-top: 12px;
+      color: var(--gunjyo);
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+
     .btn-row {
       display: flex;
       gap: 14px;
@@ -292,12 +366,24 @@
       transition: 0.25s ease;
     }
 
-    .btn-primary { background: var(--navy); color: white; }
-    .btn-secondary { border: 1px solid var(--line); color: var(--navy); background: rgba(255,255,255,0.75); }
+    .btn-primary {
+      background: var(--navy);
+      color: white;
+    }
 
-    .btn:hover { transform: translateY(-2px); }
+    .btn-secondary {
+      border: 1px solid var(--line);
+      color: var(--navy);
+      background: rgba(255, 255, 255, 0.75);
+    }
 
-    section { padding: 120px 0; }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 120px 0;
+    }
 
     .breath {
       padding: 92px 0;
@@ -330,7 +416,9 @@
       padding-left: 28px;
     }
 
-    .question { color: var(--gunjyo); }
+    .question {
+      color: var(--gunjyo);
+    }
 
     .answer {
       color: #2c3746;
@@ -346,7 +434,7 @@
     .image-panel {
       border-radius: 34px;
       overflow: hidden;
-      box-shadow: 0 34px 80px rgba(16,35,63,0.14);
+      box-shadow: 0 34px 80px rgba(16, 35, 63, 0.14);
       background: var(--mist);
     }
 
@@ -357,9 +445,13 @@
       transition: transform 1.2s ease;
     }
 
-    .image-panel:hover img { transform: scale(1.025); }
+    .image-panel:hover img {
+      transform: scale(1.025);
+    }
 
-    .soft-bg { background: var(--mist); }
+    .soft-bg {
+      background: var(--mist);
+    }
 
     .deep-section {
       background: var(--navy);
@@ -367,11 +459,17 @@
     }
 
     .deep-section h2,
-    .deep-section h3 { color: white; }
+    .deep-section h3 {
+      color: white;
+    }
 
-    .deep-section p { color: rgba(255,255,255,0.78); }
+    .deep-section p {
+      color: rgba(255, 255, 255, 0.78);
+    }
 
-    .deep-section .eyebrow { color: var(--sora); }
+    .deep-section .eyebrow {
+      color: var(--sora);
+    }
 
     .answer-grid {
       display: grid;
@@ -393,13 +491,15 @@
       font-size: 1.45rem;
     }
 
-    .mini-card p { color: var(--muted); }
+    .mini-card p {
+      color: var(--muted);
+    }
 
     .quote-band {
       padding: 110px 0;
       text-align: center;
       background:
-        linear-gradient(rgba(16,35,63,0.66), rgba(16,35,63,0.66)),
+        linear-gradient(rgba(16, 35, 63, 0.66), rgba(16, 35, 63, 0.66)),
         url("jadeite-jewellery-singapore.jpg") center / cover no-repeat;
     }
 
@@ -423,7 +523,7 @@
       padding: 34px;
       border-radius: 30px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.82);
+      background: rgba(255, 255, 255, 0.82);
     }
 
     .experience-card h3 {
@@ -431,9 +531,21 @@
       color: var(--gunjyo);
     }
 
+    .visit-address {
+      margin-top: 34px;
+      padding: 32px;
+      border-radius: 30px;
+      background: white;
+      border: 1px solid var(--line);
+    }
+
+    .visit-address p {
+      margin-bottom: 8px;
+    }
+
     .final-cta {
       text-align: center;
-      background: linear-gradient(135deg, var(--sora), #ffffff 44%, rgba(18,168,200,0.16));
+      background: linear-gradient(135deg, var(--sora), #ffffff 44%, rgba(18, 168, 200, 0.16));
     }
 
     .final-cta p {
@@ -444,7 +556,7 @@
 
     footer {
       background: var(--deep);
-      color: rgba(255,255,255,0.7);
+      color: rgba(255, 255, 255, 0.7);
       padding: 46px 0;
       font-size: 0.86rem;
     }
@@ -474,8 +586,12 @@
     }
 
     @keyframes introDrift {
-      from { transform: scale(1) translate(0,0); }
-      to { transform: scale(1.08) translate(-2%,2%); }
+      from {
+        transform: scale(1) translate(0, 0);
+      }
+      to {
+        transform: scale(1.08) translate(-2%, 2%);
+      }
     }
 
     @keyframes logoLuxuryReveal {
@@ -485,7 +601,7 @@
         filter:
           brightness(0) invert(1)
           blur(6px)
-          drop-shadow(0 22px 42px rgba(0,0,0,0.18));
+          drop-shadow(0 22px 42px rgba(0, 0, 0, 0.18));
       }
 
       45% {
@@ -494,7 +610,7 @@
         filter:
           brightness(0) invert(1)
           blur(1px)
-          drop-shadow(0 24px 46px rgba(0,0,0,0.22));
+          drop-shadow(0 24px 46px rgba(0, 0, 0, 0.22));
       }
 
       100% {
@@ -503,25 +619,35 @@
         filter:
           brightness(0) invert(1)
           blur(0)
-          drop-shadow(0 22px 42px rgba(0,0,0,0.24));
+          drop-shadow(0 22px 42px rgba(0, 0, 0, 0.24));
       }
     }
 
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(14px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 900px) {
-      .nav-links { display: none; }
+      .nav-links {
+        display: none;
+      }
 
       .hero {
         background:
-          linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.95)),
+          linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.95)),
           url("hero.jpg") center / cover no-repeat;
       }
 
-      section { padding: 86px 0; }
+      section {
+        padding: 86px 0;
+      }
 
       .split,
       .split.reverse,
@@ -531,15 +657,30 @@
         gap: 42px;
       }
 
-      .split.reverse .image-panel { order: -1; }
+      .split.reverse .image-panel {
+        order: -1;
+      }
 
-      .image-panel img { height: auto; }
+      .image-panel img {
+        height: auto;
+      }
 
-      h1 { font-size: clamp(3rem, 14vw, 4.8rem); }
+      h1 {
+        font-size: clamp(3rem, 14vw, 4.8rem);
+      }
 
-      .answer-card { padding-left: 20px; }
+      .answer-card {
+        padding-left: 20px;
+      }
 
-      .mini-card { min-height: auto; }
+      .mini-card {
+        min-height: auto;
+      }
+
+      .intro-address {
+        font-size: 0.62rem;
+        letter-spacing: 0.14em;
+      }
     }
   </style>
 
@@ -551,9 +692,10 @@
     "alternateName": "翡坊翠藝",
     "url": "https://ixchelljewellery.com/",
     "image": "https://ixchelljewellery.com/hero.jpg",
-    "description": "Ixchell Jewellery is a private jadeite boutique in Singapore near City Hall MRT, specialising in natural Type A Burmese jadeite jewellery.",
+    "description": "Ixchell Jewellery is a private jadeite boutique at The Adelphi, 1 Coleman Street #02-33, Singapore, specialising in natural Type A Burmese jadeite jewellery.",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "1 Coleman Street, The Adelphi #02-33",
       "addressLocality": "Singapore",
       "addressCountry": "SG"
     },
@@ -573,7 +715,7 @@
         "name": "Where can I buy real jadeite in Singapore?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Ixchell Jewellery is a private jadeite boutique near City Hall MRT in Singapore, specialising in natural Type A Burmese jadeite jewellery, bangles, earrings and collector pieces."
+          "text": "Ixchell Jewellery is a private jadeite boutique at The Adelphi, 1 Coleman Street #02-33, opposite Funan and near City Hall MRT in Singapore. The boutique specialises in natural Type A Burmese jadeite jewellery, bangles, earrings and collector pieces."
         }
       },
       {
@@ -608,14 +750,16 @@
 <body>
 
   <div id="intro-screen">
-    <audio id="intro-audio" src="intro.mp3" preload="auto"></audio>
+    <audio id="intro-audio" src="intro.mp3" preload="auto" playsinline></audio>
     <div class="intro-colour-layer"></div>
+
     <div class="intro-content">
-      <img src="logo-transparent.png?v=2" alt="Ixchell Jewellery logo" class="intro-logo" />
+      <img src="logo-transparent.png?v=4" alt="Ixchell Jewellery logo" class="intro-logo" />
       <p class="intro-year">Established 2014</p>
       <h1 class="intro-title">Ixchell Jewellery</h1>
       <p class="intro-subtitle">Type A Burmese Jadeite · Singapore</p>
       <p class="intro-line">Begin with understanding</p>
+      <p class="intro-address">The Adelphi #02-33 · Opposite Funan · Near City Hall MRT</p>
       <button id="enter-site" class="intro-button">Enter Ixchell</button>
     </div>
   </div>
@@ -644,7 +788,7 @@
         <h1>Jadeite, Curated with Intention</h1>
 
         <p class="hero-lead">
-          Ixchell Jewellery is a quiet private boutique near City Hall MRT, specialising in natural Type A Burmese jadeite jewellery since 2014.
+          Ixchell Jewellery is a quiet private boutique at The Adelphi, 1 Coleman Street #02-33, opposite Funan and near City Hall MRT, specialising in natural Type A Burmese jadeite jewellery since 2014.
         </p>
 
         <p>
@@ -653,6 +797,10 @@
 
         <p class="hero-proof">
           Learn first. View properly. Choose with clarity.
+        </p>
+
+        <p class="address-note">
+          The Adelphi #02-33 · Opposite Funan · Nearest MRT: City Hall
         </p>
 
         <div class="btn-row">
@@ -847,6 +995,14 @@
             </p>
           </div>
         </div>
+
+        <div class="visit-address reveal">
+          <h3>Visit Ixchell Jewellery</h3>
+          <p><strong>Address:</strong> 1 Coleman Street, The Adelphi #02-33, Singapore</p>
+          <p><strong>Landmark:</strong> Opposite Funan</p>
+          <p><strong>Nearest MRT:</strong> City Hall MRT</p>
+          <p><strong>Viewing:</strong> Private appointment recommended</p>
+        </div>
       </div>
     </section>
 
@@ -881,7 +1037,7 @@
         <h2>When you are ready, view the real thing.</h2>
 
         <p>
-          Images can introduce jadeite, but in-person viewing reveals its true character. We welcome you to visit our private boutique near City Hall MRT by appointment.
+          Images can introduce jadeite, but in-person viewing reveals its true character. We welcome you to visit our private boutique at The Adelphi #02-33, opposite Funan and near City Hall MRT, by appointment.
         </p>
 
         <p>
@@ -906,7 +1062,8 @@
 
       <div>
         <p>Natural Type A Burmese Jadeite</p>
-        <p>Private viewing near City Hall MRT · Singapore</p>
+        <p>1 Coleman Street, The Adelphi #02-33, Singapore</p>
+        <p>Opposite Funan · Nearest MRT: City Hall</p>
       </div>
     </div>
   </footer>
@@ -917,9 +1074,18 @@
     const introAudio = document.getElementById("intro-audio");
 
     function enterSite() {
-      introAudio.play().catch(() => {});
-      introScreen.classList.add("hide");
-      sessionStorage.setItem("ixchellIntroSeen", "true");
+      introAudio.volume = 0.75;
+      introAudio.currentTime = 0;
+
+      introAudio.play().then(() => {
+        setTimeout(() => {
+          introScreen.classList.add("hide");
+          sessionStorage.setItem("ixchellIntroSeen", "true");
+        }, 900);
+      }).catch(() => {
+        introScreen.classList.add("hide");
+        sessionStorage.setItem("ixchellIntroSeen", "true");
+      });
     }
 
     enterButton.addEventListener("click", enterSite);
@@ -931,11 +1097,8 @@
       }
 
       setTimeout(() => {
-        introAudio.play().catch(() => {});
-      }, 700);
-
-      setTimeout(() => {
         introScreen.classList.add("hide");
+        sessionStorage.setItem("ixchellIntroSeen", "true");
       }, 6800);
     });
 
