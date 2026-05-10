@@ -1,0 +1,32 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://ixchelljewellery.com/sitemap.xml
+
+# Main Pages
+Allow: /index.html
+Allow: /jadeite-guide-singapore.html
+Allow: /what-is-jadeite-value.html
+Allow: /jadeite-translucency-guide.html
+Allow: /jadeite-texture-guide.html
+Allow: /jadeite-thickness-guide.html
+Allow: /jadeite-light-guide.html
+Allow: /type-a-jadeite.html
+Allow: /type-a-vs-b-c.html
+Allow: /jade-vs-jadeite.html
+Allow: /how-to-choose-jadeite-properly.html
+Allow: /jadeite-bangle-singapore.html
+Allow: /how-to-choose-jadeite-bangle-size-properly.html
+Allow: /jadeite-colour-guide.html
+Allow: /why-jadeite-looks-different-in-person.html
+Allow: /jadeite-daily-wear.html
+Allow: /jadeite-durability.html
+Allow: /jadeite-shower-onsen.html
+Allow: /jadeite-care-guide.html
+
+# Block system files
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /README.md
+Disallow: /node_modules/
