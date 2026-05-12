@@ -34,6 +34,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 <link rel="preload" as="image" href="how-to-tell-real-jade.jpg">
+<link rel="preload" as="image" href="rm-blue-crocodile-texture.jpg">
 
 <meta property="og:title" content="How to Tell if Jade is Real | Ixchell Jewellery Singapore" />
 <meta property="og:description" content="Learn how to identify real jadeite, Type A jadeite, and common fake or treated jade." />
@@ -274,12 +275,90 @@ p{
 }
 
 .answer-box{
+  position:relative;
+  overflow:hidden;
   margin-top:34px;
   padding:34px;
   border-radius:30px;
-  background:rgba(255,255,255,0.9);
-  border:1px solid var(--line);
-  box-shadow:0 28px 70px rgba(16,35,63,0.08);
+
+  background:
+  linear-gradient(
+    135deg,
+    rgba(7,20,38,0.96),
+    rgba(16,35,63,0.92),
+    rgba(49,95,156,0.82)
+  ),
+  url("rm-blue-crocodile-texture.jpg") center/cover no-repeat;
+
+  border:1px solid rgba(176,224,230,0.24);
+
+  box-shadow:
+  0 32px 90px rgba(16,35,63,0.24),
+  inset 0 1px 0 rgba(255,255,255,0.08);
+
+  backdrop-filter:blur(4px);
+  -webkit-backdrop-filter:blur(4px);
+}
+
+.answer-box::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+  radial-gradient(
+    circle at top left,
+    rgba(255,255,255,0.18),
+    transparent 34%
+  ),
+  linear-gradient(
+    180deg,
+    rgba(255,255,255,0.05),
+    rgba(0,0,0,0.22)
+  );
+
+  pointer-events:none;
+}
+
+.answer-box::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(255,255,255,0.06) 50%,
+    transparent 80%
+  );
+
+  mix-blend-mode:soft-light;
+  opacity:0.55;
+  pointer-events:none;
+}
+
+.answer-box p,
+.answer-box strong,
+.answer-box a{
+  position:relative;
+  z-index:2;
+}
+
+.answer-box strong{
+  color:#ffffff;
+}
+
+.answer-box p{
+  color:rgba(255,255,255,0.88);
+}
+
+.answer-box a{
+  color:#b0e0e6;
+}
+
+.answer-box a:hover{
+  color:#ffffff;
 }
 
 section{
