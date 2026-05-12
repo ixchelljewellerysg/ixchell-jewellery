@@ -18,7 +18,18 @@
 />
 
 <meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="googlebot" content="index, follow, max-image-preview:large" />
+<meta name="bingbot" content="index, follow, max-image-preview:large" />
+
 <meta name="theme-color" content="#315f9c" />
+
+<meta name="author" content="Ixchell Jewellery" />
+<meta name="creator" content="Ixchell Jewellery" />
+<meta name="publisher" content="Ixchell Jewellery" />
+<meta name="format-detection" content="telephone=no" />
+
+<meta name="classification" content="Jewellery, Jadeite, Type A Burmese Jadeite" />
+<meta name="category" content="Luxury Jewellery" />
 
 <link rel="canonical" href="https://ixchelljewellery.com/type-a-jadeite.html" />
 
@@ -32,11 +43,24 @@
 <meta property="og:url" content="https://ixchelljewellery.com/type-a-jadeite.html" />
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="Ixchell Jewellery" />
+<meta property="og:locale" content="en_SG" />
+
+<meta property="article:publisher" content="https://www.instagram.com/ixchelljewellery/" />
+<meta property="article:section" content="Jadeite Education" />
+<meta property="article:tag" content="Type A Burmese Jadeite" />
+<meta property="article:tag" content="Natural Jadeite" />
+<meta property="article:tag" content="Untreated Jadeite" />
+<meta property="article:tag" content="Singapore Jadeite" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="What is Type A Jadeite? | Ixchell Jewellery Singapore" />
 <meta name="twitter:description" content="A refined guide to natural untreated Type A Burmese jadeite in Singapore." />
 <meta name="twitter:image" content="https://ixchelljewellery.com/jadeite-hero.jpg" />
+<meta name="twitter:site" content="@ixchelljewellery" />
+<meta name="twitter:creator" content="@ixchelljewellery" />
+
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,6 +72,43 @@
 
 <link rel="preload" as="image" href="jadeite-hero.jpg" />
 <link rel="preload" as="image" href="bangle-light.jpg" />
+<link rel="preload" as="image" href="jadeite-jewellery-singapore.jpg" />
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Ixchell Jewellery",
+  "url":"https://ixchelljewellery.com/",
+  "potentialAction":{
+    "@type":"SearchAction",
+    "target":"https://ixchelljewellery.com/search?q={search_term_string}",
+    "query-input":"required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Ixchell Jewellery",
+  "alternateName":"翡坊翠藝",
+  "url":"https://ixchelljewellery.com/",
+  "logo":"https://ixchelljewellery.com/logo-transparent.png",
+  "sameAs":[
+    "https://www.instagram.com/ixchelljewellery/"
+  ],
+  "description":"Singapore private boutique specialising in natural Type A Burmese jadeite jewellery and collector pieces.",
+  "foundingDate":"2014",
+  "areaServed":[
+    "Singapore",
+    "Malaysia",
+    "Indonesia",
+    "Brunei"
+  ]
+}
+</script>
 
 <script type="application/ld+json">
 {
@@ -168,6 +229,22 @@
     },
     {
       "@type":"Question",
+      "name":"Can Type A jadeite still look ordinary?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Yes. Type A only refers to treatment status. A natural untreated piece may still have weak colour, coarse texture or low translucency."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Why does Type A jadeite matter in Singapore?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Singapore buyers often compare jadeite closely because lighting, translucency and treatment status become easier to observe during proper in-person viewing."
+      }
+    },
+    {
+      "@type":"Question",
       "name":"Where can I view Type A Burmese jadeite in Singapore?",
       "acceptedAnswer":{
         "@type":"Answer",
@@ -196,10 +273,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  min-width: 0;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -207,16 +287,39 @@ body {
   color: var(--text);
   background: var(--white);
   line-height: 1.75;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(18,168,200,0.16);
+  color: var(--navy);
 }
 
 img {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+p a,
+.answer a {
+  color: var(--gunjyo);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(49,95,156,0.22);
+  transition: 0.25s ease;
+}
+
+p a:hover,
+.answer a:hover {
+  color: var(--tsuyukusa);
+  border-color: var(--tsuyukusa);
 }
 
 .container {
@@ -229,8 +332,9 @@ header {
   top: 0;
   width: 100%;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--line);
 }
 
@@ -272,10 +376,12 @@ header {
 }
 
 .hero {
+  position: relative;
   min-height: 92vh;
   padding-top: 76px;
   display: grid;
   align-items: center;
+  overflow: hidden;
   background:
     linear-gradient(
       90deg,
@@ -286,9 +392,22 @@ header {
     url("jadeite-hero.jpg") center right / cover no-repeat;
 }
 
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right,
+    rgba(176,224,230,0.22),
+    transparent 42%);
+  pointer-events: none;
+}
+
 .hero-content {
+  position: relative;
+  z-index: 2;
   padding: 96px 0;
-  max-width: 760px;
+  max-width: 780px;
 }
 
 .eyebrow {
@@ -335,12 +454,14 @@ p {
 .hero-lead {
   font-size: 1.08rem;
   color: #334155;
-  max-width: 680px;
+  max-width: 700px;
 }
 
 .hero-proof {
   color: var(--navy);
   font-weight: 500;
+  margin-top: 28px;
+  letter-spacing: 0.02em;
 }
 
 .btn-row {
@@ -368,14 +489,24 @@ p {
   color: white;
 }
 
+.btn-primary:hover {
+  background: #16345f;
+}
+
 .btn-secondary {
   border: 1px solid var(--line);
   color: var(--navy);
   background: rgba(255,255,255,0.75);
 }
 
+.btn-secondary:hover {
+  border-color: rgba(18,168,200,0.4);
+  background: rgba(255,255,255,0.96);
+}
+
 .btn:hover {
   transform: translateY(-2px);
+  box-shadow: 0 18px 42px rgba(16,35,63,0.16);
 }
 
 section {
@@ -419,10 +550,11 @@ section {
 
 .question-title {
   color: var(--gunjyo);
+  line-height: 1.08;
 }
 
 .answer {
-  color: #2c3746;
+  color: #324154;
   font-size: 1.04rem;
 }
 
@@ -433,10 +565,22 @@ section {
 }
 
 .image-panel {
+  position: relative;
   border-radius: 34px;
   overflow: hidden;
   box-shadow: 0 34px 80px rgba(16,35,63,0.14);
   background: var(--mist);
+}
+
+.image-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top,
+    rgba(16,35,63,0.04),
+    transparent 35%);
+  pointer-events: none;
 }
 
 .image-panel img {
@@ -494,14 +638,31 @@ section {
 
 .mini-card p {
   color: var(--muted);
+  margin-bottom: 0;
 }
 
 .quote-band {
+  position: relative;
   padding: 110px 0;
   text-align: center;
   background:
     linear-gradient(rgba(16,35,63,0.68), rgba(16,35,63,0.68)),
     url("bangle-light.jpg") center / cover no-repeat;
+}
+
+.quote-band::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center,
+    rgba(176,224,230,0.12),
+    transparent 60%);
+}
+
+.quote-band .container {
+  position: relative;
+  z-index: 2;
 }
 
 .quote-band p {
@@ -533,6 +694,26 @@ section {
   font-weight: 500;
 }
 
+.question-card,
+.index-card,
+.mini-card,
+.guide-card,
+.image-panel,
+details {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.question-card:hover,
+.index-card:hover,
+.mini-card:hover,
+details:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 60px rgba(16,35,63,0.08);
+}
+
 .faq {
   display: grid;
   gap: 18px;
@@ -547,12 +728,35 @@ details {
   box-shadow: 0 18px 50px rgba(16,35,63,0.05);
 }
 
+details[open] {
+  border-color: rgba(18,168,200,0.22);
+}
+
 summary {
   cursor: pointer;
   font-family: "Playfair Display", serif;
   color: var(--gunjyo);
   font-size: 1.22rem;
   font-weight: 600;
+  position: relative;
+  padding-right: 28px;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: var(--tsuyukusa);
+  font-size: 1.2rem;
+}
+
+details[open] summary::after {
+  content: "–";
 }
 
 details p {
@@ -601,6 +805,10 @@ details p {
   color: var(--gunjyo);
 }
 
+.guide-card p {
+  margin-bottom: 0;
+}
+
 .final-cta {
   text-align: center;
   background: linear-gradient(135deg, var(--sora), #ffffff 44%, rgba(18,168,200,0.16));
@@ -644,6 +852,10 @@ footer p {
   color: rgba(255,255,255,0.78);
 }
 
+footer a:hover {
+  color: white;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(28px);
@@ -660,10 +872,21 @@ footer p {
     display: none;
   }
 
+  .container {
+    width: min(92%, 100%);
+  }
+
   .hero {
+    min-height: auto;
+    padding: 130px 0 70px;
     background:
       linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.95)),
       url("jadeite-hero.jpg") center / cover no-repeat;
+  }
+
+  .hero-content {
+    padding: 0;
+    max-width: 100%;
   }
 
   section {
@@ -683,7 +906,12 @@ footer p {
   }
 
   h1 {
-    font-size: clamp(3rem, 14vw, 4.8rem);
+    font-size: clamp(2.6rem, 13vw, 4.8rem);
+    line-height: 1.05;
+  }
+
+  h2 {
+    font-size: clamp(1.85rem, 8vw, 3.1rem);
   }
 
   .question-card {
@@ -692,6 +920,34 @@ footer p {
 
   .mini-card {
     min-height: auto;
+  }
+
+  .btn-row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .image-panel,
+  .index-card,
+  .mini-card,
+  .guide-card,
+  details {
+    border-radius: 24px;
+  }
+
+  .index-card,
+  .mini-card,
+  .guide-card,
+  details {
+    padding: 24px;
+  }
+
+  .footer-grid {
+    flex-direction: column;
   }
 }
 </style>
@@ -726,7 +982,11 @@ footer p {
     <h1>What is Type A Jadeite?</h1>
 
     <p class="hero-lead">
-      Type A jadeite is natural jadeite that has not been chemically treated, dyed, or polymer impregnated. It keeps its original mineral structure, natural colour, and integrity.
+      Type A jadeite refers to natural untreated jadeite that has not been chemically bleached, artificially dyed, or polymer impregnated. In the jadeite world, Type A Burmese jadeite is regarded as the proper foundation before discussing colour, translucency, texture, rarity, or value.
+    </p>
+
+    <p class="hero-lead">
+      Many people search for “real jade” without realising that treatment status changes how jadeite behaves over time. Proper understanding begins with knowing whether the jadeite remains natural.
     </p>
 
     <p>
@@ -773,7 +1033,7 @@ footer p {
       </p>
 
       <p class="soft-push">
-        This is why Type A is the proper starting point when learning jadeite.
+        Type A does not promise beauty or rarity — it confirms natural integrity. Serious jadeite evaluation begins from there.
       </p>
     </div>
   </div>
@@ -844,6 +1104,33 @@ footer p {
     <p>
       Type A is not the end of jadeite knowledge. It is where proper judgement begins.
     </p>
+  </div>
+</section>
+
+<section class="soft-bg">
+  <div class="container split reverse">
+    <div class="reveal">
+      <p class="answer">
+        Natural Type A jadeite may age gracefully because its mineral structure remains closer to its original condition. Treated jadeite may change appearance over time depending on treatment methods and wear conditions.
+      </p>
+
+      <p>
+        This is one reason collectors and long-term wearers often pay attention to untreated jadeite.
+      </p>
+
+      <p>
+        However, treatment status alone does not determine beauty. Fine Type A jadeite still depends on translucency, texture, colour harmony, proportion and craftsmanship.
+      </p>
+
+      <p class="soft-push">
+        Integrity and beauty are related, but they are not identical.
+      </p>
+    </div>
+
+    <div class="question-card reveal">
+      <div class="eyebrow question-label">Question</div>
+      <h2 class="question-title">Why do collectors care about Type A jadeite?</h2>
+    </div>
   </div>
 </section>
 
@@ -961,6 +1248,16 @@ footer p {
       </details>
 
       <details>
+        <summary>Can Type A jadeite still look ordinary?</summary>
+        <p>Yes. Type A only refers to treatment status. A natural untreated piece may still have weak colour, coarse texture or low translucency.</p>
+      </details>
+
+      <details>
+        <summary>Why does Type A jadeite matter in Singapore?</summary>
+        <p>Singapore buyers often compare jadeite closely because lighting, translucency and treatment status become easier to observe during proper in-person viewing.</p>
+      </details>
+
+      <details>
         <summary>Where can I view Type A jadeite in Singapore?</summary>
         <p>Ixchell Jewellery is located at The Adelphi #02-33, 1 Coleman Street, opposite Funan and near City Hall MRT in Singapore.</p>
       </details>
@@ -983,7 +1280,7 @@ footer p {
       </p>
 
       <p>
-        Viewing is by appointment so each client may explore jadeite calmly, with privacy and proper guidance.
+        Viewing is by appointment so clients may compare jadeite calmly under proper lighting conditions, with more privacy, comfort and guidance instead of feeling rushed.
       </p>
 
       <p class="soft-push">
@@ -1114,6 +1411,21 @@ if ("IntersectionObserver" in window) {
 } else {
   revealItems.forEach(item => item.classList.add("visible"));
 }
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e){
+    const target = document.querySelector(this.getAttribute("href"));
+
+    if(target){
+      e.preventDefault();
+
+      target.scrollIntoView({
+        behavior:"smooth",
+        block:"start"
+      });
+    }
+  });
+});
 </script>
 
 </body>
