@@ -192,6 +192,19 @@ header{
   border-radius:999px;
   background:white;
   box-shadow:0 0 12px rgba(176,224,230,.8);
+  transition:.28s ease;
+}
+
+.mobile-toggle.active span:nth-child(1){
+  transform:translateY(7px) rotate(45deg);
+}
+
+.mobile-toggle.active span:nth-child(2){
+  opacity:0;
+}
+
+.mobile-toggle.active span:nth-child(3){
+  transform:translateY(-7px) rotate(-45deg);
 }
 
 .hero{
@@ -336,17 +349,6 @@ section{padding:112px 0}
   background:
     linear-gradient(135deg,rgba(255,255,255,.96),rgba(245,248,250,.92));
   box-shadow:var(--shadow);
-}
-
-.answer-card.dark{
-  background:
-    linear-gradient(rgba(7,20,38,.9),rgba(7,20,38,.96)),
-    url("rm-blue-crocodile-texture.jpg") center/cover no-repeat;
-}
-
-.answer-card.dark h3,
-.answer-card.dark p{
-  color:white;
 }
 
 .subquestion-grid{
@@ -536,16 +538,25 @@ footer p{color:rgba(255,255,255,.72)}
 @media(max-width:980px){
   .mobile-toggle{display:flex}
 
+  .hero{
+    padding-bottom:130px;
+    min-height:calc(100vh + 70px);
+  }
+
+  main{
+    padding-bottom:88px;
+  }
+
   .nav-links{
     display:none;
     position:absolute;
-    top:74px;
-    right:18px;
-    width:min(320px,88vw);
+    top:86px;
+    right:24px;
+    width:min(280px,82vw);
     flex-direction:column;
     align-items:flex-start;
-    gap:14px;
-    padding:24px;
+    gap:18px;
+    padding:30px 28px;
     border-radius:28px;
     color:white;
     background:
@@ -555,6 +566,16 @@ footer p{color:rgba(255,255,255,.72)}
   }
 
   .nav-links.active{display:flex}
+
+  .nav-links a{
+    width:100%;
+    padding:12px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
+  }
+
+  .nav-links a:last-child{
+    border-bottom:none;
+  }
 
   .question-grid,
   .visit-cards{
@@ -577,6 +598,7 @@ footer p{color:rgba(255,255,255,.72)}
 
 @media(max-width:560px){
   .btn{width:100%}
+
   .answer-card,
   .visit-card,
   .address-card{
@@ -652,13 +674,9 @@ footer p{color:rgba(255,255,255,.72)}
 
     <div class="answer-card reveal">
       <p>Ixchell Jewellery is not designed as a fast, online-only jewellery shop.</p>
-
       <p>It is a private jadeite boutique where customers are invited to slow down, view jadeite in person and understand what they are choosing.</p>
-
       <p>Jadeite is difficult to judge through photographs alone. Colour, translucency, texture and comfort can change under different lighting, on different skin tones and from different viewing angles.</p>
-
       <p>This is especially true for jadeite bangles, where thickness, inner diameter, weight and feel matter as much as appearance.</p>
-
       <p>For this reason, Ixchell Jewellery focuses on private viewing, patient explanation and direct human guidance. Customers may compare pieces calmly, ask questions and understand the difference between natural Type A Burmese jadeite and treated material before making a decision.</p>
 
       <div class="subquestion-grid">
@@ -685,13 +703,9 @@ footer p{color:rgba(255,255,255,.72)}
 
     <div class="answer-card reveal">
       <p>The value of jadeite is not determined by colour alone.</p>
-
       <p>A fine jadeite piece is judged through the relationship between colour, translucency, texture, crystal structure, thickness, proportion, craftsmanship and natural mineral quality.</p>
-
       <p>This is why two jadeite bangles may appear similar in a photograph, yet feel completely different in person. One may have better glow, smoother texture, stronger material density or more balanced proportions.</p>
-
       <p>Good jadeite has a quiet complexity. It rewards careful observation rather than quick judgement.</p>
-
       <p>At Ixchell Jewellery Singapore, customers are encouraged to compare jadeite slowly and properly. We explain why certain pieces glow better, why some bangles feel more substantial, why texture affects beauty and why natural Type A jadeite remains important for long-term confidence.</p>
 
       <div class="subquestion-grid">
@@ -718,13 +732,9 @@ footer p{color:rgba(255,255,255,.72)}
 
     <div class="answer-card reveal">
       <p>Type A jadeite refers to natural jadeite that has not been chemically bleached, filled with polymer resin or artificially dyed.</p>
-
       <p>It may be cut, carved, polished and traditionally waxed, but the material itself remains natural.</p>
-
       <p>This distinction matters because jadeite treatment can strongly affect beauty, durability and long-term value.</p>
-
       <p>A treated jadeite piece may look attractive in a photograph, especially under controlled lighting, but it does not carry the same material integrity as natural Type A jadeite.</p>
-
       <p>Ixchell Jewellery specialises in natural Type A Burmese jadeite and encourages customers to understand the material before choosing.</p>
 
       <div class="subquestion-grid">
@@ -751,11 +761,8 @@ footer p{color:rgba(255,255,255,.72)}
 
     <div class="answer-card reveal">
       <p>A jadeite bangle is one of the most personal forms of jadeite jewellery.</p>
-
       <p>It must look beautiful, feel comfortable and fit the wearer correctly. The inner diameter, thickness, curvature, weight, hand shape and wearing style all matter.</p>
-
       <p>This is why bangle selection should not be based on guesswork alone. A size that looks correct on paper may feel too tight when passing over the knuckles, or too loose once it sits on the wrist.</p>
-
       <p>Photographs also cannot fully show how a bangle behaves on the wrist. The same bangle may look brighter, softer, cooler or warmer depending on the wearer’s skin tone and surrounding light.</p>
 
       <div class="inventory-panel">
@@ -880,14 +887,28 @@ const mobileToggle = document.getElementById("mobileToggle");
 const navLinks = document.getElementById("navLinks");
 
 if (mobileToggle && navLinks) {
-  mobileToggle.addEventListener("click", () => {
+  mobileToggle.addEventListener("click", (event) => {
+    event.stopPropagation();
     navLinks.classList.toggle("active");
+    mobileToggle.classList.toggle("active");
   });
 
   navLinks.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("active");
+      mobileToggle.classList.remove("active");
     });
+  });
+
+  document.addEventListener("click", (event) => {
+    if (
+      navLinks.classList.contains("active") &&
+      !navLinks.contains(event.target) &&
+      !mobileToggle.contains(event.target)
+    ) {
+      navLinks.classList.remove("active");
+      mobileToggle.classList.remove("active");
+    }
   });
 }
 
