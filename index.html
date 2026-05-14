@@ -8,9 +8,7 @@
 <title>Ixchell Jewellery Singapore | Type A Burmese Jadeite Boutique</title>
 
 <meta name="description" content="Ixchell Jewellery is a private jadeite boutique at The Adelphi Singapore near City Hall MRT, specialising in natural Type A Burmese jadeite bangles, pendants and collector pieces. Learn jadeite properly through calm private viewing." />
-
 <meta name="keywords" content="jadeite Singapore, Type A jadeite Singapore, Burmese jadeite Singapore, jade jewellery Singapore, jadeite bangle Singapore, jade shop Singapore, private jadeite viewing Singapore, The Adelphi jadeite, City Hall jadeite boutique, natural jadeite Singapore, jadeite guide Singapore, Ixchell Jewellery, 翡坊翠藝" />
-
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <meta name="theme-color" content="#315f9c" />
 <link rel="canonical" href="https://ixchelljewellery.com/" />
@@ -115,8 +113,13 @@ img{display:block;max-width:100%;height:auto}
   display:flex;
   align-items:center;
   justify-content:center;
-  animation:introFadeOut 1.4s ease forwards;
-  animation-delay:4.2s;
+}
+
+#intro-loader.hide{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transition:1s ease;
 }
 
 .intro-center{
@@ -156,16 +159,27 @@ img{display:block;max-width:100%;height:auto}
   animation-delay:1.2s;
 }
 
+.intro-enter{
+  margin-top:34px;
+  padding:13px 34px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.35);
+  background:rgba(255,255,255,.08);
+  color:white;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-size:.72rem;
+  cursor:pointer;
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+
 @keyframes logoReveal{
   to{opacity:1;transform:translateY(0) scale(1);}
 }
 
 @keyframes textReveal{
   to{opacity:1;transform:none;}
-}
-
-@keyframes introFadeOut{
-  to{opacity:0;visibility:hidden;pointer-events:none;}
 }
 
 header{
@@ -685,9 +699,13 @@ footer p{color:rgba(255,255,255,.72)}
     <p class="intro-subtitle">
       Type A Burmese Jadeite · Since 2014
     </p>
+
+    <button class="intro-enter" id="introEnter" type="button">
+      Enter With Sound
+    </button>
   </div>
 
-  <audio id="introAudio" autoplay muted playsinline>
+  <audio id="introAudio" preload="auto" playsinline>
     <source src="intro.mp3" type="audio/mpeg">
   </audio>
 </div>
@@ -965,12 +983,31 @@ footer p{color:rgba(255,255,255,.72)}
 
 <script>
 window.addEventListener("load", () => {
-  const introAudio = document.getElementById("introAudio");
+  const intro = document.getElementById("intro-loader");
+  const enter = document.getElementById("introEnter");
+  const audio = document.getElementById("introAudio");
 
-  if (introAudio) {
-    introAudio.muted = false;
-    introAudio.play().catch(() => {});
+  function hideIntro(){
+    if(intro){
+      intro.classList.add("hide");
+    }
   }
+
+  if(enter){
+    enter.addEventListener("click", () => {
+      if(audio){
+        audio.volume = 0.75;
+        audio.currentTime = 0;
+        audio.play().catch(() => {});
+      }
+
+      hideIntro();
+    });
+  }
+
+  setTimeout(() => {
+    hideIntro();
+  }, 5000);
 });
 
 const mobileToggle = document.getElementById("mobileToggle");
