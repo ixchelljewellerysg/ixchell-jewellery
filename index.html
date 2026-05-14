@@ -103,6 +103,71 @@ img{display:block;max-width:100%;height:auto}
   margin:0 auto;
 }
 
+/* RM INTRO LOADER */
+#intro-loader{
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  overflow:hidden;
+  background:
+    linear-gradient(rgba(5,10,18,.74),rgba(5,10,18,.94)),
+    url("rm-blue-crocodile-texture.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  animation:introFadeOut 1.4s ease forwards;
+  animation-delay:4.2s;
+}
+
+.intro-center{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  padding:20px;
+}
+
+.intro-logo{
+  width:min(190px,42vw);
+  margin:auto;
+  opacity:0;
+  transform:translateY(18px) scale(.94);
+  animation:logoReveal 1.8s ease forwards;
+}
+
+.intro-title{
+  margin-top:24px;
+  color:white;
+  font-family:"Playfair Display",serif;
+  font-size:clamp(2.2rem,5vw,4.2rem);
+  letter-spacing:-.04em;
+  opacity:0;
+  animation:textReveal 1.4s ease forwards;
+  animation-delay:.7s;
+}
+
+.intro-subtitle{
+  margin-top:12px;
+  color:rgba(255,255,255,.72);
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  font-size:.72rem;
+  opacity:0;
+  animation:textReveal 1.4s ease forwards;
+  animation-delay:1.2s;
+}
+
+@keyframes logoReveal{
+  to{opacity:1;transform:translateY(0) scale(1);}
+}
+
+@keyframes textReveal{
+  to{opacity:1;transform:none;}
+}
+
+@keyframes introFadeOut{
+  to{opacity:0;visibility:hidden;pointer-events:none;}
+}
+
 header{
   position:fixed;
   top:0;
@@ -611,6 +676,22 @@ footer p{color:rgba(255,255,255,.72)}
 
 <body>
 
+<div id="intro-loader">
+  <div class="intro-center">
+    <img src="logo-transparent.png" alt="Ixchell Jewellery Logo" class="intro-logo" />
+
+    <h1 class="intro-title">Ixchell Jewellery</h1>
+
+    <p class="intro-subtitle">
+      Type A Burmese Jadeite · Since 2014
+    </p>
+  </div>
+
+  <audio id="introAudio" autoplay muted playsinline>
+    <source src="intro.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
 <header>
   <div class="container nav">
     <a href="/" class="brand">
@@ -883,6 +964,15 @@ footer p{color:rgba(255,255,255,.72)}
 </footer>
 
 <script>
+window.addEventListener("load", () => {
+  const introAudio = document.getElementById("introAudio");
+
+  if (introAudio) {
+    introAudio.muted = false;
+    introAudio.play().catch(() => {});
+  }
+});
+
 const mobileToggle = document.getElementById("mobileToggle");
 const navLinks = document.getElementById("navLinks");
 
