@@ -1,635 +1,919 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-SG">
 <head>
-
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Lavender Jadeite | Ixchell Jewellery Singapore</title>
+<title>Jade Shop Singapore | Ixchell Jewellery at The Adelphi City Hall</title>
 
-<meta name="description" content="Discover lavender jadeite properly through a calm educational guide by Ixchell Jewellery Singapore. Learn what lavender jadeite is, why its colour changes under light, and why natural Type A jadeite matters." />
+<meta name="description" content="Ixchell Jewellery is a private jadeite boutique at The Adelphi, City Hall Singapore, specialising in natural Type A Burmese jadeite bangles, earrings, pendants and collector pieces. Convenient by MRT, taxi, e-hailing and public transport." />
 
-<meta name="keywords" content="lavender jadeite Singapore, Type A lavender jadeite, lavender jadeite guide, Burmese jadeite Singapore, jadeite Singapore, Ixchell Jewellery" />
+<meta name="keywords" content="jade shop Singapore, jadeite shop Singapore, jade jewellery Singapore, Type A jadeite Singapore, Burmese jadeite Singapore, jadeite bangle Singapore, The Adelphi jade shop, City Hall jadeite boutique, Ixchell Jewellery, 翡坊翠藝" />
 
-<meta name="robots" content="index, follow" />
-<meta name="theme-color" content="#0b1020" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#07111f" />
 
-<link rel="canonical" href="https://ixchelljewellery.com/lavender-jadeite.html" />
+<link rel="canonical" href="https://ixchelljewellery.com/jade-shop-singapore.html" />
 
-<meta property="og:title" content="Lavender Jadeite | Ixchell Jewellery Singapore" />
-<meta property="og:description" content="Understand lavender jadeite properly through a calm luxury educational guide." />
+<meta property="og:title" content="Jade Shop Singapore | Ixchell Jewellery" />
+<meta property="og:description" content="A private Type A Burmese jadeite boutique at The Adelphi, City Hall Singapore." />
+<meta property="og:image" content="https://ixchelljewellery.com/images/jade-shop-singapore-hero.jpg" />
+<meta property="og:url" content="https://ixchelljewellery.com/jade-shop-singapore.html" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="https://ixchelljewellery.com/images/lavender-jadeite-hero.webp" />
 
-<link rel="preload" as="image" href="images/lavender-jadeite-hero-mobile.webp" />
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+:root{
+  --bg:#06101d;
+  --panel:rgba(255,255,255,.075);
+  --line:rgba(255,255,255,.14);
+  --text:#f7f9fc;
+  --muted:#b8c4d4;
+  --soft:#dde6f2;
+  --gold:#d8b46a;
+  --jade:#76c7a5;
+  --radius:28px;
+  --max:1180px;
+  --shadow:0 28px 90px rgba(0,0,0,.45);
 }
-
-html{
-scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{
-font-family:'Inter',sans-serif;
-background:#050816;
-color:#f5f7fb;
-line-height:1.8;
-overflow-x:hidden;
+  font-family:Inter,system-ui,sans-serif;
+  background:
+    radial-gradient(circle at top left,rgba(118,199,165,.2),transparent 34%),
+    radial-gradient(circle at top right,rgba(216,180,106,.16),transparent 35%),
+    linear-gradient(135deg,#040914,#07111f 48%,#0b1625);
+  color:var(--text);
+  line-height:1.65;
+  overflow-x:hidden;
 }
-
-body::before{
-content:"";
-position:fixed;
-inset:0;
-background:
-radial-gradient(circle at top left, rgba(168,85,247,0.14), transparent 35%),
-linear-gradient(to bottom,#050816,#0f172a);
-z-index:-2;
+body:before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  opacity:.15;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+  background-size:42px 42px;
+  z-index:-1;
 }
-
-header{
-min-height:88vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:90px 28px 70px;
-position:relative;
-overflow:hidden;
-background:
-linear-gradient(rgba(5,8,22,0.45),rgba(5,8,22,0.92)),
-url("images/lavender-jadeite-hero.webp") center/cover no-repeat;
+a{text-decoration:none;color:inherit}
+img{width:100%;display:block}
+.container{width:min(var(--max),calc(100% - 32px));margin:auto}
+section{padding:86px 0}
+.site-header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  backdrop-filter:blur(18px);
+  background:rgba(5,12,22,.76);
+  border-bottom:1px solid rgba(255,255,255,.1);
 }
-
-.hero-content{
-max-width:920px;
-text-align:center;
-animation:fadeUp 1s ease;
+.nav{
+  min-height:74px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
 }
-
-.hero-tag{
-display:inline-block;
-padding:10px 18px;
-border-radius:999px;
-border:1px solid rgba(255,255,255,0.12);
-background:rgba(255,255,255,0.05);
-font-size:12px;
-letter-spacing:2px;
-text-transform:uppercase;
-margin-bottom:28px;
+.brand-title{
+  font-family:"Playfair Display",serif;
+  font-size:1.45rem;
+  font-weight:800;
 }
-
-.hero-content h1{
-font-family:'Playfair Display',serif;
-font-size:clamp(3rem,7vw,5.8rem);
-line-height:1.05;
-margin-bottom:24px;
-font-weight:600;
-text-shadow:0 10px 30px rgba(0,0,0,0.35);
+.brand-sub{
+  font-size:.72rem;
+  color:var(--muted);
+  letter-spacing:.15em;
+  text-transform:uppercase;
 }
-
-.hero-content p{
-max-width:760px;
-margin:auto;
-font-size:1.08rem;
-color:#e5e7eb;
+.nav-links{
+  display:flex;
+  gap:20px;
+  align-items:center;
+  font-size:.9rem;
 }
-
-section{
-padding:90px 8%;
+.nav-cta,.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px 18px;
+  border-radius:999px;
+  font-weight:800;
 }
-
-.container{
-max-width:1180px;
-margin:auto;
+.nav-cta,.btn-primary{
+  background:linear-gradient(135deg,#f4d78b,#c79a3d);
+  color:#10131a;
 }
-
-.section-label{
-font-size:12px;
-letter-spacing:2px;
-text-transform:uppercase;
-color:#c4b5fd;
-margin-bottom:14px;
+.btn-secondary{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.18);
+  color:var(--text);
 }
-
+.hero{
+  min-height:calc(100vh - 74px);
+  display:grid;
+  align-items:center;
+  position:relative;
+}
+.hero-bg{
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  opacity:.3;
+  background:
+    linear-gradient(90deg,rgba(4,9,20,.95),rgba(4,9,20,.55),rgba(4,9,20,.96)),
+    url("images/jade-shop-singapore-hero.jpg") center/cover no-repeat;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:46px;
+  align-items:center;
+}
+.eyebrow,.section-kicker{
+  color:var(--gold);
+  font-size:.78rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  font-weight:800;
+  margin-bottom:14px;
+}
+h1,.section-title{
+  font-family:"Playfair Display",serif;
+  letter-spacing:-.045em;
+}
+h1{
+  font-size:clamp(3.2rem,7vw,6.9rem);
+  line-height:.92;
+  margin-bottom:24px;
+}
 .section-title{
-font-family:'Playfair Display',serif;
-font-size:clamp(2rem,4vw,3.5rem);
-line-height:1.2;
-margin-bottom:24px;
+  font-size:clamp(2.1rem,4.5vw,4.4rem);
+  line-height:1;
+  margin-bottom:18px;
 }
-
-.section-text{
-max-width:900px;
-color:#d7dee8;
-font-size:1.03rem;
+.hero-lead,.section-lead{
+  color:var(--soft);
+  font-size:1.08rem;
+  max-width:780px;
 }
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:28px;
-margin-top:55px;
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:30px;
 }
-
-.card{
-background:
-linear-gradient(
-145deg,
-rgba(255,255,255,0.06),
-rgba(168,85,247,0.04)
-);
-border:1px solid rgba(255,255,255,0.08);
-border-radius:28px;
-overflow:hidden;
-transition:0.45s ease;
+.quick-facts{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:34px;
 }
-
-.card:hover{
-transform:translateY(-8px);
-border-color:rgba(196,181,253,0.32);
-box-shadow:0 18px 45px rgba(0,0,0,0.25);
+.fact,.glass,.card,.flow-card,.transport-card,.route-card,.local-item,details{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:24px;
+  backdrop-filter:blur(16px);
 }
-
-.card img{
-width:100%;
-height:260px;
-object-fit:cover;
-display:block;
+.fact{padding:16px}
+.fact span,.panel-label,.local-item span{
+  display:block;
+  color:var(--gold);
+  font-size:.72rem;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-weight:800;
+  margin-bottom:6px;
 }
-
-.card-content{
-padding:28px;
+.fact strong{display:block;color:white;line-height:1.35}
+.hero-card{
+  padding:18px;
+  border-radius:var(--radius);
+  background:rgba(255,255,255,.08);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
 }
-
-.card-content h3{
-font-family:'Playfair Display',serif;
-font-size:1.5rem;
-margin-bottom:14px;
+.hero-card-inner{
+  min-height:460px;
+  border-radius:22px;
+  overflow:hidden;
+  position:relative;
+  background:
+    linear-gradient(to top,rgba(4,9,20,.9),transparent 55%),
+    url("images/type-a-jadeite-bangles-singapore.jpg") center/cover no-repeat;
 }
-
-.card-content p{
-color:#d7dee8;
-font-size:0.97rem;
+.hero-card-copy{
+  position:absolute;
+  left:22px;
+  right:22px;
+  bottom:22px;
+  padding:18px;
+  border-radius:20px;
+  background:rgba(5,12,22,.76);
+  border:1px solid var(--line);
 }
-
-.quote-box{
-margin-top:70px;
-padding:50px 40px;
-border-radius:34px;
-background:
-linear-gradient(
-135deg,
-rgba(168,85,247,0.08),
-rgba(59,130,246,0.05)
-);
-border:1px solid rgba(255,255,255,0.08);
-text-align:center;
+.hero-card-copy h2,.location-card h3,.flow-card h3,.transport-card h3,.route-card h3{
+  font-family:"Playfair Display",serif;
 }
-
-.quote-box h3{
-font-family:'Playfair Display',serif;
-font-size:clamp(2rem,4vw,3rem);
-line-height:1.4;
-max-width:880px;
-margin:auto;
+.hero-card-copy p,.soft-copy,.flow-card p,.transport-card p,.route-card li,.local-item strong,details p,footer p{
+  color:var(--muted);
 }
-
+.story-grid,.evening-grid,.private-grid,.local-grid,.dropoff-card{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:38px;
+  align-items:center;
+}
+.soft-copy{display:grid;gap:18px;margin-top:24px}
+.glass,.location-card,.private-panel,.final-cta-inner{
+  padding:30px;
+  border-radius:var(--radius);
+  background:linear-gradient(145deg,rgba(255,255,255,.11),rgba(255,255,255,.045));
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+.mini-map-card{
+  padding:16px 0;
+  border-top:1px solid rgba(255,255,255,.12);
+}
+.mini-map-card span{
+  color:var(--gold);
+  font-size:.72rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-weight:800;
+}
+.section-head.centre{text-align:center;max-width:900px;margin:0 auto 42px}
+.section-head.centre .section-lead{margin:auto}
+.flow-grid,.strength-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+.flow-card,.strength-card,.transport-card,.route-card{
+  padding:24px;
+}
+.flow-number{
+  color:var(--gold);
+  font-weight:800;
+  letter-spacing:.14em;
+  margin-bottom:24px;
+}
+.image-frame{
+  border-radius:var(--radius);
+  overflow:hidden;
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+.image-frame img{aspect-ratio:4/5;object-fit:cover}
+.tag-row,.app-list{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:24px;
+}
+.tag-row span,.app-list span{
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  border:1px solid var(--line);
+  font-weight:700;
+}
+.strength-box,.cta-inner{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:34px;
+  padding:34px;
+  border-radius:var(--radius);
+  background:rgba(255,255,255,.07);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  margin-bottom:18px;
+}
+.directions-grid{
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  gap:16px;
+}
+.transport-card.featured{grid-row:span 2}
+.transport-icon{
+  display:inline-flex;
+  padding:12px;
+  border-radius:16px;
+  background:rgba(216,180,106,.13);
+  color:var(--gold);
+  font-weight:800;
+  margin-bottom:18px;
+}
+.transport-note,.parking-box{
+  margin-top:18px;
+  padding:16px;
+  border-radius:18px;
+  background:rgba(0,0,0,.24);
+}
+.split-head{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:34px;
+  align-items:end;
+  margin-bottom:38px;
+}
+.landmark-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.route-card ul{list-style:none;display:grid;gap:12px}
+.route-card li{position:relative;padding-left:18px}
+.route-card li:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.72em;
+  width:6px;
+  height:6px;
+  border-radius:99px;
+  background:var(--gold);
+}
+.bus-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:42px;
+}
+.bus-list{display:grid;gap:12px}
+.bus-item{
+  padding:18px;
+  border-radius:20px;
+  background:var(--panel);
+  border:1px solid var(--line);
+}
+.bus-item span{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-weight:800;
+  font-size:.74rem;
+}
+.bus-item strong{display:block;color:white}
+.address-card{
+  padding:24px;
+  border-radius:24px;
+  background:rgba(0,0,0,.26);
+  border:1px solid var(--line);
+}
+.address-card strong{
+  display:block;
+  font-family:"Playfair Display",serif;
+  font-size:1.6rem;
+}
+.jadeite-grid{
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  grid-template-rows:repeat(2,280px);
+  gap:16px;
+}
+.jadeite-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:var(--radius);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+}
+.jadeite-card.large-card{grid-row:span 2}
+.jadeite-card img{
+  height:100%;
+  object-fit:cover;
+  position:absolute;
+  inset:0;
+}
+.jadeite-card:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(4,9,20,.92),rgba(4,9,20,.12));
+}
+.jadeite-card-copy{
+  position:absolute;
+  z-index:2;
+  left:24px;
+  right:24px;
+  bottom:24px;
+}
+.jadeite-card-copy span{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  font-weight:800;
+  font-size:.72rem;
+}
+.jadeite-card-copy h3{
+  font-family:"Playfair Display",serif;
+  font-size:2rem;
+}
+.private-points{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+  margin-top:26px;
+}
+.private-points div{
+  padding:17px;
+  border-radius:19px;
+  background:var(--panel);
+  border:1px solid var(--line);
+}
+.private-points span{color:var(--gold);font-weight:800}
+.cta-band{padding:34px 0}
+.cta-inner h2,.final-cta-inner h2{
+  font-family:"Playfair Display",serif;
+  font-size:clamp(2rem,4vw,4rem);
+  line-height:1;
+  margin-bottom:14px;
+}
+.cta-actions,.final-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:flex-end;
+}
+.local-list{display:grid;gap:12px}
+.local-item{padding:18px}
 .faq-grid{
-margin-top:55px;
-display:flex;
-flex-direction:column;
-gap:18px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
 }
-
-.faq-item{
-padding:28px;
-border-radius:24px;
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.08);
+summary{
+  cursor:pointer;
+  list-style:none;
+  padding:20px 50px 20px 22px;
+  font-weight:800;
+  position:relative;
 }
-
-.faq-item h3{
-font-size:1.08rem;
-margin-bottom:12px;
+summary::-webkit-details-marker{display:none}
+summary:after{
+  content:"+";
+  position:absolute;
+  right:22px;
+  top:50%;
+  transform:translateY(-50%);
+  color:var(--gold);
+  font-size:1.4rem;
 }
-
-.faq-item p{
-color:#d7dee8;
+details[open] summary:after{content:"–"}
+details p{padding:0 22px 22px}
+.final-cta{text-align:center}
+.final-cta-inner{max-width:900px;margin:auto}
+.final-actions{justify-content:center;margin-top:28px}
+.site-footer{
+  padding:46px 0;
+  border-top:1px solid rgba(255,255,255,.1);
+  background:rgba(3,8,15,.65);
 }
-
-.learn-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:26px;
-margin-top:50px;
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr .8fr .8fr;
+  gap:30px;
 }
-
-.learn-card{
-display:block;
-padding:30px;
-border-radius:26px;
-text-decoration:none;
-background:
-linear-gradient(
-145deg,
-rgba(255,255,255,0.05),
-rgba(255,255,255,0.02)
-);
-border:1px solid rgba(255,255,255,0.08);
-transition:0.4s ease;
+footer h2{
+  font-family:"Playfair Display",serif;
+  margin-bottom:10px;
 }
-
-.learn-card:hover{
-transform:translateY(-6px);
-border-color:rgba(196,181,253,0.3);
+footer h3{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-size:.78rem;
+  margin-bottom:10px;
 }
-
-.learn-card h3{
-font-family:'Playfair Display',serif;
-font-size:1.45rem;
-margin-bottom:12px;
-color:white;
+@media(max-width:1000px){
+  .hero-grid,.story-grid,.evening-grid,.private-grid,.local-grid,.directions-grid,.split-head,.bus-grid,.dropoff-card,.strength-box,.cta-inner{
+    grid-template-columns:1fr;
+  }
+  .flow-grid,.strength-grid,.landmark-grid{grid-template-columns:repeat(2,1fr)}
+  .transport-card.featured{grid-row:auto}
 }
-
-.learn-card p{
-color:#d7dee8;
+@media(max-width:720px){
+  .nav-links{display:none}
+  section{padding:66px 0}
+  .quick-facts,.flow-grid,.strength-grid,.landmark-grid,.faq-grid,.footer-grid,.jadeite-grid{
+    grid-template-columns:1fr;
+  }
+  .jadeite-grid{grid-template-rows:auto}
+  .jadeite-card,.jadeite-card.large-card{min-height:360px}
+  .hero-card-inner{min-height:340px}
+  .private-points{grid-template-columns:1fr}
+  .hero-actions,.cta-actions,.final-actions{flex-direction:column}
+  .btn{width:100%}
 }
-
-footer{
-padding:90px 8%;
-text-align:center;
-border-top:1px solid rgba(255,255,255,0.08);
-}
-
-footer p{
-max-width:820px;
-margin:auto;
-color:#d7dee8;
-}
-
-.cta-btn{
-display:inline-block;
-margin-top:34px;
-padding:16px 30px;
-border-radius:999px;
-background:linear-gradient(to right,#8b5cf6,#3b82f6);
-color:white;
-text-decoration:none;
-font-weight:600;
-transition:0.35s ease;
-}
-
-.cta-btn:hover{
-transform:translateY(-3px);
-box-shadow:0 15px 35px rgba(59,130,246,0.25);
-}
-
-@keyframes fadeUp{
-
-from{
-opacity:0;
-transform:translateY(30px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-@media(max-width:768px){
-
-header{
-min-height:78vh;
-padding:100px 22px 60px;
-background:
-linear-gradient(rgba(5,8,22,0.55),rgba(5,8,22,0.92)),
-url("images/lavender-jadeite-hero-mobile.webp") center/cover no-repeat;
-}
-
-.hero-content h1{
-font-size:2.7rem;
-line-height:1.1;
-}
-
-.hero-content p{
-font-size:1rem;
-line-height:1.75;
-}
-
-section{
-padding:75px 22px;
-}
-
-.quote-box{
-padding:36px 22px;
-}
-
-.card img{
-height:220px;
-}
-
-}
-
 </style>
 
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"JewelryStore",
+  "name":"Ixchell Jewellery",
+  "alternateName":"翡坊翠藝",
+  "url":"https://ixchelljewellery.com/",
+  "image":"https://ixchelljewellery.com/images/jade-shop-singapore-hero.jpg",
+  "description":"Ixchell Jewellery is a private jadeite boutique at The Adelphi, City Hall Singapore, specialising in natural Type A Burmese jadeite.",
+  "priceRange":"$$",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"1 Coleman Street, The Adelphi #02-33",
+    "addressLocality":"Singapore",
+    "postalCode":"179803",
+    "addressCountry":"SG"
+  },
+  "areaServed":["Singapore","City Hall","Marina Bay","Orchard","Bugis","Clarke Quay","Boat Quay","Sentosa"],
+  "sameAs":[
+    "https://www.instagram.com/ixchelljewellery",
+    "https://www.facebook.com/ixchelljewellery"
+  ]
+}
+</script>
 </head>
 
 <body>
-
-<header>
-
-<div class="hero-content">
-
-<div class="hero-tag">
-Lavender Jadeite • Type A Burmese Jadeite • Singapore
-</div>
-
-<h1>
-The Quiet Mystery of Lavender Jadeite
-</h1>
-
-<p>
-Lavender jadeite is admired for its soft lilac, violet and misty blue-grey tones. Unlike ordinary gemstones, its appearance may change gently under daylight, indoor lighting and different skin tones.
-</p>
-
-</div>
-
+<header class="site-header">
+  <div class="container nav">
+    <a href="index.html">
+      <div class="brand-title">Ixchell Jewellery</div>
+      <div class="brand-sub">翡坊翠藝 · Since 2014</div>
+    </a>
+    <nav class="nav-links">
+      <a href="#why-adelphi">Why City Hall</a>
+      <a href="#directions">Directions</a>
+      <a href="#jadeite">Jadeite</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-cta" href="https://www.instagram.com/ixchelljewellery" target="_blank">DM @ixchelljewellery</a>
+    </nav>
+  </div>
 </header>
 
-<section>
+<main>
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">Natural Type A Burmese Jadeite</div>
+      <h1>Jade Shop Singapore.</h1>
+      <p class="hero-lead">
+        Ixchell Jewellery is a private jadeite boutique at The Adelphi, City Hall Singapore,
+        specialising in natural Type A Burmese jadeite bangles, earrings, pendants and collector pieces.
+      </p>
+      <p class="hero-lead">
+        Located at The Adelphi, 1 Coleman Street, we are near City Hall MRT, National Gallery Singapore,
+        St Andrew’s Cathedral, Funan Mall, Marina Bay, Orchard, Bugis and the Singapore River area.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://www.instagram.com/ixchelljewellery" target="_blank">Arrange Viewing</a>
+        <a class="btn btn-secondary" href="#directions">View Directions</a>
+      </div>
+      <div class="quick-facts">
+        <div class="fact"><span>Location</span><strong>The Adelphi #02-33, City Hall</strong></div>
+        <div class="fact"><span>Nearest MRT</span><strong>City Hall MRT</strong></div>
+        <div class="fact"><span>Speciality</span><strong>Natural Type A Burmese jadeite</strong></div>
+      </div>
+    </div>
 
-<div class="container">
+    <aside class="hero-card">
+      <div class="hero-card-inner">
+        <div class="hero-card-copy">
+          <h2>Begin with understanding.</h2>
+          <p>View jadeite calmly, compare colour and translucency in person, and choose with confidence.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
 
-<div class="section-label">
-What Is Lavender Jadeite?
-</div>
+<section id="why-adelphi">
+  <div class="container story-grid">
+    <div>
+      <p class="section-kicker">Why The Adelphi / City Hall</p>
+      <h2 class="section-title">Why Ixchell Jewellery Is Located at City Hall.</h2>
+      <p class="section-lead">
+        Ixchell Jewellery is located at The Adelphi because City Hall sits naturally inside the way many
+        visitors move through Singapore. It is central, connected, easy to reach, and surrounded by places
+        people already pass through during their stay.
+      </p>
+      <div class="soft-copy">
+        <p>
+          For travellers, collectors, returning clients and visitors exploring Singapore, City Hall is one
+          of the most convenient meeting points in the city.
+        </p>
+        <p>
+          This allows guests to arrange a calm jadeite viewing without making a separate journey far away
+          from their travel route.
+        </p>
+      </div>
+    </div>
 
-<h2 class="section-title">
-A Calm Form of Natural Jadeite
-</h2>
-
-<p class="section-text">
-Lavender jadeite is a natural variety of jadeite displaying soft violet, lilac or blue-grey tones. Its colour is believed to be influenced by trace mineral conditions during formation deep beneath the Earth’s surface.
-<br><br>
-Fine lavender jadeite is valued not only for colour, but for translucency, texture, glow and balance. Some pieces appear gentle and understated indoors, then reveal richer violet tones under daylight.
-</p>
-
-<div class="grid">
-
-<div class="card">
-
-<img
-src="images/lavender-jadeite-closeup.webp"
-alt="Close up texture of lavender jadeite"
-loading="lazy"
-/>
-
-<div class="card-content">
-
-<h3>
-Why Colour Changes
-</h3>
-
-<p>
-Lavender jadeite reacts strongly with lighting environments. Daylight, indoor light and skin tone may all affect how violet and blue undertones appear visually.
-</p>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img
-src="images/type-a-lavender-jadeite.webp"
-alt="Natural Type A lavender jadeite"
-loading="lazy"
-/>
-
-<div class="card-content">
-
-<h3>
-Why Type A Matters
-</h3>
-
-<p>
-Type A jadeite refers to natural jadeite without bleaching or polymer impregnation. Many collectors value natural structure and long-term stability.
-</p>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img
-src="images/lavender-jadeite-myanmar-mine.webp"
-alt="Myanmar jadeite mining region"
-loading="lazy"
-/>
-
-<div class="card-content">
-
-<h3>
-Myanmar & Guatemala
-</h3>
-
-<p>
-Most recognised jadeite originates from Myanmar, though Guatemala also possesses ancient jadeite history and unique natural material.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="quote-box">
-
-<h3>
-“Lavender jadeite rarely shouts for attention.  
-Its beauty is often discovered slowly.”
-</h3>
-
-</div>
-
-</div>
-
+    <div class="location-card">
+      <div class="panel-label">Central Singapore</div>
+      <h3>The Adelphi, 1 Coleman Street</h3>
+      <p>A quiet address near City Hall MRT, National Gallery Singapore, St Andrew’s Cathedral, Funan Mall and the Singapore River district.</p>
+      <div class="mini-map-card"><span>Nearest MRT</span><strong>City Hall MRT</strong></div>
+      <div class="mini-map-card"><span>Drop-off point</span><strong>The Adelphi Main Lobby</strong></div>
+      <div class="mini-map-card"><span>Good for</span><strong>Private jadeite viewing and quiet perusal</strong></div>
+    </div>
+  </div>
 </section>
 
 <section>
+  <div class="container">
+    <div class="section-head centre">
+      <p class="section-kicker">Singapore Travel Flow</p>
+      <h2 class="section-title">A Jadeite Boutique Within Reach of the City’s Main Journey.</h2>
+      <p class="section-lead">
+        City Hall is useful for overseas visitors because hotels, landmarks, cultural places and evening
+        destinations are nearby.
+      </p>
+    </div>
 
-<div class="container">
-
-<div class="section-label">
-Frequently Asked Questions
-</div>
-
-<h2 class="section-title">
-Lavender Jadeite Questions
-</h2>
-
-<div class="faq-grid">
-
-<div class="faq-item">
-<h3>
-Is lavender jadeite rare?
-</h3>
-
-<p>
-Fine translucent lavender jadeite with balanced colour and natural Type A status is considered relatively rare.
-</p>
-</div>
-
-<div class="faq-item">
-<h3>
-Why does lavender jadeite look different under light?
-</h3>
-
-<p>
-Lavender jadeite interacts strongly with lighting conditions, causing violet and blue undertones to appear differently indoors and outdoors.
-</p>
-</div>
-
-<div class="faq-item">
-<h3>
-Can lavender jadeite be worn daily?
-</h3>
-
-<p>
-Natural jadeite is suitable for daily wear when treated respectfully. Many collectors appreciate lavender jadeite for its calm and elegant appearance.
-</p>
-</div>
-
-</div>
-
-</div>
-
+    <div class="flow-grid">
+      <article class="flow-card"><div class="flow-number">01</div><h3>Near Hotels of Many Categories</h3><p>City Hall, Bras Basah, Bugis, Marina Bay, Clarke Quay and Orchard include many hotel options.</p></article>
+      <article class="flow-card"><div class="flow-number">02</div><h3>Close to Places of Interest</h3><p>Near National Gallery Singapore, St Andrew’s Cathedral, Funan Mall, Capitol Singapore and Fort Canning.</p></article>
+      <article class="flow-card"><div class="flow-number">03</div><h3>Easy Before Marina Bay or Sentosa</h3><p>City Hall connects smoothly towards Marina Bay, HarbourFront and Sentosa.</p></article>
+      <article class="flow-card"><div class="flow-number">04</div><h3>Simple by MRT, Taxi or E-Hailing</h3><p>Guests may arrive by MRT, bus, taxi, Grab, Gojek, TADA, Ryde or CDG Zig.</p></article>
+    </div>
+  </div>
 </section>
 
 <section>
-
-<div class="container">
-
-<div class="section-label">
-Continue Learning
-</div>
-
-<h2 class="section-title">
-Explore More Jadeite Knowledge
-</h2>
-
-<div class="learn-grid">
-
-<a href="type-a-vs-b-vs-c-jadeite.html" class="learn-card">
-
-<h3>
-Type A vs B vs C Jadeite
-</h3>
-
-<p>
-Learn how treatment affects structure and stability.
-</p>
-
-</a>
-
-<a href="jade-vs-jadeite.html" class="learn-card">
-
-<h3>
-Jade vs Jadeite
-</h3>
-
-<p>
-Understand the difference between nephrite and jadeite.
-</p>
-
-</a>
-
-<a href="how-to-choose-jadeite.html" class="learn-card">
-
-<h3>
-How to Choose Jadeite
-</h3>
-
-<p>
-Learn colour, translucency, texture and balance properly.
-</p>
-
-</a>
-
-</div>
-
-</div>
-
+  <div class="container evening-grid">
+    <div class="image-frame">
+      <img src="images/jadeite-shop-city-hall-mrt.jpg" alt="City Hall MRT route to The Adelphi and Ixchell Jewellery jadeite boutique" loading="lazy">
+    </div>
+    <div>
+      <p class="section-kicker">Within Reach After Viewing</p>
+      <h2 class="section-title">From Quiet Jadeite Viewing to Singapore’s Evening Atmosphere.</h2>
+      <p class="section-lead">
+        After a private jadeite viewing, visitors can continue towards the Singapore River, Clarke Quay,
+        Boat Quay, Marina Bay, nearby food streets, cafés, restaurants and nightlife areas.
+      </p>
+      <div class="tag-row">
+        <span>Singapore River</span><span>Clarke Quay</span><span>Boat Quay</span><span>Marina Bay</span><span>Funan</span><span>Bugis</span>
+      </div>
+    </div>
+  </div>
 </section>
 
-<footer>
+<section>
+  <div class="container">
+    <div class="strength-box">
+      <div>
+        <p class="section-kicker">Ixchell Jewellery Strength</p>
+        <h2 class="section-title">A Simple, Knowledge-First Jadeite Experience.</h2>
+      </div>
+      <div class="soft-copy">
+        <p>Our strength is helping visitors slow down, look properly, understand colour, translucency, texture, size, proportion and comfort.</p>
+        <p>Whether you are looking for a jadeite bangle, earrings, a pendant, a gift or a Singapore souvenir, the viewing experience is personal and respectful.</p>
+      </div>
+    </div>
 
-<h2 class="section-title">
-View Lavender Jadeite Calmly
-</h2>
+    <div class="strength-grid">
+      <article class="flow-card"><h3>Natural Type A Burmese Jadeite</h3><p>Selected for colour, translucency, texture, wearability and character.</p></article>
+      <article class="flow-card"><h3>Private Viewing</h3><p>Arrange viewing for a calmer and more focused experience.</p></article>
+      <article class="flow-card"><h3>Bangles, Earrings & Pendants</h3><p>Pieces for different tastes, occasions and budgets.</p></article>
+      <article class="flow-card"><h3>Education Before Purchase</h3><p>The right piece begins with proper viewing and patient comparison.</p></article>
+    </div>
+  </div>
+</section>
 
-<p>
-Ixchell Jewellery 翡坊翠藝 is a private jadeite boutique at The Adelphi #02-33 near City Hall MRT Singapore.
-<br><br>
-We encourage calm private viewing so visitors may understand jadeite properly before choosing.
-</p>
+<section id="directions">
+  <div class="container">
+    <div class="section-head centre">
+      <p class="section-kicker">Getting Here</p>
+      <h2 class="section-title">Easy to Reach by MRT, Taxi, E-Hailing, Bus or Car.</h2>
+      <p class="section-lead">Ixchell Jewellery is located at The Adelphi, 1 Coleman Street, Singapore 179803.</p>
+    </div>
 
-<a href="https://www.instagram.com/ixchelljewellery" class="cta-btn" target="_blank">
-Arrange Private Viewing
-</a>
+    <div class="directions-grid">
+      <article class="transport-card featured">
+        <div class="transport-icon">MRT</div>
+        <h3>By MRT</h3>
+        <p>Take the MRT to City Hall MRT. From there, walk towards The Adelphi at 1 Coleman Street.</p>
+        <div class="transport-note">Best instruction: <strong>City Hall MRT → The Adelphi → Level 2, #02-33</strong></div>
+      </article>
 
+      <article class="transport-card">
+        <div class="transport-icon">EH</div>
+        <h3>By E-Hailing</h3>
+        <p>Enter <strong>The Adelphi, 1 Coleman Street, Singapore 179803</strong>.</p>
+        <div class="app-list"><span>Grab</span><span>Gojek</span><span>TADA</span><span>Ryde</span><span>CDG Zig</span></div>
+      </article>
+
+      <article class="transport-card">
+        <div class="transport-icon">BUS</div>
+        <h3>By Bus</h3>
+        <p>Check routes towards Coleman Street, North Bridge Road, Stamford Road or City Hall.</p>
+      </article>
+
+      <article class="transport-card">
+        <div class="transport-icon">P</div>
+        <h3>Parking at The Adelphi</h3>
+        <p>Parking is available at The Adelphi. Please check the car park rate board before entering.</p>
+        <div class="parking-box">
+          <strong>Approx. S$2.40 first hour</strong><br>
+          <strong>Approx. S$1.20 per subsequent 30 mins</strong><br>
+          <strong>Approx. S$3.21 per entry after 5pm / Sun / PH</strong>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="split-head">
+      <div>
+        <p class="section-kicker">From Popular Places</p>
+        <h2 class="section-title">How Visitors Usually Reach Us.</h2>
+      </div>
+      <p class="section-lead">Simple travel references for tourists, hotel guests and locals planning a comfortable route.</p>
+    </div>
+
+    <div class="landmark-grid">
+      <article class="route-card"><h3>From Marina Bay Sands</h3><ul><li><strong>By taxi:</strong> around 8–12 minutes.</li><li><strong>By MRT:</strong> around 15–20 minutes.</li></ul></article>
+      <article class="route-card"><h3>From Merlion Park</h3><ul><li><strong>By taxi:</strong> around 5–8 minutes.</li><li><strong>By walking:</strong> around 15–18 minutes.</li></ul></article>
+      <article class="route-card"><h3>From Orchard Road Hotels</h3><ul><li><strong>By MRT:</strong> around 10–15 minutes.</li><li><strong>By taxi:</strong> around 10–20 minutes.</li></ul></article>
+      <article class="route-card"><h3>From Bugis Hotels</h3><ul><li><strong>By MRT:</strong> short ride to City Hall.</li><li><strong>By taxi:</strong> around 5–10 minutes.</li></ul></article>
+      <article class="route-card"><h3>From Clarke Quay or Boat Quay</h3><ul><li><strong>By taxi:</strong> around 5–10 minutes.</li><li><strong>By walking:</strong> around 15–20 minutes.</li></ul></article>
+      <article class="route-card"><h3>From Sentosa or HarbourFront</h3><ul><li><strong>By taxi:</strong> around 15–25 minutes.</li><li><strong>By MRT:</strong> HarbourFront to City Hall via MRT network.</li></ul></article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container dropoff-card">
+    <div>
+      <p class="section-kicker">Driver Instruction</p>
+      <h2 class="section-title">What to Tell Your Driver.</h2>
+      <p>For taxi, Grab, Gojek, TADA, Ryde or CDG Zig, use this simple instruction:</p>
+    </div>
+    <div class="address-card">
+      <span>Drop-off Address</span>
+      <strong>The Adelphi Main Lobby</strong>
+      <p>1 Coleman Street, Singapore 179803</p>
+      <p>Ixchell Jewellery #02-33</p>
+    </div>
+  </div>
+</section>
+
+<section id="jadeite">
+  <div class="container">
+    <div class="section-head centre">
+      <p class="section-kicker">Natural Type A Burmese Jadeite</p>
+      <h2 class="section-title">Jadeite Jewellery Chosen with Patience, Light and Understanding.</h2>
+      <p class="section-lead">Colour, translucency, texture, thickness, comfort and proportion are easier to understand in person.</p>
+    </div>
+
+    <div class="jadeite-grid">
+      <article class="jadeite-card large-card">
+        <img src="images/type-a-jadeite-bangles-singapore.jpg" alt="Natural Type A Burmese jadeite bangles in Singapore" loading="lazy">
+        <div class="jadeite-card-copy"><span>Bangles</span><h3>Jadeite Bangles</h3><p>Chosen with attention to size, comfort, colour, texture, translucency and thickness.</p></div>
+      </article>
+
+      <article class="jadeite-card">
+        <img src="images/natural-burmese-jadeite-singapore.jpg" alt="Natural Burmese jadeite jewellery Singapore" loading="lazy">
+        <div class="jadeite-card-copy"><span>Jewellery</span><h3>Earrings & Pendants</h3><p>Suitable for daily wear, thoughtful gifts, elegant souvenirs and milestone pieces.</p></div>
+      </article>
+
+      <article class="jadeite-card">
+        <img src="images/private-jadeite-viewing-adelphi.jpg" alt="Private jadeite viewing at The Adelphi Singapore" loading="lazy">
+        <div class="jadeite-card-copy"><span>Private Viewing</span><h3>Quiet Perusal</h3><p>Time to compare pieces without pressure or rushed retail noise.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container private-grid">
+    <div>
+      <p class="section-kicker">Private Viewing at The Adelphi</p>
+      <h2 class="section-title">A Calm Way to Choose Jadeite in Singapore.</h2>
+      <p class="section-lead">Jadeite is not always easy to judge from photos alone.</p>
+      <div class="private-points">
+        <div><span>01</span><strong>View under real light</strong></div>
+        <div><span>02</span><strong>Check size and comfort</strong></div>
+        <div><span>03</span><strong>Compare colour and translucency</strong></div>
+        <div><span>04</span><strong>Ask before deciding</strong></div>
+      </div>
+    </div>
+
+    <div class="private-panel">
+      <div class="panel-label">Visitor Note</div>
+      <h3>DM before visiting is recommended.</h3>
+      <p>Walk-ins may be welcome whenever possible, but arranging through Instagram DM helps us prepare a more comfortable private viewing experience.</p>
+      <a class="btn btn-primary" href="https://www.instagram.com/ixchelljewellery" target="_blank">DM @ixchelljewellery</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-inner">
+    <div>
+      <p class="section-kicker">Jade Shop Singapore</p>
+      <h2>Looking for Type A Burmese jadeite in Singapore?</h2>
+      <p>Visit Ixchell Jewellery at The Adelphi, City Hall, for jadeite bangles, earrings, pendants and collector pieces.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-primary" href="https://www.instagram.com/ixchelljewellery" target="_blank">Arrange Viewing</a>
+      <a class="btn btn-secondary" href="#directions">View Directions</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container local-grid">
+    <div>
+      <p class="section-kicker">For Visitors to Singapore</p>
+      <h2 class="section-title">A Meaningful Stop Within a Singapore City Journey.</h2>
+      <p class="section-lead">A jadeite visit can be part of a wider Singapore experience.</p>
+    </div>
+
+    <div class="local-list">
+      <div class="local-item"><span>Nearby Culture</span><strong>National Gallery, St Andrew’s Cathedral, Civic District, Fort Canning</strong></div>
+      <div class="local-item"><span>Nearby Shopping</span><strong>Funan Mall, Capitol Singapore, Peninsula area, Bugis, Orchard</strong></div>
+      <div class="local-item"><span>Nearby Evening Flow</span><strong>Singapore River, Clarke Quay, Boat Quay, Marina Bay, food streets</strong></div>
+      <div class="local-item"><span>Nearby Travel Routes</span><strong>Marina Bay Sands, Merlion Park, Orchard hotels, Bugis hotels, Sentosa route</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head centre">
+      <p class="section-kicker">Questions Visitors Ask</p>
+      <h2 class="section-title">Jade Shop Singapore FAQ.</h2>
+    </div>
+
+    <div class="faq-grid">
+      <details open><summary>Where is Ixchell Jewellery located?</summary><p>The Adelphi #02-33, 1 Coleman Street, Singapore 179803.</p></details>
+      <details><summary>Which MRT station is nearest?</summary><p>City Hall MRT is the nearest main MRT station.</p></details>
+      <details><summary>Can I take Grab, Gojek, TADA, Ryde or CDG Zig?</summary><p>Yes. Enter The Adelphi, 1 Coleman Street, Singapore 179803.</p></details>
+      <details><summary>Is parking available?</summary><p>Yes, parking is available at The Adelphi. Please check current car park rates before entering.</p></details>
+      <details><summary>Do I need an appointment?</summary><p>DM before visiting is recommended for a calmer private viewing experience.</p></details>
+      <details><summary>What jadeite does Ixchell Jewellery specialise in?</summary><p>Natural Type A Burmese jadeite bangles, earrings, pendants and collector pieces.</p></details>
+      <details><summary>Is this convenient for tourists?</summary><p>Yes. The Adelphi is near City Hall MRT, Marina Bay, Orchard, Bugis, Clarke Quay and many hotels.</p></details>
+      <details><summary>Can I visit before going to Marina Bay or Sentosa?</summary><p>Yes. City Hall connects smoothly towards Marina Bay, HarbourFront and Sentosa.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container final-cta-inner">
+    <p class="section-kicker">Ixchell Jewellery · 翡坊翠藝</p>
+    <h2>Begin with understanding. Choose with confidence.</h2>
+    <p>Visit our private jadeite boutique at The Adelphi, City Hall Singapore, for natural Type A Burmese jadeite.</p>
+    <div class="final-actions">
+      <a class="btn btn-primary" href="https://www.instagram.com/ixchelljewellery" target="_blank">DM for Private Viewing</a>
+      <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Ixchell+Jewellery+The+Adelphi+Singapore" target="_blank">Open Google Maps</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <h2>Ixchell Jewellery</h2>
+      <p>翡坊翠藝 · Private jadeite boutique at The Adelphi, City Hall Singapore.</p>
+    </div>
+    <div>
+      <h3>Visit</h3>
+      <p>The Adelphi #02-33</p>
+      <p>1 Coleman Street</p>
+      <p>Singapore 179803</p>
+    </div>
+    <div>
+      <h3>Connect</h3>
+      <p><a href="https://www.instagram.com/ixchelljewellery" target="_blank">@ixchelljewellery</a></p>
+      <p><a href="https://ixchelljewellery.com/">ixchelljewellery.com</a></p>
+    </div>
+  </div>
 </footer>
 
 <script type="application/ld+json">
 {
-"@context":"https://schema.org",
-"@type":"FAQPage",
-"mainEntity":[
-
-{
-"@type":"Question",
-"name":"What is lavender jadeite?",
-"acceptedAnswer":{
-"@type":"Answer",
-"text":"Lavender jadeite is a natural variety of jadeite displaying soft violet, lilac and blue-grey tones."
-}
-},
-
-{
-"@type":"Question",
-"name":"Why does lavender jadeite change colour under light?",
-"acceptedAnswer":{
-"@type":"Answer",
-"text":"Lavender jadeite interacts strongly with different lighting conditions, causing violet and blue undertones to appear differently."
-}
-},
-
-{
-"@type":"Question",
-"name":"What is Type A lavender jadeite?",
-"acceptedAnswer":{
-"@type":"Answer",
-"text":"Type A lavender jadeite refers to natural jadeite without bleaching or polymer impregnation."
-}
-}
-
-]
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"Where is Ixchell Jewellery located?","acceptedAnswer":{"@type":"Answer","text":"Ixchell Jewellery is located at The Adelphi #02-33, 1 Coleman Street, Singapore 179803."}},
+    {"@type":"Question","name":"Which MRT station is nearest to Ixchell Jewellery?","acceptedAnswer":{"@type":"Answer","text":"City Hall MRT is the nearest main MRT station."}},
+    {"@type":"Question","name":"Can I take Grab, Gojek, TADA, Ryde or CDG Zig?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter The Adelphi, 1 Coleman Street, Singapore 179803."}},
+    {"@type":"Question","name":"Does Ixchell Jewellery specialise in Type A jadeite?","acceptedAnswer":{"@type":"Answer","text":"Ixchell Jewellery specialises in natural Type A Burmese jadeite bangles, earrings, pendants and collector pieces."}}
+  ]
 }
 </script>
-
 </body>
 </html>
