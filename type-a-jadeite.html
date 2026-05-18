@@ -17,7 +17,7 @@
 
 <meta property="og:title" content="What Is Type A Jadeite? | Ixchell Jewellery Singapore" />
 <meta property="og:description" content="A calm, clear guide to Type A jadeite by Ixchell Jewellery, a private jadeite boutique at The Adelphi Singapore near City Hall MRT." />
-<meta property="og:image" content="https://ixchelljewellery.com/images/type-a-jadeite-hero.jpg" />
+<meta property="og:image" content="https://ixchelljewellery.com/images/type-a-jadeite-hero.png" />
 <meta property="og:url" content="https://ixchelljewellery.com/type-a-jadeite.html" />
 <meta property="og:type" content="article" />
 
@@ -47,7 +47,7 @@ body{
     radial-gradient(circle at 20% 10%, rgba(143,216,255,.12), transparent 35%),
     radial-gradient(circle at 80% 20%, rgba(231,197,107,.08), transparent 35%),
     linear-gradient(135deg, rgba(255,255,255,.035) 1px, transparent 1px),
-    #05070b;
+    linear-gradient(180deg, #05070b 0%, #07111a 45%, #05070b 100%);
   background-size:auto, auto, 22px 22px, auto;
   color:var(--text);
   font-family:Inter, sans-serif;
@@ -142,19 +142,52 @@ h3{
 }
 
 .hero-card{
-  border:1px solid var(--line);
-  background:linear-gradient(145deg, rgba(255,255,255,.08), rgba(255,255,255,.025));
-  padding:16px;
+  position:relative;
+  border:1px solid rgba(255,255,255,.12);
+  background:
+    radial-gradient(circle at center, rgba(143,216,255,.08), transparent 60%),
+    linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.015));
+  padding:18px;
+  overflow:hidden;
   clip-path:polygon(0 0, 94% 0, 100% 8%, 100% 100%, 6% 100%, 0 92%);
-  box-shadow:0 30px 90px rgba(0,0,0,.45);
+  box-shadow:
+    0 30px 90px rgba(0,0,0,.55),
+    inset 0 0 40px rgba(255,255,255,.03);
+}
+
+.hero-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.03) 0%, transparent 30%, transparent 70%, rgba(255,255,255,.02) 100%);
+  pointer-events:none;
 }
 
 .hero-card img{
+  position:relative;
   width:100%;
   display:block;
-  border-radius:18px;
   aspect-ratio:4/5;
-  object-fit:cover;
+  object-fit:contain;
+  animation:floatHero 8s ease-in-out infinite;
+  filter:
+    drop-shadow(0 0 25px rgba(180,220,255,.15))
+    drop-shadow(0 0 60px rgba(180,220,255,.08));
+}
+
+@keyframes floatHero{
+  0%{
+    transform:translateY(0px) scale(1);
+  }
+
+  50%{
+    transform:translateY(-10px) scale(1.015);
+  }
+
+  100%{
+    transform:translateY(0px) scale(1);
+  }
 }
 
 .caption{
@@ -328,7 +361,7 @@ footer{
   "name":"Ixchell Jewellery",
   "alternateName":"翡坊翠藝",
   "url":"https://ixchelljewellery.com",
-  "image":"https://ixchelljewellery.com/images/type-a-jadeite-hero.jpg",
+  "image":"https://ixchelljewellery.com/images/type-a-jadeite-hero.png",
   "address":{
     "@type":"PostalAddress",
     "streetAddress":"The Adelphi #02-33",
@@ -371,7 +404,7 @@ footer{
   </div>
 
   <figure class="hero-card">
-    <img src="images/type-a-jadeite-hero.jpg" alt="Natural Type A Burmese jadeite jewellery at Ixchell Jewellery Singapore">
+    <img src="images/type-a-jadeite-hero.png" alt="Natural Type A Burmese jadeite pendant photographed under cinematic luxury lighting at Ixchell Jewellery Singapore">
     <figcaption class="caption">
       Natural jadeite is best understood in person, where light, skin tone, texture and translucency can be seen honestly.
     </figcaption>
