@@ -27,7 +27,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
-
 :root{
   --bg:#05070b;
   --panel:#0b1018;
@@ -47,20 +46,12 @@
 
 body{
   margin:0;
-
   background:
     radial-gradient(circle at 20% 10%, rgba(143,216,255,.12), transparent 35%),
     radial-gradient(circle at 80% 20%, rgba(231,197,107,.08), transparent 35%),
     linear-gradient(135deg, rgba(255,255,255,.035) 1px, transparent 1px),
-    linear-gradient(
-      180deg,
-      #05070b 0%,
-      #07111a 45%,
-      #05070b 100%
-    );
-
+    linear-gradient(180deg, #05070b 0%, #07111a 45%, #05070b 100%);
   background-size:auto, auto, 22px 22px, auto;
-
   color:var(--text);
   font-family:Inter, sans-serif;
   line-height:1.7;
@@ -68,25 +59,12 @@ body{
 
 body::before{
   content:"";
-
   position:fixed;
   inset:0;
-
   pointer-events:none;
-
   background:
-    repeating-linear-gradient(
-      135deg,
-      rgba(255,255,255,.03) 0 1px,
-      transparent 1px 8px
-    ),
-
-    radial-gradient(
-      circle at 50% 50%,
-      transparent 0,
-      rgba(0,0,0,.45) 75%
-    );
-
+    repeating-linear-gradient(135deg, rgba(255,255,255,.03) 0 1px, transparent 1px 8px),
+    radial-gradient(circle at 50% 50%, transparent 0, rgba(0,0,0,.45) 75%);
   opacity:.5;
   z-index:-1;
 }
@@ -127,20 +105,16 @@ header{
 
 .hero{
   padding:82px 0 56px;
-
   display:grid;
   grid-template-columns:1.05fr .95fr;
-
   gap:46px;
   align-items:center;
 }
 
 .kicker{
   color:var(--blue);
-
   text-transform:uppercase;
   letter-spacing:.22em;
-
   font-size:.78rem;
   font-weight:800;
 }
@@ -175,35 +149,13 @@ h3{
 
 .hero-card{
   position:relative;
-
   border:1px solid rgba(255,255,255,.12);
-
   background:
-    radial-gradient(
-      circle at center,
-      rgba(143,216,255,.08),
-      transparent 60%
-    ),
-
-    linear-gradient(
-      145deg,
-      rgba(255,255,255,.06),
-      rgba(255,255,255,.015)
-    );
-
+    radial-gradient(circle at center, rgba(143,216,255,.08), transparent 60%),
+    linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.015));
   padding:18px;
-
   overflow:hidden;
-
-  clip-path:polygon(
-    0 0,
-    94% 0,
-    100% 8%,
-    100% 100%,
-    6% 100%,
-    0 92%
-  );
-
+  clip-path:polygon(0 0, 94% 0, 100% 8%, 100% 100%, 6% 100%, 0 92%);
   box-shadow:
     0 30px 90px rgba(0,0,0,.55),
     inset 0 0 40px rgba(255,255,255,.03);
@@ -211,57 +163,36 @@ h3{
 
 .hero-card::before{
   content:"";
-
   position:absolute;
   inset:0;
-
   background:
-    linear-gradient(
-      135deg,
-      rgba(255,255,255,.03) 0%,
-      transparent 30%,
-      transparent 70%,
-      rgba(255,255,255,.02) 100%
-    );
-
+    linear-gradient(135deg, rgba(255,255,255,.03) 0%, transparent 30%, transparent 70%, rgba(255,255,255,.02) 100%);
   pointer-events:none;
 }
 
 .hero-card img{
   position:relative;
-
   width:100%;
   display:block;
-
   aspect-ratio:4/5;
-
   object-fit:contain;
-
   animation:floatHero 8s ease-in-out infinite;
-
   filter:
     drop-shadow(0 0 25px rgba(180,220,255,.15))
     drop-shadow(0 0 60px rgba(180,220,255,.08));
 }
 
 @keyframes floatHero{
-
   0%{
-    transform:
-      translateY(0px)
-      scale(1);
+    transform:translateY(0px) scale(1);
   }
 
   50%{
-    transform:
-      translateY(-10px)
-      scale(1.015);
+    transform:translateY(-10px) scale(1.015);
   }
 
   100%{
-    transform:
-      translateY(0px)
-      scale(1);
+    transform:translateY(0px) scale(1);
   }
 }
 
@@ -280,15 +211,10 @@ h3{
 
 .btn{
   border:1px solid var(--line);
-
   padding:13px 18px;
-
   border-radius:999px;
-
   font-weight:800;
-
   background:rgba(255,255,255,.06);
-
   transition:.3s ease;
 }
 
@@ -315,18 +241,9 @@ h3{
 
 .card{
   border:1px solid var(--line);
-
-  background:
-    linear-gradient(
-      160deg,
-      rgba(255,255,255,.075),
-      rgba(255,255,255,.025)
-    );
-
+  background:linear-gradient(160deg, rgba(255,255,255,.075), rgba(255,255,255,.025));
   padding:26px;
-
   border-radius:26px;
-
   min-height:100%;
 }
 
@@ -338,13 +255,9 @@ h3{
 
 .answer-box{
   border-left:4px solid var(--blue);
-
   background:rgba(143,216,255,.07);
-
   padding:26px;
-
   border-radius:0 24px 24px 0;
-
   margin-top:22px;
 }
 
@@ -357,22 +270,16 @@ h3{
 
 .compare{
   width:100%;
-
   border-collapse:collapse;
-
   overflow:hidden;
-
   border-radius:22px;
-
   border:1px solid var(--line);
 }
 
 .compare th,
 .compare td{
   padding:16px;
-
   border-bottom:1px solid var(--line);
-
   text-align:left;
   vertical-align:top;
 }
@@ -389,13 +296,9 @@ h3{
 
 .faq details{
   border:1px solid var(--line);
-
   background:rgba(255,255,255,.045);
-
   padding:20px 22px;
-
   border-radius:22px;
-
   margin-bottom:14px;
 }
 
@@ -411,16 +314,12 @@ h3{
 
 footer{
   padding:44px 0;
-
   border-top:1px solid var(--line);
-
   color:var(--soft);
-
   font-size:.92rem;
 }
 
 @media(max-width:850px){
-
   .hero,
   .two,
   .grid{
@@ -436,7 +335,6 @@ footer{
     flex-direction:column;
   }
 }
-
 </style>
 
 <script type="application/ld+json">
@@ -449,7 +347,39 @@ footer{
       "name":"What is Type A jadeite?",
       "acceptedAnswer":{
         "@type":"Answer",
-        "text":"Type A jadeite refers to natural jadeite that has not been chemically bleached, resin-filled, dyed, or artificially enhanced."
+        "text":"Type A jadeite refers to natural jadeite that has not been chemically bleached, resin-filled, dyed, or artificially enhanced. It may be traditionally polished, but its colour and structure remain natural."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Is Type A jadeite the same as Grade A jade?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Type A is the more accurate trade and gemmological term. Grade A is commonly used by shoppers, but Type A specifically refers to natural untreated jadeite."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Where can I view Type A jadeite in Singapore?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Ixchell Jewellery is a private jadeite boutique at The Adelphi Singapore near City Hall MRT, specialising in natural Type A Burmese jadeite bangles, pendants, earrings and collector pieces."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Is Type A jadeite always expensive?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"No. Price depends on colour, translucency, texture, size, thickness, craftsmanship, rarity and overall beauty. Type A simply tells you the jadeite is natural and untreated."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Why should jadeite be viewed in person?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Jadeite can look different under lighting, skin tone and viewing angle. In-person viewing helps buyers understand colour, translucency, texture, thickness and overall feel."
       }
     }
   ]
@@ -470,132 +400,233 @@ footer{
     "addressLocality":"Singapore",
     "addressCountry":"SG"
   },
-  "areaServed":[
-    "Singapore",
-    "Malaysia",
-    "Brunei",
-    "Indonesia"
-  ]
+  "areaServed":["Singapore","Malaysia","Brunei","Indonesia"],
+  "description":"Ixchell Jewellery is a private jadeite boutique at The Adelphi Singapore near City Hall MRT, specialising in natural Type A Burmese jadeite jewellery."
 }
 </script>
-
 </head>
 
 <body>
 
 <header>
   <div class="wrapper nav">
-
-    <div class="brand">
-      Ixchell Jewellery · 翡坊翠藝
-    </div>
+    <div class="brand">Ixchell Jewellery · 翡坊翠藝</div>
 
     <nav>
-      <a href="index.html">Home</a>
-      &nbsp; / &nbsp;
-
-      <a href="jade-shop-singapore.html">Visit</a>
-      &nbsp; / &nbsp;
-
-      <a href="type-a-vs-b-vs-c-jadeite.html">
-        Type A vs B & C
-      </a>
+      <a href="index.html">Home</a> &nbsp; / &nbsp;
+      <a href="jade-shop-singapore.html">Visit</a> &nbsp; / &nbsp;
+      <a href="type-a-vs-b-vs-c-jadeite.html">Type A vs B & C</a>
     </nav>
-
   </div>
 </header>
 
 <main>
 
 <section class="wrapper hero">
-
   <div>
+    <div class="kicker">Natural Burmese Jadeite · Singapore Guide</div>
 
-    <div class="kicker">
-      Natural Burmese Jadeite · Singapore Guide
-    </div>
-
-    <h1>
-      What Is Type A Jadeite?
-    </h1>
+    <h1>What Is Type A Jadeite?</h1>
 
     <p class="lead">
       Type A jadeite is natural jadeite that has not been chemically bleached, resin-filled, dyed, or artificially enhanced. For anyone choosing jadeite in Singapore, this is the first question to understand before looking at colour, translucency, price, or peerless beauty.
     </p>
 
     <div class="cta-row">
-
-      <a class="btn primary"
-      href="https://www.instagram.com/ixchelljewellery/">
-
-      DM for Private Viewing
-
+      <a class="btn primary" href="https://www.instagram.com/ixchelljewellery/">
+        DM for Private Viewing
       </a>
 
-      <a class="btn"
-      href="type-a-vs-b-vs-c-jadeite.html">
-
-      Compare Type A, B & C
-
+      <a class="btn" href="type-a-vs-b-vs-c-jadeite.html">
+        Compare Type A, B & C
       </a>
-
     </div>
-
   </div>
 
   <figure class="hero-card">
-
-    <img
-    src="type-a-jadeite-hero.png"
-
-    alt="Natural Type A Burmese jadeite pendant photographed under cinematic luxury lighting at Ixchell Jewellery Singapore">
+    <img src="type-a-jadeite-hero.png" alt="Natural Type A Burmese jadeite pendant photographed under cinematic luxury lighting at Ixchell Jewellery Singapore">
 
     <figcaption class="caption">
       Natural jadeite is best understood in person, where light, skin tone, texture and translucency can be seen honestly.
     </figcaption>
-
   </figure>
-
 </section>
 
 <section class="section">
-
   <div class="wrapper two">
-
     <div>
-
-      <div class="kicker">
-        Simple Answer
-      </div>
-
-      <h2>
-        Type A means natural, not magically perfect.
-      </h2>
-
+      <div class="kicker">Simple Answer</div>
+      <h2>Type A means natural, not magically perfect.</h2>
     </div>
 
     <div class="answer-box">
-
       <p>
         Type A jadeite means the stone remains natural in its internal structure and colour. It may be cut, carved, polished and set into jewellery, but it should not be acid-bleached, polymer-filled, dyed, or artificially improved to imitate higher quality jadeite.
       </p>
+    </div>
+  </div>
+</section>
 
+<section class="section">
+  <div class="wrapper">
+    <div class="kicker">Why It Matters</div>
+    <h2>Why buyers should ask this first</h2>
+
+    <div class="grid">
+      <article class="card">
+        <h3>Authenticity</h3>
+        <p>
+          Type A jadeite keeps its natural character. Its beauty comes from the stone itself, not from chemical enhancement.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Long-term confidence</h3>
+        <p>
+          Natural jadeite is preferred by collectors because its identity is clearer and more stable than treated material.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Proper comparison</h3>
+        <p>
+          Colour, translucency and price can only be compared fairly after the treatment status is understood.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrapper">
+    <div class="kicker">Clear Comparison</div>
+    <h2>Type A, Type B and Type C jadeite</h2>
+
+    <table class="compare">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Meaning</th>
+          <th>Buyer note</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td><strong>Type A</strong></td>
+          <td>Natural jadeite. No chemical bleaching, resin filling or dyeing.</td>
+          <td>Preferred for serious buying, collecting and heirloom jewellery.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Type B</strong></td>
+          <td>Acid-treated and commonly resin-filled to improve appearance.</td>
+          <td>May look attractive at first, but it is not natural Type A jadeite.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Type C</strong></td>
+          <td>Dyed jadeite with artificial colour enhancement.</td>
+          <td>Colour may not represent the stone’s natural identity.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrapper two">
+    <div>
+      <div class="kicker">Ixchell Jewellery Singapore</div>
+      <h2>Begin with understanding, not pressure.</h2>
     </div>
 
-  </div>
+    <div>
+      <p>
+        At Ixchell Jewellery, we guide customers through natural Type A Burmese jadeite in a calm private-viewing setting at The Adelphi, near City Hall MRT. Walk-ins are warmly welcome whenever possible, though DM before visiting is gently advised for a more comfortable one-to-one viewing.
+      </p>
 
+      <br>
+
+      <p>
+        Customers are also welcome to arrange independent verification through recognised gemological laboratories in Singapore, including Nanyang Gemological Institute or other recognised authorities. This keeps the buying journey transparent, grounded and respectful.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section faq">
+  <div class="wrapper">
+    <div class="kicker">FAQ</div>
+    <h2>Questions people ask about Type A jadeite</h2>
+
+    <details>
+      <summary>Is Type A jadeite the same as real jade?</summary>
+      <p>
+        Type A jadeite is real natural jadeite. However, “jade” can also refer to nephrite, which is a different mineral. Not all jade is jadeite, and not all jadeite is Type A.
+      </p>
+    </details>
+
+    <details>
+      <summary>Is Type A jadeite always expensive?</summary>
+      <p>
+        No. Price depends on colour, translucency, texture, size, thickness, craftsmanship, rarity and overall beauty. Type A simply tells you the jadeite is natural and untreated.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can Type A jadeite have flaws?</summary>
+      <p>
+        Yes. Natural jadeite may have stone lines, clouds, colour variation, mineral texture or internal structures. Natural does not mean flawless; it means the stone has not been artificially altered.
+      </p>
+    </details>
+
+    <details>
+      <summary>Why should I view jadeite in person?</summary>
+      <p>
+        Jadeite changes under lighting, skin tone and viewing angle. In-person viewing helps you understand colour, translucency, texture, thickness and how the piece feels when worn.
+      </p>
+    </details>
+
+    <details>
+      <summary>Where is Ixchell Jewellery located?</summary>
+      <p>
+        Ixchell Jewellery is located at The Adelphi #02-33, Singapore, near City Hall MRT. The boutique specialises in natural Type A Burmese jadeite jewellery and private jadeite viewing.
+      </p>
+    </details>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrapper">
+    <div class="card">
+      <div class="kicker">Private Jadeite Viewing</div>
+
+      <h2>Learn before you choose.</h2>
+
+      <p>
+        Visit Ixchell Jewellery at The Adelphi Singapore to view Type A Burmese jadeite bangles, pendants, earrings and collector pieces in person. For a quieter experience, kindly DM us on Instagram before visiting.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="https://www.instagram.com/ixchelljewellery/">
+          DM @ixchelljewellery
+        </a>
+
+        <a class="btn" href="index.html">
+          Return to Homepage
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
 </main>
 
 <footer>
-
   <div class="wrapper">
-
     Ixchell Jewellery · 翡坊翠藝 · The Adelphi #02-33 Singapore · Natural Type A Burmese Jadeite · One Stone. One Story.
-
   </div>
-
 </footer>
 
 </body>
