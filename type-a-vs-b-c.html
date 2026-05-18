@@ -8,7 +8,7 @@
 
 <meta name="description" content="Understand the difference between Type A, Type B and Type C jadeite through a calm educational guide by Ixchell Jewellery Singapore near City Hall MRT." />
 
-<meta name="keywords" content="Type A vs B vs C jadeite, Type A jadeite Singapore, jade treatment guide, natural Burmese jadeite, jadeite education Singapore, Ixchell Jewellery" />
+<meta name="keywords" content="Type A vs B vs C jadeite, Type A jadeite Singapore, jade treatment guide, natural Burmese jadeite, jadeite education Singapore, jadeite bangle Singapore, Ixchell Jewellery, 翡坊翠藝, The Adelphi jadeite, City Hall jade shop" />
 
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <meta name="theme-color" content="#05070b" />
@@ -23,16 +23,18 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 :root{
   --bg:#05070b;
-  --line:rgba(255,255,255,.12);
+  --line:rgba(255,255,255,.14);
   --text:#eef4ff;
   --muted:#b9c4d6;
   --soft:#7f8ca3;
   --blue:#8fd8ff;
+  --gold:#e7c56b;
 }
 
 *{
@@ -43,11 +45,25 @@ body{
   margin:0;
   background:
     radial-gradient(circle at 20% 10%, rgba(143,216,255,.12), transparent 35%),
-    linear-gradient(180deg,#05070b 0%,#07111a 45%,#05070b 100%);
-
+    radial-gradient(circle at 80% 20%, rgba(231,197,107,.08), transparent 35%),
+    linear-gradient(135deg, rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(180deg, #05070b 0%, #07111a 45%, #05070b 100%);
+  background-size:auto, auto, 22px 22px, auto;
   color:var(--text);
-  font-family:Inter,sans-serif;
+  font-family:Inter, sans-serif;
   line-height:1.7;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:
+    repeating-linear-gradient(135deg, rgba(255,255,255,.03) 0 1px, transparent 1px 8px),
+    radial-gradient(circle at 50% 50%, transparent 0, rgba(0,0,0,.45) 75%);
+  opacity:.5;
+  z-index:-1;
 }
 
 a{
@@ -61,7 +77,7 @@ a{
 }
 
 header{
-  padding:24px 0;
+  padding:26px 0;
   border-bottom:1px solid var(--line);
 }
 
@@ -69,21 +85,31 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  gap:20px;
 }
 
 .brand{
-  font-family:"Space Grotesk",sans-serif;
+  font-family:Space Grotesk, sans-serif;
   font-weight:800;
   letter-spacing:.08em;
   text-transform:uppercase;
 }
 
+.nav a{
+  color:var(--muted);
+  font-size:.9rem;
+}
+
 .hero{
+  padding:82px 0 56px;
   display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:48px;
+  grid-template-columns:1fr;
+  gap:42px;
   align-items:center;
-  padding:82px 0 60px;
+}
+
+.hero-text{
+  max-width:920px;
 }
 
 .kicker{
@@ -95,54 +121,88 @@ header{
 }
 
 h1,h2,h3{
-  font-family:"Space Grotesk",sans-serif;
+  font-family:Space Grotesk, Inter, sans-serif;
   font-weight:900;
-  line-height:1.05;
   letter-spacing:-.04em;
+  line-height:1.05;
 }
 
 h1{
-  font-size:clamp(2.7rem,6vw,5.6rem);
+  font-size:clamp(2.55rem,7vw,5.8rem);
   margin:18px 0;
 }
 
 h2{
-  font-size:clamp(2rem,4vw,3.2rem);
-  margin-bottom:18px;
+  font-size:clamp(2rem,4vw,3.4rem);
+  margin:0 0 20px;
+}
+
+h3{
+  font-size:1.25rem;
+  margin:0 0 10px;
 }
 
 .lead{
   color:var(--muted);
   font-size:1.08rem;
+  max-width:820px;
 }
 
 .hero-card{
   position:relative;
   border:1px solid rgba(255,255,255,.12);
-  padding:18px;
-  overflow:hidden;
-
   background:
-    radial-gradient(circle at center,rgba(143,216,255,.08),transparent 60%),
-    linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.015));
+    radial-gradient(circle at center, rgba(143,216,255,.08), transparent 60%),
+    linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.015));
+  padding:10px;
+  overflow:hidden;
+  max-width:900px;
+  margin:auto;
+  clip-path:polygon(0 0, 94% 0, 100% 8%, 100% 100%, 6% 100%, 0 92%);
+  box-shadow:
+    0 30px 90px rgba(0,0,0,.55),
+    inset 0 0 40px rgba(255,255,255,.03);
+}
 
-  clip-path:polygon(0 0,94% 0,100% 8%,100% 100%,6% 100%,0 92%);
-
-  box-shadow:0 30px 90px rgba(0,0,0,.55);
+.hero-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.03) 0%, transparent 30%, transparent 70%, rgba(255,255,255,.02) 100%);
+  pointer-events:none;
 }
 
 .hero-card img{
+  position:relative;
   width:100%;
   display:block;
-  object-fit:contain;
-  aspect-ratio:4/5;
+  border-radius:18px;
+  object-fit:cover;
   animation:floatHero 8s ease-in-out infinite;
+  filter:
+    drop-shadow(0 0 25px rgba(180,220,255,.15))
+    drop-shadow(0 0 60px rgba(180,220,255,.08));
 }
 
 @keyframes floatHero{
-  0%{transform:translateY(0px)}
-  50%{transform:translateY(-10px)}
-  100%{transform:translateY(0px)}
+  0%{
+    transform:translateY(0px) scale(1);
+  }
+
+  50%{
+    transform:translateY(-10px) scale(1.015);
+  }
+
+  100%{
+    transform:translateY(0px) scale(1);
+  }
+}
+
+.caption{
+  color:var(--soft);
+  font-size:.86rem;
+  padding:14px 8px 4px;
 }
 
 .section{
@@ -153,23 +213,36 @@ h2{
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:20px;
+  gap:18px;
 }
 
 .card{
   border:1px solid var(--line);
-  border-radius:28px;
-  padding:28px;
-
-  background:
-    linear-gradient(160deg,
-    rgba(255,255,255,.075),
-    rgba(255,255,255,.02));
+  background:linear-gradient(160deg, rgba(255,255,255,.075), rgba(255,255,255,.025));
+  padding:26px;
+  border-radius:26px;
+  min-height:100%;
 }
 
 .card p,
 .section p{
   color:var(--muted);
+  margin:0;
+}
+
+.answer-box{
+  border-left:4px solid var(--blue);
+  background:rgba(143,216,255,.07);
+  padding:26px;
+  border-radius:0 24px 24px 0;
+  margin-top:22px;
+}
+
+.two{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+  align-items:start;
 }
 
 .compare{
@@ -182,41 +255,77 @@ h2{
 
 .compare th,
 .compare td{
-  padding:18px;
+  padding:16px;
   border-bottom:1px solid var(--line);
   text-align:left;
   vertical-align:top;
 }
 
 .compare th{
-  background:linear-gradient(90deg,var(--blue),#ffffff);
-  color:#06111c;
+  color:#07111f;
+  background:linear-gradient(90deg,var(--blue),#fff);
 }
 
 .compare td{
-  background:rgba(255,255,255,.04);
   color:var(--muted);
+  background:rgba(255,255,255,.04);
 }
 
-.cta-box{
-  border:1px solid var(--line);
+.infographic-card{
+  border:1px solid rgba(255,255,255,.12);
   border-radius:28px;
-  padding:34px;
+  padding:14px;
+  background:linear-gradient(160deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
+  box-shadow:0 30px 90px rgba(0,0,0,.45);
+}
 
-  background:
-    linear-gradient(160deg,
-    rgba(255,255,255,.08),
-    rgba(255,255,255,.025));
+.infographic-card img{
+  width:100%;
+  display:block;
+  border-radius:20px;
+}
+
+.faq details{
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.045);
+  padding:20px 22px;
+  border-radius:22px;
+  margin-bottom:14px;
+}
+
+.faq summary{
+  cursor:pointer;
+  font-weight:900;
+  color:var(--text);
+}
+
+.faq p{
+  margin-top:12px;
+}
+
+.cta-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
 }
 
 .btn{
-  display:inline-block;
-  margin-top:24px;
-  padding:14px 22px;
+  border:1px solid var(--line);
+  padding:13px 18px;
   border-radius:999px;
   font-weight:800;
+  background:rgba(255,255,255,.06);
+  transition:.3s ease;
+}
 
-  background:linear-gradient(90deg,var(--blue),#ffffff);
+.btn:hover{
+  transform:translateY(-2px);
+  background:rgba(255,255,255,.1);
+}
+
+.btn.primary{
+  background:linear-gradient(90deg,var(--blue),#fff);
   color:#06111c;
 }
 
@@ -228,16 +337,22 @@ footer{
 }
 
 @media(max-width:850px){
-
-  .hero,
+  .two,
   .grid{
     grid-template-columns:1fr;
   }
 
+  .hero{
+    padding-top:50px;
+  }
+
   .nav{
-    flex-direction:column;
     align-items:flex-start;
-    gap:12px;
+    flex-direction:column;
+  }
+
+  .hero-card{
+    max-width:100%;
   }
 }
 </style>
@@ -252,7 +367,7 @@ footer{
       "name":"What is Type A jadeite?",
       "acceptedAnswer":{
         "@type":"Answer",
-        "text":"Type A jadeite refers to natural jadeite that has not been chemically bleached, dyed or resin-filled."
+        "text":"Type A jadeite refers to natural jadeite that has not been chemically bleached, resin-filled, dyed or artificially enhanced."
       }
     },
     {
@@ -260,7 +375,7 @@ footer{
       "name":"What is Type B jadeite?",
       "acceptedAnswer":{
         "@type":"Answer",
-        "text":"Type B jadeite has been chemically treated and commonly resin-filled to improve appearance and translucency."
+        "text":"Type B jadeite has been chemically treated, often by acid bleaching and polymer impregnation, to improve appearance or translucency."
       }
     },
     {
@@ -268,188 +383,299 @@ footer{
       "name":"What is Type C jadeite?",
       "acceptedAnswer":{
         "@type":"Answer",
-        "text":"Type C jadeite has been artificially dyed to alter or enhance colour."
+        "text":"Type C jadeite has been dyed to alter or enhance its colour."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Is Type B or Type C jadeite the same as natural Type A jadeite?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"No. Type B and Type C jadeite involve treatment. Type A jadeite refers to natural untreated jadeite."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"Where can I learn about Type A jadeite in Singapore?",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"Ixchell Jewellery is a private jadeite boutique at The Adelphi Singapore near City Hall MRT, specialising in natural Type A Burmese jadeite jewellery and educational private viewing."
       }
     }
   ]
 }
 </script>
 
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"JewelryStore",
+  "name":"Ixchell Jewellery",
+  "alternateName":"翡坊翠藝",
+  "url":"https://ixchelljewellery.com",
+  "image":"https://ixchelljewellery.com/type-a-vs-b-vs-c-hero.png",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"The Adelphi #02-33",
+    "addressLocality":"Singapore",
+    "addressCountry":"SG"
+  },
+  "areaServed":["Singapore","Malaysia","Brunei","Indonesia"],
+  "description":"Ixchell Jewellery is a private jadeite boutique at The Adelphi Singapore near City Hall MRT, specialising in natural Type A Burmese jadeite jewellery."
+}
+</script>
 </head>
 
 <body>
 
 <header>
   <div class="wrapper nav">
-
-    <div class="brand">
-      Ixchell Jewellery · 翡坊翠藝
-    </div>
+    <div class="brand">Ixchell Jewellery · 翡坊翠藝</div>
 
     <nav>
-      <a href="index.html">Home</a>
-      &nbsp; / &nbsp;
-      <a href="type-a-jadeite.html">What Is Type A</a>
+      <a href="index.html">Home</a> &nbsp; / &nbsp;
+      <a href="type-a-jadeite.html">What Is Type A</a> &nbsp; / &nbsp;
+      <a href="jade-shop-singapore.html">Visit</a>
     </nav>
-
   </div>
 </header>
 
 <main>
 
 <section class="wrapper hero">
+  <div class="hero-text">
+    <div class="kicker">Jadeite Education Singapore</div>
 
-  <div>
-
-    <div class="kicker">
-      Jadeite Education Singapore
-    </div>
-
-    <h1>
-      Type A vs B vs C Jadeite
-    </h1>
+    <h1>Type A vs B vs C Jadeite</h1>
 
     <p class="lead">
       Most people see colour first. Experienced buyers ask about treatment first. Understanding the difference between Type A, Type B and Type C jadeite helps buyers avoid confusion, unrealistic expectations and misleading comparisons.
     </p>
-
   </div>
 
   <figure class="hero-card">
+    <img src="type-a-vs-b-vs-c-hero.png" alt="Type A versus Type B versus Type C jadeite comparison guide by Ixchell Jewellery Singapore">
 
-    <img
-    src="type-a-vs-b-vs-c-hero.png"
-    alt="Type A versus Type B versus Type C jadeite comparison guide by Ixchell Jewellery Singapore">
-
+    <figcaption class="caption">
+      A cinematic visual guide to natural and treated jadeite. For accurate identification, professional testing and reputable gemological reports remain important.
+    </figcaption>
   </figure>
-
 </section>
 
 <section class="section">
-
-  <div class="wrapper">
-
-    <div class="kicker">
-      The Core Difference
+  <div class="wrapper two">
+    <div>
+      <div class="kicker">Simple Answer</div>
+      <h2>The key difference is treatment.</h2>
     </div>
 
-    <h2>
-      Natural versus treated jadeite
-    </h2>
+    <div class="answer-box">
+      <p>
+        Type A jadeite is natural and untreated. Type B jadeite is chemically treated and commonly polymer impregnated. Type C jadeite is dyed. Type B+C jadeite refers to material that has been chemically treated and dyed. This is why treatment status should be understood before comparing colour, translucency, price or peerless beauty.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrapper">
+    <div class="kicker">Clear Comparison</div>
+    <h2>Type A, Type B, Type C and Type B+C jadeite</h2>
 
     <table class="compare">
-
       <thead>
         <tr>
           <th>Type</th>
           <th>Meaning</th>
-          <th>What buyers should know</th>
+          <th>Buyer note</th>
         </tr>
       </thead>
 
       <tbody>
-
         <tr>
           <td><strong>Type A</strong></td>
-          <td>Natural jadeite with no chemical bleaching, resin filling or dyeing.</td>
-          <td>Preferred by collectors and buyers seeking natural Burmese jadeite.</td>
+          <td>Natural jadeite. No chemical bleaching, resin filling or dyeing.</td>
+          <td>Preferred by buyers seeking natural jadeite, serious collecting and heirloom jewellery.</td>
         </tr>
 
         <tr>
           <td><strong>Type B</strong></td>
-          <td>Acid-treated and commonly resin-filled to improve appearance.</td>
-          <td>May appear more translucent at first glance but is no longer considered natural Type A jadeite.</td>
+          <td>Acid-treated and commonly polymer impregnated to improve appearance and translucency.</td>
+          <td>May appear attractive at first glance, but it is not natural Type A jadeite.</td>
         </tr>
 
         <tr>
           <td><strong>Type C</strong></td>
-          <td>Artificially dyed to enhance or alter colour.</td>
+          <td>Dyed jadeite with artificial colour enhancement.</td>
           <td>Colour does not fully represent the stone’s natural state.</td>
         </tr>
 
+        <tr>
+          <td><strong>Type B+C</strong></td>
+          <td>Chemically treated, polymer impregnated and dyed.</td>
+          <td>Often looks vivid or overly even, but the appearance is not naturally produced.</td>
+        </tr>
       </tbody>
-
     </table>
-
   </div>
-
 </section>
 
 <section class="section">
-
   <div class="wrapper">
-
-    <div class="kicker">
-      Why It Matters
-    </div>
-
-    <h2>
-      Why experienced buyers ask this first
-    </h2>
+    <div class="kicker">Why It Matters</div>
+    <h2>Why experienced buyers ask this first</h2>
 
     <div class="grid">
-
       <article class="card">
         <h3>Fair comparison</h3>
         <p>
-          Colour and translucency should never be compared fairly between natural and treated material without understanding treatment status first.
+          Colour and translucency should not be compared fairly between natural and treated material without first understanding treatment status.
         </p>
       </article>
 
       <article class="card">
         <h3>Long-term confidence</h3>
         <p>
-          Natural jadeite is generally preferred for collecting, heirloom jewellery and long-term appreciation.
+          Natural Type A jadeite is generally preferred for collecting, heirloom jewellery and buyers who value authenticity.
         </p>
       </article>
 
       <article class="card">
         <h3>Knowledge before trends</h3>
         <p>
-          Many buyers focus on intense green colour first. Serious understanding begins with authenticity and structure.
+          Many buyers focus on intense colour first. Serious understanding begins with natural structure, treatment status and honest viewing.
         </p>
       </article>
-
     </div>
-
   </div>
-
 </section>
 
 <section class="section">
-
   <div class="wrapper">
+    <div class="kicker">Professional Observation</div>
+    <h2>Common identification clues under magnification and testing</h2>
 
-    <div class="cta-box">
+    <div class="grid">
+      <article class="card">
+        <h3>Type A jadeite</h3>
+        <p>
+          Natural jadeite may show fine crystalline interlocking structure, natural texture and no obvious acid-etching network. Natural does not mean flawless; it means the material has not been artificially altered.
+        </p>
+      </article>
 
-      <div class="kicker">
-        Private Jadeite Viewing
-      </div>
+      <article class="card">
+        <h3>Type B jadeite</h3>
+        <p>
+          Type B jadeite may show loosened structure, acid-etching patterns, polymer filling and fluorescence under ultraviolet light, depending on the treatment and testing conditions.
+        </p>
+      </article>
 
-      <h2>
-        Learn before you choose.
-      </h2>
+      <article class="card">
+        <h3>Type C jadeite</h3>
+        <p>
+          Type C jadeite may show dye concentration along fractures, uneven colour distribution, colour pooling or unnatural colour zoning.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
 
-      <p>
-        Ixchell Jewellery at The Adelphi Singapore specialises in natural Type A Burmese jadeite bangles, pendants and collector pieces. Customers are welcome to explore jadeite calmly through private viewing and educational guidance near City Hall MRT.
-      </p>
-
-      <a class="btn"
-      href="https://www.instagram.com/ixchelljewellery/">
-      DM @ixchelljewellery
-      </a>
-
+<section class="section">
+  <div class="wrapper two">
+    <div>
+      <div class="kicker">Important Note</div>
+      <h2>Images help learning. Laboratories confirm identity.</h2>
     </div>
 
-  </div>
+    <div>
+      <p>
+        Visual signs can help buyers understand jadeite more intelligently, but accurate identification should be carried out by qualified gemologists using proper instruments and multiple tests. When in doubt, always seek a reputable gemological report.
+      </p>
 
+      <br>
+
+      <p>
+        At Ixchell Jewellery, customers are welcome to arrange independent verification through recognised gemological laboratories in Singapore, including Nanyang Gemological Institute or other recognised authorities.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section faq">
+  <div class="wrapper">
+    <div class="kicker">FAQ</div>
+    <h2>Questions people ask about jadeite treatment</h2>
+
+    <details>
+      <summary>Is Type A jadeite better than Type B or Type C jadeite?</summary>
+      <p>
+        Type A jadeite is preferred by buyers who want natural untreated jadeite. Type B and Type C are treated materials, so they should not be compared with Type A as though they are the same.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can treated jadeite still look beautiful?</summary>
+      <p>
+        Yes, treated jadeite can look attractive. The issue is not whether it looks nice, but whether the buyer understands what it is and pays accordingly.
+      </p>
+    </details>
+
+    <details>
+      <summary>Can I identify Type A jadeite by eye?</summary>
+      <p>
+        Not reliably. Experienced observation can raise suspicion, but proper identification usually requires professional testing and a reputable laboratory report.
+      </p>
+    </details>
+
+    <details>
+      <summary>Why do some treated jadeites look very vivid?</summary>
+      <p>
+        Dyeing and treatment can make colour appear stronger, more even or more dramatic than the stone’s natural state. This is why treatment disclosure matters.
+      </p>
+    </details>
+
+    <details>
+      <summary>Where can I view natural Type A jadeite in Singapore?</summary>
+      <p>
+        Ixchell Jewellery is located at The Adelphi #02-33, Singapore, near City Hall MRT. The boutique specialises in natural Type A Burmese jadeite jewellery and private jadeite viewing.
+      </p>
+    </details>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrapper">
+    <div class="card">
+      <div class="kicker">Private Jadeite Viewing</div>
+
+      <h2>Learn before you choose.</h2>
+
+      <p>
+        Visit Ixchell Jewellery at The Adelphi Singapore to view natural Type A Burmese jadeite bangles, pendants, earrings and collector pieces in person. For a quieter experience, kindly DM us on Instagram before visiting.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn primary" href="https://www.instagram.com/ixchelljewellery/">
+          DM @ixchelljewellery
+        </a>
+
+        <a class="btn" href="type-a-jadeite.html">
+          Read: What Is Type A Jadeite?
+        </a>
+
+        <a class="btn" href="index.html">
+          Return to Homepage
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
 
 </main>
 
 <footer>
   <div class="wrapper">
-    Ixchell Jewellery · 翡坊翠藝 · The Adelphi #02-33 Singapore · Natural Type A Burmese Jadeite
+    Ixchell Jewellery · 翡坊翠藝 · The Adelphi #02-33 Singapore · Natural Type A Burmese Jadeite · One Stone. One Story.
   </div>
 </footer>
 
