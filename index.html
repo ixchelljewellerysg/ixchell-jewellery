@@ -16,10 +16,7 @@ content="9utpzrIOBpC92ewH1LbLsCqmLIgABFmCDbJ2naw3y-E"
 />
 
 <title>
-
-Ixchell Jewellery Singapore |
-Type A Burmese Jadeite Boutique At The Adelphi
-
+Ixchell Jewellery Singapore | Type A Burmese Jadeite Boutique At The Adelphi
 </title>
 
 <meta
@@ -29,7 +26,7 @@ content="Ixchell Jewellery is a private Type A Burmese jadeite boutique at The A
 
 <meta
 name="keywords"
-content="Ixchell Jewellery, 翡坊翠藝, Type A Burmese jadeite Singapore, jadeite Singapore, jade shop Singapore, The Adelphi jadeite, City Hall MRT jadeite, jadeite bangles Singapore"
+content="Ixchell Jewellery, 翡坊翠藝, Type A Burmese jadeite Singapore, jadeite Singapore, jade shop Singapore, jadeite boutique Singapore, The Adelphi jadeite, City Hall MRT jadeite, jadeite bangles Singapore, natural jadeite Singapore"
 />
 
 <meta
@@ -49,7 +46,7 @@ href="https://ixchelljewellery.com/"
 
 <meta
 property="og:title"
-content="Ixchell Jewellery Singapore"
+content="Ixchell Jewellery Singapore | Type A Burmese Jadeite Boutique"
 />
 
 <meta
@@ -122,6 +119,38 @@ as="audio"
 href="intro.mp3"
 />
 
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"JewelryStore",
+  "name":"Ixchell Jewellery",
+  "alternateName":"翡坊翠藝",
+  "url":"https://ixchelljewellery.com",
+  "logo":"https://ixchelljewellery.com/logo-transparent.png",
+  "image":"https://ixchelljewellery.com/ixchell-jewellery-shopfront-the-adelphi.jpg",
+  "description":"Private Singapore boutique specialising in natural Type A Burmese jadeite.",
+  "telephone":"+6591050813",
+  "priceRange":"$$",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"1 Coleman Street The Adelphi #02-33",
+    "addressLocality":"Singapore",
+    "postalCode":"179803",
+    "addressCountry":"SG"
+  },
+  "areaServed":[
+    "Singapore",
+    "Malaysia",
+    "Indonesia",
+    "Brunei",
+    "Philippines"
+  ],
+  "sameAs":[
+    "https://instagram.com/ixchelljewellery"
+  ]
+}
+</script>
+
 <style>
 
 :root{
@@ -129,10 +158,13 @@ href="intro.mp3"
 --black:#020611;
 --deep:#030914;
 --navy:#071426;
+--ink:#0b1728;
 
 --rmBlue:#315f9c;
 --rmBlue2:#12a8c8;
-
+--sora:#b0e0e6;
+--silver:#d8edf7;
+--titanium:#d2e4f0;
 --ice:#edf7fb;
 
 --line:
@@ -156,11 +188,10 @@ rgba(
 245,
 250,
 255,
-.93
+.94
 );
 
 --shadow:
-
 0 32px 110px
 rgba(
 0,
@@ -175,7 +206,6 @@ rgba(
 
 margin:0;
 padding:0;
-
 box-sizing:border-box;
 
 }
@@ -189,7 +219,6 @@ scroll-behavior:smooth;
 body{
 
 font-family:
-
 "Inter",
 sans-serif;
 
@@ -207,14 +236,14 @@ rgba(
 2,
 6,
 17,
-.84
+.66
 ),
 
 rgba(
 7,
 20,
 38,
-.82
+.74
 )
 
 ),
@@ -224,9 +253,7 @@ url(
 );
 
 background-size:cover;
-
 background-position:center;
-
 background-attachment:fixed;
 
 }
@@ -248,10 +275,10 @@ radial-gradient(
 circle at 15% 10%,
 
 rgba(
-176,
-224,
-230,
-.18
+190,
+228,
+248,
+.26
 ),
 
 transparent 28%
@@ -263,17 +290,84 @@ radial-gradient(
 circle at 82% 12%,
 
 rgba(
-49,
-95,
-156,
-.28
+120,
+190,
+255,
+.22
 ),
 
 transparent 36%
 
+),
+
+radial-gradient(
+
+circle at 50% 30%,
+
+rgba(
+170,
+230,
+255,
+.10
+),
+
+transparent 42%
+
 );
 
 z-index:-1;
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+inset:0;
+
+pointer-events:none;
+
+z-index:-1;
+
+background:
+
+linear-gradient(
+
+120deg,
+
+transparent,
+
+rgba(
+255,
+255,
+255,
+.035
+),
+
+transparent
+
+),
+
+repeating-linear-gradient(
+
+135deg,
+
+rgba(
+176,
+224,
+230,
+.032
+)
+
+0 1px,
+
+transparent 1px 18px
+
+);
+
+opacity:.78;
 
 }
 
@@ -349,14 +443,14 @@ rgba(
 2,
 6,
 17,
-.74
+.58
 ),
 
 rgba(
 2,
 6,
 17,
-.94
+.88
 )
 
 ),
@@ -401,11 +495,24 @@ padding:
 
 background:
 
+linear-gradient(
+
+180deg,
+
 rgba(
 3,
 9,
 20,
-.78
+.72
+),
+
+rgba(
+7,
+20,
+38,
+.84
+)
+
 );
 
 backdrop-filter:
@@ -416,12 +523,12 @@ blur(
 
 border:
 
-1px solid
+1.6px solid
 
 rgba(
-176,
-224,
-230,
+214,
+233,
+245,
 .22
 );
 
@@ -433,24 +540,157 @@ text-align:center;
 
 box-shadow:
 
-0 40px 120px
+0 42px 140px
 
 rgba(
 0,
 0,
 0,
-.5
+.55
+),
+
+0 0 0 1px
+
+rgba(
+176,
+224,
+230,
+.08
+),
+
+inset
+
+0 0 0 1px
+
+rgba(
+255,
+255,
+255,
+.03
+),
+
+inset
+
+0 1px 0
+
+rgba(
+220,
+240,
+250,
+.10
 );
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.intro-panel::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+
+130deg,
+
+transparent,
+
+rgba(
+255,
+255,
+255,
+.05
+),
+
+transparent
+
+);
+
+pointer-events:none;
 
 }
 
 .intro-logo{
 
-width:170px;
+width:190px;
 
 margin:
 
 0 auto 22px;
+
+animation:
+
+logoGlow
+
+4s ease-in-out infinite;
+
+}
+
+@keyframes logoGlow{
+
+0%{
+
+filter:
+
+drop-shadow(
+
+0 0 6px
+
+rgba(
+176,
+224,
+230,
+.12
+)
+
+);
+
+}
+
+50%{
+
+filter:
+
+drop-shadow(
+
+0 0 18px
+
+rgba(
+170,
+225,
+255,
+.26
+)
+
+);
+
+}
+
+100%{
+
+filter:
+
+drop-shadow(
+
+0 0 6px
+
+rgba(
+176,
+224,
+230,
+.12
+)
+
+);
+
+}
 
 }
 
@@ -472,12 +712,25 @@ linear-gradient(
 
 transparent,
 
+#d8edf7,
+
 #b0e0e6,
 
 #12a8c8,
 
 transparent
 
+);
+
+box-shadow:
+
+0 0 18px
+
+rgba(
+176,
+224,
+230,
+.18
 );
 
 }
@@ -491,11 +744,21 @@ serif;
 
 font-size:
 
-2rem;
+2.2rem;
 
 font-weight:
 
 800;
+
+letter-spacing:
+
+-.02em;
+
+line-height:
+
+1.12;
+
+color:white;
 
 }
 
@@ -507,7 +770,7 @@ margin:
 
 max-width:
 
-320px;
+330px;
 
 line-height:
 
@@ -519,7 +782,7 @@ rgba(
 237,
 247,
 251,
-.75
+.76
 );
 
 }
@@ -530,7 +793,16 @@ padding:
 
 14px 28px;
 
-border:none;
+border:
+
+1px solid
+
+rgba(
+214,
+233,
+245,
+.38
+);
 
 border-radius:
 
@@ -550,13 +822,26 @@ linear-gradient(
 
 #ffffff,
 
-#b0e0e6
+#d8edf7,
+
+#b8dcea
 
 );
 
 color:
 
 #030914;
+
+box-shadow:
+
+0 10px 32px
+
+rgba(
+160,
+220,
+245,
+.18
+);
 
 }
 
@@ -578,21 +863,34 @@ position:sticky;
 
 top:0;
 
-z-index:1000;
+z-index:1200;
 
 background:
+
+linear-gradient(
+
+180deg,
 
 rgba(
 2,
 6,
 17,
-.88
+.92
+),
+
+rgba(
+3,
+9,
+20,
+.84
+)
+
 );
 
 backdrop-filter:
 
 blur(
-18px
+22px
 );
 
 border-bottom:
@@ -600,10 +898,70 @@ border-bottom:
 1px solid
 
 rgba(
+210,
+228,
+240,
+.12
+);
+
+box-shadow:
+
+0 8px 36px
+
+rgba(
+0,
+0,
+0,
+.18
+);
+
+}
+
+header::after{
+
+content:"";
+
+position:absolute;
+
+left:0;
+
+right:0;
+
+bottom:0;
+
+height:1px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(
 176,
 224,
 230,
-.12
+.18
+),
+
+rgba(
+210,
+228,
+240,
+.26
+),
+
+rgba(
+176,
+224,
+230,
+.18
+),
+
+transparent
+
 );
 
 }
@@ -612,7 +970,7 @@ rgba(
 
 min-height:
 
-82px;
+88px;
 
 display:flex;
 
@@ -620,7 +978,11 @@ align-items:center;
 
 justify-content:space-between;
 
-gap:24px;
+gap:28px;
+
+position:relative;
+
+z-index:2;
 
 }
 
@@ -633,7 +995,7 @@ serif;
 
 font-size:
 
-1.28rem;
+2rem;
 
 font-weight:
 
@@ -641,7 +1003,22 @@ font-weight:
 
 color:white;
 
+letter-spacing:
+
+-.03em;
+
 white-space:nowrap;
+
+text-shadow:
+
+0 0 18px
+
+rgba(
+176,
+224,
+230,
+.08
+);
 
 }
 
@@ -649,7 +1026,7 @@ white-space:nowrap;
 
 display:block;
 
-margin-top:4px;
+margin-top:6px;
 
 font-family:
 
@@ -658,15 +1035,24 @@ sans-serif;
 
 font-size:
 
-.72rem;
+.78rem;
 
 font-weight:
 
 700;
 
+letter-spacing:
+
+.08em;
+
 color:
 
-#b0e0e6;
+rgba(
+216,
+237,
+247,
+.82
+);
 
 }
 
@@ -674,7 +1060,7 @@ color:
 
 display:flex;
 
-gap:22px;
+gap:24px;
 
 align-items:center;
 
@@ -683,13 +1069,13 @@ font-family:
 "Space Grotesk",
 sans-serif;
 
+font-size:
+
+.92rem;
+
 font-weight:
 
 800;
-
-font-size:
-
-.88rem;
 
 }
 
@@ -697,11 +1083,15 @@ font-size:
 
 position:relative;
 
-opacity:.84;
+padding:
+
+6px 2px;
+
+opacity:.88;
 
 transition:
 
-.25s;
+all .28s ease;
 
 }
 
@@ -711,11 +1101,17 @@ opacity:1;
 
 color:
 
-#b0e0e6;
+#d8edf7;
+
+transform:
+
+translateY(
+-1px
+);
 
 }
 
-.nav-links a::after{
+.nav-links a::before{
 
 content:"";
 
@@ -723,11 +1119,21 @@ position:absolute;
 
 left:0;
 
-bottom:-8px;
+right:0;
 
-width:0;
+bottom:-10px;
 
 height:2px;
+
+transform:
+
+scaleX(
+0
+);
+
+transition:
+
+transform .28s ease;
 
 background:
 
@@ -735,21 +1141,38 @@ linear-gradient(
 
 90deg,
 
+transparent,
+
+#b0e0e6,
+
 #12a8c8,
 
-#b0e0e6
+#d8edf7,
+
+transparent
 
 );
 
-transition:
+box-shadow:
 
-.25s;
+0 0 12px
+
+rgba(
+176,
+224,
+230,
+.18
+);
 
 }
 
-.nav-links a:hover::after{
+.nav-links a:hover::before{
 
-width:100%;
+transform:
+
+scaleX(
+1
+);
 
 }
 
@@ -769,13 +1192,17 @@ letter-spacing:
 
 .22em;
 
-text-transform:uppercase;
+text-transform:
+
+uppercase;
 
 color:
 
 #b0e0e6;
 
-margin-bottom:14px;
+margin-bottom:
+
+14px;
 
 }
 
@@ -794,7 +1221,7 @@ clamp(
 
 6vw,
 
-5.6rem
+5.7rem
 
 );
 
@@ -802,15 +1229,21 @@ line-height:
 
 1.02;
 
-margin-bottom:24px;
-
 font-weight:
 
 800;
 
+margin-bottom:
+
+24px;
+
+letter-spacing:
+
+-.03em;
+
 text-shadow:
 
-0 22px 62px
+0 18px 60px
 
 rgba(
 0,
@@ -832,7 +1265,7 @@ font-size:
 
 clamp(
 
-2.2rem,
+2rem,
 
 4vw,
 
@@ -844,7 +1277,17 @@ line-height:
 
 1.08;
 
-margin-bottom:18px;
+font-weight:
+
+800;
+
+margin-bottom:
+
+20px;
+
+letter-spacing:
+
+-.02em;
 
 }
 
@@ -869,11 +1312,11 @@ p{
 
 line-height:
 
-1.72;
+1.74;
 
 }
 
-/* RM LUXURY CARD */
+/* RM TITANIUM CARD */
 
 .lux-card{
 
@@ -887,14 +1330,14 @@ rgba(
 255,
 255,
 255,
-.95
+.96
 ),
 
 rgba(
-236,
-246,
+240,
+247,
 252,
-.92
+.93
 )
 
 );
@@ -908,27 +1351,60 @@ border:
 1px solid
 
 rgba(
-176,
-224,
-230,
-.28
+210,
+228,
+240,
+.26
 );
 
 border-radius:
 
-24px;
+28px;
 
 padding:
 
-28px;
-
-box-shadow:
-
-var(--shadow);
+30px;
 
 position:relative;
 
 overflow:hidden;
+
+box-shadow:
+
+0 28px 90px
+
+rgba(
+0,
+0,
+0,
+.34
+),
+
+0 0 0 1px
+
+rgba(
+176,
+224,
+230,
+.05
+),
+
+inset
+
+0 1px 0
+
+rgba(
+255,
+255,
+255,
+.12
+);
+
+backdrop-filter:
+
+blur(
+12px
+);
 
 }
 
@@ -954,7 +1430,7 @@ linear-gradient(
 
 transparent,
 
-#b0e0e6,
+#d8edf7,
 
 #12a8c8,
 
@@ -966,11 +1442,54 @@ transparent
 
 }
 
+.lux-card::after{
+
+content:"";
+
+position:absolute;
+
+top:-120%;
+
+left:-30%;
+
+width:40%;
+
+height:260%;
+
+transform:
+
+rotate(
+18deg
+);
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(
+255,
+255,
+255,
+.06
+),
+
+transparent
+
+);
+
+pointer-events:none;
+
+}
+
 .lux-card h3{
 
 color:
 
-#0b1728;
+#081425;
 
 }
 
@@ -978,7 +1497,7 @@ color:
 
 color:
 
-#536273;
+#526273;
 
 }
 
@@ -988,11 +1507,13 @@ color:
 
 display:flex;
 
-gap:12px;
-
 flex-wrap:wrap;
 
-margin-top:24px;
+gap:14px;
+
+margin-top:
+
+26px;
 
 }
 
@@ -1006,7 +1527,7 @@ justify-content:center;
 
 padding:
 
-14px 22px;
+14px 24px;
 
 border-radius:
 
@@ -1018,7 +1539,7 @@ font-weight:
 
 transition:
 
-.22s;
+all .25s ease;
 
 }
 
@@ -1026,7 +1547,9 @@ transition:
 
 transform:
 
-translateY(-2px);
+translateY(
+-2px
+);
 
 }
 
@@ -1034,7 +1557,15 @@ translateY(-2px);
 
 background:
 
-#030914;
+linear-gradient(
+
+135deg,
+
+#030914,
+
+#071426
+
+);
 
 color:white;
 
@@ -1056,20 +1587,20 @@ linear-gradient(
 
 color:white;
 
+box-shadow:
+
+0 10px 28px
+
+rgba(
+18,
+168,
+200,
+.18
+);
+
 }
 
 .btn-outline{
-
-border:
-
-1px solid
-
-rgba(
-176,
-224,
-230,
-.38
-);
 
 background:
 
@@ -1077,22 +1608,31 @@ rgba(
 255,
 255,
 255,
-.06
+.05
+);
+
+border:
+
+1px solid
+
+rgba(
+210,
+228,
+240,
+.22
 );
 
 color:white;
 
-}
-
-/* HERO */
-
-.hero{
+}.hero{
 
 padding:
 
 118px 0 98px;
 
 position:relative;
+
+overflow:hidden;
 
 }
 
@@ -1104,6 +1644,8 @@ position:absolute;
 
 inset:0;
 
+pointer-events:none;
+
 background:
 
 linear-gradient(
@@ -1114,7 +1656,7 @@ rgba(
 176,
 224,
 230,
-.06
+.08
 ),
 
 transparent 22%,
@@ -1125,12 +1667,25 @@ rgba(
 49,
 95,
 156,
-.08
+.10
 )
 
-);
+),
 
-pointer-events:none;
+radial-gradient(
+
+circle at 82% 18%,
+
+rgba(
+120,
+190,
+255,
+.12
+),
+
+transparent 34%
+
+);
 
 }
 
@@ -1138,7 +1693,7 @@ pointer-events:none;
 
 max-width:
 
-860px;
+870px;
 
 position:relative;
 
@@ -1156,7 +1711,9 @@ max-width:
 
 720px;
 
-margin-bottom:16px;
+margin-bottom:
+
+16px;
 
 color:
 
@@ -1164,7 +1721,7 @@ rgba(
 237,
 247,
 251,
-.88
+.9
 );
 
 }
@@ -1173,9 +1730,11 @@ rgba(
 
 max-width:
 
-660px;
+670px;
 
-margin-bottom:30px;
+margin-bottom:
+
+30px;
 
 color:
 
@@ -1190,13 +1749,25 @@ rgba(
 
 .trust-box{
 
-margin-top:34px;
+margin-top:
+
+34px;
+
+}
+
+.trust-box p + p{
+
+margin-top:
+
+14px;
 
 }
 
 .security-note{
 
-margin-top:18px;
+margin-top:
+
+18px;
 
 padding:
 
@@ -1226,9 +1797,565 @@ rgba(
 .18
 );
 
-}.security-note{
+}
 
-margin-top:18px;
+/* TRUST STRIP */
+
+.strip{
+
+padding:
+
+34px 0;
+
+text-align:center;
+
+background:
+
+rgba(
+2,
+6,
+17,
+.72
+);
+
+border-top:
+
+1px solid
+
+rgba(
+176,
+224,
+230,
+.14
+);
+
+border-bottom:
+
+1px solid
+
+rgba(
+176,
+224,
+230,
+.14
+);
+
+}
+
+.strip p{
+
+font-family:
+
+"Playfair Display",
+serif;
+
+font-size:
+
+1.24rem;
+
+color:white;
+
+}
+
+/* SECTION BASE */
+
+.discovery,
+.learning-hub,
+.question-section,
+.visit-section,
+.final-cta{
+
+padding:
+
+94px 0;
+
+position:relative;
+
+}
+
+.discovery::before,
+.learning-hub::before,
+.question-section::before,
+.visit-section::before,
+.final-cta::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:5%;
+
+right:5%;
+
+height:1px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(
+176,
+224,
+230,
+.30
+),
+
+rgba(
+216,
+237,
+247,
+.24
+),
+
+transparent
+
+);
+
+}
+
+.section-intro{
+
+max-width:
+
+800px;
+
+margin-bottom:
+
+42px;
+
+}
+
+.section-intro p{
+
+color:
+
+rgba(
+237,
+247,
+251,
+.78
+);
+
+}
+
+/* DISCOVERY + LEARNING GRID */
+
+.discovery-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+3,
+1fr
+);
+
+gap:
+
+24px;
+
+align-items:stretch;
+
+}
+
+.discovery-card{
+
+position:relative;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:space-between;
+
+min-height:
+
+260px;
+
+padding:
+
+30px;
+
+overflow:hidden;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+rgba(
+255,
+255,
+255,
+.96
+),
+
+rgba(
+240,
+247,
+252,
+.93
+)
+
+);
+
+border:
+
+1px solid
+
+rgba(
+210,
+228,
+240,
+.26
+);
+
+border-radius:
+
+28px;
+
+box-shadow:
+
+0 28px 90px
+
+rgba(
+0,
+0,
+0,
+.34
+),
+
+0 0 0 1px
+
+rgba(
+176,
+224,
+230,
+.05
+),
+
+inset
+
+0 1px 0
+
+rgba(
+255,
+255,
+255,
+.12
+);
+
+backdrop-filter:
+
+blur(
+12px
+);
+
+color:
+
+#0b1728;
+
+}
+
+.discovery-card::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+right:0;
+
+height:3px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+#d8edf7,
+
+#12a8c8,
+
+#315f9c,
+
+transparent
+
+);
+
+}
+
+.discovery-card::after{
+
+content:"";
+
+position:absolute;
+
+top:-120%;
+
+left:-30%;
+
+width:40%;
+
+height:260%;
+
+transform:
+
+rotate(
+18deg
+);
+
+background:
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(
+255,
+255,
+255,
+.06
+),
+
+transparent
+
+);
+
+pointer-events:none;
+
+}
+
+.discovery-card span,
+.learning-group-header span,
+.subquestion span{
+
+display:block;
+
+font-size:
+
+.72rem;
+
+font-weight:
+
+900;
+
+letter-spacing:
+
+.18em;
+
+text-transform:uppercase;
+
+color:
+
+#315f9c;
+
+margin-bottom:
+
+10px;
+
+}
+
+.discovery-card h3{
+
+color:
+
+#081425;
+
+font-size:
+
+1.42rem;
+
+line-height:
+
+1.2;
+
+margin-bottom:
+
+12px;
+
+}
+
+.discovery-card p{
+
+color:
+
+#3f4f61;
+
+font-size:
+
+1rem;
+
+font-weight:
+
+500;
+
+line-height:
+
+1.7;
+
+}
+
+.discovery-actions{
+
+display:flex;
+
+gap:8px;
+
+flex-wrap:wrap;
+
+margin-top:
+
+22px;
+
+}
+
+.mini-link{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:
+
+7px 12px;
+
+border-radius:
+
+999px;
+
+background:
+
+rgba(
+49,
+95,
+156,
+.09
+);
+
+font-size:
+
+.72rem;
+
+font-weight:
+
+900;
+
+color:
+
+#315f9c;
+
+}.learning-group{
+
+margin-bottom:
+
+74px;
+
+}
+
+.learning-group-header{
+
+margin-bottom:
+
+30px;
+
+padding-bottom:
+
+14px;
+
+border-bottom:
+
+1px solid
+
+rgba(
+176,
+224,
+230,
+.22
+);
+
+}
+
+.learning-group-header h3{
+
+color:white;
+
+}
+
+.learning-card{
+
+min-height:
+
+260px;
+
+}
+
+/* QUESTION / ANSWER SECTIONS */
+
+.question-grid{
+
+display:grid;
+
+grid-template-columns:
+
+.88fr 1.42fr;
+
+gap:
+
+40px;
+
+align-items:start;
+
+}
+
+.answer-card p + p{
+
+margin-top:
+
+16px;
+
+}
+
+.subquestion-grid{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+2,
+1fr
+);
+
+gap:
+
+16px;
+
+margin-top:
+
+26px;
+
+}
+
+.subquestion{
 
 padding:
 
@@ -1252,13 +2379,301 @@ border:
 1px solid
 
 rgba(
-49,
-95,
-156,
+210,
+228,
+240,
 .18
 );
 
-}/* MOBILE RESPONSIVE */
+}
+
+.subquestion strong{
+
+display:block;
+
+font-size:
+
+.95rem;
+
+color:
+
+#0b1728;
+
+}
+
+/* INVENTORY / VALUE */
+
+.inventory-panel{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+2,
+1fr
+);
+
+gap:
+
+16px;
+
+margin-top:
+
+26px;
+
+}
+
+.inventory-stat{
+
+padding:
+
+18px;
+
+border-radius:
+
+18px;
+
+background:
+
+rgba(
+49,
+95,
+156,
+.08
+);
+
+border:
+
+1px solid
+
+rgba(
+210,
+228,
+240,
+.18
+);
+
+}
+
+.inventory-stat span{
+
+display:block;
+
+font-family:
+
+"Space Grotesk",
+sans-serif;
+
+font-size:
+
+1.38rem;
+
+font-weight:
+
+900;
+
+color:
+
+#315f9c;
+
+margin-bottom:
+
+6px;
+
+}
+
+/* VISIT */
+
+.visit-cards{
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+3,
+1fr
+);
+
+gap:
+
+18px;
+
+margin-top:
+
+30px;
+
+}
+
+.address-card{
+
+margin-top:
+
+24px;
+
+display:grid;
+
+grid-template-columns:
+
+repeat(
+4,
+1fr
+);
+
+gap:
+
+18px;
+
+}
+
+/* FINAL CTA */
+
+.final-cta{
+
+text-align:center;
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:
+
+rgba(
+2,
+6,
+17,
+.96
+);
+
+color:white;
+
+padding:
+
+60px 0 126px;
+
+border-top:
+
+1px solid
+
+rgba(
+210,
+228,
+240,
+.18
+);
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:
+
+1.45fr .85fr;
+
+gap:
+
+38px;
+
+}
+
+.footer-brand{
+
+font-family:
+
+"Playfair Display",
+serif;
+
+font-size:
+
+1.6rem;
+
+font-weight:
+
+800;
+
+margin-bottom:
+
+10px;
+
+}
+
+.footer-links{
+
+display:flex;
+
+flex-wrap:wrap;
+
+gap:
+
+10px 16px;
+
+margin-top:
+
+18px;
+
+}
+
+.footer-links a{
+
+font-size:
+
+.84rem;
+
+color:
+
+rgba(
+237,
+247,
+251,
+.78
+);
+
+}
+
+footer p{
+
+color:
+
+rgba(
+237,
+247,
+251,
+.72
+);
+
+}
+
+/* STICKY MOBILE CTA */
+
+.sticky-mobile-cta{
+
+display:none;
+
+}
+
+main{
+
+padding-bottom:
+
+110px;
+
+}
+
+.reveal,
+.reveal.visible{
+
+opacity:1;
+
+transform:none;
+
+}
+
+/* MOBILE RESPONSIVE */
 
 @media(max-width:900px){
 
@@ -1289,6 +2704,10 @@ gap:14px;
 .brand{
 
 text-align:center;
+
+font-size:
+
+1.5rem;
 
 }
 
@@ -1342,6 +2761,42 @@ width:92%;
 
 }
 
+.intro-panel{
+
+width:min(
+
+420px,
+
+92vw
+
+);
+
+padding:
+
+30px 22px;
+
+border-radius:
+
+26px;
+
+}
+
+.intro-logo{
+
+width:
+
+165px;
+
+}
+
+.intro-title{
+
+font-size:
+
+1.9rem;
+
+}
+
 .hero{
 
 padding:
@@ -1378,11 +2833,42 @@ font-size:
 
 padding:
 
-22px;
+24px;
 
 border-radius:
 
-20px;
+22px;
+
+}
+
+.discovery-grid{
+
+grid-template-columns:
+
+1fr;
+
+gap:
+
+22px;
+
+}
+
+.discovery-card,
+.learning-card{
+
+min-height:auto;
+
+padding:
+
+24px;
+
+}
+
+.discovery-card h3{
+
+font-size:
+
+1.28rem;
 
 }
 
@@ -1418,18 +2904,11 @@ margin-bottom:
 
 }
 
-.discovery-card,
-.learning-card{
-
-min-height:auto;
-
-}
-
 .address-card{
 
 padding:
 
-22px;
+24px;
 
 }
 
@@ -1437,7 +2916,7 @@ footer{
 
 padding-bottom:
 
-126px;
+132px;
 
 }
 
@@ -1500,13 +2979,24 @@ blur(
 18px
 );
 
+border:
+
+1px solid
+
+rgba(
+216,
+237,
+247,
+.26
+);
+
 }
 
 main{
 
 padding-bottom:
 
-110px;
+120px;
 
 }
 
@@ -1546,7 +3036,7 @@ gap:
 
 font-size:
 
-1.08rem;
+1.2rem;
 
 }
 
@@ -1566,11 +3056,7 @@ font-size:
 
 }
 
-}
-
-</style>
-
-</head></style>
+}</style>
 
 </head>
 
@@ -1611,9 +3097,7 @@ Ixchell Jewellery
 
 <p class="intro-subtitle">
 
-A quieter way to understand
-natural Type A Burmese jadeite
-in Singapore.
+A quieter way to understand natural Type A Burmese jadeite in Singapore.
 
 </p>
 
@@ -1641,12 +3125,7 @@ Tap to enter with sound
 
 <header>
 
-<div
-class="
-container
-nav
-"
->
+<div class="container nav">
 
 <a
 href="/"
@@ -1663,11 +3142,7 @@ Ixchell Jewellery
 
 </a>
 
-<nav
-class="
-nav-links
-"
->
+<nav class="nav-links">
 
 <a href="#mustread">
 
@@ -1709,24 +3184,13 @@ Visit
 
 <!-- HERO -->
 
-<section
-class="hero"
->
+<section class="hero">
 
-<div
-class="
-container
-hero-content
-reveal
-"
->
+<div class="container hero-content reveal">
 
-<div
-class="eyebrow"
->
+<div class="eyebrow">
 
-Private Jadeite Boutique ·
-The Adelphi Singapore
+Private Jadeite Boutique · The Adelphi Singapore
 
 </div>
 
@@ -1736,27 +3200,20 @@ A quieter way to understand jadeite.
 
 </h1>
 
-<p
-class="hero-lead"
->
+<p class="hero-lead">
 
-Ixchell Jewellery is a private jadeite boutique near City Hall MRT Singapore specialising in natural Type A Burmese jadeite, calm viewing and educational understanding.
+Ixchell Jewellery is a private jadeite boutique near City Hall MRT Singapore, specialising in natural Type A Burmese jadeite, calm viewing and educational understanding.
 
 </p>
 
-<p
-class="hero-proof"
->
+<p class="hero-proof">
 
 We welcome customers who prefer comfort, explanation, privacy and face-to-face confidence before choosing jadeite.
 
 </p>
 
 <div
-class="
-trust-box
-lux-card
-"
+class="trust-box lux-card"
 id="mustread"
 >
 
@@ -1778,11 +3235,7 @@ We do not acknowledge unofficial payment arrangements outside our boutique.
 
 </p>
 
-<div
-class="
-security-note
-"
->
+<div class="security-note">
 
 <p>
 
@@ -1798,28 +3251,13 @@ Please complete official viewing and transactions personally at The Adelphi Sing
 
 </div>
 
-<div
-class="
-btn-row
-"
->
+<div class="btn-row">
 
 <a
-
-class="
-btn
-btn-dark
-"
-
+class="btn btn-dark"
 href="https://wa.me/6591050813"
-
 target="_blank"
-
-rel="
-noopener
-nofollow
-"
-
+rel="noopener nofollow"
 >
 
 WhatsApp Us
@@ -1827,18 +3265,10 @@ WhatsApp Us
 </a>
 
 <a
-
-class="
-btn
-btn-blue
-"
-
+class="btn btn-blue"
 href="https://instagram.com/ixchelljewellery"
-
 target="_blank"
-
 rel="noopener"
-
 >
 
 DM For Private Viewing
@@ -1846,14 +3276,8 @@ DM For Private Viewing
 </a>
 
 <a
-
-class="
-btn
-btn-outline
-"
-
+class="btn btn-outline"
 href="#visit"
-
 >
 
 Visit Boutique
@@ -1868,16 +3292,9 @@ Visit Boutique
 
 </section>
 
-<section
-class="strip"
->
+<section class="strip">
 
-<div
-class="
-container
-reveal
-"
->
+<div class="container reveal">
 
 <p>
 
@@ -1919,156 +3336,270 @@ Each Ixchell Jewellery guide is arranged around one focused jadeite question, wi
 <div class="discovery-grid">
 
 <a
-class="discovery-card lux-card reveal"
+class="discovery-card reveal"
 href="type-a-jadeite.html"
 >
 
 <div>
 
-<span>Foundation</span>
+<span>
 
-<h3>What Is Type A Jadeite?</h3>
+Foundation
+
+</span>
+
+<h3>
+
+What Is Type A Jadeite?
+
+</h3>
 
 <p>
+
 Learn why Type A means natural untreated jadeite, not a beauty grade.
+
 </p>
 
 </div>
 
 <div class="discovery-actions">
 
-<span class="mini-link">Natural jadeite</span>
-<span class="mini-link">Treatment</span>
+<span class="mini-link">
+
+Natural jadeite
+
+</span>
+
+<span class="mini-link">
+
+Treatment
+
+</span>
 
 </div>
 
 </a>
 
 <a
-class="discovery-card lux-card reveal"
+class="discovery-card reveal"
 href="jade-vs-jadeite.html"
 >
 
 <div>
 
-<span>Beginner</span>
+<span>
 
-<h3>Is Jade The Same As Jadeite?</h3>
+Beginner
+
+</span>
+
+<h3>
+
+Is Jade The Same As Jadeite?
+
+</h3>
 
 <p>
+
 Understand jade, jadeite and nephrite before choosing jewellery.
+
 </p>
 
 </div>
 
 <div class="discovery-actions">
 
-<span class="mini-link">Jadeite</span>
-<span class="mini-link">Nephrite</span>
+<span class="mini-link">
+
+Jadeite
+
+</span>
+
+<span class="mini-link">
+
+Nephrite
+
+</span>
 
 </div>
 
 </a>
 
 <a
-class="discovery-card lux-card reveal"
+class="discovery-card reveal"
 href="what-gives-jadeite-value.html"
 >
 
 <div>
 
-<span>Value</span>
+<span>
 
-<h3>What Gives Jadeite Value?</h3>
+Value
+
+</span>
+
+<h3>
+
+What Gives Jadeite Value?
+
+</h3>
 
 <p>
+
 Understand colour, translucency, texture and thickness before judging price.
+
 </p>
 
 </div>
 
 <div class="discovery-actions">
 
-<span class="mini-link">Colour</span>
-<span class="mini-link">Translucency</span>
+<span class="mini-link">
+
+Colour
+
+</span>
+
+<span class="mini-link">
+
+Translucency
+
+</span>
 
 </div>
 
 </a>
 
 <a
-class="discovery-card lux-card reveal"
+class="discovery-card reveal"
 href="why-jadeite-looks-different-in-person.html"
 >
 
 <div>
 
-<span>Lighting</span>
+<span>
 
-<h3>Why Does Jadeite Look Different In Person?</h3>
+Lighting
+
+</span>
+
+<h3>
+
+Why Does Jadeite Look Different In Person?
+
+</h3>
 
 <p>
+
 Learn how daylight, indoor light, cameras and skin tone affect jadeite.
+
 </p>
 
 </div>
 
 <div class="discovery-actions">
 
-<span class="mini-link">Lighting</span>
-<span class="mini-link">Camera</span>
+<span class="mini-link">
+
+Lighting
+
+</span>
+
+<span class="mini-link">
+
+Camera
+
+</span>
 
 </div>
 
 </a>
 
 <a
-class="discovery-card lux-card reveal"
+class="discovery-card reveal"
 href="jadeite-bangle-singapore.html"
 >
 
 <div>
 
-<span>Bangles</span>
+<span>
 
-<h3>How Do I Choose A Jadeite Bangle?</h3>
+Bangles
+
+</span>
+
+<h3>
+
+How Do I Choose A Jadeite Bangle?
+
+</h3>
 
 <p>
+
 Learn size, comfort, thickness and fitting before visiting the boutique.
+
 </p>
 
 </div>
 
 <div class="discovery-actions">
 
-<span class="mini-link">Size</span>
-<span class="mini-link">Fit</span>
+<span class="mini-link">
+
+Size
+
+</span>
+
+<span class="mini-link">
+
+Fit
+
+</span>
 
 </div>
 
 </a>
 
 <a
-class="discovery-card lux-card reveal"
+class="discovery-card reveal"
 href="lavender-jadeite-guide.html"
 >
 
 <div>
 
-<span>Lavender</span>
+<span>
 
-<h3>What Is Lavender Jadeite?</h3>
+Lavender
+
+</span>
+
+<h3>
+
+What Is Lavender Jadeite?
+
+</h3>
 
 <p>
+
 Discover lavender jadeite colour formation, rarity and comparison with green.
+
 </p>
 
 </div>
 
 <div class="discovery-actions">
 
-<span class="mini-link">Formation</span>
-<span class="mini-link">Rarity</span>
+<span class="mini-link">
+
+Formation
+
+</span>
+
+<span class="mini-link">
+
+Rarity
+
+</span>
 
 </div>
 
@@ -2115,88 +3646,161 @@ This structure helps customers learn jadeite properly while helping search engin
 
 <div class="learning-group-header">
 
-<span>1 Foundation</span>
+<span>
 
-<h3>Type A jadeite knowledge</h3>
+1 Foundation
+
+</span>
+
+<h3>
+
+Type A jadeite knowledge
+
+</h3>
 
 </div>
 
 <div class="discovery-grid">
 
-<a class="discovery-card lux-card learning-card" href="type-a-jadeite.html">
+<a
+class="discovery-card learning-card"
+href="type-a-jadeite.html"
+>
 
 <div>
 
-<span>Main Page</span>
+<span>
 
-<h3>What Is Type A Jadeite?</h3>
+Main Page
+
+</span>
+
+<h3>
+
+What Is Type A Jadeite?
+
+</h3>
 
 <p>
+
 Main guide for natural untreated Type A Burmese jadeite.
+
 </p>
 
 </div>
 
 </a>
 
-<a class="discovery-card lux-card learning-card" href="what-is-type-a-jadeite.html">
+<a
+class="discovery-card learning-card"
+href="what-is-type-a-jadeite.html"
+>
 
 <div>
 
-<span>Sub Question</span>
+<span>
 
-<h3>What Does Type A Jadeite Mean?</h3>
+Sub Question
+
+</span>
+
+<h3>
+
+What Does Type A Jadeite Mean?
+
+</h3>
 
 <p>
+
 A direct answer page explaining Type A in simple gemmological language.
+
 </p>
 
 </div>
 
 </a>
 
-<a class="discovery-card lux-card learning-card" href="type-a-vs-b-vs-c-jadeite.html">
+<a
+class="discovery-card learning-card"
+href="type-a-vs-b-vs-c-jadeite.html"
+>
 
 <div>
 
-<span>Sub Question</span>
+<span>
 
-<h3>Type A vs B vs C Jadeite</h3>
+Sub Question
+
+</span>
+
+<h3>
+
+Type A vs B vs C Jadeite
+
+</h3>
 
 <p>
+
 Compare natural jadeite, treated jadeite and dyed jadeite clearly.
+
 </p>
 
 </div>
 
 </a>
 
-<a class="discovery-card lux-card learning-card" href="why-natural-jadeite-matters.html">
+<a
+class="discovery-card learning-card"
+href="why-natural-jadeite-matters.html"
+>
 
 <div>
 
-<span>Sub Question</span>
+<span>
 
-<h3>Why Does Natural Jadeite Matter?</h3>
+Sub Question
+
+</span>
+
+<h3>
+
+Why Does Natural Jadeite Matter?
+
+</h3>
 
 <p>
+
 Understand why untreated jadeite matters for trust, value and longevity.
+
 </p>
 
 </div>
 
 </a>
 
-<a class="discovery-card lux-card learning-card" href="jadeite-treatment-guide.html">
+<a
+class="discovery-card learning-card"
+href="jadeite-treatment-guide.html"
+>
 
 <div>
 
-<span>Sub Question</span>
+<span>
 
-<h3>How Is Jadeite Treated?</h3>
+Sub Question
+
+</span>
+
+<h3>
+
+How Is Jadeite Treated?
+
+</h3>
 
 <p>
+
 Learn common treatment terms before buying jadeite.
+
 </p>
 
 </div>
@@ -2211,88 +3815,330 @@ Learn common treatment terms before buying jadeite.
 
 <div class="learning-group-header">
 
-<span>2 Jade vs Jadeite</span>
+<span>
 
-<h3>Beginner clarity before buying</h3>
+2 Jade vs Jadeite
+
+</span>
+
+<h3>
+
+Beginner clarity before buying
+
+</h3>
 
 </div>
 
 <div class="discovery-grid">
 
-<a class="discovery-card lux-card learning-card" href="jade-vs-jadeite.html">
+<a
+class="discovery-card learning-card"
+href="jade-vs-jadeite.html"
+>
 
 <div>
 
-<span>Main Page</span>
+<span>
 
-<h3>Is Jade The Same As Jadeite?</h3>
+Main Page
+
+</span>
+
+<h3>
+
+Is Jade The Same As Jadeite?
+
+</h3>
 
 <p>
+
 Main guide for understanding jade, jadeite and nephrite.
+
 </p>
 
 </div>
 
 </a>
 
-<a class="discovery-card lux-card learning-card" href="what-is-jade.html">
+<a
+class="discovery-card learning-card"
+href="what-is-jade.html"
+>
 
 <div>
 
-<span>Sub Question</span>
+<span>
 
-<h3>What Is Jade?</h3>
+Sub Question
+
+</span>
+
+<h3>
+
+What Is Jade?
+
+</h3>
 
 <p>
+
 Understand why jade is an umbrella term.
+
 </p>
 
 </div>
 
 </a>
 
-<a class="discovery-card lux-card learning-card" href="what-is-jadeite.html">
+<a
+class="discovery-card learning-card"
+href="what-is-jadeite.html"
+>
 
 <div>
 
-<span>Sub Question</span>
+<span>
 
-<h3>What Is Jadeite?</h3>
+Sub Question
+
+</span>
+
+<h3>
+
+What Is Jadeite?
+
+</h3>
 
 <p>
+
 Learn what jadeite is and why it differs from nephrite.
+
 </p>
 
 </div>
 
 </a>
 
-<a class="discovery-card lux-card learning-card" href="jadeite-vs-nephrite.html">
+<a
+class="discovery-card learning-card"
+href="jadeite-vs-nephrite.html"
+>
 
 <div>
 
-<span>Sub Question</span>
+<span>
 
-<h3>Jadeite vs Nephrite</h3>
+Sub Question
+
+</span>
+
+<h3>
+
+Jadeite vs Nephrite
+
+</h3>
 
 <p>
+
 Compare two different minerals often called jade.
+
 </p>
 
 </div>
 
 </a>
 
-<a class="discovery-card lux-card learning-card" href="why-jadeite-is-more-expensive.html">
+<a
+class="discovery-card learning-card"
+href="why-jadeite-is-more-expensive.html"
+>
 
 <div>
 
-<span>Sub Question</span>
+<span>
 
-<h3>Why Is Jadeite More Expensive?</h3>
+Sub Question
+
+</span>
+
+<h3>
+
+Why Is Jadeite More Expensive?
+
+</h3>
 
 <p>
+
 Understand rarity, colour, translucency and market preference.
+
+</p>
+
+</div>
+
+</a>
+
+</div>
+
+</div>
+
+<div class="learning-group reveal">
+
+<div class="learning-group-header">
+
+<span>
+
+3 Jadeite Value
+
+</span>
+
+<h3>
+
+Colour, translucency, texture and thickness
+
+</h3>
+
+</div>
+
+<div class="discovery-grid">
+
+<a
+class="discovery-card learning-card"
+href="what-gives-jadeite-value.html"
+>
+
+<div>
+
+<span>
+
+Main Page
+
+</span>
+
+<h3>
+
+What Gives Jadeite Value?
+
+</h3>
+
+<p>
+
+Main guide for understanding the main value factors in jadeite.
+
+</p>
+
+</div>
+
+</a>
+
+<a
+class="discovery-card learning-card"
+href="jadeite-colour-guide.html"
+>
+
+<div>
+
+<span>
+
+Sub Question
+
+</span>
+
+<h3>
+
+Why Does Jadeite Colour Matter?
+
+</h3>
+
+<p>
+
+Understand green, lavender, yellow, red, white and mixed jadeite colour.
+
+</p>
+
+</div>
+
+</a>
+
+<a
+class="discovery-card learning-card"
+href="jadeite-translucency-guide.html"
+>
+
+<div>
+
+<span>
+
+Sub Question
+
+</span>
+
+<h3>
+
+Why Does Jadeite Translucency Matter?
+
+</h3>
+
+<p>
+
+Learn how translucency affects glow, softness and visual depth.
+
+</p>
+
+</div>
+
+</a>
+
+<a
+class="discovery-card learning-card"
+href="jadeite-texture-guide.html"
+>
+
+<div>
+
+<span>
+
+Sub Question
+
+</span>
+
+<h3>
+
+Why Does Jadeite Texture Matter?
+
+</h3>
+
+<p>
+
+Understand structure, grain and smoothness in jadeite.
+
+</p>
+
+</div>
+
+</a>
+
+<a
+class="discovery-card learning-card"
+href="jadeite-thickness-guide.html"
+>
+
+<div>
+
+<span>
+
+Sub Question
+
+</span>
+
+<h3>
+
+Why Does Jadeite Thickness Matter?
+
+</h3>
+
+<p>
+
+Learn why thickness changes presence, colour and durability.
+
 </p>
 
 </div>
@@ -2310,244 +4156,54 @@ class="question-section"
 id="experience"
 >
 
-<div
-class="
-container
-question-grid
-"
->
+<div class="container question-grid">
 
-<div
-class="
-question-label
-reveal
-"
->
+<div class="question-label reveal">
 
 <div class="eyebrow">
-
 The Ixchell Experience
-
 </div>
 
 <h2>
-
 Calm. Human. Low pressure.
-
 </h2>
 
 <p>
-
 A quieter luxury approach to jadeite understanding.
-
 </p>
 
 </div>
 
-<div
-class="
-answer-card
-lux-card
-reveal
-"
->
+<div class="answer-card lux-card reveal">
 
 <p>
-
-Ixchell Jewellery is intentionally kept personal, educational and calm.
-
-Many customers visit simply to understand natural Type A Burmese jadeite before making decisions.
-
+Ixchell Jewellery is intentionally kept personal, educational and calm. Many customers visit simply to understand natural Type A Burmese jadeite before making decisions.
 </p>
 
 <p>
-
 Jadeite behaves differently under daylight, indoor lighting, skin tone reflection and viewing distance.
-
-This becomes especially important for translucent jadeite and finer collector pieces.
-
 </p>
 
-<p>
-
-Customers who wish independent verification are welcome to verify through recognised gemological laboratories in Singapore.
-
-</p>
-
-<div
-class="
-subquestion-grid
-"
->
+<div class="subquestion-grid">
 
 <div class="subquestion">
-
-<span>
-
-Private Viewing
-
-</span>
-
-<strong>
-
-Comfortable one-to-one guidance
-
-</strong>
-
+<span>Private Viewing</span>
+<strong>Comfortable one-to-one guidance</strong>
 </div>
 
 <div class="subquestion">
-
-<span>
-
-Knowledge
-
-</span>
-
-<strong>
-
-Learn before choosing
-
-</strong>
-
+<span>Knowledge</span>
+<strong>Learn before choosing</strong>
 </div>
 
 <div class="subquestion">
-
-<span>
-
-Verification
-
-</span>
-
-<strong>
-
-Independent verification welcome
-
-</strong>
-
+<span>Verification</span>
+<strong>Independent verification welcome</strong>
 </div>
 
 <div class="subquestion">
-
-<span>
-
-Environment
-
-</span>
-
-<strong>
-
-Quiet boutique near City Hall MRT
-
-</strong>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section
-class="question-section"
->
-
-<div
-class="
-container
-question-grid
-"
->
-
-<div
-class="
-question-label
-reveal
-"
->
-
-<div class="eyebrow">
-
-Why Jadeite Matters
-
-</div>
-
-<h2>
-
-Quiet luxury that outlives trends.
-
-</h2>
-
-</div>
-
-<div
-class="
-answer-card
-lux-card
-reveal
-"
->
-
-<p>
-
-Natural Type A Burmese jadeite is appreciated for geological rarity, translucency, structure, texture, cultural meaning and generational continuity.
-
-</p>
-
-<p>
-
-Customers visit Ixchell Jewellery searching for gifts, milestones, heirlooms and future memories.
-
-</p>
-
-<div
-class="
-inventory-panel
-"
->
-
-<div
-class="
-inventory-stat
-"
->
-
-<span>
-
-2300+
-
-</span>
-
-<p>
-
-Curated jadeite bangles and collector pieces.
-
-</p>
-
-</div>
-
-<div
-class="
-inventory-stat
-"
->
-
-<span>
-
-Since 2014
-
-</span>
-
-<p>
-
-Serving customers through quiet educational boutique experience.
-
-</p>
-
+<span>Environment</span>
+<strong>Quiet boutique near City Hall MRT</strong>
 </div>
 
 </div>
@@ -2568,21 +4224,15 @@ id="visit"
 <div class="section-intro reveal">
 
 <div class="eyebrow">
-
 Visit Ixchell Jewellery
-
 </div>
 
 <h2>
-
 A quiet jadeite boutique near City Hall MRT.
-
 </h2>
 
 <p>
-
-Located at The Adelphi Singapore opposite Funan and near National Gallery Singapore.
-
+Located at The Adelphi Singapore, opposite Funan and near National Gallery Singapore.
 </p>
 
 </div>
@@ -2590,131 +4240,42 @@ Located at The Adelphi Singapore opposite Funan and near National Gallery Singap
 <div class="visit-cards">
 
 <div class="visit-card lux-card reveal">
-
-<h3>
-
-Walk-ins Welcome
-
-</h3>
-
-<p>
-
-Walk-ins are warmly welcomed whenever possible.
-
-</p>
-
+<h3>Walk-ins Welcome</h3>
+<p>Walk-ins are warmly welcomed whenever possible.</p>
 </div>
 
 <div class="visit-card lux-card reveal">
-
-<h3>
-
-Private Viewing
-
-</h3>
-
-<p>
-
-Messaging beforehand is gently encouraged.
-
-</p>
-
+<h3>Private Viewing</h3>
+<p>Messaging beforehand is gently encouraged.</p>
 </div>
 
 <div class="visit-card lux-card reveal">
-
-<h3>
-
-New Collectors Welcome
-
-</h3>
-
-<p>
-
-Completely new to jadeite? Explore slowly and comfortably.
-
-</p>
-
+<h3>New Collectors Welcome</h3>
+<p>Completely new to jadeite? Explore slowly and comfortably.</p>
 </div>
 
 </div>
 
-<div
-class="
-address-card
-lux-card
-reveal
-"
->
+<div class="address-card lux-card reveal">
 
 <div>
-
-<strong>
-
-Address
-
-</strong>
-
-<p>
-
-1 Coleman Street<br>
-
-The Adelphi #02-33<br>
-
-Singapore 179803
-
-</p>
-
+<strong>Address</strong>
+<p>1 Coleman Street<br>The Adelphi #02-33<br>Singapore 179803</p>
 </div>
 
 <div>
-
-<strong>
-
-Nearest MRT
-
-</strong>
-
-<p>
-
-City Hall MRT
-
-</p>
-
+<strong>Nearest MRT</strong>
+<p>City Hall MRT</p>
 </div>
 
 <div>
-
-<strong>
-
-Nearby
-
-</strong>
-
-<p>
-
-Funan<br>
-
-National Gallery Singapore
-
-</p>
-
+<strong>Nearby</strong>
+<p>Funan<br>National Gallery Singapore</p>
 </div>
 
 <div>
-
-<strong>
-
-Instagram
-
-</strong>
-
-<p>
-
-@ixchelljewellery
-
-</p>
-
+<strong>Instagram</strong>
+<p>@ixchelljewellery</p>
 </div>
 
 </div>
@@ -2722,43 +4283,28 @@ Instagram
 <div class="btn-row">
 
 <a
-class="
-btn
-btn-dark
-"
+class="btn btn-dark"
 href="https://wa.me/6591050813"
 target="_blank"
 rel="noopener nofollow"
 >
-
 WhatsApp Us
-
 </a>
 
 <a
-class="
-btn
-btn-blue
-"
+class="btn btn-blue"
 href="https://instagram.com/ixchelljewellery"
 target="_blank"
 rel="noopener"
 >
-
 DM For Viewing
-
 </a>
 
 <a
-class="
-btn
-btn-outline
-"
+class="btn btn-outline"
 href="type-a-jadeite.html"
 >
-
 Learn Type A Jadeite
-
 </a>
 
 </div>
@@ -2767,33 +4313,20 @@ Learn Type A Jadeite
 
 </section>
 
-<section
-class="final-cta"
->
+<section class="final-cta">
 
-<div
-class="
-container
-reveal
-"
->
+<div class="container reveal">
 
 <div class="eyebrow">
-
 Begin With Understanding
-
 </div>
 
 <h2>
-
 Seen often. Understood rarely.
-
 </h2>
 
 <p>
-
 Learn calmly before choosing.
-
 </p>
 
 </div>
@@ -2808,65 +4341,39 @@ href="https://wa.me/6591050813"
 target="_blank"
 rel="noopener nofollow"
 >
-
 WhatsApp For Private Viewing
-
 </a>
 
 <footer>
 
-<div
-class="
-container
-footer-grid
-"
->
+<div class="container footer-grid">
 
 <div>
 
 <div class="footer-brand">
-
 Ixchell Jewellery
-
 </div>
 
 <p>
-
 翡坊翠藝 · Since 2014
-
 </p>
 
 <div class="footer-links">
 
-<a href="type-a-jadeite.html">
-
-Type A Jadeite
-
-</a>
-
-<a href="jade-vs-jadeite.html">
-
-Jade vs Jadeite
-
-</a>
-
-<a href="what-gives-jadeite-value.html">
-
-Jadeite Value
-
-</a>
-
-<a href="jadeite-bangle-singapore.html">
-
-Jadeite Bangles
-
-</a>
-
-<a href="history-origins-of-jade.html">
-
-History Of Jade
-
-</a>
+<a href="type-a-jadeite.html">Type A Jadeite</a>
+<a href="what-is-type-a-jadeite.html">What Type A Means</a>
+<a href="type-a-vs-b-vs-c-jadeite.html">Type A vs B vs C</a>
+<a href="jade-vs-jadeite.html">Jade vs Jadeite</a>
+<a href="what-is-jade.html">What Is Jade</a>
+<a href="what-is-jadeite.html">What Is Jadeite</a>
+<a href="what-gives-jadeite-value.html">Jadeite Value</a>
+<a href="jadeite-colour-guide.html">Colour Guide</a>
+<a href="jadeite-translucency-guide.html">Translucency</a>
+<a href="jadeite-texture-guide.html">Texture</a>
+<a href="jadeite-thickness-guide.html">Thickness</a>
+<a href="jadeite-bangle-singapore.html">Jadeite Bangles</a>
+<a href="lavender-jadeite-guide.html">Lavender Jadeite</a>
+<a href="history-origins-of-jade.html">History Of Jade</a>
 
 </div>
 
@@ -2874,29 +4381,11 @@ History Of Jade
 
 <div>
 
-<p>
-
-Natural Type A Burmese Jadeite
-
-</p>
-
-<p>
-
-The Adelphi #02-33
-
-</p>
-
-<p>
-
-Singapore 179803
-
-</p>
-
-<p>
-
-Near City Hall MRT
-
-</p>
+<p>Natural Type A Burmese Jadeite</p>
+<p>The Adelphi #02-33</p>
+<p>Singapore 179803</p>
+<p>Near City Hall MRT</p>
+<p>Instagram: @ixchelljewellery</p>
 
 </div>
 
@@ -2906,88 +4395,42 @@ Near City Hall MRT
 
 <script>
 
-const introLoader =
-document.getElementById(
-"intro-loader"
-);
-
-const enterButton =
-document.getElementById(
-"enterSite"
-);
-
-const introAudio =
-document.getElementById(
-"introAudio"
-);
+const introLoader = document.getElementById("intro-loader");
+const enterButton = document.getElementById("enterSite");
+const introAudio = document.getElementById("introAudio");
 
 if(enterButton){
 
-enterButton.addEventListener(
+enterButton.addEventListener("click",()=>{
 
-"click",
-
-()=>{
-
-document.body.classList.remove(
-
-"intro-active"
-
-);
+document.body.classList.remove("intro-active");
 
 if(introLoader){
-
-introLoader.classList.add(
-
-"hide"
-
-);
-
+introLoader.classList.add("hide");
 }
 
 if(introAudio){
-
-introAudio.volume=.4;
-
+introAudio.volume = .4;
 introAudio.play().catch(()=>{});
+}
+
+});
 
 }
 
-}
-
-);
-
-}
-
-window.addEventListener(
-
-"load",
-
-()=>{
+window.addEventListener("load",()=>{
 
 setTimeout(()=>{
 
-document.body.classList.remove(
-
-"intro-active"
-
-);
+document.body.classList.remove("intro-active");
 
 if(introLoader){
-
-introLoader.classList.add(
-
-"hide"
-
-);
-
+introLoader.classList.add("hide");
 }
 
 },5000);
 
-}
-
-);
+});
 
 </script>
 
