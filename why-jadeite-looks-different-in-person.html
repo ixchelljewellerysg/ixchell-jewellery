@@ -23,6 +23,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet" />
 
 <style>
+:root {
+  --brand-black: #000000;
+  --brand-ink: #05080a;
+  --brand-blue-silver: #9ec7ff;
+  --text-main: #ffffff;
+  --text-muted: #d0d0d0;
+  --line: rgba(192, 216, 228, 0.2);
+}
+
 *{
   margin:0;
   padding:0;
@@ -36,8 +45,8 @@ html{
 
 body{
   font-family:'Inter',sans-serif;
-  background:#050505;
-  color:#f3f3f3;
+  background:var(--brand-black);
+  color:var(--text-muted);
   line-height:1.9;
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
@@ -48,11 +57,11 @@ body::before{
   position:fixed;
   inset:0;
   background:
-    linear-gradient(rgba(0,0,0,.78),rgba(0,0,0,.9)),
+    linear-gradient(160deg, rgba(11, 20, 38, 0.95), rgba(10, 36, 27, 0.98)),
     url('rm-black-crocodile-texture.jpg');
   background-size:cover;
   background-position:center;
-  opacity:.16;
+  opacity:0.6;
   z-index:-2;
 }
 
@@ -62,7 +71,8 @@ body::after{
   inset:0;
   background:
     radial-gradient(circle at 18% 12%,rgba(255,255,255,.06),transparent 28%),
-    radial-gradient(circle at 82% 78%,rgba(176,224,230,.06),transparent 32%);
+    radial-gradient(circle at 82% 78%,var(--brand-blue-silver),transparent 32%);
+  opacity: 0.1;
   z-index:-1;
   pointer-events:none;
 }
@@ -105,7 +115,7 @@ img{
   position:absolute;
   inset:0;
   background:
-    linear-gradient(to bottom,rgba(0,0,0,.35),rgba(0,0,0,.76));
+    linear-gradient(to bottom,rgba(0,0,0,.35),var(--brand-black));
   z-index:1;
 }
 
@@ -122,7 +132,7 @@ img{
   font-size:.72rem;
   letter-spacing:3px;
   text-transform:uppercase;
-  color:#cbd5e1;
+  color:var(--brand-blue-silver);
 }
 
 .hero h1{
@@ -132,13 +142,14 @@ img{
   font-weight:600;
   margin-bottom:26px;
   letter-spacing:-.03em;
+  color:var(--text-main);
 }
 
 .hero p{
   max-width:760px;
   margin:auto;
   font-size:1.08rem;
-  color:#d6d6d6;
+  color:var(--text-muted);
 }
 
 .section{
@@ -162,7 +173,8 @@ img{
   position:relative;
   overflow:hidden;
   border-radius:28px;
-  background:#0a0a0a;
+  background:var(--brand-ink);
+  border:1px solid var(--line);
   box-shadow:
     0 10px 40px rgba(0,0,0,.35),
     0 30px 80px rgba(0,0,0,.28);
@@ -191,7 +203,7 @@ img{
   letter-spacing:.24em;
   text-transform:uppercase;
   font-size:.72rem;
-  color:#9ec7ff;
+  color:var(--brand-blue-silver);
 }
 
 .text h2,
@@ -201,16 +213,17 @@ img{
   line-height:1.05;
   margin-bottom:24px;
   font-weight:600;
+  color:var(--text-main);
 }
 
 .text p{
   margin-bottom:22px;
   font-size:1.02rem;
-  color:#d0d0d0;
+  color:var(--text-muted);
 }
 
 .highlight{
-  color:#fff;
+  color:var(--text-main);
   font-weight:600;
 }
 
@@ -225,8 +238,8 @@ img{
 .card{
   padding:34px;
   border-radius:28px;
-  background:rgba(255,255,255,.05);
-  border:1px solid rgba(255,255,255,.1);
+  background:rgba(255,255,255,.03);
+  border:1px solid var(--line);
   box-shadow:0 20px 60px rgba(0,0,0,.35);
   backdrop-filter:blur(10px);
   -webkit-backdrop-filter:blur(10px);
@@ -238,7 +251,7 @@ img{
   letter-spacing:.22em;
   text-transform:uppercase;
   font-size:.68rem;
-  color:#9ec7ff;
+  color:var(--brand-blue-silver);
 }
 
 .card h3{
@@ -246,23 +259,24 @@ img{
   font-size:2.1rem;
   line-height:1.1;
   margin-bottom:18px;
+  color:var(--text-main);
 }
 
 .card p{
-  color:#d4d4d4;
+  color:var(--text-muted);
   font-size:.98rem;
 }
 
 .quote{
   margin-top:34px;
   padding:28px;
-  border-left:2px solid rgba(255,255,255,.25);
+  border-left:2px solid var(--brand-blue-silver);
   background:rgba(255,255,255,.03);
   backdrop-filter:blur(10px);
   -webkit-backdrop-filter:blur(10px);
   border-radius:18px;
   font-style:italic;
-  color:#e6e6e6;
+  color:var(--text-main);
 }
 
 .table-section{
@@ -276,6 +290,7 @@ img{
   background:rgba(255,255,255,.03);
   backdrop-filter:blur(12px);
   -webkit-backdrop-filter:blur(12px);
+  border:1px solid var(--line);
 }
 
 table{
@@ -287,7 +302,7 @@ table{
 th,td{
   padding:24px;
   text-align:left;
-  border-bottom:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid var(--line);
   vertical-align:top;
 }
 
@@ -295,13 +310,13 @@ th{
   font-size:.78rem;
   letter-spacing:.18em;
   text-transform:uppercase;
-  color:#9ec7ff;
+  color:var(--brand-blue-silver);
   font-weight:600;
 }
 
 td{
   font-size:.98rem;
-  color:#d4d4d4;
+  color:var(--text-muted);
 }
 
 .cta{
@@ -319,13 +334,14 @@ td{
   font-size:clamp(2.6rem,5vw,5rem);
   margin-bottom:28px;
   line-height:1;
+  color:var(--text-main);
 }
 
 .cta p{
   font-size:1.08rem;
   max-width:760px;
   margin:auto auto 40px;
-  color:#d6d6d6;
+  color:var(--text-muted);
 }
 
 .button{
@@ -334,11 +350,11 @@ td{
   justify-content:center;
   padding:16px 30px;
   border-radius:999px;
-  border:1px solid rgba(255,255,255,.12);
+  border:1px solid var(--line);
   background:rgba(255,255,255,.04);
   backdrop-filter:blur(10px);
   -webkit-backdrop-filter:blur(10px);
-  color:#fff;
+  color:var(--text-main);
   text-decoration:none;
   margin:8px;
   transition:.35s ease;
@@ -357,7 +373,7 @@ footer{
   text-align:center;
   font-size:.9rem;
   color:#9d9d9d;
-  border-top:1px solid rgba(255,255,255,.06);
+  border-top:1px solid var(--line);
 }
 
 @media(max-width:980px){
@@ -687,67 +703,4 @@ footer{
   <div class="cta-content">
     <h2>Jadeite is best viewed, not guessed.</h2>
     <p>
-      If jadeite looks different in person, it may not mean something is wrong. It may simply mean the stone has depth, translucency and a personality that photographs cannot fully control.
-    </p>
-
-    <a href="jade-vs-jadeite.html" class="button">Read Jade vs Jadeite</a>
-    <a href="type-a-vs-b-c.html" class="button">Read Type A vs B vs C</a>
-    <a href="index.html" class="button">Return To Ixchell Jewellery</a>
-  </div>
-</section>
-
-<footer>
-  © Ixchell Jewellery Singapore — Natural Type A Burmese Jadeite
-</footer>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"FAQPage",
-  "mainEntity":[
-    {
-      "@type":"Question",
-      "name":"Why does jadeite look different in person?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Jadeite looks different in person because lighting, translucency, surface polish, skin tone, surrounding reflections and camera processing all affect how its colour and glow are perceived."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"Why does jadeite look different in photos?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Phone cameras automatically adjust white balance, contrast, brightness and saturation, which can make the same jadeite piece look different in different photos."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"Does jadeite change colour when worn?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Natural jadeite does not turn into a different mineral or create new colour, but long-term wear, skin oil, surface condition and light interaction may make it appear smoother, richer or more luminous."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"What does 人養玉 玉養人 mean?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"人養玉，玉養人 means people nurture jade and jade nurtures people. Traditionally, it describes the belief that jade becomes more beautiful through long-term wear, while the wearer develops appreciation, patience and care."
-      }
-    },
-    {
-      "@type":"Question",
-      "name":"Can skin oil affect jadeite?",
-      "acceptedAnswer":{
-        "@type":"Answer",
-        "text":"Skin oil does not change jadeite’s mineral composition, but it may gradually affect microscopic surface texture and polish, influencing how light reflects from the stone."
-      }
-    }
-  ]
-}
-</script>
-
-</body>
-</html>
+      If jadeite looks different in person, it may not mean something is wrong. It may simply mean the stone has depth, translucency and
