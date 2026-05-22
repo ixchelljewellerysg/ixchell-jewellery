@@ -11,7 +11,7 @@
 <meta name="keywords" content="jade vs jadeite, jadeite vs jade, nephrite vs jadeite, Type A jadeite Singapore, Burmese jadeite Singapore, jade jewellery Singapore, Ixchell Jewellery, 翡坊翠藝, The Adelphi jadeite, City Hall jade shop" />
 
 <meta name="robots" content="index, follow, max-image-preview:large" />
-<meta name="theme-color" content="#05070b" />
+<meta name="theme-color" content="#000000" />
 
 <link rel="canonical" href="https://ixchelljewellery.com/jade-vs-jadeite.html" />
 
@@ -24,325 +24,494 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="rm-blue-crocodile-texture.jpg">
+<link rel="preload" as="image" href="jade-vs-jadeite-hero.png">
 
 <style>
-:root{
-  --bg:#05070b;
-  --line:rgba(255,255,255,.14);
-  --text:#eef4ff;
-  --muted:#b9c4d6;
-  --soft:#7f8ca3;
-  --blue:#8fd8ff;
-  --gold:#e7c56b;
+/* ==========================================================================
+   1. VARIABLES & FOUNDATION (RM DARK THEME)
+   ========================================================================== */
+:root {
+  --brand-black: #000000;       
+  --brand-ink: #05080a;         
+  --brand-blue-deep: #0b1426;   
+  --brand-blue-bright: #12a8c8; 
+  --brand-blue-silver: #c0d8e4; 
+  --brand-green-deep: #0a241b;  
+  --brand-green-glow: #1b4d3e;  
+  --text-main: #ffffff;         
+  --text-muted: rgba(255, 255, 255, 0.75); 
+  --line: rgba(192, 216, 228, 0.2);
 }
 
-*{
-  box-sizing:border-box;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-  margin:0;
-  background:
-    radial-gradient(circle at 20% 10%, rgba(143,216,255,.12), transparent 35%),
-    radial-gradient(circle at 80% 20%, rgba(231,197,107,.08), transparent 35%),
-    linear-gradient(135deg, rgba(255,255,255,.035) 1px, transparent 1px),
-    linear-gradient(180deg, #05070b 0%, #07111a 45%, #05070b 100%);
-  background-size:auto, auto, 22px 22px, auto;
-  color:var(--text);
-  font-family:Inter, sans-serif;
-  line-height:1.7;
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  background:
-    repeating-linear-gradient(135deg, rgba(255,255,255,.03) 0 1px, transparent 1px 8px),
-    radial-gradient(circle at 50% 50%, transparent 0, rgba(0,0,0,.45) 75%);
-  opacity:.5;
-  z-index:-1;
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--brand-black);
+  color: var(--text-muted);
+  line-height: 1.8;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
-a{
-  color:inherit;
-  text-decoration:none;
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.wrapper{
-  width:min(1120px,92%);
-  margin:auto;
+a:hover {
+  color: var(--brand-blue-silver);
 }
 
-header{
-  padding:26px 0;
-  border-bottom:1px solid var(--line);
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
 }
 
-.nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
+/* ==========================================================================
+   2. HEADER
+   ========================================================================== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
 }
 
-.brand{
-  font-family:Space Grotesk, sans-serif;
-  font-weight:800;
-  letter-spacing:.08em;
-  text-transform:uppercase;
+.nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.nav a{
-  color:var(--muted);
-  font-size:.9rem;
+.brand {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-.hero{
-  padding:82px 0 56px;
-  display:grid;
-  grid-template-columns:1fr;
-  gap:42px;
-  align-items:center;
+.brand span {
+  display: block;
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  font-family: "Inter", sans-serif;
+  color: var(--brand-blue-silver);
+  font-weight: 600;
+  margin-top: 4px;
 }
 
-.hero-text{
-  max-width:940px;
+.nav-links {
+  display: flex;
+  gap: 24px;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-main);
 }
 
-.kicker{
-  color:var(--blue);
-  text-transform:uppercase;
-  letter-spacing:.22em;
-  font-size:.78rem;
-  font-weight:800;
+/* ==========================================================================
+   3. TYPOGRAPHY
+   ========================================================================== */
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--brand-blue-silver);
 }
 
-h1,h2,h3{
-  font-family:Space Grotesk, Inter, sans-serif;
-  font-weight:900;
-  letter-spacing:-.04em;
-  line-height:1.05;
+h1, h2, h3 {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
-h1{
-  font-size:clamp(2.55rem,7vw,5.8rem);
-  margin:18px 0;
+h1 {
+  font-size: clamp(2.55rem, 6vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  margin-bottom: 24px;
 }
 
-h2{
-  font-size:clamp(2rem,4vw,3.4rem);
-  margin:0 0 20px;
+h2 {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 800;
+  margin-bottom: 20px;
 }
 
-h3{
-  font-size:1.25rem;
-  margin:0 0 10px;
+h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--text-main);
 }
 
-.lead{
-  color:var(--muted);
-  font-size:1.08rem;
-  max-width:860px;
+p {
+  margin-bottom: 20px;
+  font-size: 1.05rem;
 }
 
-.hero-card{
-  position:relative;
-  border:1px solid rgba(255,255,255,.12);
-  background:
-    radial-gradient(circle at center, rgba(143,216,255,.08), transparent 60%),
-    linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.015));
-  padding:10px;
-  overflow:hidden;
-  max-width:980px;
-  margin:auto;
-  clip-path:polygon(0 0, 94% 0, 100% 8%, 100% 100%, 6% 100%, 0 92%);
-  box-shadow:
-    0 30px 90px rgba(0,0,0,.55),
-    inset 0 0 40px rgba(255,255,255,.03);
+.lead {
+  font-size: 1.1rem;
+  max-width: 680px;
+  color: var(--text-muted);
 }
 
-.hero-card img{
-  position:relative;
-  width:100%;
-  display:block;
-  border-radius:18px;
-  object-fit:cover;
-  animation:floatHero 8s ease-in-out infinite;
-  filter:
-    drop-shadow(0 0 25px rgba(180,220,255,.15))
-    drop-shadow(0 0 60px rgba(180,220,255,.08));
+.note {
+  color: var(--brand-blue-silver);
+  font-size: 0.92rem;
+  margin-top: 14px;
+  opacity: 0.8;
 }
 
-@keyframes floatHero{
-  0%{transform:translateY(0px) scale(1);}
-  50%{transform:translateY(-10px) scale(1.015);}
-  100%{transform:translateY(0px) scale(1);}
+/* ==========================================================================
+   4. LAYOUT & SECTIONS
+   ========================================================================== */
+section {
+  padding: 80px 0;
+  border-top: 1px solid var(--line);
 }
 
-.caption{
-  color:var(--soft);
-  font-size:.86rem;
-  padding:14px 8px 4px;
+.soft-bg {
+  background: var(--brand-ink);
 }
 
-.section{
-  padding:64px 0;
-  border-top:1px solid var(--line);
+.hero {
+  padding: 140px 0 80px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 46px;
+  align-items: center;
+  border-top: none;
 }
 
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
 }
 
-.two{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:24px;
-  align-items:start;
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 30px;
 }
 
-.card{
-  border:1px solid var(--line);
-  background:linear-gradient(160deg, rgba(255,255,255,.075), rgba(255,255,255,.025));
-  padding:26px;
-  border-radius:26px;
-  min-height:100%;
+/* ==========================================================================
+   5. CARDS & BOXES (RM CROCODILE STYLE)
+   ========================================================================== */
+.lux-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background: 
+    linear-gradient(160deg, rgba(11, 20, 38, 0.90), rgba(10, 36, 27, 0.96)),
+    url("rm-blue-crocodile-texture.jpg") center/cover;
+  background-blend-mode: overlay;
+  border: 1px solid rgba(192, 216, 228, 0.25);
+  box-shadow: 
+    0 32px 90px rgba(0, 0, 0, 0.65),           
+    inset 0 1px 1px rgba(192, 216, 228, 0.4);       
+  color: var(--text-main);
 }
 
-.card p,
-.section p{
-  color:var(--muted);
-  margin:0;
+.lux-box::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--brand-blue-silver), var(--brand-blue-bright), transparent);
 }
 
-.answer-box{
-  border-left:4px solid var(--blue);
-  background:rgba(143,216,255,.07);
-  padding:26px;
-  border-radius:0 24px 24px 0;
-  margin-top:22px;
+.hero-card {
+  position: relative;
+  border: 1px solid rgba(192, 216, 228, 0.25);
+  background: 
+    linear-gradient(160deg, rgba(11, 20, 38, 0.85), rgba(10, 36, 27, 0.90)),
+    url("rm-blue-crocodile-texture.jpg") center/cover;
+  background-blend-mode: overlay;
+  padding: 18px;
+  clip-path: polygon(0 0, 94% 0, 100% 8%, 100% 100%, 6% 100%, 0 92%);
+  box-shadow: 0 30px 90px rgba(0,0,0,0.8);
+  max-width: 980px;
+  margin: auto;
 }
 
-.compare{
-  width:100%;
-  border-collapse:collapse;
-  overflow:hidden;
-  border-radius:22px;
-  border:1px solid var(--line);
+.hero-card img {
+  position: relative;
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+  animation: floatHero 8s ease-in-out infinite;
+  filter: drop-shadow(0 0 40px rgba(18, 168, 200, 0.15));
 }
 
-.compare th,
-.compare td{
-  padding:16px;
-  border-bottom:1px solid var(--line);
-  text-align:left;
-  vertical-align:top;
+@keyframes floatHero {
+  0%   { transform: translateY(0px) scale(1); }
+  50%  { transform: translateY(-10px) scale(1.015); }
+  100% { transform: translateY(0px) scale(1); }
 }
 
-.compare th{
-  color:#07111f;
-  background:linear-gradient(90deg,var(--blue),#fff);
+.caption {
+  color: var(--brand-blue-silver);
+  font-size: 0.86rem;
+  padding: 14px 4px 2px;
+  font-weight: 600;
+  text-align: center;
 }
 
-.compare td{
-  color:var(--muted);
-  background:rgba(255,255,255,.04);
+.guide-card {
+  padding: 30px 24px;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.3s ease;
+  height: 100%;
 }
 
-.image-card{
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:28px;
-  padding:14px;
-  background:linear-gradient(160deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
-  box-shadow:0 30px 90px rgba(0,0,0,.45);
+.guide-card:hover {
+  transform: translateY(-4px);
+  background: rgba(192, 216, 228, 0.05);
+  border-color: rgba(192, 216, 228, 0.4);
 }
 
-.image-card img{
-  width:100%;
-  display:block;
-  border-radius:20px;
+.quote-box {
+  padding: 36px 40px;
+  border-left: 4px solid var(--brand-blue-silver);
+  background: rgba(192, 216, 228, 0.05);
+  border-radius: 0 20px 20px 0;
 }
 
-.faq details{
-  border:1px solid var(--line);
-  background:rgba(255,255,255,.045);
-  padding:20px 22px;
-  border-radius:22px;
-  margin-bottom:14px;
+.image-card {
+  border: 1px solid rgba(192, 216, 228, 0.25);
+  border-radius: 20px;
+  padding: 14px;
+  background: linear-gradient(160deg, rgba(11, 20, 38, 0.90), rgba(10, 36, 27, 0.96));
+  box-shadow: 0 30px 90px rgba(0,0,0,0.65);
 }
 
-.faq summary{
-  cursor:pointer;
-  font-weight:900;
-  color:var(--text);
+.image-card img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
 }
 
-.faq p{
-  margin-top:12px;
+/* ==========================================================================
+   6. TABLE
+   ========================================================================== */
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 30px;
 }
 
-.cta-row{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:30px;
+.compare {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  min-width: 600px;
 }
 
-.btn{
-  border:1px solid var(--line);
-  padding:13px 18px;
-  border-radius:999px;
-  font-weight:800;
-  background:rgba(255,255,255,.06);
-  transition:.3s ease;
+.compare th {
+  background: rgba(192, 216, 228, 0.1);
+  color: var(--brand-blue-silver);
+  padding: 20px;
+  text-align: left;
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 800;
+  border-bottom: 1px solid var(--line);
 }
 
-.btn:hover{
-  transform:translateY(-2px);
-  background:rgba(255,255,255,.1);
+.compare td {
+  padding: 20px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.02);
+  vertical-align: top;
 }
 
-.btn.primary{
-  background:linear-gradient(90deg,var(--blue),#fff);
-  color:#06111c;
+.compare strong {
+  color: var(--text-main);
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 0.05em;
 }
 
-.note{
-  color:var(--soft);
-  font-size:.92rem;
-  margin-top:14px;
+.compare tr:last-child td {
+  border-bottom: none;
 }
 
-footer{
-  padding:44px 0;
-  border-top:1px solid var(--line);
-  color:var(--soft);
-  font-size:.92rem;
+/* ==========================================================================
+   7. BUTTONS
+   ========================================================================== */
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
 }
 
-@media(max-width:850px){
-  .two,
-  .grid{
-    grid-template-columns:1fr;
-  }
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+}
 
-  .hero{
-    padding-top:50px;
-  }
+.btn-primary {
+  background: linear-gradient(135deg, var(--brand-blue-deep), var(--brand-green-deep));
+  color: white;
+  border: 1px solid rgba(192, 216, 228, 0.3); 
+  box-shadow: 0 10px 28px rgba(10, 36, 27, 0.4), inset 0 1px 1px rgba(192, 216, 228, 0.2);
+}
 
-  .nav{
-    align-items:flex-start;
-    flex-direction:column;
-  }
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #0e1c33, #0f3326);
+  box-shadow: 0 14px 32px rgba(10, 36, 27, 0.6), inset 0 1px 1px rgba(192, 216, 228, 0.3);
+}
 
-  .hero-card{
-    max-width:100%;
-  }
+.btn-secondary {
+  background: transparent;
+  border: 1px solid rgba(192, 216, 228, 0.4);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================================================
+   8. FAQ
+   ========================================================================== */
+.faq-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+details {
+  padding: 24px 30px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--line);
+  transition: background 0.3s ease;
+}
+
+details[open] {
+  background: rgba(192, 216, 228, 0.05);
+  border-color: rgba(192, 216, 228, 0.3);
+}
+
+summary {
+  cursor: pointer;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--text-main);
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--brand-blue-silver); font-size: 1.5rem; font-weight: 400; }
+details[open] summary::after { content: "−"; }
+
+details p {
+  margin-top: 16px;
+  margin-bottom: 0;
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   9. FOOTER
+   ========================================================================== */
+footer {
+  background: var(--brand-black);
+  padding: 60px 0;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  color: var(--text-main);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ==========================================================================
+   10. RESPONSIVE
+   ========================================================================== */
+@media(max-width: 900px) {
+  .nav-links { display: none; }
+  .hero, .two-col, .grid-3 { grid-template-columns: 1fr; gap: 30px; }
+  .hero { padding-top: 110px; }
+  h1 { font-size: clamp(2.4rem, 10vw, 3.5rem); }
+  h2 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+  .cta-row { flex-direction: column; width: 100%; }
+  .btn { width: 100%; }
+  .footer-grid { flex-direction: column; gap: 30px; }
+  .hero-card { max-width: 100%; }
 }
 </style>
 
@@ -418,25 +587,28 @@ footer{
 <body>
 
 <header>
-  <div class="wrapper nav">
-    <div class="brand">Ixchell Jewellery · 翡坊翠藝</div>
+<div class="container nav">
+  <a href="/" class="brand">
+    Ixchell Jewellery
+    <span>翡坊翠藝 · Since 2014</span>
+  </a>
 
-    <nav>
-      <a href="index.html">Home</a> &nbsp; / &nbsp;
-      <a href="type-a-jadeite.html">Type A Jadeite</a> &nbsp; / &nbsp;
-      <a href="type-a-vs-b-vs-c-jadeite.html">Type A vs B & C</a>
-    </nav>
-  </div>
+  <nav class="nav-links">
+    <a href="/">Home</a>
+    <a href="jadeite-guide-singapore.html">Guide</a>
+    <a href="type-a-jadeite.html">Type A</a>
+    <a href="what-gives-jadeite-value.html">Value</a>
+    <a href="jadeite-bangle-singapore.html">Bangles</a>
+  </nav>
+</div>
 </header>
 
 <main>
 
-<section class="wrapper hero">
+<section class="container hero">
   <div class="hero-text">
-    <div class="kicker">Jade Education Singapore</div>
-
+    <div class="eyebrow">Jade Education Singapore</div>
     <h1>Jade vs Jadeite</h1>
-
     <p class="lead">
       Jade is not one single mineral. In gemmology, jade refers mainly to two different materials: jadeite and nephrite. They share cultural importance, but they differ in mineral structure, appearance, rarity, market value and historical use.
     </p>
@@ -444,98 +616,94 @@ footer{
 
   <figure class="hero-card">
     <img src="jade-vs-jadeite-hero.png" alt="Nephrite and jadeite comparison guide by Ixchell Jewellery Singapore">
-
     <figcaption class="caption">
       A simple visual comparison between nephrite and jadeite. Both are jade, but they are not the same mineral.
     </figcaption>
   </figure>
 </section>
 
-<section class="section">
-  <div class="wrapper two">
+<section class="soft-bg">
+  <div class="container two-col">
     <div>
-      <div class="kicker">Simple Answer</div>
+      <div class="eyebrow">Simple Answer</div>
       <h2>Jade is the family name. Jadeite is one type of jade.</h2>
     </div>
 
-    <div class="answer-box">
-      <p>
+    <div class="quote-box">
+      <p style="margin-bottom:0;">
         The word “jade” is often used casually, but properly speaking, jade refers to two recognised minerals: jadeite and nephrite. Jadeite is generally rarer, often more vivid in colour, and strongly associated with Burmese jadeite. Nephrite is historically older in Chinese jade culture and is known for its tough, fibrous structure.
       </p>
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="wrapper">
-    <div class="kicker">Clear Comparison</div>
+<section>
+  <div class="container">
+    <div class="eyebrow">Clear Comparison</div>
     <h2>Nephrite vs jadeite</h2>
 
-    <table class="compare">
-      <thead>
-        <tr>
-          <th>Feature</th>
-          <th>Nephrite</th>
-          <th>Jadeite</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <td><strong>Mineral identity</strong></td>
-          <td>A calcium magnesium iron silicate mineral with a tough fibrous structure.</td>
-          <td>A sodium aluminium silicate mineral with a granular to crystalline structure.</td>
-        </tr>
-
-        <tr>
-          <td><strong>Historical use</strong></td>
-          <td>Widely used in ancient Chinese jade culture, ritual carvings and traditional ornaments.</td>
-          <td>Became highly admired later, especially through Burmese jadeite entering Chinese and Southeast Asian markets.</td>
-        </tr>
-
-        <tr>
-          <td><strong>Appearance</strong></td>
-          <td>Often waxy, soft-looking, and commonly white, cream, grey-green, spinach green or brownish green.</td>
-          <td>Can appear more vivid, translucent, icy, lavender, bright green, yellow, red, black or multi-coloured.</td>
-        </tr>
-
-        <tr>
-          <td><strong>Market language</strong></td>
-          <td>Often discussed as nephrite jade.</td>
-          <td>Often discussed through Type A, Type B and Type C treatment terms.</td>
-        </tr>
-
-        <tr>
-          <td><strong>Buyer note</strong></td>
-          <td>Not fake jade. It is genuine jade, but not jadeite.</td>
-          <td>Not all jadeite is equal. Treatment status, colour, translucency, texture and craftsmanship matter.</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="table-wrapper">
+      <table class="compare">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Nephrite</th>
+            <th>Jadeite</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Mineral identity</strong></td>
+            <td>A calcium magnesium iron silicate mineral with a tough fibrous structure.</td>
+            <td>A sodium aluminium silicate mineral with a granular to crystalline structure.</td>
+          </tr>
+          <tr>
+            <td><strong>Historical use</strong></td>
+            <td>Widely used in ancient Chinese jade culture, ritual carvings and traditional ornaments.</td>
+            <td>Became highly admired later, especially through Burmese jadeite entering Chinese and Southeast Asian markets.</td>
+          </tr>
+          <tr>
+            <td><strong>Appearance</strong></td>
+            <td>Often waxy, soft-looking, and commonly white, cream, grey-green, spinach green or brownish green.</td>
+            <td>Can appear more vivid, translucent, icy, lavender, bright green, yellow, red, black or multi-coloured.</td>
+          </tr>
+          <tr>
+            <td><strong>Market language</strong></td>
+            <td>Often discussed as nephrite jade.</td>
+            <td>Often discussed through Type A, Type B and Type C treatment terms.</td>
+          </tr>
+          <tr>
+            <td><strong>Buyer note</strong></td>
+            <td>Not fake jade. It is genuine jade, but not jadeite.</td>
+            <td>Not all jadeite is equal. Treatment status, colour, translucency, texture and craftsmanship matter.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="wrapper">
-    <div class="kicker">Why People Confuse Them</div>
+<section class="soft-bg">
+  <div class="container">
+    <div class="eyebrow">Why People Confuse Them</div>
     <h2>Most confusion begins with the word “jade”.</h2>
 
-    <div class="grid">
-      <article class="card">
+    <div class="grid-3">
+      <article class="guide-card">
         <h3>One word, two minerals</h3>
         <p>
           Many people use “jade” as a single word for all green or carved stones. In reality, nephrite and jadeite are different minerals with different structures.
         </p>
       </article>
 
-      <article class="card">
+      <article class="guide-card">
         <h3>Culture came before gemmology</h3>
         <p>
           Jade has been valued culturally for thousands of years. Modern mineral classification came later, which is why traditional language can sometimes feel confusing.
         </p>
       </article>
 
-      <article class="card">
+      <article class="guide-card">
         <h3>Colour is not enough</h3>
         <p>
           Green colour alone does not prove jadeite. Proper understanding begins with mineral identity, treatment status and professional observation.
@@ -545,10 +713,10 @@ footer{
   </div>
 </section>
 
-<section class="section">
-  <div class="wrapper two">
+<section>
+  <div class="container two-col">
     <div>
-      <div class="kicker">Historical Context</div>
+      <div class="eyebrow">Historical Context</div>
       <h2>Ancient Chinese jade culture was largely nephrite-based.</h2>
       <p>
         For much of early Chinese history, jade culture was built around nephrite. Its toughness made it suitable for ritual objects, symbolic carvings and refined ornaments. This is why nephrite remains culturally important and should not be dismissed as “fake jade”.
@@ -561,14 +729,14 @@ footer{
   </div>
 </section>
 
-<section class="section">
-  <div class="wrapper two">
+<section class="soft-bg">
+  <div class="container two-col">
     <figure class="image-card">
       <img src="burmese-jadeite-landscape-carving.jpg" alt="Burmese jadeite landscape carving representing jadeite colour and translucency">
     </figure>
 
     <div>
-      <div class="kicker">Burmese Jadeite</div>
+      <div class="eyebrow">Burmese Jadeite</div>
       <h2>Jadeite changed the way many collectors understood jade.</h2>
       <p>
         Burmese jadeite became highly admired because it can show vivid green, icy translucency, lavender, yellow, red and multi-coloured material. This wider visual range helped jadeite become especially desirable in later Chinese, Southeast Asian and international collecting markets.
@@ -577,15 +745,14 @@ footer{
   </div>
 </section>
 
-<section class="section">
-  <div class="wrapper two">
+<section>
+  <div class="container two-col">
     <div>
-      <div class="kicker">Trade & Movement</div>
+      <div class="eyebrow">Trade & Movement</div>
       <h2>Jadeite travelled through mountain and maritime networks.</h2>
       <p>
         Burmese jadeite is closely associated with northern Myanmar and trade routes into Yunnan, China and Southeast Asia. Over time, Chinese merchant networks, maritime trade, and 下南洋 migration helped jade culture travel through places such as Singapore, Malacca, Penang, Kuching, Pontianak and beyond.
       </p>
-
       <p class="note">
         Map visuals on this website should be treated as educational illustrations and must be geographically checked before publishing.
       </p>
@@ -597,95 +764,94 @@ footer{
   </div>
 </section>
 
-<section class="section">
-  <div class="wrapper">
-    <div class="kicker">Very Important</div>
+<section class="soft-bg">
+  <div class="container">
+    <div class="eyebrow">Very Important</div>
     <h2>Type A, B and C terminology belongs mainly to jadeite.</h2>
 
-    <div class="answer-box">
-      <p>
+    <div class="quote-box" style="border-radius: 20px; border-left: none; border-top: 4px solid var(--brand-blue-silver); margin-bottom: 30px;">
+      <p style="margin-bottom:0;">
         When buyers ask whether a piece is “Type A”, they are usually asking about jadeite treatment status. Type A jadeite means natural untreated jadeite. Type B jadeite is chemically treated and commonly polymer impregnated. Type C jadeite is dyed. This terminology should not be loosely applied to every stone simply called “jade”.
       </p>
     </div>
 
     <div class="cta-row">
-      <a class="btn primary" href="type-a-jadeite.html">
+      <a class="btn btn-primary" href="type-a-jadeite.html">
         Read: What Is Type A Jadeite?
       </a>
-
-      <a class="btn" href="type-a-vs-b-vs-c-jadeite.html">
+      <a class="btn btn-secondary" href="type-a-vs-b-vs-c-jadeite.html">
         Compare Type A, B & C
       </a>
     </div>
   </div>
 </section>
 
-<section class="section faq">
-  <div class="wrapper">
-    <div class="kicker">FAQ</div>
+<section class="faq">
+  <div class="container">
+    <div class="eyebrow">FAQ</div>
     <h2>Questions people ask about jade and jadeite</h2>
 
-    <details>
-      <summary>Is jadeite real jade?</summary>
-      <p>
-        Yes. Jadeite is real jade. It is one of the two recognised minerals commonly known as jade.
-      </p>
-    </details>
+    <div class="faq-grid">
+      <details>
+        <summary>Is jadeite real jade?</summary>
+        <p>
+          Yes. Jadeite is real jade. It is one of the two recognised minerals commonly known as jade.
+        </p>
+      </details>
 
-    <details>
-      <summary>Is nephrite fake jade?</summary>
-      <p>
-        No. Nephrite is genuine jade, but it is not jadeite. It has its own long cultural and historical importance.
-      </p>
-    </details>
+      <details>
+        <summary>Is nephrite fake jade?</summary>
+        <p>
+          No. Nephrite is genuine jade, but it is not jadeite. It has its own long cultural and historical importance.
+        </p>
+      </details>
 
-    <details>
-      <summary>Which is more valuable, jadeite or nephrite?</summary>
-      <p>
-        Fine jadeite is generally rarer and can command higher prices, especially vivid green or highly translucent material. However, value still depends on quality, provenance, carving, condition and buyer demand.
-      </p>
-    </details>
+      <details>
+        <summary>Which is more valuable, jadeite or nephrite?</summary>
+        <p>
+          Fine jadeite is generally rarer and can command higher prices, especially vivid green or highly translucent material. However, value still depends on quality, provenance, carving, condition and buyer demand.
+        </p>
+      </details>
 
-    <details>
-      <summary>Why is Burmese jadeite famous?</summary>
-      <p>
-        Burmese jadeite is admired because Myanmar has produced some of the most desired jadeite material, including vivid green, icy, lavender and multi-coloured varieties.
-      </p>
-    </details>
+      <details>
+        <summary>Why is Burmese jadeite famous?</summary>
+        <p>
+          Burmese jadeite is admired because Myanmar has produced some of the most desired jadeite material, including vivid green, icy, lavender and multi-coloured varieties.
+        </p>
+      </details>
 
-    <details>
-      <summary>Should I ask for jade or jadeite when buying?</summary>
-      <p>
-        If you are specifically looking for natural Type A Burmese jadeite, ask for jadeite clearly. The word “jade” alone may refer to either jadeite or nephrite.
-      </p>
-    </details>
+      <details>
+        <summary>Should I ask for jade or jadeite when buying?</summary>
+        <p>
+          If you are specifically looking for natural Type A Burmese jadeite, ask for jadeite clearly. The word “jade” alone may refer to either jadeite or nephrite.
+        </p>
+      </details>
 
-    <details>
-      <summary>Where can I learn about jadeite in Singapore?</summary>
-      <p>
-        Ixchell Jewellery is located at The Adelphi #02-33, Singapore, near City Hall MRT. The boutique specialises in natural Type A Burmese jadeite jewellery and private educational viewing.
-      </p>
-    </details>
+      <details>
+        <summary>Where can I learn about jadeite in Singapore?</summary>
+        <p>
+          Ixchell Jewellery is located at The Adelphi #02-33, Singapore, near City Hall MRT. The boutique specialises in natural Type A Burmese jadeite jewellery and private educational viewing.
+        </p>
+      </details>
+    </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="wrapper">
-    <div class="card">
-      <div class="kicker">Private Jadeite Viewing</div>
-
+<section>
+  <div class="container">
+    <div class="lux-box" style="padding:60px; text-align:center;">
+      <div class="eyebrow">Private Jadeite Viewing</div>
       <h2>Begin with understanding.</h2>
-
-      <p>
+      
+      <p style="max-width:700px; margin:0 auto 30px;">
         Visit Ixchell Jewellery at The Adelphi Singapore to view natural Type A Burmese jadeite bangles, pendants, earrings and collector pieces in person. For a quieter experience, kindly DM us on Instagram before visiting.
       </p>
 
-      <div class="cta-row">
-        <a class="btn primary" href="https://www.instagram.com/ixchelljewellery/">
+      <div class="cta-row" style="justify-content:center;">
+        <a class="btn btn-primary" href="https://www.instagram.com/ixchelljewellery/" target="_blank" rel="noopener">
           DM @ixchelljewellery
         </a>
-
-        <a class="btn" href="index.html">
+        <a class="btn btn-secondary" href="index.html">
           Return to Homepage
         </a>
       </div>
@@ -696,8 +862,25 @@ footer{
 </main>
 
 <footer>
-  <div class="wrapper">
-    Ixchell Jewellery · 翡坊翠藝 · The Adelphi #02-33 Singapore · Natural Type A Burmese Jadeite · One Stone. One Story.
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">Ixchell Jewellery</div>
+      <p>翡坊翠藝 · Established 2014</p>
+
+      <div class="footer-links">
+        <a href="jadeite-guide-singapore.html">Jadeite Guide</a>
+        <a href="type-a-jadeite.html">Type A Jadeite</a>
+        <a href="history-origins-of-jade.html">History & Origins</a>
+        <a href="what-gives-jadeite-value.html">Understanding Value</a>
+      </div>
+    </div>
+
+    <div>
+      <p style="color:var(--text-main); font-weight:600;">Natural Type A Burmese Jadeite</p>
+      <p>1 Coleman Street, The Adelphi #02-33, Singapore</p>
+      <p>Opposite Funan · City Hall MRT</p>
+      <p>Instagram: @ixchelljewellery</p>
+    </div>
   </div>
 </footer>
 
