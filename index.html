@@ -1,217 +1,1263 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-SG">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ixchell Jewellery Menu</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="9utpzrIOBpC92ewH1LbLsCqmLIgABFmCDbJ2naw3y-E" />
+<title>Ixchell Jewellery Singapore | Type A Burmese Jadeite Boutique At The Adelphi</title>
+<meta name="description" content="Ixchell Jewellery is a private Type A Burmese jadeite boutique at The Adelphi Singapore near City Hall MRT. Calm viewing. Educational guidance. Quiet luxury jadeite experience." />
+<meta name="keywords" content="Ixchell Jewellery, 翡坊翠藝, Type A Burmese jadeite Singapore, jadeite Singapore, jade shop Singapore, jadeite boutique Singapore, The Adelphi jadeite, City Hall MRT jadeite, jadeite bangles Singapore, natural jadeite Singapore" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+<meta name="theme-color" content="#000000" />
+
+<link rel="canonical" href="https://ixchelljewellery.com/" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="logo-transparent.png" />
+<link rel="preload" as="image" href="rm-blue-crocodile-texture.jpg" />
+<link rel="preload" as="image" href="ixchell-jewellery-shopfront-the-adelphi.jpg" />
+<link rel="preload" as="audio" href="intro.mp3" />
+
 <style>
-  /* --- Base Styles --- */
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+/* ==========================================================================
+   1. VARIABLES & FOUNDATION
+   ========================================================================== */
+:root {
+  /* THE FOUNDATION */
+  --brand-black: #000000;       
+  --brand-ink: #05080a;         
 
-  body {
-    background-color: #000;
-    color: #fff;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-  }
+  /* THE BRAND BLUE (藏藍) */
+  --brand-blue-deep: #0b1426;   
+  --brand-blue-bright: #12a8c8; 
+  --brand-blue-silver: #c0d8e4; 
 
-  .menu-container {
-    padding: 20px;
-    max-width: 400px; /* Adjust based on your mobile layout width */
-    margin: 0 auto;
-  }
+  /* THE BRAND GREEN (藏綠) */
+  --brand-green-deep: #0a241b;  
+  --brand-green-glow: #1b4d3e;  
 
-  a {
-    text-decoration: none;
-    display: block;
-    transition: opacity 0.2s ease;
-  }
+  /* TYPOGRAPHY */
+  --text-main: #ffffff;         
+  --text-muted: rgba(255, 255, 255, 0.6); 
+}
 
-  a:hover {
-    opacity: 0.7;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  hr.divider {
-    border: 0;
-    border-top: 1px solid #333;
-    margin: 24px 0;
-  }
+/* FULL PAGE SCROLL SNAPPING */
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
 
-  /* --- Header --- */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-  }
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  background-color: var(--brand-black);
+  color: var(--text-main);
+}
 
-  .header h1 {
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-  }
+body.intro-active {
+  overflow: hidden;
+}
 
-  .icon-btn {
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-  }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-  .icon-btn svg {
-    height: 24px;
-    width: auto;
-  }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
-  /* --- Main Navigation --- */
-  .main-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
 
-  .main-nav a {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-  }
+section {
+  scroll-snap-align: start;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px 0; 
+  position: relative;
+}
 
-  /* --- Sub Navigation --- */
-  .sub-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+/* ==========================================================================
+   2. TYPOGRAPHY (RICHARD MILLE STYLE)
+   ========================================================================== */
+.eyebrow {
+  font-family: "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--brand-blue-silver);
+  margin-bottom: 12px;
+}
 
-  .sub-nav a {
-    color: #aaa; /* Lighter grey text */
-    font-size: 16px;
-    font-weight: 400;
-  }
+h1, h2, h3 {
+  font-family: "Inter", sans-serif;
+  color: var(--text-main);
+  text-transform: uppercase; 
+}
 
-  /* --- Social Row --- */
-  .footer-social-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+h1 {
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  line-height: 1.05;
+  font-weight: 900; 
+  margin-bottom: 16px;
+  letter-spacing: -0.03em; 
+}
 
-  .footer-social-row .social-label {
-    font-size: 16px;
-    font-weight: 400;
-    color: #fff;
-  }
+h2 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
 
-  .footer-social-row .social-icons {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
+h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
 
-  .footer-social-row svg {
-    height: 22px;
-    width: auto;
-    color: #fff;
-  }
+p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75); 
+}
 
-  /* --- Footer Links --- */
-  .footer-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
+.section-intro {
+  margin-bottom: 48px;
+}
 
-  .footer-nav a,
-  .footer-nav .copyright {
-    color: #888; /* Darker grey for bottom links */
-    font-size: 14px;
-    font-weight: 400;
-  }
+.section-intro p {
+  margin-bottom: 0;
+}
 
-  .footer-nav .copyright {
-    margin-top: 10px;
+/* ==========================================================================
+   3. INTRO SEQUENCE (LIGHT BLUE & CINEMATIC)
+   ========================================================================== */
+#intro-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #e0f2fe, #bae6fd); 
+  opacity: 0;
+  animation: introFadeIn 0.4s ease-out 0.1s forwards;
+}
+
+@keyframes introFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+#intro-loader.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 1.5s ease, visibility 1.5s ease;
+}
+
+.intro-panel {
+  width: min(440px, 92vw);
+  padding: 36px 28px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px);
+  border: 1.6px solid rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 
+    0 42px 140px rgba(14, 165, 233, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-logo {
+  width: 190px;
+  margin: 0 auto 22px;
+}
+
+.intro-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0b1426; 
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.intro-line {
+  width: 86px;
+  height: 1px;
+  margin: 0 auto 18px;
+  background: linear-gradient(90deg, transparent, #38bdf8, #0284c7, transparent);
+  box-shadow: 0 0 18px rgba(56, 189, 248, 0.4);
+}
+
+.intro-subtitle {
+  margin: 14px auto 24px;
+  max-width: 330px;
+  line-height: 1.7;
+  color: #1e293b; 
+  font-weight: 500;
+}
+
+.enter-btn {
+  padding: 14px 32px;
+  border: 1px solid rgba(2, 132, 199, 0.4); 
+  border-radius: 999px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, #0b1426, #1e293b);
+  color: #ffffff;
+  box-shadow: 
+    0 10px 24px rgba(2, 132, 199, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.enter-btn:hover {
+  background: linear-gradient(135deg, #0f1e38, #2a3b52);
+  box-shadow: 
+    0 14px 32px rgba(2, 132, 199, 0.3),
+    inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.enter-btn:active {
+  transform: scale(0.97) translateY(2px);
+  box-shadow: 
+    0 2px 8px rgba(2, 132, 199, 0.2),
+    inset 0 4px 8px rgba(0, 0, 0, 0.5); 
+  border-color: rgba(2, 132, 199, 0.8);
+}
+
+.sound-note {
+  margin-top: 12px;
+  font-size: .76rem;
+  opacity: .8;
+  color: #0b1426;
+}
+
+/* ==========================================================================
+   4. HEADER & OVERLAY MENU
+   ========================================================================== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1200;
+  background: rgba(0, 0, 0, 0.3); 
+  backdrop-filter: blur(12px);
+}
+
+.nav-rm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.hamburger {
+  width: 24px;
+  height: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #ffffff;
+}
+
+.brand-rm {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+}
+
+.menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--brand-black);
+  z-index: 3000; 
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px); 
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 30px;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.menu-overlay-header {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 80px;
+}
+
+.close-btn {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+}
+
+.menu-overlay-links {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.menu-overlay-links a {
+  font-family: "Inter", sans-serif;
+  font-size: clamp(2rem, 6vw, 3rem); 
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  transition: color 0.3s;
+}
+
+.menu-overlay-links a:hover {
+  color: var(--brand-blue-silver);
+}
+
+/* ==========================================================================
+   5. BUTTONS & CARDS
+   ========================================================================== */
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  border-radius: 999px;
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+}
+
+.btn-blue {
+  background: linear-gradient(135deg, var(--brand-blue-deep), var(--brand-green-deep));
+  color: white;
+  border: 1px solid rgba(192, 216, 228, 0.3); 
+  box-shadow: 0 10px 28px rgba(10, 36, 27, 0.4), inset 0 1px 1px rgba(192, 216, 228, 0.2);
+}
+
+.btn-blue:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #0e1c33, #0f3326);
+  box-shadow: 0 14px 32px rgba(10, 36, 27, 0.6), inset 0 1px 1px rgba(192, 216, 228, 0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(192, 216, 228, 0.4);
+  color: white;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* TEXTURED BLUE/GREEN CROCODILE CARDS */
+.lux-card, 
+.discovery-card {
+  background: 
+    linear-gradient(160deg, rgba(11, 20, 38, 0.90), rgba(10, 36, 27, 0.96)),
+    url("rm-blue-crocodile-texture.jpg");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay; 
+  border: 1px solid rgba(192, 216, 228, 0.25);
+  box-shadow: 
+    0 32px 90px rgba(0, 0, 0, 0.65),           
+    0 0 0 1px rgba(176, 224, 230, 0.08),       
+    inset 0 1px 1px rgba(192, 216, 228, 0.4),  
+    inset 0 -1px 1px rgba(0, 0, 0, 0.8);       
+  border-radius: 20px;
+  padding: 40px;
+  color: var(--text-main);
+  position: relative;
+  overflow: hidden;
+}
+
+.lux-card::before, 
+.discovery-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--brand-blue-silver), var(--brand-blue-bright), transparent);
+}
+
+.lux-card h3, .discovery-card h3 {
+  color: var(--text-main); 
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* INNER ELEMENTS */
+.subquestion {
+  background: rgba(10, 36, 27, 0.4); 
+  border: 1px solid rgba(192, 216, 228, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.subquestion span {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--brand-blue-silver);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   6. HERO SECTION
+   ========================================================================== */
+.hero {
+  padding: 0;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.9) 100%),
+    url("ixchell-jewellery-shopfront-the-adelphi.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4; 
+  z-index: 0;
+  filter: grayscale(30%) contrast(120%); 
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-lead {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  animation: rmBounce 2.5s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-indicator:hover {
+  opacity: 1;
+}
+
+@keyframes rmBounce {
+  0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+  40% { transform: translate(-50%, -10px); }
+  60% { transform: translate(-50%, -5px); }
+}
+
+/* ==========================================================================
+   7. SECURITY POLICY
+   ========================================================================== */
+.security-note {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(192, 216, 228, 0.2);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 24px;
+}
+
+/* ==========================================================================
+   8. DISCOVERY GRID
+   ========================================================================== */
+.discovery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.discovery-card {
+  padding: 30px 24px;
+  background-blend-mode: multiply; 
+  border-radius: 16px; 
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.discovery-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(192, 216, 228, 0.5); 
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9), inset 0 1px 1px rgba(192, 216, 228, 0.6);
+}
+
+.card-category {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: var(--brand-blue-silver);
+  margin-bottom: 12px;
+}
+
+.card-footer {
+  font-family: "Inter", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 12px;
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   9. LEARNING CENTRE (ACCORDION)
+   ========================================================================== */
+.accordion-container {
+  border-top: 1px solid rgba(192, 216, 228, 0.2); 
+  max-width: 900px; 
+}
+
+.accordion-item {
+  border-bottom: 1px solid rgba(192, 216, 228, 0.2);
+}
+
+.accordion-header {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: var(--text-main);
+  transition: color 0.3s ease;
+}
+
+.accordion-header:hover {
+  color: var(--brand-blue-silver);
+}
+
+.acc-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.acc-number {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--brand-blue-silver);
+  opacity: 0.6;
+}
+
+.acc-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.acc-icon {
+  color: var(--brand-blue-silver);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-inner {
+  padding: 0 0 30px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.acc-link {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  width: fit-content;
+}
+
+.acc-link:hover {
+  color: var(--brand-blue-bright);
+  transform: translateX(4px);
+}
+
+.acc-link.main-link {
+  color: var(--text-main);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.acc-link.main-link span {
+  font-size: 0.65rem;
+  background: var(--brand-blue-deep);
+  border: 1px solid var(--brand-blue-silver);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 12px;
+  vertical-align: middle;
+}
+
+.accordion-item.active .acc-icon {
+  transform: rotate(45deg); 
+  color: var(--brand-blue-bright);
+}
+
+/* ==========================================================================
+   10. EXPERIENCE & VISIT GRIDS
+   ========================================================================== */
+.question-grid {
+  display: grid;
+  grid-template-columns: 0.88fr 1.42fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.subquestion-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.visit-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.visit-card {
+  padding: 30px;
+}
+
+.address-card {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+/* ==========================================================================
+   11. RM STYLE BLOCK FOOTER
+   ========================================================================== */
+footer {
+  background: var(--brand-black);
+  padding: 40px 0 80px;
+  scroll-snap-align: end; 
+}
+
+.footer-block {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15); 
+}
+
+.primary-block a {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.secondary-block a {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.3s ease;
+}
+
+.secondary-block a:hover {
+  color: #ffffff;
+}
+
+/* Social Media Follow Row */
+.social-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-label {
+  font-family: "Inter", sans-serif;
+  font-size: 1.15rem;
+  color: #ffffff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 24px;
+}
+
+.social-icons a {
+  color: #ffffff;
+  transition: opacity 0.3s ease;
+  display: inline-flex;
+}
+
+.social-icons a:hover {
+  opacity: 0.5;
+}
+
+.social-icons svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+/* Bottom Legal Grid */
+.footer-legal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding-top: 30px;
+  font-family: "Inter", sans-serif;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.legal-links-left, .legal-links-right {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-legal a {
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   12. MOBILE RESPONSIVE
+   ========================================================================== */
+@media(max-width: 900px){
+  section { padding: 80px 0; }
+  .discovery-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
+  .question-grid, .visit-cards, .address-card, .subquestion-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 768px){
+  .intro-panel {
+    width: min(420px, 92vw);
+    padding: 30px 22px;
+  }
+  .accordion-inner { padding: 0 0 24px 0; }
+  .acc-title-wrap { gap: 16px; }
+  .btn-row { flex-direction: column; }
+  .btn { width: 100%; }
+  
+  /* Footer Mobile Stacking */
+  .footer-legal {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
-<body>
 
-<div class="menu-container">
-  
-  <header class="header">
-    <button class="icon-btn" aria-label="Menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-        <path d="M3 12h18M3 6h18M3 18h18" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
-    <h1>IXCHELL JEWELLERY</h1>
-    <button class="icon-btn" aria-label="Search">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" xmlns="http://www.w3.org/2000/svg">
-        <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
-  </header>
+<body class="intro-active">
 
-  <nav class="main-nav">
-    <a href="#">DISCOVER JADEITE</a>
-    <a href="#">SAVOIR-FAIRE</a>
-    <a href="#">STORE LOCATOR</a>
-  </nav>
-
-  <hr class="divider">
-
-  <nav class="sub-nav">
-    <a href="#">Type A jadeite guide</a>
-    <a href="#">Jade vs jadeite</a>
-    <a href="#">Understanding value</a>
-    <a href="#">Book an appointment</a>
-  </nav>
-
-  <hr class="divider">
-
-  <div class="footer-social-row">
-    <span class="social-label">Follow us</span>
+<div id="intro-loader">
+  <div class="intro-panel">
     
-    <div class="social-icons">
-      <a href="https://www.threads.net/" aria-label="Ixchell Jewellery on Threads" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 448 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M331.5 235.7c2.2 .9 4.2 1.9 6.3 2.8c29.2 14.1 50.6 35.2 61.8 61.4c15.7 36.5 17.2 95.8-30.3 143.2c-36.2 36.2-86.6 52.2-139.2 43.9c-40.3-6.4-78.4-25.3-107.5-53C93.7 406.8 77.2 368 73.1 322c-2.3-26 1.4-53.1 11.2-78.3c10-25.7 25.4-48.4 45.4-66.6c20.3-18.4 44-32.3 69.8-40.4c28.3-8.8 58.4-11 88.3-6.5c22.1 3.3 43.3 11 62.4 22.6c28 17 48.7 41.5 58 72.5c8.7 29.1 9 60.5 1 89.8c-7.3 26.6-22.3 50.8-43.1 69c-20 17.4-44.8 28-70.5 30.5c-29.4 2.8-59-5.1-83.6-22.1c-22.1-15.3-39-36.2-48-60.7c-9.1-25-11.6-52.2-7.2-78.3c5-29.6 18.2-57.5 38.3-79.6c18.5-20.3 42-35.3 68.3-43.2c25.4-7.6 52.8-9 78.8-4c25.2 4.9 49.3 15.6 69.8 30.8c21.2 15.8 39 35.8 51.5 58.7c11.9 21.8 19.8 45.8 23.3 70.8c3.2 22.8 4.2 46.1 2.8 69.1c-1.8 28.3-7.5 56.4-17 83.2c-10 28.3-24.8 55-44.3 78.4c-20.5 24.6-46.1 45.4-75.2 60.1c-30.8 15.5-64.8 24.3-99.8 26.1c-35.1 1.8-70.7-3.3-104.2-15.2c-32.3-11.5-62.6-28.7-89.2-50.6c-25.5-21-47.5-46-65-74.4c-16.7-27.1-29.4-56.6-37.5-87.5c-7.7-29.5-11.8-60.1-12.2-90.8c-.4-31 2.9-62.1 9.8-92.4c7.1-31.1 18.2-61.2 33-89.2c15-28.4 34.2-54.6 57-77.5c23.2-23.2 49.6-43.1 78.7-58.4c30-15.8 63-26.6 97.4-31.8c34.8-5.3 70.4-5.3 105.2-1c33.9 4.2 67.2 13.7 98.4 28.3c29.5 13.8 56.7 32 80.4 53.7c22.6 20.8 42.1 45 57.5 72.1c14.6 25.7 25.6 53.5 32.5 82.5c6.5 27.5 10 55.8 10.5 84.2c.4 29-.8 58-3.5 86.8c-2.9 31.1-9.5 61.8-19.8 91.5c-10.8 31.2-26 60.7-45.3 87.7c-20.2 28.2-45.3 53-73.8 73.1c-29.7 20.9-63.5 35.8-99.3 43.8c-36 8-73.4 9.5-110 4.2c-35.8-5.2-70.7-16.8-103.1-33.8c-30.9-16.2-59.5-37.4-83.9-63c-23.2-24.3-42.5-52.6-56.5-83.5c-13.3-29.3-22-60.6-25.8-92.8c-3.5-29.8-3.4-60 .4-89.8c4-31.4 12.3-62 25.1-90.6c13.2-29.5 31.5-56.5 54.1-80c23.4-24.3 51.5-44.1 82.6-58.2c32.2-14.6 67.2-23.5 103-25.9c35.6-2.4 71.6 .8 106.1 9.8c33 8.6 64.3 22.8 92.5 41.5c26.7 17.7 50.8 39.8 70.5 65.5c18.5 24 33.6 50.8 44.5 79.5c10.3 27 16.9 55.4 19.6 84.4c2.5 27.5 1.5 55.4-2.8 82.7c-4.5 28.5-13.2 56.4-25.8 82.7c-13.3 27.8-30.8 53.4-51.9 75.8c-22.2 23.6-48.4 43.3-78 57.5c-30.8 14.8-64.8 23.5-99.5 25.5c-34.9 2-70.2-2-103.7-12c-32.2-9.6-62.8-24.8-90-44.7c-25.7-18.8-48.5-41.9-66.5-68c-17.1-24.7-30.3-51.9-38.6-80.4c-7.9-27.1-11.7-55.3-11.3-83.4c.4-29.4 4.5-58.5 12.5-86.8c8.5-30 22-58.4 39.6-84c18.4-26.8 41.6-50.5 68.8-69.5c28.3-19.8 60.5-34.2 94.6-41.8c34.9-7.8 71.1-9 106.6-3.4c34.1 5.4 67 16.5 96.5 32.5c28.2 15.3 53.6 35.4 74.8 59.3c20 22.5 36.3 48.2 47.9 76c11.1 26.6 17.9 54.8 20.3 83.8c2.3 27.7 1 55.7-3.7 83c-5 29.2-14.7 57.7-28.8 84.3c-14.9 28.2-34.7 54-58.7 75.8c-25.1 22.8-54.6 41.2-87.1 53.8c-33.8 13.1-70.7 19.8-107.5 19.6c-35.8-.2-71.6-6-105-17.6c-32.1-11.1-62.1-27.8-88.5-49.2c-25.1-20.3-46.7-44.8-63-72.3c-15.5-26.2-26.7-54.7-32.6-84.5c-5.6-28.3-7.5-57.3-5.5-86.1c2.1-30.1 8.6-59.7 19.5-88.1c11.5-30 27.6-58 47.7-83.1c21.1-26.3 46.8-49.2 76.2-67c30.8-18.7 64.9-31.5 100.9-37.4c36.1-5.9 73.1-5.4 109.2 1.6c34.8 6.8 68.3 19.9 98.6 38c28.8 17.2 54.6 39.5 75.8 65.7c19.9 24.6 35.6 52.3 46.2 81.8c10.1 28.1 15.5 57.5 15.9 87.3c.4 30.6-2.9 61.2-9.9 90.9c-7.4 31.4-19.6 61.6-36.3 89.4c-17.6 29.3-40.4 55.6-67.4 77.5c-28.5 23.1-61.6 40.6-97.7 50.8c-36.8 10.4-75.6 13.8-113.8 9.9c-37.2-3.8-73.6-13.8-107.4-29.6c-32.3-15.1-61.9-36.1-87-61.8c-23.8-24.4-43.3-53-57.2-84.2c-13.2-29.6-21.2-61.1-23.4-93.3c-2.1-31.1-1.1-62.5 3.1-93.3c4.4-32.4 13.4-64.1 26.6-94c13.9-31.6 32.8-60.8 56.1-86.2c24.5-26.7 53.6-49.1 86-66.2c33.9-17.9 71-29 109.4-32.6c38-3.6 76.6-.5 113.6 9.3c35.6 9.4 69.3 24.9 99.8 45.6c28.9 19.6 54.8 43.9 76.1 71.9c20.1 26.5 35.5 55.9 45.1 87.3c9.1 29.7 13.5 60.8 13 92.2c-.5 31.8-4.9 63.4-13.3 93.9c-8.8 32-22.9 62.4-41.9 89.9c-20 28.9-45.3 54.4-74.6 74.9c-31 21.7-65.9 37.3-103.5 45.4c-38.2 8.2-77.9 9.3-116.5 3.3c-38-5.9-74.5-18.4-108-36.8c-32-17.5-60.9-40.8-85-68.5c-22.8-26.2-40.9-56.3-53.1-88.9c-11.5-30.8-17.8-63.1-18.6-96c-.8-33.1 1.5-66.2 7-98.5c5.7-33.5 16.3-66.1 31.4-96.5c15.8-31.8 36.6-60.8 61.5-85.8c26.2-26.2 56.6-47.8 90-63.5c35.1-16.4 72.8-26 111.4-28.1c38.7-2.1 77.4 2.1 114.7 12.6c36.4 10.2 70.9 26.6 102 48.3c29.5 20.6 55.6 46.1 76.9 75.3c20 27.5 35.1 58 44.1 90.3c8.4 30.2 11.9 61.8 10.4 93.5c-1.5 32-6.5 63.7-15 94.4c-9 32.3-23.2 62.9-42 90.5c-19.8 28.9-44.5 54.3-73.1 74.6c-30.3 21.5-64.4 36.7-100.8 44.4c-37.5 7.9-76.3 8.3-114 1.3c-36.8-6.8-71.8-20.2-103.7-39.7c-30.3-18.5-57.4-42.6-80-70.9c-21.3-26.7-37.9-57.1-48.8-89.6c-10.3-30.7-15.3-63-14.7-95.6c.6-33.8 4.2-67.4 10.8-100c6.9-34 18.5-66.8 34.6-97.1c16.9-31.8 38.6-60.6 64.2-85.3c27-26 57.9-47 91.5-62c35.4-15.8 73.1-24.6 111.9-26.1c38.6-1.5 77.1 2.9 114.2 13.2c35.6 9.8 69.3 25.5 99.6 46.2c28.9 19.8 54.4 44.2 75 72.3c19.5 26.7 34 56.4 42.4 87.8c8 29.8 11.2 60.9 9.5 92.1c-1.7 32-7.1 63.8-16.1 94.6c-9.5 32.4-24.1 63-43.3 90.5c-20.1 28.8-44.8 54.1-73.4 74.2c-30 21.1-63.5 35.8-99.3 43c-36.5 7.4-74.1 7.2-110.8-.2c-35.8-7.2-69.6-21.2-100.2-41C102.5 798 76.5 774.2 55 746c-20.2-26.3-35.6-56-45.6-87.8c-9.3-29.6-13.6-60.7-12.7-92.1c1-32.9 4.9-65.6 11.8-97.6c7.2-33.5 18.9-65.7 35.1-95.5C61.3 341.2 83.2 313.4 109 289.4C136.2 264 167.3 243.6 201.2 229C236.9 213.6 274.9 205.1 313.9 204C352.5 202.9 391 207.6 428 218.4C463.3 228.6 496.6 244.7 526.4 266c28.5 20.3 53.6 45.4 73.8 74.2C620 367.6 634.3 398 642.4 430C650.1 460.5 652.8 492.2 650.5 524z"/></svg>
-      </a>
+    <audio id="introAudio" preload="auto" playsinline>
+      <source src="intro.mp3" type="audio/mpeg">
+    </audio>
 
-      <a href="https://www.facebook.com/" aria-label="Ixchell Jewellery on Facebook" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 320 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
-      </a>
+    <img src="logo-transparent.png" alt="Ixchell Jewellery Logo" class="intro-logo" />
+    <div class="intro-line"></div>
 
-      <a href="https://twitter.com/" aria-label="Ixchell Jewellery on X" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
-      </a>
+    <div class="intro-title">Ixchell Jewellery</div>
+    <div style="font-family: 'Inter', sans-serif; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.15em; color: #0284c7; margin-top: 8px;">
+      翡坊翠藝 · SINCE 2014
+    </div>
 
-      <a href="https://www.instagram.com/" aria-label="Ixchell Jewellery on Instagram" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 448 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
-      </a>
+    <p class="intro-subtitle">
+      A private gateway to understanding natural Type A Burmese jadeite.
+    </p>
+
+    <button class="enter-btn" id="enterSite" type="button">
+      Enter The Boutique
+    </button>
+
+    <div class="sound-note">
+      Please ensure device audio is on for the full experience.
     </div>
   </div>
-
-  <hr class="divider">
-
-  <nav class="footer-nav">
-    <a href="#">Contact</a>
-    <a href="#">Our commitments</a>
-    <a href="#">Sitemap</a>
-    <a href="#">Credits</a>
-    <a href="#">Legals</a>
-    <a href="#">Accessibility</a>
-    <p class="copyright">&copy; Ixchell Jewellery 2026</p>
-  </nav>
-
 </div>
 
+<header>
+  <div class="container nav-rm">
+    <div class="hamburger" id="menuToggle">
+      <span></span>
+      <span></span>
+    </div>
+    <a href="/" class="brand-rm">IXCHELL JEWELLERY</a>
+    <div class="search-icon">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    </div>
+  </div>
+</header>
+
+<div class="menu-overlay" id="menuOverlay">
+  <div class="container">
+    <div class="menu-overlay-header">
+      <div class="close-btn" id="menuClose">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </div>
+    </div>
+    <nav class="menu-overlay-links">
+      <a href="#mustread">SECURITY POLICY</a>
+      <a href="#discover">DISCOVER</a>
+      <a href="#learning-centre">SAVOIR-FAIRE</a>
+      <a href="#experience">THE EXPERIENCE</a>
+      <a href="#visit">STORE LOCATOR</a>
+    </nav>
+  </div>
+</div>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="eyebrow">TYPE A BURMESE JADEITE</div>
+      <h1>A QUIETER WAY<br>TO UNDERSTAND<br>JADEITE.</h1>
+      <p class="hero-lead">Private viewing at The Adelphi, Singapore.</p>
+    </div>
+    <a href="#mustread" class="scroll-indicator" aria-label="Scroll down">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </a>
+  </section>
+
+  <section class="policy-section" id="mustread">
+    <div class="container">
+      <div class="trust-box lux-card">
+        <h3>OFFICIAL BOUTIQUE POLICY</h3>
+        <p>In view of increasingly sophisticated impersonation scams, AI deepfake risks and unofficial payment instructions, Ixchell Jewellery encourages customers to meet personally in-store for verification and official transactions.</p>
+        <p>We do not acknowledge unofficial payment arrangements outside our boutique.</p>
+        <div class="security-note">
+          <p><strong>FOR CUSTOMER PROTECTION:</strong> Please complete official viewing and transactions personally at The Adelphi Singapore boutique.</p>
+        </div>
+        <div class="btn-row">
+          <a class="btn btn-blue" href="https://wa.me/6591050813" target="_blank" rel="noopener nofollow">WHATSAPP US</a>
+          <a class="btn btn-outline" href="https://instagram.com/ixchelljewellery" target="_blank" rel="noopener">DM FOR VIEWING</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="discovery" id="discover">
+    <div class="container">
+      <div class="section-intro">
+        <div class="eyebrow">BEGIN WITH UNDERSTANDING</div>
+        <h2>ONE QUESTION. ONE CLEAR PAGE.</h2>
+        <p>Structured guidance to understanding Type A jadeite. Calm, searchable, and easy to follow.</p>
+      </div>
+      <div class="discovery-grid">
+        <a class="discovery-card" href="type-a-jadeite.html">
+          <div class="card-category">FOUNDATION</div>
+          <h3>WHAT IS TYPE A JADEITE?</h3>
+          <p>Learn why Type A means natural untreated jadeite, not a beauty grade.</p>
+          <div class="card-footer">NATURAL JADEITE / TREATMENT</div>
+        </a>
+        <a class="discovery-card" href="jade-vs-jadeite.html">
+          <div class="card-category">BEGINNER</div>
+          <h3>IS JADE THE SAME AS JADEITE?</h3>
+          <p>Understand jade, jadeite, and nephrite before choosing jewellery.</p>
+          <div class="card-footer">JADEITE / NEPHRITE</div>
+        </a>
+        <a class="discovery-card" href="what-gives-jadeite-value.html">
+          <div class="card-category">VALUE</div>
+          <h3>WHAT GIVES JADEITE VALUE?</h3>
+          <p>Understand colour, translucency, texture, and thickness.</p>
+          <div class="card-footer">COLOUR / TRANSLUCENCY</div>
+        </a>
+        <a class="discovery-card" href="why-jadeite-looks-different-in-person.html">
+          <div class="card-category">LIGHTING</div>
+          <h3>WHY DOES IT LOOK DIFFERENT IN PERSON?</h3>
+          <p>How daylight, indoor light, cameras, and skin tone affect jadeite.</p>
+          <div class="card-footer">LIGHTING / CAMERA</div>
+        </a>
+        <a class="discovery-card" href="jadeite-bangle-singapore.html">
+          <div class="card-category">BANGLES</div>
+          <h3>HOW DO I CHOOSE A JADEITE BANGLE?</h3>
+          <p>Learn size, comfort, thickness, and fitting before visiting.</p>
+          <div class="card-footer">SIZE / FIT</div>
+        </a>
+        <a class="discovery-card" href="lavender-jadeite-guide.html">
+          <div class="card-category">LAVENDER</div>
+          <h3>WHAT IS LAVENDER JADEITE?</h3>
+          <p>Discover colour formation, rarity, and comparison with green.</p>
+          <div class="card-footer">FORMATION / RARITY</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="learning-hub" id="learning-centre">
+    <div class="container">
+      <div class="section-intro">
+        <div class="eyebrow">JADEITE LEARNING CENTRE</div>
+        <h2>SAVOIR-FAIRE</h2>
+        <p>Focused clarity before buying. Tap a category to expand our educational guides.</p>
+      </div>
+      <div class="accordion-container">
+        
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <div class="acc-title-wrap">
+              <span class="acc-number">01</span>
+              <span class="acc-title">FOUNDATION: TYPE A KNOWLEDGE</span>
+            </div>
+            <div class="acc-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </div>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-inner">
+              <a href="type-a-jadeite.html" class="acc-link main-link">WHAT IS TYPE A JADEITE? <span>MAIN GUIDE</span></a>
+              <a href="what-is-type-a-jadeite.html" class="acc-link">WHAT DOES TYPE A JADEITE MEAN?</a>
+              <a href="type-a-vs-b-vs-c-jadeite.html" class="acc-link">TYPE A VS B VS C JADEITE</a>
+              <a href="why-natural-jadeite-matters.html" class="acc-link">WHY DOES NATURAL JADEITE MATTER?</a>
+              <a href="jadeite-treatment-guide.html" class="acc-link">HOW IS JADEITE TREATED?</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <div class="acc-title-wrap">
+              <span class="acc-number">02</span>
+              <span class="acc-title">BEGINNER CLARITY</span>
+            </div>
+            <div class="acc-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </div>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-inner">
+              <a href="jade-vs-jadeite.html" class="acc-link main-link">IS JADE THE SAME AS JADEITE? <span>MAIN GUIDE</span></a>
+              <a href="what-is-jade.html" class="acc-link">WHAT IS JADE?</a>
+              <a href="what-is-jadeite.html" class="acc-link">WHAT IS JADEITE?</a>
+              <a href="jadeite-vs-nephrite.html" class="acc-link">JADEITE VS NEPHRITE</a>
+              <a href="why-jadeite-is-more-expensive.html" class="acc-link">WHY IS JADEITE MORE EXPENSIVE?</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button class="accordion-header">
+            <div class="acc-title-wrap">
+              <span class="acc-number">03</span>
+              <span class="acc-title">UNDERSTANDING VALUE</span>
+            </div>
+            <div class="acc-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+            </div>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-inner">
+              <a href="what-gives-jadeite-value.html" class="acc-link main-link">WHAT GIVES JADEITE VALUE? <span>MAIN GUIDE</span></a>
+              <a href="jadeite-colour-guide.html" class="acc-link">WHY DOES COLOUR MATTER?</a>
+              <a href="jadeite-translucency-guide.html" class="acc-link">WHY DOES TRANSLUCENCY MATTER?</a>
+              <a href="jadeite-texture-guide.html" class="acc-link">WHY DOES TEXTURE MATTER?</a>
+              <a href="jadeite-thickness-guide.html" class="acc-link">WHY DOES THICKNESS MATTER?</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="question-section" id="experience">
+    <div class="container question-grid">
+      <div class="question-label">
+        <div class="eyebrow">THE IXCHELL EXPERIENCE</div>
+        <h2>CALM. HUMAN. LOW PRESSURE.</h2>
+        <p>A quieter luxury approach to jadeite understanding.</p>
+      </div>
+      <div class="answer-card lux-card">
+        <p>Ixchell Jewellery is intentionally kept personal, educational and calm. Many customers visit simply to understand natural Type A Burmese jadeite before making decisions.</p>
+        <p>Jadeite behaves differently under daylight, indoor lighting, skin tone reflection and viewing distance.</p>
+        <div class="subquestion-grid">
+          <div class="subquestion">
+            <span>PRIVATE VIEWING</span>
+            <strong>Comfortable one-to-one guidance</strong>
+          </div>
+          <div class="subquestion">
+            <span>KNOWLEDGE</span>
+            <strong>Learn before choosing</strong>
+          </div>
+          <div class="subquestion">
+            <span>VERIFICATION</span>
+            <strong>Independent verification welcome</strong>
+          </div>
+          <div class="subquestion">
+            <span>ENVIRONMENT</span>
+            <strong>Quiet boutique near City Hall MRT</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit-section" id="visit">
+    <div class="container">
+      <div class="section-intro">
+        <div class="eyebrow">STORE LOCATOR</div>
+        <h2>THE ADELPHI BOUTIQUE</h2>
+        <p>Located in Singapore, opposite Funan and near National Gallery Singapore.</p>
+      </div>
+      
+      <div class="visit-cards">
+        <div class="visit-card lux-card">
+          <h3>WALK-INS WELCOME</h3>
+          <p>Walk-ins are warmly welcomed whenever possible.</p>
+        </div>
+        <div class="visit-card lux-card">
+          <h3>PRIVATE VIEWING</h3>
+          <p>Messaging beforehand is gently encouraged.</p>
+        </div>
+        <div class="visit-card lux-card">
+          <h3>NEW COLLECTORS</h3>
+          <p>Completely new to jadeite? Explore slowly and comfortably.</p>
+        </div>
+      </div>
+
+      <div class="address-card lux-card">
+        <div>
+          <strong>ADDRESS</strong>
+          <p>1 Coleman Street<br>The Adelphi #02-33<br>Singapore 179803</p>
+        </div>
+        <div>
+          <strong>NEAREST MRT</strong>
+          <p>City Hall MRT</p>
+        </div>
+        <div>
+          <strong>NEARBY</strong>
+          <p>Funan<br>National Gallery</p>
+        </div>
+        <div>
+          <strong>INSTAGRAM</strong>
+          <p>@ixchelljewellery</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    
+    <div class="footer-block primary-block">
+      <a href="#home">THE BOUTIQUE</a>
+      <a href="#discover">DISCOVER JADEITE</a>
+      <a href="#learning-centre">SAVOIR-FAIRE</a>
+      <a href="#visit">STORE LOCATOR</a>
+    </div>
+
+    <div class="footer-block secondary-block">
+      <a href="type-a-jadeite.html">Type A jadeite guide</a>
+      <a href="jade-vs-jadeite.html">Jade vs jadeite</a>
+      <a href="what-gives-jadeite-value.html">Understanding value</a>
+      <a href="https://wa.me/6591050813" target="_blank">Book an appointment</a>
+    </div>
+
+    <div class="footer-block social-block">
+      <span class="social-label">Follow us</span>
+      
+      <div class="social-icons">
+        <a href="https://www.threads.net/@ixchelljewellery" target="_blank" aria-label="Ixchell Jewellery on Threads" rel="noopener noreferrer">
+          <svg viewBox="0 0 448 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M331.5 235.7c2.2 .9 4.2 1.9 6.3 2.8c29.2 14.1 50.6 35.2 61.8 61.4c15.7 36.5 17.2 95.8-30.3 143.2c-36.2 36.2-86.6 52.2-139.2 43.9c-40.3-6.4-78.4-25.3-107.5-53C93.7 406.8 77.2 368 73.1 322c-2.3-26 1.4-53.1 11.2-78.3c10-25.7 25.4-48.4 45.4-66.6c20.3-18.4 44-32.3 69.8-40.4c28.3-8.8 58.4-11 88.3-6.5c22.1 3.3 43.3 11 62.4 22.6c28 17 48.7 41.5 58 72.5c8.7 29.1 9 60.5 1 89.8c-7.3 26.6-22.3 50.8-43.1 69c-20 17.4-44.8 28-70.5 30.5c-29.4 2.8-59-5.1-83.6-22.1c-22.1-15.3-39-36.2-48-60.7c-9.1-25-11.6-52.2-7.2-78.3c5-29.6 18.2-57.5 38.3-79.6c18.5-20.3 42-35.3 68.3-43.2c25.4-7.6 52.8-9 78.8-4c25.2 4.9 49.3 15.6 69.8 30.8c21.2 15.8 39 35.8 51.5 58.7c11.9 21.8 19.8 45.8 23.3 70.8c3.2 22.8 4.2 46.1 2.8 69.1c-1.8 28.3-7.5 56.4-17 83.2c-10 28.3-24.8 55-44.3 78.4c-20.5 24.6-46.1 45.4-75.2 60.1c-30.8 15.5-64.8 24.3-99.8 26.1c-35.1 1.8-70.7-3.3-104.2-15.2c-32.3-11.5-62.6-28.7-89.2-50.6c-25.5-21-47.5-46-65-74.4c-16.7-27.1-29.4-56.6-37.5-87.5c-7.7-29.5-11.8-60.1-12.2-90.8c-.4-31 2.9-62.1 9.8-92.4c7.1-31.1 18.2-61.2 33-89.2c15-28.4 34.2-54.6 57-77.5c23.2-23.2 49.6-43.1 78.7-58.4c30-15.8 63-26.6 97.4-31.8c34.8-5.3 70.4-5.3 105.2-1c33.9 4.2 67.2 13.7 98.4 28.3c29.5 13.8 56.7 32 80.4 53.7c22.6 20.8 42.1 45 57.5 72.1c14.6 25.7 25.6 53.5 32.5 82.5c6.5 27.5 10 55.8 10.5 84.2c.4 29-.8 58-3.5 86.8c-2.9 31.1-9.5 61.8-19.8 91.5c-10.8 31.2-26 60.7-45.3 87.7c-20.2 28.2-45.3 53-73.8 73.1c-29.7 20.9-63.5 35.8-99.3 43.8c-36 8-73.4 9.5-110 4.2c-35.8-5.2-70.7-16.8-103.1-33.8c-30.9-16.2-59.5-37.4-83.9-63c-23.2-24.3-42.5-52.6-56.5-83.5c-13.3-29.3-22-60.6-25.8-92.8c-3.5-29.8-3.4-60 .4-89.8c4-31.4 12.3-62 25.1-90.6c13.2-29.5 31.5-56.5 54.1-80c23.4-24.3 51.5-44.1 82.6-58.2c32.2-14.6 67.2-23.5 103-25.9c35.6-2.4 71.6 .8 106.1 9.8c33 8.6 64.3 22.8 92.5 41.5c26.7 17.7 50.8 39.8 70.5 65.5c18.5 24 33.6 50.8 44.5 79.5c10.3 27 16.9 55.4 19.6 84.4c2.5 27.5 1.5 55.4-2.8 82.7c-4.5 28.5-13.2 56.4-25.8 82.7c-13.3 27.8-30.8 53.4-51.9 75.8c-22.2 23.6-48.4 43.3-78 57.5c-30.8 14.8-64.8 23.5-99.5 25.5c-34.9 2-70.2-2-103.7-12c-32.2-9.6-62.8-24.8-90-44.7c-25.7-18.8-48.5-41.9-66.5-68c-17.1-24.7-30.3-51.9-38.6-80.4c-7.9-27.1-11.7-55.3-11.3-83.4c.4-29.4 4.5-58.5 12.5-86.8c8.5-30 22-58.4 39.6-84c18.4-26.8 41.6-50.5 68.8-69.5c28.3-19.8 60.5-34.2 94.6-41.8c34.9-7.8 71.1-9 106.6-3.4c34.1 5.4 67 16.5 96.5 32.5c28.2 15.3 53.6 35.4 74.8 59.3c20 22.5 36.3 48.2 47.9 76c11.1 26.6 17.9 54.8 20.3 83.8c2.3 27.7 1 55.7-3.7 83c-5 29.2-14.7 57.7-28.8 84.3c-14.9 28.2-34.7 54-58.7 75.8c-25.1 22.8-54.6 41.2-87.1 53.8c-33.8 13.1-70.7 19.8-107.5 19.6c-35.8-.2-71.6-6-105-17.6c-32.1-11.1-62.1-27.8-88.5-49.2c-25.1-20.3-46.7-44.8-63-72.3c-15.5-26.2-26.7-54.7-32.6-84.5c-5.6-28.3-7.5-57.3-5.5-86.1c2.1-30.1 8.6-59.7 19.5-88.1c11.5-30 27.6-58 47.7-83.1c21.1-26.3 46.8-49.2 76.2-67c30.8-18.7 64.9-31.5 100.9-37.4c36.1-5.9 73.1-5.4 109.2 1.6c34.8 6.8 68.3 19.9 98.6 38c28.8 17.2 54.6 39.5 75.8 65.7c19.9 24.6 35.6 52.3 46.2 81.8c10.1 28.1 15.5 57.5 15.9 87.3c.4 30.6-2.9 61.2-9.9 90.9c-7.4 31.4-19.6 61.6-36.3 89.4c-17.6 29.3-40.4 55.6-67.4 77.5c-28.5 23.1-61.6 40.6-97.7 50.8c-36.8 10.4-75.6 13.8-113.8 9.9c-37.2-3.8-73.6-13.8-107.4-29.6c-32.3-15.1-61.9-36.1-87-61.8c-23.8-24.4-43.3-53-57.2-84.2c-13.2-29.6-21.2-61.1-23.4-93.3c-2.1-31.1-1.1-62.5 3.1-93.3c4.4-32.4 13.4-64.1 26.6-94c13.9-31.6 32.8-60.8 56.1-86.2c24.5-26.7 53.6-49.1 86-66.2c33.9-17.9 71-29 109.4-32.6c38-3.6 76.6-.5 113.6 9.3c35.6 9.4 69.3 24.9 99.8 45.6c28.9 19.6 54.8 43.9 76.1 71.9c20.1 26.5 35.5 55.9 45.1 87.3c9.1 29.7 13.5 60.8 13 92.2c-.5 31.8-4.9 63.4-13.3 93.9c-8.8 32-22.9 62.4-41.9 89.9c-20 28.9-45.3 54.4-74.6 74.9c-31 21.7-65.9 37.3-103.5 45.4c-38.2 8.2-77.9 9.3-116.5 3.3c-38-5.9-74.5-18.4-108-36.8c-32-17.5-60.9-40.8-85-68.5c-22.8-26.2-40.9-56.3-53.1-88.9c-11.5-30.8-17.8-63.1-18.6-96c-.8-33.1 1.5-66.2 7-98.5c5.7-33.5 16.3-66.1 31.4-96.5c15.8-31.8 36.6-60.8 61.5-85.8c26.2-26.2 56.6-47.8 90-63.5c35.1-16.4 72.8-26 111.4-28.1c38.7-2.1 77.4 2.1 114.7 12.6c36.4 10.2 70.9 26.6 102 48.3c29.5 20.6 55.6 46.1 76.9 75.3c20 27.5 35.1 58 44.1 90.3c8.4 30.2 11.9 61.8 10.4 93.5c-1.5 32-6.5 63.7-15 94.4c-9 32.3-23.2 62.9-42 90.5c-19.8 28.9-44.5 54.3-73.1 74.6c-30.3 21.5-64.4 36.7-100.8 44.4c-37.5 7.9-76.3 8.3-114 1.3c-36.8-6.8-71.8-20.2-103.7-39.7c-30.3-18.5-57.4-42.6-80-70.9c-21.3-26.7-37.9-57.1-48.8-89.6c-10.3-30.7-15.3-63-14.7-95.6c.6-33.8 4.2-67.4 10.8-100c6.9-34 18.5-66.8 34.6-97.1c16.9-31.8 38.6-60.6 64.2-85.3c27-26 57.9-47 91.5-62c35.4-15.8 73.1-24.6 111.9-26.1c38.6-1.5 77.1 2.9 114.2 13.2c35.6 9.8 69.3 25.5 99.6 46.2c28.9 19.8 54.4 44.2 75 72.3c19.5 26.7 34 56.4 42.4 87.8c8 29.8 11.2 60.9 9.5 92.1c-1.7 32-7.1 63.8-16.1 94.6c-9.5 32.4-24.1 63-43.3 90.5c-20.1 28.8-44.8 54.1-73.4 74.2c-30 21.1-63.5 35.8-99.3 43c-36.5 7.4-74.1 7.2-110.8-.2c-35.8-7.2-69.6-21.2-100.2-41C102.5 798 76.5 774.2 55 746c-20.2-26.3-35.6-56-45.6-87.8c-9.3-29.6-13.6-60.7-12.7-92.1c1-32.9 4.9-65.6 11.8-97.6c7.2-33.5 18.9-65.7 35.1-95.5C61.3 341.2 83.2 313.4 109 289.4C136.2 264 167.3 243.6 201.2 229C236.9 213.6 274.9 205.1 313.9 204C352.5 202.9 391 207.6 428 218.4C463.3 228.6 496.6 244.7 526.4 266c28.5 20.3 53.6 45.4 73.8 74.2C620 367.6 634.3 398 642.4 430C650.1 460.5 652.8 492.2 650.5 524z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/IxchellJewellery" target="_blank" aria-label="Ixchell Jewellery on Facebook" rel="noopener noreferrer">
+          <svg viewBox="0 0 320 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+        </a>
+        <a href="https://x.com/IxchellJew0233" target="_blank" aria-label="Ixchell Jewellery on X" rel="noopener noreferrer">
+          <svg viewBox="0 0 512 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/ixchelljewellery" target="_blank" aria-label="Ixchell Jewellery on Instagram" rel="noopener noreferrer">
+          <svg viewBox="0 0 448 512" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <div class="legal-links-left">
+        <a href="https://wa.me/6591050813" target="_blank">Contact</a>
+        <a href="#discover">Our commitments</a>
+        <a href="#">Sitemap</a>
+        <a href="#">Credits</a>
+      </div>
+      <div class="legal-links-right">
+        <a href="#">Legals</a>
+        <a href="#">Accessibility</a>
+        <span>© Ixchell Jewellery 2026</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+// 1. INTRO & AUDIO LOGIC
+const introLoader = document.getElementById("intro-loader");
+const enterButton = document.getElementById("enterSite");
+const introAudio = document.getElementById("introAudio");
+
+if(enterButton){
+  enterButton.addEventListener("click", () => {
+    document.body.classList.remove("intro-active");
+    if(introLoader) introLoader.classList.add("hide");
+    if(introAudio) {
+      introAudio.volume = 0.4;
+      introAudio.play().catch(err => console.log("Audio play failed:", err));
+    }
+  });
+}
+
+// 2. RM STYLE MENU OVERLAY
+const menuToggle = document.getElementById('menuToggle');
+const menuOverlay = document.getElementById('menuOverlay');
+const menuClose = document.getElementById('menuClose');
+const menuLinks = document.querySelectorAll('.menu-overlay-links a');
+
+if(menuToggle && menuOverlay && menuClose) {
+  menuToggle.addEventListener('click', () => {
+    menuOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden'; 
+  });
+
+  menuClose.addEventListener('click', () => {
+    menuOverlay.classList.remove('active');
+    document.body.style.overflow = ''; 
+  });
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      menuOverlay.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+}
+
+// 3. ACCORDION LOGIC
+const accordionHeaders = document.querySelectorAll('.accordion-header');
+accordionHeaders.forEach(header => {
+  header.addEventListener('click', () => {
+    const activeItem = document.querySelector('.accordion-item.active');
+    const currentItem = header.parentElement;
+    const content = currentItem.querySelector('.accordion-content');
+
+    if (activeItem && activeItem !== currentItem) {
+      activeItem.classList.remove('active');
+      activeItem.querySelector('.accordion-content').style.maxHeight = null;
+    }
+
+    currentItem.classList.toggle('active');
+    if (currentItem.classList.contains('active')) {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } else {
+      content.style.maxHeight = null;
+    }
+  });
+});
+</script>
 </body>
 </html>
