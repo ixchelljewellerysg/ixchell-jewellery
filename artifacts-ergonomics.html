@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Room I: Artifacts & Ergonomics | Ixchell Jewellery Singapore</title>
+
+<meta name="description" content="Explore the historical utility, ergonomics, and cultural trivia behind ancient jadeite forms like the Banzhi, Saddle Ring, Pixiu, and Ping An Kou." />
+<meta name="theme-color" content="#05080a" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   VARIABLES & FOUNDATION
+   ========================================================================== */
+:root {
+  --brand-black: #000000;       
+  --brand-blue-deep: #0b1426;   
+  --brand-blue-silver: #c0d8e4; 
+  --text-main: #ffffff;         
+  --text-muted: rgba(255, 255, 255, 0.75); 
+  --line-light: rgba(192, 216, 228, 0.2);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--brand-black);
+  background-image: 
+    linear-gradient(160deg, rgba(11, 20, 38, 0.92), rgba(10, 36, 27, 0.96)),
+    url('rm-black-crocodile-texture.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: var(--text-muted);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; transition: 0.3s ease; }
+a:hover { color: var(--brand-blue-silver); }
+
+.container { width: min(1080px, 92%); margin: 0 auto; }
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+header {
+  position: fixed; top: 0; width: 100%; z-index: 1000;
+  background: rgba(5, 8, 10, 0.6);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--line-light); padding: 20px 0;
+}
+.nav { display: flex; align-items: center; justify-content: space-between; }
+.brand { font-family: "Space Grotesk", sans-serif; font-size: 1.25rem; font-weight: 800; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.05em; }
+.brand span { display: block; font-size: 0.62rem; letter-spacing: 0.22em; font-family: "Inter", sans-serif; color: var(--brand-blue-silver); font-weight: 600; margin-top: 4px; }
+.nav-links { display: flex; gap: 24px; font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: var(--text-main); }
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+.hero { padding: 180px 0 100px; text-align: center; border-bottom: 1px solid var(--line-light); }
+.room-badge { display: inline-block; font-family: "Space Grotesk", sans-serif; font-size: 0.85rem; letter-spacing: 0.2em; color: var(--brand-blue-silver); font-weight: 700; margin-bottom: 20px; padding: 6px 16px; border: 1px solid var(--line-light); border-radius: 100px; }
+.hero h1 { font-family: "Space Grotesk", sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: var(--text-main); text-transform: uppercase; letter-spacing: -0.02em; margin-bottom: 24px; line-height: 1.1; }
+.hero p { max-width: 680px; margin: auto; font-size: 1.15rem; color: var(--text-muted); }
+
+/* ==========================================================================
+   EXHIBIT SECTIONS
+   ========================================================================== */
+.exhibit-group { padding: 100px 0; border-bottom: 1px solid var(--line-light); }
+.group-title { font-family: "Space Grotesk", sans-serif; font-size: 2rem; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 60px; text-align: center; }
+
+.artifact-card {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 100px;
+}
+.artifact-card.reverse { direction: rtl; }
+.artifact-card.reverse .artifact-text { direction: ltr; }
+
+.artifact-text h3 { font-family: "Space Grotesk", sans-serif; font-size: 2.2rem; color: var(--text-main); margin-bottom: 8px; line-height: 1.1; text-transform: uppercase; }
+.artifact-text .chinese-name { font-size: 1.2rem; color: var(--brand-blue-silver); font-weight: 600; margin-bottom: 24px; display: block; letter-spacing: 0.1em; }
+.artifact-text p { margin-bottom: 16px; font-size: 1.05rem; }
+
+.trivia-box {
+  margin-top: 24px; padding: 24px; border-radius: 12px;
+  background: rgba(192, 216, 228, 0.05); border-left: 3px solid var(--brand-blue-silver);
+}
+.trivia-box strong { display: block; color: var(--brand-blue-silver); font-family: "Space Grotesk", sans-serif; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.85rem; margin-bottom: 8px; }
+.trivia-box p { margin-bottom: 0; font-size: 0.95rem; font-style: italic; color: var(--text-muted); }
+
+.artifact-image {
+  border-radius: 20px; border: 1px solid rgba(192, 216, 228, 0.25);
+  background: linear-gradient(160deg, rgba(11, 20, 38, 0.6), rgba(10, 36, 27, 0.6));
+  padding: 16px; box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8); overflow: hidden;
+}
+.artifact-image img { width: 100%; border-radius: 12px; display: block; transition: transform 0.8s ease; }
+.artifact-image:hover img { transform: scale(1.03); }
+
+/* ==========================================================================
+   FLOATING DOCK & FOOTER
+   ========================================================================== */
+.floating-dock-wrapper { position: fixed; bottom: 30px; left: 0; width: 100%; display: flex; justify-content: center; pointer-events: none; z-index: 9999; }
+.floating-dock { pointer-events: auto; background: rgba(11, 20, 38, 0.85); backdrop-filter: blur(24px); border: 1px solid rgba(192, 216, 228, 0.3); border-radius: 100px; display: flex; align-items: center; padding: 6px 8px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9); }
+.dock-btn { display: flex; align-items: center; gap: 10px; padding: 12px 24px; border-radius: 100px; color: var(--text-main); font-family: "Space Grotesk", sans-serif; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; transition: 0.3s ease; }
+.dock-btn svg { width: 18px; height: 18px; stroke: var(--brand-blue-silver); }
+.dock-btn:hover { background: rgba(192, 216, 228, 0.1); color: var(--brand-blue-silver); }
+.dock-divider { width: 1px; height: 24px; background: rgba(192, 216, 228, 0.3); margin: 0 4px; }
+footer { padding: 60px 0 140px; text-align: center; background: rgba(0,0,0,0.8); }
+.footer-brand { font-family: "Space Grotesk", sans-serif; font-size: 1.2rem; color: var(--text-main); font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 10px; }
+
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+@media(max-width: 900px) {
+  .nav-links { display: none; }
+  .artifact-card { grid-template-columns: 1fr; gap: 40px; margin-bottom: 80px; }
+  .artifact-card.reverse { direction: ltr; }
+  .dock-btn { padding: 12px 16px; font-size: 0.75rem; gap: 6px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="index.html" class="brand">Ixchell Jewellery<span>翡坊翠藝 · The Adelphi</span></a>
+    <nav class="nav-links">
+      <a href="index.html">Gallery</a>
+      <a href="type-a-jadeite.html">Type A</a>
+      <a href="jadeite-bangle-singapore.html">Bangles</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero reveal">
+    <div class="container">
+      <span class="room-badge">ROOM I</span>
+      <h1>Artifacts & Ergonomics</h1>
+      <p>Moving beyond the aesthetic. We decode the mechanical utility, the ancient risk management, and the cultural psychology embedded in classic jadeite forms.</p>
+    </div>
+  </section>
+
+  <section class="exhibit-group">
+    <div class="container">
+      <h2 class="group-title reveal">The Strategist & The Traveller</h2>
+
+      <article class="artifact-card reveal">
+        <div class="artifact-text">
+          <h3>The Thumb Ring</h3>
+          <span class="chinese-name">扳指 / 板戒 (Banzhi)</span>
+          <p>Originally a raw, utilitarian piece of military equipment worn by archers during the Shang dynasty to protect the thumb from the violent snap of heavy bowstrings.</p>
+          <p>During the Qing Dynasty, it transitioned into the ultimate aristocratic status symbol. Emperors and noblemen wore oversized jadeite variants to signal that they possessed absolute authority without needing to do physical labour.</p>
+          <div class="trivia-box">
+            <strong>Cinematic Trivia: The TVB Villain Trope</strong>
+            <p>In Asian historical dramas, the Banzhi is famously used as the ultimate prop for the scheming official. Right before plotting a sinister move, the camera inevitably catches them slowly spinning their heavy jade thumb ring. While used as a villainous trope, it reflects reality: turning the heavy ring was a physical grounding mechanism for men engaged in deep, calculating thought.</p>
+          </div>
+        </div>
+        <div class="artifact-image">
+          <img src="banzhi-thumb-ring.jpg" alt="Type A Jadeite Banzhi Thumb Ring" onerror="this.src='https://via.placeholder.com/600x600/0a1122/a8c0cc?text=Banzhi'">
+        </div>
+      </article>
+
+      <article class="artifact-card reverse reveal">
+        <div class="artifact-text">
+          <h3>The Saddle Ring</h3>
+          <span class="chinese-name">馬鞍戒 (Ma An Jie)</span>
+          <p>Developed by nomadic horsemen, the shape directly mirrors the saddle of a horse. It was the ultimate traveler's ring, worn by high-ranking couriers traversing ancient trade paths.</p>
+          <p>Ergonomically, it is an aerodynamic masterpiece. The curved top face sits completely flush against the hand, meaning it has zero catching points—making it practically impossible to snag on luggage or clothing during transit.</p>
+        </div>
+        <div class="artifact-image">
+          <img src="saddle-ring.jpg" alt="Type A Jadeite Saddle Ring" onerror="this.src='https://via.placeholder.com/600x600/0a1122/a8c0cc?text=Saddle+Ring'">
+        </div>
+      </article>
+
+      <article class="artifact-card reveal">
+        <div class="artifact-text">
+          <h3>The Crab</h3>
+          <span class="chinese-name">螃蟹 (Pang Xie)</span>
+          <p>Deeply tied to the imperial examination system. Scholars travelling to the capital carried crab carvings as a quiet declaration of intent to score the highest rank.</p>
+          <p>The Chinese character for a crab's shell is *Jia* (甲), a direct homophone for "First Place" or "Top Tier" (大甲). Because the crab walks sideways, it symbolises traversing the corporate world unhindered and dominating an industry.</p>
+        </div>
+        <div class="artifact-image">
+          <img src="crab-carving.jpg" alt="Jadeite Crab Carving" onerror="this.src='https://via.placeholder.com/600x600/0a1122/a8c0cc?text=The+Crab'">
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="exhibit-group">
+    <div class="container">
+      <h2 class="group-title reveal">The Protectors & The Guides</h2>
+
+      <article class="artifact-card reveal">
+        <div class="artifact-text">
+          <h3>The Pixiu</h3>
+          <span class="chinese-name">貔貅 (Pixiu)</span>
+          <p>A celestial hybrid creature and the ultimate symbol of capital preservation. Sculpted with a heavy, muscular stance, it serves as a tactile anchor against reckless financial decisions.</p>
+          <div class="trivia-box">
+            <strong>Mythology: The Emperor God's Slap</strong>
+            <p>Legend states the Pixiu overate gold and accidentally soiled the heavenly palace. A furious Jade Emperor slapped the creature’s backside so hard it sealed shut forever. Thus, wealth comes in from all directions, but can never leak out. Furthermore, at any Mahjong table, you will see players rotating their Pixiu rings so the mouth faces opponents—symbolically "eating" their wealth. Never touch another player's Pixiu; you might confuse the creature!</p>
+          </div>
+        </div>
+        <div class="artifact-image">
+          <img src="pixiu-carving.jpg" alt="Jadeite Pixiu Carving" onerror="this.src='https://via.placeholder.com/600x600/0a1122/a8c0cc?text=Pixiu'">
+        </div>
+      </article>
+
+      <article class="artifact-card reverse reveal">
+        <div class="artifact-text">
+          <h3>The Safety Coin</h3>
+          <span class="chinese-name">平安扣 (Ping An Kou)</span>
+          <p>Derived from ancient ritual jade discs, this is structurally the most perfect piece of wearable engineering ever devised. A flat, circular plane with flawlessly radiused edges that sits flush against the chest, dispersing all physical impact energy.</p>
+          <div class="trivia-box">
+            <strong>Cultural Trivia: The Asian Grandmother Talisman</strong>
+            <p>Because of its zero-sharp-edge geometry, the Ping An Kou is the cultural equivalent of wrapping a child in bubble wrap. Almost every child in a traditional Chinese household has, at some point, had a miniature version tied to them with a red string before facing the outside world.</p>
+          </div>
+        </div>
+        <div class="artifact-image">
+          <img src="ping-an-kou.jpg" alt="Jadeite Ping An Kou" onerror="this.src='https://via.placeholder.com/600x600/0a1122/a8c0cc?text=Ping+An+Kou'">
+        </div>
+      </article>
+
+      <article class="artifact-card reveal">
+        <div class="artifact-text">
+          <h3>The Ru Yi</h3>
+          <span class="chinese-name">如意 (Ru Yi)</span>
+          <p>Held by emperors and generals, the Ru Yi Sceptre signalled high executive rank. Its smooth S-curve design contours elegantly without severe structural stress points.</p>
+          <div class="trivia-box">
+            <strong>Historical Trivia: The Ultimate Glow-Up</strong>
+            <p>The Ru Yi represents history’s greatest functional "glow-up." Before it became the supreme symbol of absolute, untouchable heavenly authority, it actually evolved from the humble ancient backscratcher. The name literally translates to "As you wish"—which makes perfect sense when you finally reach that impossible itch on your back.</p>
+          </div>
+        </div>
+        <div class="artifact-image">
+          <img src="ru-yi-carving.jpg" alt="Jadeite Ru Yi" onerror="this.src='https://via.placeholder.com/600x600/0a1122/a8c0cc?text=Ru+Yi'">
+        </div>
+      </article>
+
+      <article class="artifact-card reverse reveal">
+        <div class="artifact-text">
+          <h3>The Laughing Buddha</h3>
+          <span class="chinese-name">笑佛 (Xiao Fo)</span>
+          <p>Based on the historical monk Budai, representing ultimate contentment. Its broad, dome-like belly provides massive material thickness, making it exceptionally durable against front-facing impacts.</p>
+          <p>Why do women traditionally wear the Buddha? Historically, women balanced the incredibly volatile micro-politics of running large households. The philosophy of *Da Du Neng Rong* (a belly wide enough to tolerate all things) served as a daily mental anchor to laugh off grievances.</p>
+          <div class="trivia-box">
+            <strong>Cultural Trivia: The Universal Urge</strong>
+            <p>The Laughing Buddha holds the unique distinction of having the most universally patted stomach in human history. Whether it is a massive brass statue or a smooth jadeite pendant, human beings seem possessed by an irresistible, instinctual urge to rub his prominent belly for good luck.</p>
+          </div>
+        </div>
+        <div class="artifact-image">
+          <img src="laughing-buddha.jpg" alt="Jadeite Laughing Buddha" onerror="this.src='https://via.placeholder.com/600x600/0a1122/a8c0cc?text=Laughing+Buddha'">
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</main>
+
+<div class="floating-dock-wrapper">
+  <div class="floating-dock">
+    <a href="#" class="dock-btn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      WhatsApp Us
+    </a>
+    <div class="dock-divider"></div>
+    <a href="#" class="dock-btn">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      Book Adventure
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-brand">Ixchell Jewellery</div>
+    <p class="footer-text">© 2026. A Hakka Lineage. Natural Type A Burmese Jadeite.</p>
+  </div>
+</footer>
+
+<script>
+  const observerOptions = { root: null, rootMargin: '0px', threshold: 0.15 };
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
