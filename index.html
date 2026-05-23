@@ -1,32 +1,33 @@
 <!DOCTYPE html>
-<html lang="en-SG">
+<html lang="en-GB">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Ixchell Jewellery | The Jadeite Repository | Singapore</title>
+<title>Ixchell Jewellery | The Savoir-Faire of Type A Jadeite | Singapore</title>
 
-<meta name="description" content="A private repository of natural Type A Burmese jadeite. Explore the history, science, and connoisseurship of jadeite at The Adelphi, Singapore." />
-<meta name="theme-color" content="#000000" />
+<meta name="description" content="A private gallery and educational gateway to natural Type A Burmese jadeite. Discover bespoke luxury and the savoir-faire of the living stone at The Adelphi, Singapore." />
+<meta name="theme-color" content="#05080a" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 /* ==========================================================================
-   1. VARIABLES & FOUNDATION (RM BLACK CROCODILE THEME)
+   1. VARIABLES & RM CROCODILE FOUNDATION
    ========================================================================== */
 :root {
   --brand-black: #000000;       
-  --brand-ink: #050505;         
-  --brand-blue-deep: #0a1122;   
-  --brand-blue-silver: #a8c0cc; 
-  --brand-green-glow: #1b4d3e;  
+  --brand-ink: #05080a;         
+  --brand-blue-deep: #0b1426;   
+  --brand-blue-bright: #12a8c8; 
+  --brand-blue-silver: #c0d8e4; 
+  --brand-green-deep: #0a241b;  
   --text-main: #ffffff;         
-  --text-muted: rgba(255, 255, 255, 0.65); 
-  --line-light: rgba(168, 192, 204, 0.15);
-  --line-glow: rgba(168, 192, 204, 0.4);
+  --text-muted: rgba(255, 255, 255, 0.75); 
+  --line-light: rgba(192, 216, 228, 0.2);
+  --line-glow: rgba(192, 216, 228, 0.4);
 }
 
 * {
@@ -37,20 +38,21 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   font-family: "Inter", sans-serif;
-  /* THE RM CROCODILE FOUNDATION */
   background-color: var(--brand-black);
+  /* The RM Black Crocodile Base with deep blue/green luxury overlay */
   background-image: 
-    linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(5,5,5,0.95) 100%),
+    linear-gradient(160deg, rgba(11, 20, 38, 0.92), rgba(10, 36, 27, 0.96)),
     url('rm-black-crocodile-texture.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   color: var(--text-muted);
-  line-height: 1.7;
+  line-height: 1.8;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -61,13 +63,32 @@ a {
   transition: all 0.3s ease;
 }
 
+a:hover {
+  color: var(--brand-blue-silver);
+}
+
 .container {
-  width: min(1080px, 90%);
+  width: min(1120px, 92%);
   margin: 0 auto;
 }
 
 /* ==========================================================================
-   2. INTRO LOADER (Cinematic Entrance)
+   2. CINEMATIC SCROLL REVEAL SYSTEM
+   ========================================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   3. INTRO LOADER
    ========================================================================== */
 #intro-loader {
   position: fixed;
@@ -84,12 +105,17 @@ a {
   text-align: center;
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeUpIn 1s ease 0.5s forwards;
+  animation: fadeUpIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+}
+
+.intro-logo {
+  max-width: 140px;
+  margin-bottom: 20px;
 }
 
 .intro-title {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 800;
   color: var(--text-main);
   text-transform: uppercase;
@@ -97,7 +123,6 @@ a {
 }
 
 .intro-subtitle {
-  font-family: "Inter", sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -121,8 +146,9 @@ a {
 }
 
 .enter-btn:hover {
-  background: var(--text-main);
+  background: var(--brand-blue-silver);
   color: var(--brand-black);
+  box-shadow: 0 0 20px rgba(192, 216, 228, 0.4);
 }
 
 @keyframes fadeUpIn {
@@ -130,141 +156,169 @@ a {
 }
 
 /* ==========================================================================
-   3. HEADER
+   4. HEADER
    ========================================================================== */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(5, 8, 10, 0.6);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--line-light);
-  padding: 24px 0;
+  padding: 20px 0;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .brand {
-  text-align: center;
-}
-
-.brand-name {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 900;
+  font-size: 1.25rem;
+  font-weight: 800;
   color: var(--text-main);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
-.brand-est {
+.brand span {
   display: block;
-  font-size: 0.65rem;
-  letter-spacing: 0.25em;
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  font-family: "Inter", sans-serif;
   color: var(--brand-blue-silver);
+  font-weight: 600;
   margin-top: 4px;
 }
 
-/* ==========================================================================
-   4. HERO SECTION
-   ========================================================================== */
-.hero {
-  min-height: 80vh;
+.nav-links {
   display: flex;
-  align-items: center;
-  padding-top: 100px;
+  gap: 24px;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-main);
 }
 
-.hero-content {
-  max-width: 800px;
+/* ==========================================================================
+   5. HERO SECTION (Cinematic Graphic)
+   ========================================================================== */
+.hero {
+  padding: 160px 0 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 600px;
 }
 
 .eyebrow {
-  font-size: 0.75rem;
-  letter-spacing: 0.25em;
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 0.72rem;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
+  font-weight: 800;
   color: var(--brand-blue-silver);
-  font-weight: 700;
-  margin-bottom: 20px;
-  display: block;
 }
 
 h1 {
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
   font-weight: 900;
   color: var(--text-main);
   line-height: 1.05;
   letter-spacing: -0.02em;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .lead {
   font-size: 1.15rem;
   color: var(--text-muted);
-  max-width: 600px;
-}
-
-/* ==========================================================================
-   5. THE EXHIBITIONS (ROOM DIRECTORY)
-   ========================================================================== */
-.exhibitions {
-  padding: 80px 0 160px; /* Extra bottom padding for the floating dock */
-}
-
-.section-title {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 1.5rem;
-  color: var(--text-main);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  border-bottom: 1px solid var(--line-glow);
-  padding-bottom: 20px;
   margin-bottom: 40px;
 }
 
-.room-list {
-  display: grid;
-  gap: 20px;
-}
-
-.room-card {
-  display: block;
-  padding: 40px;
-  border: 1px solid var(--line-light);
-  border-radius: 16px;
-  background: linear-gradient(145deg, rgba(10, 17, 34, 0.4), rgba(0, 0, 0, 0.6));
-  backdrop-filter: blur(10px);
+.hero-graphic {
   position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease;
+  border-radius: 20px;
+  border: 1px solid rgba(192, 216, 228, 0.25);
+  background: linear-gradient(160deg, rgba(11, 20, 38, 0.6), rgba(10, 36, 27, 0.6));
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(192, 216, 228, 0.4);
+  animation: floatHero 8s ease-in-out infinite;
 }
 
-.room-card::before {
-  content: '';
+.hero-graphic img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  filter: drop-shadow(0 0 30px rgba(18, 168, 200, 0.15));
+}
+
+@keyframes floatHero {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ==========================================================================
+   6. RM LUXURY CARDS (The Exhibitions)
+   ========================================================================== */
+.section-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 2.2rem;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 40px;
+}
+
+.lux-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 100px;
+}
+
+.lux-card {
+  position: relative;
+  display: block;
+  padding: 50px 40px;
+  border-radius: 20px;
+  background: linear-gradient(160deg, rgba(11, 20, 38, 0.85), rgba(10, 36, 27, 0.90));
+  border: 1px solid rgba(192, 216, 228, 0.25);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(192, 216, 228, 0.3);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.lux-card::before {
+  content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--brand-blue-silver), transparent);
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  background: linear-gradient(90deg, transparent, var(--brand-blue-silver), var(--brand-blue-bright), transparent);
+  opacity: 0.3;
+  transition: opacity 0.5s ease;
 }
 
-.room-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--line-glow);
-  background: linear-gradient(145deg, rgba(10, 17, 34, 0.7), rgba(0, 0, 0, 0.8));
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+.lux-card:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), inset 0 1px 1px rgba(192, 216, 228, 0.6);
+  border-color: rgba(192, 216, 228, 0.5);
 }
 
-.room-card:hover::before {
+.lux-card:hover::before {
   opacity: 1;
 }
 
@@ -273,43 +327,147 @@ h1 {
   font-size: 0.85rem;
   color: var(--brand-blue-silver);
   font-weight: 700;
-  letter-spacing: 0.1em;
-  margin-bottom: 10px;
+  letter-spacing: 0.2em;
+  margin-bottom: 16px;
   display: block;
 }
 
-.room-title {
+.lux-title {
   font-family: "Space Grotesk", sans-serif;
   font-size: 1.8rem;
   color: var(--text-main);
   text-transform: uppercase;
   font-weight: 800;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
+  line-height: 1.1;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.room-title svg {
+.lux-title svg {
   opacity: 0;
   transform: translateX(-10px);
   transition: all 0.4s ease;
   color: var(--brand-blue-silver);
 }
 
-.room-card:hover .room-title svg {
+.lux-card:hover .lux-title svg {
   opacity: 1;
   transform: translateX(0);
 }
 
-.room-desc {
-  font-size: 1rem;
+.lux-desc {
+  font-size: 1.05rem;
   color: var(--text-muted);
-  max-width: 85%;
 }
 
 /* ==========================================================================
-   6. THE FLOATING LUXURY DOCK
+   7. SAVOIR-FAIRE ACCORDION (Merged Content)
+   ========================================================================== */
+.accordion-section {
+  padding-bottom: 140px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid var(--line-light);
+}
+
+.accordion-header {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 36px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: var(--text-main);
+  text-align: left;
+}
+
+.acc-title-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+}
+
+.acc-number {
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--brand-blue-silver);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.acc-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+.accordion-header:hover .acc-title {
+  color: var(--brand-blue-silver);
+}
+
+.acc-icon {
+  color: var(--brand-blue-silver);
+  transition: transform 0.4s ease;
+}
+
+.accordion-item.active .acc-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.accordion-inner {
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-left: 45px;
+}
+
+.acc-link {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.acc-link:hover {
+  color: var(--brand-blue-bright);
+}
+
+.main-link {
+  color: var(--text-main);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.main-link span {
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border: 1px solid var(--line-glow);
+  border-radius: 4px;
+  color: var(--brand-blue-silver);
+  letter-spacing: 0.1em;
+}
+
+/* ==========================================================================
+   8. THE FLOATING LUXURY DOCK
    ========================================================================== */
 .floating-dock-wrapper {
   position: fixed;
@@ -318,35 +476,35 @@ h1 {
   width: 100%;
   display: flex;
   justify-content: center;
-  pointer-events: none; /* Allows clicking through the empty space */
+  pointer-events: none;
   z-index: 9999;
 }
 
 .floating-dock {
-  pointer-events: auto; /* Re-enables clicking on the dock itself */
-  background: rgba(10, 17, 34, 0.75); /* Dark, frosted blue/black */
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(168, 192, 204, 0.25);
+  pointer-events: auto;
+  background: rgba(11, 20, 38, 0.85); 
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(192, 216, 228, 0.3);
   border-radius: 100px;
   display: flex;
   align-items: center;
   padding: 6px 8px;
   box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.8),
-    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    0 20px 50px rgba(0, 0, 0, 0.9),
+    inset 0 1px 1px rgba(192, 216, 228, 0.5);
 }
 
 .dock-btn {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 100px;
   color: var(--text-main);
   font-family: "Space Grotesk", sans-serif;
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 0.85rem;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   transition: all 0.3s ease;
@@ -360,7 +518,7 @@ h1 {
 }
 
 .dock-btn:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(192, 216, 228, 0.1);
   color: var(--brand-blue-silver);
 }
 
@@ -370,34 +528,49 @@ h1 {
 
 .dock-divider {
   width: 1px;
-  height: 20px;
-  background: rgba(168, 192, 204, 0.2);
+  height: 24px;
+  background: rgba(192, 216, 228, 0.3);
   margin: 0 4px;
 }
 
 /* ==========================================================================
-   7. FOOTER
+   9. FOOTER
    ========================================================================== */
 footer {
   border-top: 1px solid var(--line-light);
-  padding: 60px 0 120px; /* High padding to clear the dock */
+  padding: 60px 0 140px; 
   text-align: center;
+  background: rgba(0,0,0,0.8);
+}
+
+.footer-brand {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.2rem;
+  color: var(--text-main);
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .footer-text {
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.4);
+  color: var(--text-muted);
   letter-spacing: 0.05em;
 }
 
 /* ==========================================================================
    RESPONSIVE
    ========================================================================== */
-@media(max-width: 768px) {
-  .room-title { font-size: 1.4rem; }
-  .room-desc { max-width: 100%; }
+@media(max-width: 900px) {
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; text-align: center; padding-top: 130px; gap: 40px; }
+  .hero-text { margin: 0 auto; }
+  .lux-grid { grid-template-columns: 1fr; }
+  .acc-title-wrap { flex-direction: column; gap: 8px; }
+  .acc-title { font-size: 1.3rem; }
   .floating-dock { padding: 6px; }
-  .dock-btn { padding: 10px 14px; font-size: 0.7rem; gap: 6px; }
+  .dock-btn { padding: 12px 16px; font-size: 0.75rem; gap: 6px; }
 }
 </style>
 </head>
@@ -405,83 +578,138 @@ footer {
 
 <div id="intro-loader">
   <div class="intro-panel">
+    <img src="logo-transparent.png" alt="Ixchell Jewellery Logo" class="intro-logo" onerror="this.style.display='none'">
     <div class="intro-title">Ixchell Jewellery</div>
     <div class="intro-subtitle">翡坊翠藝 · SINCE 2014</div>
-    <button class="enter-btn" id="enterSite" type="button">Enter The Repository</button>
+    <button class="enter-btn" id="enterSite" type="button">Enter The Gallery</button>
   </div>
 </div>
 
 <header>
   <div class="container nav">
-    <div class="brand">
-      <div class="brand-name">Ixchell Jewellery</div>
-      <div class="brand-est">The Adelphi · Singapore</div>
-    </div>
+    <a href="/" class="brand">
+      Ixchell Jewellery
+      <span>翡坊翠藝 · The Adelphi</span>
+    </a>
+    <nav class="nav-links">
+      <a href="jade-vs-jadeite.html">Guide</a>
+      <a href="type-a-jadeite.html">Type A</a>
+      <a href="what-gives-jadeite-value.html">Value</a>
+      <a href="jadeite-bangle-singapore.html">Bangles</a>
+    </nav>
   </div>
 </header>
 
 <main>
-  <section class="container hero">
-    <div class="hero-content">
+  <section class="container hero reveal">
+    <div class="hero-text">
       <span class="eyebrow">A Private Gateway</span>
-      <h1>The Savoir-Faire of Burmese Jadeite</h1>
+      <h1>The Savoir-Faire<br>of Burmese Jadeite</h1>
       <p class="lead">
-        Welcome to the repository. This is an encyclopedic exploration of natural Type A Burmese jadeite. Here, we move beyond mere jewelry—we decode the ancient ergonomics, the physics of value, and the cultural legacy of the living stone.
+        An encyclopaedic curation of natural Type A jadeite. We invite you to move beyond the aesthetic—decoding the ancient ergonomics, the physics of valuation, and the aristocratic legacy of the living stone.
       </p>
+    </div>
+    <div class="hero-graphic">
+      <img src="jade-vs-jadeite-hero.png" alt="High Grade Type A Jadeite Bangle" onerror="this.src='https://via.placeholder.com/600x400/0a1122/a8c0cc?text=Premium+Jadeite+Visual'">
     </div>
   </section>
 
-  <section class="container exhibitions">
-    <h2 class="section-title">Curated Exhibitions</h2>
+  <section class="container reveal">
+    <h2 class="section-title">The Master Exhibitions</h2>
     
-    <div class="room-list">
-      
-      <a href="artifacts-ergonomics.html" class="room-card">
+    <div class="lux-grid">
+      <a href="artifacts-ergonomics.html" class="lux-card">
         <span class="room-number">ROOM I</span>
-        <h3 class="room-title">
+        <h3 class="lux-title">
           Artifacts & Ergonomics
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </h3>
-        <p class="room-desc">
-          Discover the historical utility behind jadeite forms. From the aerodynamic Saddle Ring of ancient travelers to the calculating authority of the Banzhi thumb ring.
+        <p class="lux-desc">
+          Discover the historical utility behind jadeite forms. From the aerodynamic Saddle Ring designed for ancient travellers to the calculating executive authority of the Banzhi thumb ring.
         </p>
       </a>
 
-      <a href="ritual-reality.html" class="room-card">
+      <a href="ritual-reality.html" class="lux-card">
         <span class="room-number">ROOM II</span>
-        <h3 class="room-title">
+        <h3 class="lux-title">
           Ritual & Reality
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </h3>
-        <p class="room-desc">
+        <p class="lux-desc">
           Bridging science and folklore. Understand ancient Feng Shui as environmental risk management, the chemistry of the "Living Stone," and the respectful urban closure for a broken bangle.
         </p>
       </a>
 
-      <a href="understanding-value.html" class="room-card">
+      <a href="understanding-value.html" class="lux-card">
         <span class="room-number">ROOM III</span>
-        <h3 class="room-title">
+        <h3 class="lux-title">
           Understanding Value
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </h3>
-        <p class="room-desc">
-          The connoisseur’s 6-pillar guide to pricing. Train your eye to read translucency, recognize the "Fingernail Test," and navigate lapidary finishes.
+        <p class="lux-desc">
+          The connoisseur’s 6-pillar guide to pricing. Train your eye to read the physics of translucency, execute the "Fingernail Test," and navigate traditional lapidary finishes.
         </p>
       </a>
 
-      <a href="lifestyle-guide.html" class="room-card">
+      <a href="lifestyle-guide.html" class="lux-card">
         <span class="room-number">ROOM IV</span>
-        <h3 class="room-title">
+        <h3 class="lux-title">
           The Lifestyle Guide
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </h3>
-        <p class="room-desc">
-          The physics of ownership. Learn the mechanical differences between bangle silhouettes, the strict laws of knuckle sizing, and how skin tone acts as a canvas.
+        <p class="lux-desc">
+          The physics of ownership. Learn the mechanical differences between bangle silhouettes, the strict laws of knuckle sizing, and how human skin tone acts as a canvas for the stone.
         </p>
       </a>
-
     </div>
   </section>
+
+  <section class="container accordion-section reveal">
+    <h2 class="section-title">Essential Savoir-Faire</h2>
+    
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <div class="acc-title-wrap">
+          <span class="acc-number">01</span>
+          <span class="acc-title">Foundation: Type A Knowledge</span>
+        </div>
+        <div class="acc-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </div>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <a href="type-a-jadeite.html" class="acc-link main-link">What Is Type A Jadeite? <span>MAIN GUIDE</span></a>
+          <a href="type-a-jadeite.html#what-is-type-a" class="acc-link">What Does Type A Jadeite Mean?</a>
+          <a href="type-a-jadeite.html#treatment-types" class="acc-link">Type A vs B vs C Jadeite</a>
+          <a href="type-a-jadeite.html#why-natural-matters" class="acc-link">Why Does Natural Jadeite Matter?</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <div class="acc-title-wrap">
+          <span class="acc-number">02</span>
+          <span class="acc-title">Beginner Clarity</span>
+        </div>
+        <div class="acc-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+        </div>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <a href="jade-vs-jadeite.html" class="acc-link main-link">Is Jade The Same As Jadeite? <span>MAIN GUIDE</span></a>
+          <a href="jade-vs-jadeite.html#what-is-jade" class="acc-link">What Is Jade?</a>
+          <a href="jade-vs-jadeite.html#what-is-jadeite" class="acc-link">What Is Jadeite?</a>
+          <a href="jade-vs-jadeite.html#jadeite-vs-nephrite" class="acc-link">Jadeite vs Nephrite</a>
+          <a href="jade-vs-jadeite.html#why-expensive" class="acc-link">Why Is Jadeite More Expensive?</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
 </main>
 
 <div class="floating-dock-wrapper">
@@ -511,11 +739,14 @@ footer {
 
 <footer>
   <div class="container">
-    <p class="footer-text">© 2026 Ixchell Jewellery. A Hakka Lineage. Natural Type A Burmese Jadeite.</p>
+    <div class="footer-brand">Ixchell Jewellery</div>
+    <p class="footer-text">© 2026. A Hakka Lineage. Natural Type A Burmese Jadeite.</p>
+    <p class="footer-text" style="margin-top: 8px;">The Adelphi, Singapore.</p>
   </div>
 </footer>
 
 <script>
+  // Intro Loader
   document.getElementById('enterSite').addEventListener('click', function() {
     const loader = document.getElementById('intro-loader');
     loader.style.opacity = '0';
@@ -523,6 +754,51 @@ footer {
       loader.style.visibility = 'hidden';
       loader.style.display = 'none';
     }, 1200);
+  });
+
+  // Accordion Logic
+  const accHeaders = document.querySelectorAll('.accordion-header');
+  accHeaders.forEach(header => {
+    header.addEventListener('click', function() {
+      const item = this.parentElement;
+      const content = this.nextElementSibling;
+      
+      // Close others
+      document.querySelectorAll('.accordion-item').forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+          otherItem.querySelector('.accordion-content').style.maxHeight = null;
+        }
+      });
+
+      // Toggle current
+      item.classList.toggle('active');
+      if (item.classList.contains('active')) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = null;
+      }
+    });
+  });
+
+  // Cinematic Scroll Reveal (Intersection Observer)
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.15
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target); // Optional: stop observing once revealed
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.reveal').forEach(el => {
+    observer.observe(el);
   });
 </script>
 
