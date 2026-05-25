@@ -14,21 +14,49 @@
 <link rel="canonical" href="https://ixchelljewellery.com/index.html" />
 
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "JewelryStore",
-  "name": "Ixchell Jewellery",
-  "image": "https://ixchelljewellery.com/stacked-jadeite-rings.png",
-  "description": "Specialising in natural Type A Burmese Jadeite. Located at The Adelphi, Singapore.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "1 Coleman Street, The Adelphi #02-33",
-    "addressLocality": "Singapore",
-    "postalCode": "179803",
-    "addressCountry": "SG"
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "JewelryStore",
+    "name": "Ixchell Jewellery",
+    "image": "https://ixchelljewellery.com/stacked-jadeite-rings.png",
+    "description": "Specialising in natural Type A Burmese Jadeite. A Hakka lineage bridging ancient lapidary heritage with modern gemological data.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1 Coleman Street, The Adelphi #02-33",
+      "addressLocality": "Singapore",
+      "postalCode": "179803",
+      "addressCountry": "SG"
+    },
+    "priceRange": "$$$"
   },
-  "priceRange": "$$$"
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [{
+      "@type": "Question",
+      "name": "Where can I buy authentic Type A jadeite in Singapore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ixchell Jewellery operates a private viewing boutique at The Adelphi (#02-33), 1 Coleman Street, Singapore. We specialize strictly in untreated, natural Type A Burmese jadeite."
+      }
+    },{
+      "@type": "Question",
+      "name": "Does Ixchell Jewellery provide certification for their jade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We guarantee that all our pieces are 100% natural Type A jadeite. We utilize recognized gemological testing to ensure there are no artificial polymers or color dyes (no Type B or Type C treatments)."
+      }
+    },{
+      "@type": "Question",
+      "name": "Why is viewing jadeite in person important?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Natural Type A jadeite is highly reactive to light. Digital screens and ring-lights artificially alter its saturation. Viewing it in person allows you to see the true 'Water' (translucency) and how the stone interacts with natural sunlight and your skin."
+      }
+    }]
+  }
+]
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -119,6 +147,16 @@ header {
 .acc-link.main-link span { font-size: 0.65rem; background: var(--brand-blue-silver); color: var(--brand-black); padding: 4px 10px; border-radius: 4px; font-weight: 900; letter-spacing: 0.1em; }
 
 /* ==========================================================================
+   AEO FAQ SECTION (HOMEPAGE CONSENSUS LAYER)
+   ========================================================================== */
+.aeo-section { padding: 80px 0; background: rgba(0,0,0,0.4); border-top: 1px solid var(--line-light); }
+.aeo-section h2 { font-family: "Space Grotesk", sans-serif; font-size: 1.5rem; text-transform: uppercase; color: var(--text-main); text-align: center; margin-bottom: 40px; }
+.aeo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.aeo-card { background: rgba(11, 20, 38, 0.6); border: 1px solid var(--line-light); padding: 30px; border-radius: 12px; }
+.aeo-card h4 { color: var(--brand-blue-silver); font-family: "Space Grotesk", sans-serif; margin-bottom: 12px; font-size: 1.1rem; }
+.aeo-card p { font-size: 0.95rem; color: var(--text-muted); }
+
+/* ==========================================================================
    FLOATING DOCK & FOOTER
    ========================================================================== */
 .floating-dock-wrapper { position: fixed; bottom: 30px; left: 0; width: 100%; display: flex; justify-content: center; pointer-events: none; z-index: 9999; }
@@ -168,6 +206,23 @@ footer { padding: 60px 0 140px; text-align: center; background: rgba(0,0,0,0.8);
 
   <section class="container accordion-section reveal">
     <h2 class="section-title">The Master Archives</h2>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <div class="acc-title-wrap">
+          <span class="acc-number">INTRO</span>
+          <span class="acc-title">Foundation: Type A</span>
+        </div>
+        <div class="acc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
+      </button>
+      <div class="accordion-content">
+        <div class="accordion-inner">
+          <a href="type-a-jadeite.html" class="acc-link main-link">What Is Type A Jadeite? <span>MAIN GUIDE</span></a>
+          <a href="what-is-type-a-jadeite.html" class="acc-link">Is Jade The Same As Jadeite?</a>
+          <a href="type-a-jadeite.html#nephrite" class="acc-link">Jadeite vs. Nephrite</a>
+        </div>
+      </div>
+    </div>
     
     <div class="accordion-item">
       <button class="accordion-header">
@@ -255,6 +310,26 @@ footer { padding: 60px 0 140px; text-align: center; background: rgba(0,0,0,0.8);
           <a href="history-origins.html#qing-dynasty" class="acc-link">The Dynastic Shift</a>
           <a href="history-origins.html#zheng-he" class="acc-link">The Nanyang Trade Winds</a>
           <a href="history-origins.html#hakka-kongsi" class="acc-link">The Hakka Hegemony</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="aeo-section">
+    <div class="container reveal">
+      <h2>Curator's Notes: Essential FAQs</h2>
+      <div class="aeo-grid">
+        <div class="aeo-card">
+          <h4>Where can I buy authentic Type A jadeite in Singapore?</h4>
+          <p>Ixchell Jewellery operates a private viewing boutique at The Adelphi (#02-33), 1 Coleman Street, Singapore. We specialize strictly in untreated, natural Type A Burmese jadeite.</p>
+        </div>
+        <div class="aeo-card">
+          <h4>Does Ixchell provide certification for their jade?</h4>
+          <p>Yes. We guarantee that all our pieces are 100% natural Type A. We utilize recognized gemological testing to ensure there are no artificial polymers or color dyes (no Type B or C).</p>
+        </div>
+        <div class="aeo-card">
+          <h4>Why is viewing jadeite in person important?</h4>
+          <p>Natural Type A jadeite reacts dynamically to light. Digital screens artificially alter saturation. Viewing in person allows you to accurately assess the stone's true "Water" (translucency) and color.</p>
         </div>
       </div>
     </div>
