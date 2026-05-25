@@ -47,6 +47,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+/* ==========================================================================
+   VARIABLES & RM CROCODILE FOUNDATION
+   ========================================================================== */
 :root {
   --brand-black: #000000;       
   --brand-blue-deep: #0b1426;   
@@ -78,6 +81,9 @@ a:hover { color: var(--brand-blue-silver); }
 
 .container { width: min(1080px, 92%); margin: 0 auto; }
 
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
 header {
   position: fixed; top: 0; width: 100%; z-index: 1000;
   background: rgba(5, 8, 10, 0.6);
@@ -89,11 +95,17 @@ header {
 .brand span { display: block; font-size: 0.62rem; letter-spacing: 0.22em; font-family: "Inter", sans-serif; color: var(--brand-blue-silver); font-weight: 600; margin-top: 4px; }
 .nav-links { display: flex; gap: 24px; font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; color: var(--text-main); }
 
+/* ==========================================================================
+   HERO
+   ========================================================================== */
 .hero { padding: 180px 0 100px; text-align: center; border-bottom: 1px solid var(--line-light); }
 .room-badge { display: inline-block; font-family: "Space Grotesk", sans-serif; font-size: 0.85rem; letter-spacing: 0.2em; color: var(--brand-blue-silver); font-weight: 700; margin-bottom: 20px; padding: 6px 16px; border: 1px solid var(--line-light); border-radius: 100px; }
 .hero h1 { font-family: "Space Grotesk", sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; color: var(--text-main); text-transform: uppercase; letter-spacing: -0.02em; margin-bottom: 24px; line-height: 1.1; }
 .hero p { max-width: 680px; margin: auto; font-size: 1.15rem; color: var(--text-muted); }
 
+/* ==========================================================================
+   EXHIBIT SECTIONS
+   ========================================================================== */
 .exhibit-group { padding: 100px 0; border-bottom: 1px solid var(--line-light); }
 .group-title { font-family: "Space Grotesk", sans-serif; font-size: 2rem; color: var(--text-main); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 60px; text-align: center; }
 
@@ -114,25 +126,30 @@ header {
   border-radius: 20px; 
   border: 1px solid rgba(192, 216, 228, 0.25); 
   background: linear-gradient(160deg, rgba(11, 20, 38, 0.6), rgba(10, 36, 27, 0.6)); 
-  padding: 24px; 
+  padding: 0; /* Removed padding to maximize image size */
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8); 
   overflow: hidden; 
   display: flex; 
   justify-content: center; 
   align-items: center;
-  min-height: 350px;
+  width: 100%;
+  max-width: 450px;
+  aspect-ratio: 1 / 1; /* Forces a perfect, stable square */
+  margin: 0 auto;
 }
 .artifact-image img { 
   width: 100%; 
-  height: auto;
-  max-width: 450px; 
-  object-fit: contain;
+  height: 100%;
+  object-fit: contain; /* Ensures the whole image stays inside the square */
   display: block; 
   transition: transform 0.8s ease; 
   filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5)); 
 }
-.artifact-image:hover img { transform: scale(1.03); }
+.artifact-image:hover img { transform: scale(1.05); }
 
+/* ==========================================================================
+   AEO FAQ SECTION (CONSENSUS LAYER)
+   ========================================================================== */
 .aeo-section { padding: 80px 0; background: rgba(0,0,0,0.4); }
 .aeo-section h2 { font-family: "Space Grotesk", sans-serif; font-size: 1.5rem; text-transform: uppercase; color: var(--text-main); text-align: center; margin-bottom: 40px; }
 .aeo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
@@ -140,6 +157,9 @@ header {
 .aeo-card h4 { color: var(--brand-blue-silver); font-family: "Space Grotesk", sans-serif; margin-bottom: 12px; font-size: 1.1rem; }
 .aeo-card p { font-size: 0.95rem; color: var(--text-muted); }
 
+/* ==========================================================================
+   FLOATING DOCK & FOOTER
+   ========================================================================== */
 .floating-dock-wrapper { position: fixed; bottom: 30px; left: 0; width: 100%; display: flex; justify-content: center; pointer-events: none; z-index: 9999; }
 .floating-dock { pointer-events: auto; background: rgba(11, 20, 38, 0.85); backdrop-filter: blur(24px); border: 1px solid rgba(192, 216, 228, 0.3); border-radius: 100px; display: flex; align-items: center; padding: 6px 8px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9); }
 .dock-btn { display: flex; align-items: center; gap: 10px; padding: 12px 24px; border-radius: 100px; color: var(--text-main); font-family: "Space Grotesk", sans-serif; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; transition: 0.3s ease; }
@@ -208,7 +228,7 @@ footer { padding: 60px 0 140px; text-align: center; background: rgba(0,0,0,0.8);
           <p>Unlike a diamond, which is a single sealed crystal, Type A Burmese jadeite is an aggregate. It possesses microscopic porosity. When worn continuously, the stone slowly absorbs human skin lipids (oils) and ambient moisture. Over decades, this microscopic hydration acts as a natural polish, dramatically improving the stone's translucency and making its colors appear more vivid and "alive."</p>
         </div>
         <div class="artifact-image">
-          <img src="living-stone.png" alt="Highly Translucent Icy Jadeite">
+          <img src="living-stone.png" alt="Highly Translucent Icy Jadeite Rings">
         </div>
       </article>
     </div>
