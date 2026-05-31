@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>The Lifestyle Guide | Jade Bangle Sizing & Fits | Ixchell Jewellery Singapore</title>
+<title>The Lifestyle Guide | Jade Bangle Sizing & Fit | Ixchell Jewellery Singapore</title>
 
 <meta name="description" content="Master the physics of jadeite ownership. Learn the differences between Round, D-Shape, and Guifei bangles, and discover the strict laws of knuckle sizing." />
 <meta name="keywords" content="jade bangle sizing, how to measure jade bangle, round vs d shape jade bangle, guifei bangle, Type A jadeite Singapore, Ixchell Jewellery, The Adelphi" />
@@ -148,6 +148,18 @@ header {
 .artifact-image:hover img { transform: scale(1.05); }
 
 /* ==========================================================================
+   LIFESTYLE GRID
+   ========================================================================== */
+.lifestyle-section { padding: 100px 0; border-bottom: 1px solid var(--line-light); }
+.lifestyle-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 40px; }
+.lifestyle-card { position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 3/4; border: 1px solid rgba(192, 216, 228, 0.15); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); }
+.lifestyle-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; filter: brightness(0.75); }
+.lifestyle-card:hover img { transform: scale(1.05); filter: brightness(1); }
+.lifestyle-caption { position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px 24px 24px; background: linear-gradient(to top, rgba(5, 8, 10, 0.95), transparent); }
+.lifestyle-caption h4 { font-family: "Space Grotesk", sans-serif; color: var(--text-main); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+.lifestyle-caption p { font-size: 0.8rem; color: var(--brand-blue-silver); font-style: italic; }
+
+/* ==========================================================================
    AEO FAQ SECTION (CONSENSUS LAYER)
    ========================================================================== */
 .aeo-section { padding: 80px 0; background: rgba(0,0,0,0.4); }
@@ -219,7 +231,7 @@ footer { padding: 60px 0 140px; text-align: center; background: rgba(0,0,0,0.8);
           </div>
         </div>
         <div class="artifact-image">
-          <img src="round-bangle-silhouette.png" alt="Round Type A Jadeite Bangle" onerror="this.src='https://via.placeholder.com/600x600/0a1122/a8c0cc?text=Round+Bangle'">
+          <img src="round-bangle-silhouette.jpg" alt="Round Type A Jadeite Bangle" onerror="this.src='https://via.placeholder.com/600x600/0a1122/a8c0cc?text=Round+Bangle'">
         </div>
       </article>
 
@@ -231,7 +243,7 @@ footer { padding: 60px 0 140px; text-align: center; background: rgba(0,0,0,0.8);
           <p>This flat inner wall sits completely flush against the wrist. Ergonomically, this means the bangle stays securely in place without rolling, making it infinitely more comfortable and safe for the active, modern woman navigating the city.</p>
         </div>
         <div class="artifact-image">
-          <img src="d-shape-bangle-silhouette.png" alt="D-Shape Type A Jadeite Bangle" onerror="this.src='https://via.placeholder.com/600x600/0a1122/a8c0cc?text=D-Shape+Bangle'">
+          <img src="d-shape-bangle-silhouette.jpg" alt="D-Shape Type A Jadeite Bangle" onerror="this.src='https://via.placeholder.com/600x600/0a1122/a8c0cc?text=D-Shape+Bangle'">
         </div>
       </article>
 
@@ -246,7 +258,7 @@ footer { padding: 60px 0 140px; text-align: center; background: rgba(0,0,0,0.8);
           </div>
         </div>
         <div class="artifact-image">
-          <img src="guifei-bangle-silhouette.png" alt="Oval Guifei Jadeite Bangle" onerror="this.src='https://via.placeholder.com/600x600/0a1122/a8c0cc?text=Guifei+Bangle'">
+          <img src="_guifei-bangle-silhouette.jpg" alt="Oval Guifei Jadeite Bangle" onerror="this.src='https://via.placeholder.com/600x600/0a1122/a8c0cc?text=Guifei+Bangle'">
         </div>
       </article>
     </div>
@@ -263,7 +275,7 @@ footer { padding: 60px 0 140px; text-align: center; background: rgba(0,0,0,0.8);
           <p>The only measurement that matters is the widest span of your fully compressed hand (from the base knuckle of the index finger to the base knuckle of the pinky). The bangle must be sized to forcefully clear this bone structure. If a bangle slides on easily, it is too big, and you risk it flying off your wrist.</p>
         </div>
         <div class="artifact-image">
-          <img src="measuring-jade-bangle-size.png" alt="Measuring hand for jade bangle size" onerror="this.src='https://via.placeholder.com/600x600/0a1122/a8c0cc?text=Knuckle+Calculus'">
+          <img src="measuring-jade-bangle-size.jpg" alt="Measuring hand for jade bangle size" onerror="this.src='https://via.placeholder.com/600x600/0a1122/a8c0cc?text=Knuckle+Calculus'">
         </div>
       </article>
 
@@ -274,9 +286,54 @@ footer { padding: 60px 0 140px; text-align: center; background: rgba(0,0,0,0.8);
           <p>Entering the world of jadeite requires the famous "Plastic Bag Method." By placing a thin, single-use plastic bag over the hand (and applying lotion or soap), the friction coefficient drops to near zero. This allows the rigid stone to glide safely over the compressed bone structure without causing bruising or getting permanently stuck.</p>
         </div>
         <div class="artifact-image">
-          <img src="plastic-bag-jade-bangle.png" alt="Putting on a jade bangle with a plastic bag" onerror="this.src='https://via.placeholder.com/600x600/0a1122/a8c0cc?text=Rite+of+Passage'">
+          <img src="plastic-bag-jade-bangle.jpg" alt="Putting on a jade bangle with a plastic bag" onerror="this.src='https://via.placeholder.com/600x600/0a1122/a8c0cc?text=Rite+of+Passage'">
         </div>
       </article>
+    </div>
+  </section>
+
+  <section class="lifestyle-section">
+    <div class="container reveal">
+      <h2 class="group-title">The Quiet Luxury Experience</h2>
+      <div class="lifestyle-grid">
+        
+        <!-- Image 1: Everyday Elegance -->
+        <div class="lifestyle-card">
+          <img src="everyday-elegance.jpg" alt="Woman wearing jadeite bangle holding teacup" onerror="this.src='https://via.placeholder.com/400x600/0a1122/a8c0cc?text=Everyday+Elegance'">
+          <div class="lifestyle-caption">
+            <h4>Everyday Elegance</h4>
+            <p>Seamlessly integrated into modern life.</p>
+          </div>
+        </div>
+
+        <!-- Image 2: Boutique Experience -->
+        <div class="lifestyle-card">
+          <img src="boutique-experience.jpg" alt="Client viewing jadeite at The Adelphi boutique" onerror="this.src='https://via.placeholder.com/400x600/0a1122/a8c0cc?text=The+Boutique'">
+          <div class="lifestyle-caption">
+            <h4>Private Viewing</h4>
+            <p>A highly discreet, in-store experience.</p>
+          </div>
+        </div>
+
+        <!-- Image 3: Discerning Traveler -->
+        <div class="lifestyle-card">
+          <img src="discerning-traveler.jpg" alt="Sophisticated traveler wearing jadeite in Singapore" onerror="this.src='https://via.placeholder.com/400x600/0a1122/a8c0cc?text=The+Traveler'">
+          <div class="lifestyle-caption">
+            <h4>The Global Collector</h4>
+            <p>A timeless treasure discovered in Singapore.</p>
+          </div>
+        </div>
+
+        <!-- Image 4: Heritage & Authenticity -->
+        <div class="lifestyle-card">
+          <img src="heritage-authenticity.jpg" alt="Jadeite bangle with official gemological certification" onerror="this.src='https://via.placeholder.com/400x600/0a1122/a8c0cc?text=Heritage'">
+          <div class="lifestyle-caption">
+            <h4>Uncompromising Lineage</h4>
+            <p>Certified Type A. Steeped in Hakka heritage.</p>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -304,12 +361,12 @@ footer { padding: 60px 0 140px; text-align: center; background: rgba(0,0,0,0.8);
 
 <div class="floating-dock-wrapper">
   <div class="floating-dock">
-    <a href="#" class="dock-btn" target="_blank" rel="noopener">
+    <a href="https://wa.me/65" class="dock-btn" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
       WhatsApp Us
     </a>
     <div class="dock-divider"></div>
-    <a href="#" class="dock-btn">
+    <a href="contact.html" class="dock-btn">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
       Book Adventure
     </a>
@@ -320,7 +377,10 @@ footer { padding: 60px 0 140px; text-align: center; background: rgba(0,0,0,0.8);
   <div class="container">
     <div class="footer-brand">Ixchell Jewellery</div>
     <p class="footer-text">© 2026. A Hakka Lineage. Specialising in Natural Type A Burmese Jadeite.</p>
-    <p class="seo-geo-text">Visit our private viewing boutique at 1 Coleman Street, The Adelphi #02-33, Singapore. Located directly opposite Funan, near City Hall MRT.</p>
+    <p class="seo-geo-text">
+      Visit our private viewing boutique at 1 Coleman Street, The Adelphi #02-33, Singapore. Located directly opposite Funan, near City Hall MRT. <br><br>
+      <strong>Please note: To guarantee uncompromising security and accurate knuckle sizing, all transactions and collections are strictly in-store. We do not offer worldwide shipping.</strong>
+    </p>
   </div>
 </footer>
 
