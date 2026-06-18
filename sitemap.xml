@@ -1,389 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<urlset
-xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
->
-
-<!-- HOME -->
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/
-</loc>
-
-<changefreq>
-weekly
-</changefreq>
-
-<priority>
-1.0
-</priority>
-
-</url>
-
-<!-- FOUNDATION -->
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/type-a-jadeite.html
-</loc>
-
-<priority>0.95</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/what-is-type-a-jadeite.html
-</loc>
-
-<priority>0.90</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/type-a-vs-b-vs-c-jadeite.html
-</loc>
-
-<priority>0.90</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/why-natural-jadeite-matters.html
-</loc>
-
-<priority>0.85</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/jadeite-treatment-guide.html
-</loc>
-
-<priority>0.85</priority>
-
-</url>
-
-<!-- JADE VS JADEITE -->
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/jade-vs-jadeite.html
-</loc>
-
-<priority>0.95</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/what-is-jade.html
-</loc>
-
-<priority>0.85</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/what-is-jadeite.html
-</loc>
-
-<priority>0.85</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/jadeite-vs-nephrite.html
-</loc>
-
-<priority>0.85</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/why-jadeite-is-more-expensive.html
-</loc>
-
-<priority>0.85</priority>
-
-</url>
-
-<!-- VALUE -->
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/what-gives-jadeite-value.html
-</loc>
-
-<priority>0.95</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/jadeite-colour-guide.html
-</loc>
-
-<priority>0.90</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/jadeite-translucency-guide.html
-</loc>
-
-<priority>0.90</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/jadeite-texture-guide.html
-</loc>
-
-<priority>0.90</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/jadeite-thickness-guide.html
-</loc>
-
-<priority>0.90</priority>
-
-</url>
-
-<!-- LIGHT -->
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/why-jadeite-looks-different-in-person.html
-</loc>
-
-<priority>0.90</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/jadeite-daylight-guide.html
-</loc>
-
-<priority>0.82</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/jadeite-indoor-light-guide.html
-</loc>
-
-<priority>0.82</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/skin-tone-jadeite-guide.html
-</loc>
-
-<priority>0.82</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/why-jadeite-looks-different-camera.html
-</loc>
-
-<priority>0.82</priority>
-
-</url>
-
-<!-- BANGLE -->
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/jadeite-bangle-singapore.html
-</loc>
-
-<priority>0.95</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/jadeite-bangle-size-guide.html
-</loc>
-
-<priority>0.85</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/jadeite-bangle-thickness-guide.html
-</loc>
-
-<priority>0.85</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/how-tight-jadeite-bangle-should-fit.html
-</loc>
-
-<priority>0.85</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/how-to-measure-jadeite-bangle-size.html
-</loc>
-
-<priority>0.85</priority>
-
-</url>
-
-<!-- LAVENDER -->
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/lavender-jadeite-guide.html
-</loc>
-
-<priority>0.92</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/how-lavender-jadeite-forms.html
-</loc>
-
-<priority>0.84</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/myanmar-lavender-jadeite.html
-</loc>
-
-<priority>0.82</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/guatemala-lavender-jadeite.html
-</loc>
-
-<priority>0.82</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/lavender-jadeite-vs-green-jadeite.html
-</loc>
-
-<priority>0.84</priority>
-
-</url>
-
-<!-- HISTORY -->
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/history-origins-of-jade.html
-</loc>
-
-<priority>0.95</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/jade-history-china.html
-</loc>
-
-<priority>0.84</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/qing-dynasty-jadeite-history.html
-</loc>
-
-<priority>0.84</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/jadeite-trade-route-history.html
-</loc>
-
-<priority>0.84</priority>
-
-</url>
-
-<url>
-
-<loc>
-https://ixchelljewellery.com/empress-dowager-cixi-jadeite.html
-</loc>
-
-<priority>0.84</priority>
-
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://ixchelljewellery.com/</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ixchelljewellery.com/sitemap.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://ixchelljewellery.com/type-a-jadeite.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ixchelljewellery.com/what-is-type-a-jadeite.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ixchelljewellery.com/artifacts-ergonomics.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ixchelljewellery.com/ritual-reality.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ixchelljewellery.com/understanding-value.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ixchelljewellery.com/lifestyle-guide.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://ixchelljewellery.com/history-origins-of-jade.html</loc>
+    <lastmod>2026-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
 </urlset>
